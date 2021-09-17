@@ -38,6 +38,7 @@ namespace Vivero
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "frmPrincipal";
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load_1);
             this.ResumeLayout(false);
 
         }
