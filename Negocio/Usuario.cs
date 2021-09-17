@@ -23,16 +23,16 @@ namespace Vivero.Negocio
         public string Contrasena { get; set; }
         public bool Estado { get; set; }
 
-        public int validarUsuario(string Id_Usuario, string Contrasena)
+        public bool ValidarUsuario(int Id_Usuario, string Contrasena)
         {
-            string consulta = "SELECT * FROM Empleado WHERE ID='" + Id_Usuario + "' AND contraseña='" + Contrasena + "'";
+            string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "'";
 
             DBHelper oDatos = new DBHelper();
             DataTable tabla = oDatos.consultar(consulta);
             if (tabla.Rows.Count > 0)
-                return (int)tabla.Rows[0][0];
+                return true;
             else
-                return 0;
+                return false;
         }
     }
 }

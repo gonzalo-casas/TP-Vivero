@@ -11,17 +11,17 @@ using Vivero.Presentacion;
 
 namespace Vivero
 {
-    public partial class frmPrincipal : Form
+    public partial class FrmPrincipal : Form
     {
-        public frmPrincipal()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            frmLogin fl;
-            fl = new frmLogin();
+            FrmLogin fl;
+            fl = new FrmLogin();
             fl.ShowDialog();
 
             if (fl.MiUsuario.Id_usuario == 0)
