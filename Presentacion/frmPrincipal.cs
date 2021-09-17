@@ -32,5 +32,11 @@ namespace Vivero
             fl.Dispose();
 
         }
+
+        private void frmPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+//hola
