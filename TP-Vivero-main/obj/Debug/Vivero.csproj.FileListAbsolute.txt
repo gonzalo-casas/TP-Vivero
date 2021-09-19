@@ -1,0 +1,15 @@
+C:\Users\andre\Desktop\TP-Vivero-main\bin\Debug\Vivero.exe.config
+C:\Users\andre\Desktop\TP-Vivero-main\bin\Debug\Vivero.exe
+C:\Users\andre\Desktop\TP-Vivero-main\bin\Debug\Vivero.pdb
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.csproj.AssemblyReference.cache
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Presentacion.FrmLogin.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.FrmPrincipal.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Properties.Resources.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.csproj.GenerateResource.cache
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.csproj.CoreCompileInputs.cache
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.exe
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.pdb
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Presentacion.Empleados.ABMC_Empleados.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Presentacion.Empleados.ALTA_Empleado.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Presentacion.Empleados.MODIFICACION_Empleado.resources
+C:\Users\andre\Desktop\TP-Vivero-main\obj\Debug\Vivero.Presentacion.Proveedor.ABMC_Proveedor.resources
