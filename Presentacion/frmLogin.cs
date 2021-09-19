@@ -15,6 +15,8 @@ namespace Vivero.Presentacion
     {
         private Usuario miUsuario = new Usuario();
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
+
+        internal bool LoginOk = false;
         public FrmLogin()
         {
             InitializeComponent();
@@ -51,6 +53,8 @@ namespace Vivero.Presentacion
             if (this.miUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena))
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoginOk = true;
+                this.Close();
             }
             else
             {
@@ -58,6 +62,7 @@ namespace Vivero.Presentacion
                 this.txtUsuario.Text = string.Empty;
                 this.txtContrasena.Text = string.Empty;
                 this.txtUsuario.Focus();
+                return;
             }
         }
         private void TxtUsuario_KeyPress(object sender, KeyPressEventArgs e)
