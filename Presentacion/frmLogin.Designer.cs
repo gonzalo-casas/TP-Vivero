@@ -62,6 +62,7 @@ namespace Vivero.Presentacion
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(168, 97);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '●';
             this.txtContrasena.Size = new System.Drawing.Size(138, 26);
             this.txtContrasena.TabIndex = 3;
             // 
@@ -107,6 +108,9 @@ namespace Vivero.Presentacion
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Iniciar Sesion";

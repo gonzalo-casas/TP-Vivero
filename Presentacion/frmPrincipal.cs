@@ -25,10 +25,10 @@ namespace Vivero
             fl = new FrmLogin();
             fl.ShowDialog();
 
-            if (fl.MiUsuario.Id_usuario == 0)
+            if (!fl.LoginOk)
                 this.Close();
             else
-                this.Text += "- Usuario: " + fl.MiUsuario.Nombre;
+                this.Text += "- Usuario: " + fl.MiUsuario.Id_usuario;
 
             fl.Dispose();
 
@@ -45,6 +45,13 @@ namespace Vivero
         {
 
         }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro de que desea salir?", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
+        }
     }
 }
-//hola
