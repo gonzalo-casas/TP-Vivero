@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Presentacion;
+using Vivero.Presentacion.Empleados;
 
 namespace Vivero
 {
@@ -33,7 +34,17 @@ namespace Vivero
 
         }
 
-        
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            ABMC_Empleados fl;
+            fl = new ABMC_Empleados();
+            fl.ShowDialog();
+        }
+
+        private void btnCatalogos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //hola

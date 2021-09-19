@@ -12,7 +12,7 @@ namespace Vivero.Datos
     {
         private SqlConnection conexion = new SqlConnection();
         private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source=sql5108.site4now.net;Initial Catalog = db_a79e23_vivero; Persist Security Info=True;User ID = db_a79e23_vivero_admin; Password=grupo10pav";
+        private string cadenaConexion = @"Data Source=LAPTOP-KOG6AAPD\SQLEXPRESS;Initial Catalog=vivero;Integrated Security=True";
 
         public DataTable consultar(string consultaSQL)
         {
