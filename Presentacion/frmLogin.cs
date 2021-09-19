@@ -36,13 +36,13 @@ namespace Vivero.Presentacion
         {
             if (string.IsNullOrEmpty(this.txtUsuario.Text))
             {
-                MessageBox.Show("Ingrese su usuario");
+                MessageBox.Show("Ingrese su usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.txtUsuario.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(this.txtContrasena.Text))
             {
-                MessageBox.Show("Ingrese la contraseña");
+                MessageBox.Show("Ingrese la contraseña","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.txtContrasena.Focus();
                 return;
             }
