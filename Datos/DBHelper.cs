@@ -8,14 +8,36 @@ using System.Threading.Tasks;
 
 namespace Vivero.Datos
 {
-    class DBHelper
+    class BDHelper
     {
-        private SqlConnection conexion = new SqlConnection();
-        private SqlCommand comando = new SqlCommand();
-        private string cadenaConexion = @"Data Source = SQL5108.site4now.net; Initial Catalog = db_a79e23_vivero; User Id = db_a79e23_vivero_admin; Password=grupo10pav";
+
+        private static BDHelper instancia; // patron singleton
+
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private string cadenaConexion;
+
+        private BDHelper() // constructor privado de la clase
+        {
+            conexion = new SqlConnection();
+            comando = new SqlCommand();
+            cadenaConexion = @"Data Source = SQL5108.site4now.net; Initial Catalog = db_a79e23_vivero; User Id = db_a79e23_vivero_admin; Password=grupo10pav";
+        }
+
+        public static BDHelper obtenerInstancia()
+        {
+            if (instancia == null) // las referencias a objetos se las evalua como nulas y no empty
+            {
+                instancia = new BDHelper();
+
+            }
+            return instancia;
+        }
+
         public DataTable consultar(string consultaSQL)
         {
             DataTable tabla = new DataTable();
+
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
 
@@ -25,6 +47,7 @@ namespace Vivero.Datos
             tabla.Load(comando.ExecuteReader());
 
             conexion.Close();
+
             return tabla;
         }
     }

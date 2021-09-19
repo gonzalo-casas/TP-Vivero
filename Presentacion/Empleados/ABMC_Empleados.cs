@@ -15,7 +15,7 @@ namespace Vivero.Presentacion.Empleados
     
     public partial class ABMC_Empleados : Form
     {
-        Ng_Empleados Empleado = new Ng_Empleados();
+        EmpleadoService oEmpleado = new EmpleadoService ();
 
         public ABMC_Empleados()
         {
@@ -46,21 +46,21 @@ namespace Vivero.Presentacion.Empleados
         {
             if (chk_Activos.Checked == true)
             {
-                Cargar_Grilla(Empleado.Empleados_Activos());
+                Cargar_Grilla(oEmpleado.Empleados_Activos());
                 return;
             }
             if (chk_Inactivos.Checked == true)
             {
-                Cargar_Grilla(Empleado.Empleados_Inactivos());
+                Cargar_Grilla(oEmpleado.Empleados_Inactivos());
                 return;
             }
             if (txt_IdEmpleado.Text != "" || txt_ApellidoEmpleado.Text != "" || txt_NombreEmpleado.Text != "")
             {
-                Cargar_Grilla(Empleado.Buscar_empleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text));
+                Cargar_Grilla(oEmpleado.Buscar_empleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text));
             }
             if (txt_IdEmpleado.Text == "" || txt_ApellidoEmpleado.Text == "" || txt_NombreEmpleado.Text == "")
             {
-                Cargar_Grilla(Empleado.Todos_Los_Empleados());
+                Cargar_Grilla(oEmpleado.Todos_Los_Empleados());
             }
         }
 

@@ -27,8 +27,9 @@ namespace Vivero.Negocio
         {
             string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "'";
 
-            DBHelper oDatos = new DBHelper();
-            DataTable tabla = oDatos.consultar(consulta);
+   
+          
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             if (tabla.Rows.Count > 0)
                 return true;
             else
