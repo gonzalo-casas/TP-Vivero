@@ -127,6 +127,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -146,6 +147,9 @@
     <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Presentacion\Productos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-user-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

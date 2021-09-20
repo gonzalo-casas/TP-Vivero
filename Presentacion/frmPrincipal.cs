@@ -53,5 +53,10 @@ namespace Vivero
             else
                 e.Cancel = true;
         }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
