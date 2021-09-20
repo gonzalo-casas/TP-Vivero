@@ -4,13 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vivero.Datos.Interfaces;
 using Vivero.Negocio.EstructuraNegocio;
 
 namespace Vivero.Datos.Daos
 {
-    class ProveedorDao
+    class ProveedorDao : IProveedor
     {
-        public DataTable Proovedores_Activos()
+        public DataTable Proveedores_Activos()
         {
             string consulta = "SELECT * FROM Proveedor WHERE Estado = 1";
             
@@ -30,7 +31,7 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public DataTable Todos_Los_Empleados()
+        public DataTable Todos_Los_Proveedores()
         {
             string consulta = "SELECT * FROM Proveedor WHERE Estado = 1 or Estado = 0";
 
@@ -126,6 +127,16 @@ namespace Vivero.Datos.Daos
 
             //BDHelper oDatos = new BDHelper();
             return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+        public bool Delete(Es_Proveedor oProveedorSeleccionado)
+        {
+            string consulta = "UPDATE Proveedor " +
+                             "SET Estado= '0'" +
+                             " WHERE ID=" + oProveedorSeleccionado.ID;
+
+            //TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado
+
+            return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
         }
     }
 }

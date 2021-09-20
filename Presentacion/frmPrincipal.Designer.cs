@@ -40,7 +40,7 @@ namespace Vivero
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnProveedor = new System.Windows.Forms.Button();
+            this.BtnProveedor = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -194,29 +194,29 @@ namespace Vivero
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnProveedor);
+            this.panel7.Controls.Add(this.BtnProveedor);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 70);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 70);
             this.panel7.TabIndex = 1;
             // 
-            // btnProveedor
+            // BtnProveedor
             // 
-            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnProveedor.FlatAppearance.BorderSize = 0;
-            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.Image = global::Vivero.Properties.Resources.icons8_truck_64;
-            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(12, 0);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(188, 70);
-            this.btnProveedor.TabIndex = 4;
-            this.btnProveedor.Text = "Proveedores";
-            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
+            this.BtnProveedor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnProveedor.FlatAppearance.BorderSize = 0;
+            this.BtnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProveedor.Image = global::Vivero.Properties.Resources.icons8_truck_64;
+            this.BtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProveedor.Location = new System.Drawing.Point(12, 0);
+            this.BtnProveedor.Name = "BtnProveedor";
+            this.BtnProveedor.Size = new System.Drawing.Size(188, 70);
+            this.BtnProveedor.TabIndex = 4;
+            this.BtnProveedor.Text = "Proveedores";
+            this.BtnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnProveedor.UseVisualStyleBackColor = true;
+            this.BtnProveedor.Click += new System.EventHandler(this.BtnProveedor_Click);
             // 
             // panel6
             // 
@@ -344,7 +344,7 @@ namespace Vivero
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button Plantas;
         private System.Windows.Forms.Button btnCatalogos;
-        private System.Windows.Forms.Button btnProveedor;
+        private System.Windows.Forms.Button BtnProveedor;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

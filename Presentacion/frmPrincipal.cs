@@ -40,6 +40,8 @@ namespace Vivero
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
             ABMC_Empleados fl;
             fl = new ABMC_Empleados();
             fl.MdiParent = this;
@@ -62,9 +64,17 @@ namespace Vivero
                 e.Cancel = true;
         }
 
-        private void btnProveedor_Click(object sender, EventArgs e)
+        private void BtnProveedor_Click(object sender, EventArgs e)
         {
-
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            ABMC_Proveedores fl;
+            fl = new ABMC_Proveedores();
+            fl.MdiParent = this;
+            fl.Show();
+            fl.Dock = DockStyle.Fill;
+            fl.WindowState = FormWindowState.Minimized;
+            fl.WindowState = FormWindowState.Maximized;
         }
         private void BtnSalir_Click(object sender, EventArgs e)
         {

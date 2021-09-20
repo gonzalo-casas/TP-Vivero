@@ -14,9 +14,10 @@ namespace Vivero.Datos.Interfaces
         DataTable Proveedores_Inactivos();
         DataTable Buscar_proveedor(string ID_emp, string nom_emp, string ap_emp);
         DataTable Todos_Los_Proveedores();
-        string GetUserSinParametros(string nombre, string contrasena);
+        //string GetUserSinParametros(string nombre, string contrasena);
         bool Create(Es_Proveedor oProveedor);
         bool Update(Es_Proveedor oProveedorSeleccionado);
+        bool Delete(Es_Proveedor oProveedor);
         DataTable RecuperarPorId(int idProveedor);
     }
 }
