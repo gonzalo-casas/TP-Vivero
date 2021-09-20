@@ -35,13 +35,14 @@ namespace Vivero.Presentacion
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.LblIngresoCaracteres = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(70, 45);
+            this.lblUsuario.Location = new System.Drawing.Point(52, 45);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 0;
@@ -51,7 +52,7 @@ namespace Vivero.Presentacion
             // 
             this.lblContrasena.AutoSize = true;
             this.lblContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrasena.Location = new System.Drawing.Point(42, 100);
+            this.lblContrasena.Location = new System.Drawing.Point(24, 100);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(92, 20);
             this.lblContrasena.TabIndex = 1;
@@ -60,10 +61,10 @@ namespace Vivero.Presentacion
             // txtContrasena
             // 
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(168, 97);
+            this.txtContrasena.Location = new System.Drawing.Point(147, 97);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '●';
-            this.txtContrasena.Size = new System.Drawing.Size(138, 26);
+            this.txtContrasena.Size = new System.Drawing.Size(159, 26);
             this.txtContrasena.TabIndex = 3;
             // 
             // btnSalir
@@ -80,7 +81,7 @@ namespace Vivero.Presentacion
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(22, 151);
+            this.btnIngresar.Location = new System.Drawing.Point(28, 151);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(112, 36);
             this.btnIngresar.TabIndex = 4;
@@ -91,17 +92,26 @@ namespace Vivero.Presentacion
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(168, 42);
+            this.txtUsuario.Location = new System.Drawing.Point(147, 42);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(138, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(159, 26);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsuario_KeyPress);
+            // 
+            // LblIngresoCaracteres
+            // 
+            this.LblIngresoCaracteres.ForeColor = System.Drawing.Color.Red;
+            this.LblIngresoCaracteres.Location = new System.Drawing.Point(147, 71);
+            this.LblIngresoCaracteres.Name = "LblIngresoCaracteres";
+            this.LblIngresoCaracteres.Size = new System.Drawing.Size(175, 14);
+            this.LblIngresoCaracteres.TabIndex = 6;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 211);
+            this.Controls.Add(this.LblIngresoCaracteres);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtContrasena);
@@ -128,5 +138,6 @@ namespace Vivero.Presentacion
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label LblIngresoCaracteres;
     }
 }
