@@ -32,12 +32,32 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        //public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp)
-        //{
-        //    string consulta = "SELECT * FROM Empleado WHERE ID LIKE '%" + ID_emp + "%' AND Nombre LIKE '%" + nom_emp + "%' AND Apellido LIKE '%" + ap_emp + "%'";
+        public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp, string estado)
+        {
+           
+            string consulta = "SELECT * FROM Empleado WHERE Estado in  " + estado;
+            
 
-        //    return BDHelper.obtenerInstancia().consultar(consulta);
-        //}
+            if (!String.IsNullOrEmpty(ID_emp))
+            {
+                consulta += " AND ID LIKE " + ID_emp;
+
+            } 
+
+            if (!String.IsNullOrEmpty(nom_emp))
+            {
+                consulta += " AND Nombre LIKE " + "'" + nom_emp + "'";
+            }
+
+            if (!String.IsNullOrEmpty(ap_emp))
+            {
+                consulta += " AND Apellido LIKE " + "'" + ap_emp + "'";
+            }
+
+
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
 
         public DataTable Todos_Los_Empleados()
         {

@@ -48,7 +48,23 @@ namespace Vivero.Presentacion.Empleados
         }
 
         private void btn_ConsultarEmpleado_Click(object sender, EventArgs e)
-        {
+        { var estado = "('0')";
+            if (chk_Activos.Checked == true)
+            {
+                estado = "('1')";
+            }
+            if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
+            {
+                estado = "('1','2')";
+            }
+
+            if (txt_IdEmpleado.Text != "" || txt_ApellidoEmpleado.Text != "" || txt_NombreEmpleado.Text != "")
+            {
+                Cargar_Grilla(oEmpleado.BuscarEmpleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text, estado));
+                return;
+            }
+
+
             if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
             {
                 Cargar_Grilla(oEmpleado.Todos_Los_Empleados());
@@ -65,10 +81,7 @@ namespace Vivero.Presentacion.Empleados
                 Cargar_Grilla(oEmpleado.Empleados_Inactivos());
                 return;
             }
-            if (txt_IdEmpleado.Text != "" || txt_ApellidoEmpleado.Text != "" || txt_NombreEmpleado.Text != "")
-            {
-                Cargar_Grilla(oEmpleado.Buscar_empleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text));
-            }
+            
 
 
             if (txt_IdEmpleado.Text == "" || txt_ApellidoEmpleado.Text == "" || txt_NombreEmpleado.Text == "")

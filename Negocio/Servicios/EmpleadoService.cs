@@ -51,9 +51,13 @@ namespace Vivero.Negocio
             return dao.Update(oEmpleadoSeleccionado);
         }
 
+        public DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado)
+        {
+            return dao.BuscarEmpleado( ID_emp,  nom_emp,  ap_emp,  estado);
+        }
 
 
-  
+
 
         internal bool CrearUsuario(Es_Empleado oEmpleado)
         {

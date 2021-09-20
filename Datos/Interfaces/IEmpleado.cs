@@ -19,6 +19,7 @@ namespace Vivero.Datos.Interfaces
         bool Update(Es_Empleado oEmpleadoSeleccionado);
         bool Delete(Es_Empleado oEmpleado);
         DataTable RecuperarPorId(int idEmpleado);
+        DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado);
 
     }
 }
