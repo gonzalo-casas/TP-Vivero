@@ -70,6 +70,7 @@ namespace Vivero.Presentacion
             if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+                LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
             }
         }
     }
