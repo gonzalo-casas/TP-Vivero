@@ -61,8 +61,8 @@
     <Compile Include="Negocio\Entidades\Es_Puntos.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoProducto.cs" />
-    <Compile Include="Negocio\Servicios\Ng_Plantas.cs" />
-    <Compile Include="Negocio\Servicios\Usuario.cs" />
+    <Compile Include="Negocio\Servicios\PlantasService.cs" />
+    <Compile Include="Negocio\Servicios\UsuarioService.cs" />
     <Compile Include="Presentacion\Empleados\ABMC_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
