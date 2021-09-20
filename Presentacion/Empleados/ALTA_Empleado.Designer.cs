@@ -45,7 +45,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtNroCalle = new System.Windows.Forms.TextBox();
             this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.cboTipoDoc = new System.Windows.Forms.ComboBox();
             this.txtBarrio = new System.Windows.Forms.TextBox();
@@ -203,13 +203,13 @@ namespace Vivero.Presentacion.Empleados
             this.txtLocalidad.Size = new System.Drawing.Size(132, 22);
             this.txtLocalidad.TabIndex = 27;
             // 
-            // textBox6
+            // txtTelefono
             // 
-            this.textBox6.Location = new System.Drawing.Point(215, 458);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 22);
-            this.textBox6.TabIndex = 28;
+            this.txtTelefono.Location = new System.Drawing.Point(215, 458);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(132, 22);
+            this.txtTelefono.TabIndex = 28;
             // 
             // txtContrasena
             // 
@@ -284,7 +284,7 @@ namespace Vivero.Presentacion.Empleados
             this.Controls.Add(this.txtBarrio);
             this.Controls.Add(this.cboTipoDoc);
             this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.txtCalle);
@@ -328,7 +328,7 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtNroCalle;
         private System.Windows.Forms.TextBox txtLocalidad;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.ComboBox cboTipoDoc;
         private System.Windows.Forms.TextBox txtBarrio;

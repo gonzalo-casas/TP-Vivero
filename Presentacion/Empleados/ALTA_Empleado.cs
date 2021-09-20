@@ -126,6 +126,7 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.TipoDoc = new Es_TipoDoc();
                                 oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
                                 oEmpleado.Nro_Doc = txtNroDoc.Text;
+                                oEmpleado.Telefono = txtTelefono.Text;
                                 oEmpleado.Calle = txtCalle.Text;
                                 oEmpleado.Nro_Calle = int.Parse(txtNroCalle.Text);
                                 oEmpleado.Barrio = int.Parse(txtBarrio.Text);
@@ -137,6 +138,7 @@ namespace Vivero.Presentacion.Empleados
                                     MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
+                                else { MessageBox.Show("Error"); }
                             }
                         }
                         else

@@ -71,7 +71,7 @@ namespace Vivero.Datos.Daos
 
             //SIN PARAMETROS
 
-            string consulta = "INSERT INTO Empleado (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña)" +
+            string consulta = "INSERT INTO Empleado (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado)" +
                             " VALUES (" +
                             "'" + oEmpleado.TipoDoc.IdTipoDoc + "'" + "," +
                             "'" + oEmpleado.Nro_Doc + "'" + "," +
