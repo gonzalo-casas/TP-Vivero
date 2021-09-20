@@ -49,11 +49,13 @@
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
+    <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
+    <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
@@ -106,12 +108,6 @@
     <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Proveedor\ABMC_Proveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Proveedor\ABMC_Proveedor.Designer.cs">
-      <DependentUpon>ABMC_Proveedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\Empleados\ABMC_Empleados.resx">
@@ -128,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Proveedor\ABMC_Proveedor.resx">
-      <DependentUpon>ABMC_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +153,7 @@
     <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Presentacion\Productos\" />
+    <Folder Include="Presentacion\Proveedor\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Presentacion\Recursos\Iconos\icons8-user-64.png" />
