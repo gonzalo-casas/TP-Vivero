@@ -155,5 +155,38 @@
   <ItemGroup>
     <None Include="Presentacion\Recursos\Iconos\icons8-user-64.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-exit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-exit-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-user-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-user-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-user-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-customer-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-truck-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-employee-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-cleaning-products-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-plant-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-catalog-49.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
