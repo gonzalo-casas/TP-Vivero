@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Negocio;
+using Vivero.Negocio.Entidades;
+using Vivero.Negocio.EstructuraNegocio;
 using Vivero.Negocio.Servicios;
 
 namespace Vivero.Presentacion.Empleados
@@ -17,10 +19,15 @@ namespace Vivero.Presentacion.Empleados
         private FormMode formMode = FormMode.insert;
         private readonly TipoDocService oTipoDocService;
         private readonly EmpleadoService oEmpleadoService;
+
+
+
         public ALTA_Empleado()
         {
             InitializeComponent();
              oTipoDocService = new TipoDocService();
+            oEmpleadoService = new EmpleadoService();
+
         }
 
         public enum FormMode
@@ -71,35 +78,7 @@ namespace Vivero.Presentacion.Empleados
                     }
             }
 
-            switch (formMode)
-            {
-                case FormMode.insert:
-                    {
-                        if (ExisteUsuario() == false)
-                        {
-                            if (ValidarCampos())
-                            {
-                                var oUsuario = new Usuario();
-                                oUsuario.NombreUsuario = txtNombre.Text;
-                                oUsuario.Password = txtPassword.Text;
-                                oUsuario.Email = txtEmail.Text;
-                                oUsuario.Perfil = new Perfil();
-                                oUsuario.Perfil.IdPerfil = (int)cboPerfil.SelectedValue;
-                                oUsuario.Estado = "S";
-
-                                if (oUsuarioService.CrearUsuario(oUsuario))
-                                {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Close();
-                                }
-                            }
-                        }
-                        else
-                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    }
-
-            }
+            
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -112,7 +91,60 @@ namespace Vivero.Presentacion.Empleados
 
         private bool ExisteUsuario()
         {
-            return oEmpleadoService.Buscar_empleado(txt_NombreEmpleado.Text) != null;
+            return (oEmpleadoService.ObtenerEmpleado(txt_NombreEmpleado.Text, txtContrasena.Text) != string.Empty);
+        }
+
+        private bool ValidarCampos()
+        {
+            // campos obligatorios
+            if (txt_NombreEmpleado.Text == string.Empty)
+            {
+                txt_NombreEmpleado.BackColor = Color.Red;
+                txt_NombreEmpleado.Focus();
+                return false;
+            }
+            else
+                txt_NombreEmpleado.BackColor = Color.White;
+
+            return true;
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch (formMode)
+            {
+                case FormMode.insert:
+                    {
+                        if (ExisteUsuario() == false)
+                        {
+                            if (ValidarCampos())
+                            {
+                                var oEmpleado = new Es_Empleado();
+                                oEmpleado.Nombre = txt_NombreEmpleado.Text;
+                                oEmpleado.Apellido = txt_ApellidoEmpleado.Text;
+                                oEmpleado.Contraseña = txtContrasena.Text;
+                                oEmpleado.TipoDoc = new Es_TipoDoc();
+                                oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
+                                oEmpleado.Nro_Doc = txtNroDoc.Text;
+                                oEmpleado.Calle = txtCalle.Text;
+                                oEmpleado.Nro_Calle = txtNroCalle.Text;
+                                oEmpleado.Barrio = txtBarrio.Text;
+                                oEmpleado.Localidad = txtLocalidad.Text;
+                                oEmpleado.Estado = "1";
+
+                                if (oEmpleadoService.CrearUsuario(oEmpleado))
+                                {
+                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                            }
+                        }
+                        else
+                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        break;
+                    }
+
+            }
         }
     }
 

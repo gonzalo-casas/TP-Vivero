@@ -14,6 +14,7 @@ namespace Vivero.Datos.Interfaces
         DataTable Empleados_Inactivos();
         DataTable Buscar_empleado(string ID_emp, string nom_emp, string ap_emp);
         DataTable Todos_Los_Empleados();
-        Es_Empleado GetUserSinParametros(string nombreUsuario);
+        string GetUserSinParametros(string nombre, string contrasena);
+         bool Create(Es_Empleado oEmpleado);
     }
 }

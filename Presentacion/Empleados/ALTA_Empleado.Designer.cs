@@ -44,7 +44,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.txtNroCalle = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.cboTipoDoc = new System.Windows.Forms.ComboBox();
@@ -195,13 +195,13 @@ namespace Vivero.Presentacion.Empleados
             this.txtNroCalle.Size = new System.Drawing.Size(132, 22);
             this.txtNroCalle.TabIndex = 26;
             // 
-            // textBox5
+            // txtLocalidad
             // 
-            this.textBox5.Location = new System.Drawing.Point(215, 400);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 22);
-            this.textBox5.TabIndex = 27;
+            this.txtLocalidad.Location = new System.Drawing.Point(215, 400);
+            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(132, 22);
+            this.txtLocalidad.TabIndex = 27;
             // 
             // textBox6
             // 
@@ -261,6 +261,7 @@ namespace Vivero.Presentacion.Empleados
             this.btnAceptar.TabIndex = 34;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -284,7 +285,7 @@ namespace Vivero.Presentacion.Empleados
             this.Controls.Add(this.cboTipoDoc);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.txtNroCalle);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.txtNroDoc);
@@ -326,7 +327,7 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.TextBox txtNroDoc;
         private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.TextBox txtNroCalle;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtLocalidad;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.ComboBox cboTipoDoc;

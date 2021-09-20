@@ -49,9 +49,9 @@ namespace Vivero.Presentacion
 
             this.miUsuario.Id_usuario = int.Parse(this.txtUsuario.Text);
             this.miUsuario.Contrasena = this.txtContrasena.Text;
-            this.miUsuario.Nombre = this.MiUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena);
+            this.miUsuario.Nombre = this.oUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena);
 
-            if (this.miUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena))
+            if (this.oUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena) != String.Empty)
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

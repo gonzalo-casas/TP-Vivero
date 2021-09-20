@@ -51,6 +51,7 @@
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
+    <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Usuario.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />

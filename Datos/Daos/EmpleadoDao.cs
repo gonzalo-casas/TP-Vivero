@@ -39,51 +39,67 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public Es_Empleado GetUserSinParametros(string nombreUsuario)
+        public string GetUserSinParametros(string nombreUsuario,string Contrasena)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
-            String consulta = string.Concat(" SELECT id_usuario, ",
-                                          "        usuario, ",
-                                          "        email, ",
-                                          "        estado, ",
-                                          "        password, ",
-                                          "        p.id_perfil, ",
-                                          "        p.nombre as perfil ",
-                                          "   FROM Usuarios u",
-                                          "  INNER JOIN Perfiles p ON u.id_perfil= p.id_perfil ",
-                                          "  WHERE u.borrado =0 ");
-
-            consulta += " AND usuario=" + "'" + nombreUsuario + "'";
+            string consulta = "SELECT * FROM Empleado WHERE nombre='" + nombreUsuario + "' AND contraseña='" + Contrasena + "'";
 
 
-            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
-            var resultado = BDHelper.obtenerInstancia().consultar(consulta);
 
-            // Validamos que el resultado tenga al menos una fila.
-            if (resultado.Rows.Count > 0)
-            {
-                return ObjectMapping(resultado.Rows[0]);
-            }
-
-            return null;
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
+            if (tabla.Rows.Count > 0)
+                return (string)tabla.Rows[0][1];
+            else
+                return string.Empty;
         }
 
-        private Es_Empleado ObjectMapping(DataRow row)
+        public bool Create(Es_Empleado oEmpleado)
         {
-            Es_Empleado oEmpleado = new Es_Empleado
-            {
-                //ID = Convert.ToInt32(row["ID"].ToString()),
-                //TipoDoc = row["TipoDoc"].ToString(),
-                //NroDoc = row["NroDoc"].ToString(),
-                //Nombre = row["Nombre"].ToString(),
-                //Apellido = row["Apellido"].ToString(),
-                //Password = row.Table.Columns.Contains("password") ? row["password"].ToString() : null,
+            //CON PARAMETROS
+            //string str_sql = "     INSERT INTO Usuarios (usuario, password, email, id_perfil, estado, borrado)" +
+            //                 "     VALUES (@usuario, @password, @email, @id_perfil, 'S', 0)";
 
-                
-            };
+            // var parametros = new Dictionary<string, object>();
+            //parametros.Add("usuario", oUsuario.NombreUsuario);
+            //parametros.Add("password", oUsuario.Password);
+            //parametros.Add("email", oUsuario.Email);
+            //parametros.Add("id_perfil", oUsuario.Perfil.IdPerfil);
 
-            return oEmpleado;
+            // Si una fila es afectada por la inserción retorna TRUE. Caso contrario FALSE
+            //con parametros
+            //return (DBHelper.GetDBHelper().EjecutarSQLConParametros(str_sql, parametros) == 1);
+
+            //SIN PARAMETROS
+
+            string consulta = "INSERT INTO Usuarios (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña)" +
+                            " VALUES (" +
+                            "'" + oEmpleado.TipoDoc.IdTipoDoc + "'" + "," +
+                            "'" + oEmpleado.Nro_Doc + "'" + "," +
+                            "'" + oEmpleado.Nombre + "'" + "," +
+                            "'" + oEmpleado.Apellido + "'" + "," +
+                            "'" + oEmpleado.Telefono + "'" + "," +
+                            "'" + oEmpleado.Calle + "'" + "," +
+                            "'" + oEmpleado.Nro_Calle + "'" + "," +
+                            "'" + oEmpleado.Barrio + "'" + "," +
+                            "'" + oEmpleado.Localidad + "'" + "," +
+                            "'" + oEmpleado.Contraseña + "'" + "," +
+                            "'" + oEmpleado.Estado + " )";
+                                 //oUsuario.Perfil.IdPerfil + ",0)";
+
+            return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
+            //return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
         }
 
+        //oEmpleado.Nombre = txt_NombreEmpleado.Text;
+        //                        oEmpleado.Apellido = txt_ApellidoEmpleado.Text;
+        //                        oEmpleado.Contraseña = txtContrasena.Text;
+        //                        oEmpleado.TipoDoc = new Es_TipoDoc();
+        //oEmpleado.TipoDoc.IdTipoDoc = (int) cboTipoDoc.SelectedValue;
+        //oEmpleado.Nro_Doc = txtNroDoc.Text;
+        //                        oEmpleado.Calle = txtCalle.Text;
+        //                        oEmpleado.Nro_Calle = txtNroCalle.Text;
+        //                        oEmpleado.Barrio = txtBarrio.Text;
+        //                        oEmpleado.Localidad = txtLocalidad.Text;
+        //                        oEmpleado.Estado = "1";
     }
 }

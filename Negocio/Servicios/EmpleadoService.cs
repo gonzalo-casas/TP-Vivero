@@ -34,10 +34,10 @@ namespace Vivero.Negocio
         {
             return dao.Buscar_empleado(ID_emp, nom_emp, ap_emp);
         }
-        public ObtenerEmpleado(string usuario)
+        public string ObtenerEmpleado(string nombre, string contrasena)
         {
             //SIN PARAMETROS
-            return dao.GetUserSinParametros(usuario);
+            return dao.GetUserSinParametros(nombre, contrasena);
 
             //CON PARAMETROS
             // return oUsuarioDao.GetUserConParametros(usuario);
@@ -66,7 +66,10 @@ namespace Vivero.Negocio
         //    return oDatos;
         //}
 
-
+        internal bool CrearUsuario(Es_Empleado oEmpleado)
+        {
+            return dao.Create(oEmpleado);
+        }
 
 
 
