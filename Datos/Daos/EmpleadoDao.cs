@@ -71,7 +71,7 @@ namespace Vivero.Datos.Daos
 
             //SIN PARAMETROS
 
-            string consulta = "INSERT INTO Usuarios (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña)" +
+            string consulta = "INSERT INTO Empleado (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña)" +
                             " VALUES (" +
                             "'" + oEmpleado.TipoDoc.IdTipoDoc + "'" + "," +
                             "'" + oEmpleado.Nro_Doc + "'" + "," +
@@ -82,8 +82,8 @@ namespace Vivero.Datos.Daos
                             "'" + oEmpleado.Nro_Calle + "'" + "," +
                             "'" + oEmpleado.Barrio + "'" + "," +
                             "'" + oEmpleado.Localidad + "'" + "," +
-                            "'" + oEmpleado.Contraseña + "'" + "," +
-                            "'" + oEmpleado.Estado + " )";
+                           oEmpleado.Contraseña  + " , 0)";
+           // "'" + oEmpleado.Estado + " )";
                                  //oUsuario.Perfil.IdPerfil + ",0)";
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;

@@ -127,10 +127,10 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
                                 oEmpleado.Nro_Doc = txtNroDoc.Text;
                                 oEmpleado.Calle = txtCalle.Text;
-                                oEmpleado.Nro_Calle = txtNroCalle.Text;
-                                oEmpleado.Barrio = txtBarrio.Text;
-                                oEmpleado.Localidad = txtLocalidad.Text;
-                                oEmpleado.Estado = "1";
+                                oEmpleado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                                oEmpleado.Barrio = int.Parse(txtBarrio.Text);
+                                oEmpleado.Localidad = int.Parse(txtLocalidad.Text);
+                                oEmpleado.Estado = 1;
 
                                 if (oEmpleadoService.CrearUsuario(oEmpleado))
                                 {
