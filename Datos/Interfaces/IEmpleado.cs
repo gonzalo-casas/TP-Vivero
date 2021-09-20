@@ -17,6 +17,8 @@ namespace Vivero.Datos.Interfaces
         string GetUserSinParametros(string nombre, string contrasena);
         bool Create(Es_Empleado oEmpleado);
         bool Update(Es_Empleado oEmpleadoSeleccionado);
+        bool Delete(Es_Empleado oEmpleado);
         DataTable RecuperarPorId(int idEmpleado);
+
     }
 }

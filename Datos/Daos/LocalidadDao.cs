@@ -12,7 +12,7 @@ namespace Vivero.Datos.Daos
     {
         public DataTable traerTodo()
         {
-            string consulta = "SELECT * FROM TipoDoc ";
+            string consulta = "SELECT * FROM Localidad ";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }

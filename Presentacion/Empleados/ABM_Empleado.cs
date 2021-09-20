@@ -99,14 +99,19 @@ namespace Vivero.Presentacion.Empleados
 
                 case FormMode.delete:
                     {
-                        //MostrarDatos();
+                        actualizarCampos();
                         this.Text = "Habilitar/Deshabilitar Usuario";
-                        //txtNombre.Enabled = false;
-                        //txtEmail.Enabled = false;
-                        //txtEmail.Enabled = false;
-                        //txtPassword.Enabled = false;
-                        //cboPerfil.Enabled = false;
-                        //txtConfirmarPass.Enabled = false;
+                        txt_NombreEmpleado.Enabled = false;
+                        txt_ApellidoEmpleado.Enabled = false;
+                        txtContrasena.Enabled = false;
+                        txtRepetirContrasena.Enabled = false;
+                        cboTipoDoc.Enabled = false;
+                        txtNroDoc.Enabled = false;
+                        txtCalle.Enabled = false;
+                        txtNroCalle.Enabled = false;
+                        cboBarrio.Enabled = false;
+                        cboLocalidad.Enabled = false;
+                        txtTelefono.Enabled = false;
                         break;
                     }
             }
@@ -121,7 +126,7 @@ namespace Vivero.Presentacion.Empleados
             EmpleadoService oEmpleadoSeleccionado = new EmpleadoService();
             tabla = oEmpleadoSeleccionado.RecuperarPorId(idEmpleado);
             //txt.Text = tabla.Rows[0]["ID"].ToString();
-           
+       
             cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
             txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
             txt_NombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
@@ -132,6 +137,8 @@ namespace Vivero.Presentacion.Empleados
             cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
             cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
             txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+
+
             //txt_criticidad.Text = tabla.Rows[0]["Estado"].ToString();
 
 
@@ -251,15 +258,17 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
 
                             oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
-                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
+                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
                             oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
                             oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
                             oEmpleadoSeleccionado.Calle = txtCalle.Text;
                             oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
                             oEmpleadoSeleccionado.Barrio = new Es_Barrio();
-                            oEmpleadoSeleccionado.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oEmpleadoSeleccionado.Localidad = new Es_Localidad();
-                            oEmpleadoSeleccionado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
+                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
+
+                            
 
 
 
@@ -269,6 +278,42 @@ namespace Vivero.Presentacion.Empleados
                             {
                                 MessageBox.Show("Usuario actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
+                            }
+                            else
+                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        break;
+                    }
+
+                case FormMode.delete:
+                    {
+                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        {
+
+
+                            Es_Empleado oEmpleadoSeleccionado = new Es_Empleado();
+
+                            oEmpleadoSeleccionado.ID = idEmpleado;
+                            oEmpleadoSeleccionado.Nombre = txt_NombreEmpleado.Text;
+                            oEmpleadoSeleccionado.Apellido = txt_ApellidoEmpleado.Text;
+                            oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
+
+                            oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
+                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex + 1);
+                            oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
+                            oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
+                            oEmpleadoSeleccionado.Calle = txtCalle.Text;
+                            oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oEmpleadoSeleccionado.Barrio = new Es_Barrio();
+                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex + 1);
+                            oEmpleadoSeleccionado.Localidad = new Es_Localidad();
+                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
+
+                            if (oEmpleadoService.ModificarEstadoUsuario(oEmpleadoSeleccionado))
+                            {
+                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
                             }
                             else
                                 MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
