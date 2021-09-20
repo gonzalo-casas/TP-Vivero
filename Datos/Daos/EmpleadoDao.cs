@@ -32,6 +32,13 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
+        //public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp)
+        //{
+        //    string consulta = "SELECT * FROM Empleado WHERE ID LIKE '%" + ID_emp + "%' AND Nombre LIKE '%" + nom_emp + "%' AND Apellido LIKE '%" + ap_emp + "%'";
+
+        //    return BDHelper.obtenerInstancia().consultar(consulta);
+        //}
+
         public DataTable Todos_Los_Empleados()
         {
             string consulta = "SELECT * FROM Empleado WHERE Estado = 1 or Estado = 0";
@@ -39,7 +46,7 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public string GetUserSinParametros(string nombreUsuario,string Contrasena)
+        public string GetUserSinParametros(string nombreUsuario, string Contrasena)
         {
             //Construimos la consulta sql para buscar el usuario en la base de datos.
             string consulta = "SELECT * FROM Empleado WHERE nombre='" + nombreUsuario + "' AND contraseña='" + Contrasena + "'";
@@ -83,25 +90,12 @@ namespace Vivero.Datos.Daos
                             "'" + oEmpleado.Barrio.IdBarrio + "'" + "," +
                             "'" + oEmpleado.Localidad.IdLocalidad + "'" + "," +
                            oEmpleado.Contraseña  + " , 1)";
-           // "'" + oEmpleado.Estado + " )";
-                                 //oUsuario.Perfil.IdPerfil + ",0)";
-
+          
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
-            //return (DBHelper.GetDBHelper().EjecutarSQL(str_sql) == 1);
+            
         }
 
-        //oEmpleado.Nombre = txt_NombreEmpleado.Text;
-        //                        oEmpleado.Apellido = txt_ApellidoEmpleado.Text;
-        //                        oEmpleado.Contraseña = txtContrasena.Text;
-        //                        oEmpleado.TipoDoc = new Es_TipoDoc();
-        //oEmpleado.TipoDoc.IdTipoDoc = (int) cboTipoDoc.SelectedValue;
-        //oEmpleado.Nro_Doc = txtNroDoc.Text;
-        //                        oEmpleado.Calle = txtCalle.Text;
-        //                        oEmpleado.Nro_Calle = txtNroCalle.Text;
-        //                        oEmpleado.Barrio = txtBarrio.Text;
-        //                        oEmpleado.Localidad = txtLocalidad.Text;
-        //                        oEmpleado.Estado = "1";
-
+       
         public bool Update(Es_Empleado oEmpleadoSeleccionado)
         {
             string consulta = "UPDATE Empleado " +
@@ -134,11 +128,6 @@ namespace Vivero.Datos.Daos
               idEmpleado;
 
 
-
-
-
-
-            //BDHelper oDatos = new BDHelper();
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
@@ -157,8 +146,6 @@ namespace Vivero.Datos.Daos
                              " Contraseña=" + "'" + oEmpleadoSeleccionado.Contraseña + "'" + "," +
                              " Estado=" + "'" + 0 + "'" +
                              " WHERE ID=" + oEmpleadoSeleccionado.ID;
-
-            //TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
         }
