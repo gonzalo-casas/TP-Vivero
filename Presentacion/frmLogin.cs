@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Negocio;
+using Vivero.Negocio.Entidades;
 
 namespace Vivero.Presentacion
 {
     public partial class FrmLogin : Form
     {
         private Usuario miUsuario = new Usuario();
+        UsuarioService oUsuario = new UsuarioService();
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
 
         internal bool LoginOk = false;
@@ -50,7 +52,7 @@ namespace Vivero.Presentacion
             this.miUsuario.Id_usuario = int.Parse(this.txtUsuario.Text);
             this.miUsuario.Contrasena = this.txtContrasena.Text;
 
-            if (this.miUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena))
+            if (this.oUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena))
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoginOk = true;

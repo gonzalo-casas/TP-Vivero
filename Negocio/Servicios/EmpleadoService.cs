@@ -34,7 +34,14 @@ namespace Vivero.Negocio
         {
             return dao.Buscar_empleado(ID_emp, nom_emp, ap_emp);
         }
+        public ObtenerEmpleado(string usuario)
+        {
+            //SIN PARAMETROS
+            return dao.GetUserSinParametros(usuario);
 
+            //CON PARAMETROS
+            // return oUsuarioDao.GetUserConParametros(usuario);
+        }
         public DataTable Todos_Los_Empleados()
         {
             return dao.Todos_Los_Empleados();

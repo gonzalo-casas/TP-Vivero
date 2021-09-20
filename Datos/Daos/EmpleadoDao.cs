@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vivero.Datos.Interfaces;
+using Vivero.Negocio.EstructuraNegocio;
 
 namespace Vivero.Datos.Daos
 {
@@ -37,5 +38,52 @@ namespace Vivero.Datos.Daos
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+
+        public Es_Empleado GetUserSinParametros(string nombreUsuario)
+        {
+            //Construimos la consulta sql para buscar el usuario en la base de datos.
+            String consulta = string.Concat(" SELECT id_usuario, ",
+                                          "        usuario, ",
+                                          "        email, ",
+                                          "        estado, ",
+                                          "        password, ",
+                                          "        p.id_perfil, ",
+                                          "        p.nombre as perfil ",
+                                          "   FROM Usuarios u",
+                                          "  INNER JOIN Perfiles p ON u.id_perfil= p.id_perfil ",
+                                          "  WHERE u.borrado =0 ");
+
+            consulta += " AND usuario=" + "'" + nombreUsuario + "'";
+
+
+            //Usando el método GetDBHelper obtenemos la instancia unica de DBHelper (Patrón Singleton) y ejecutamos el método ConsultaSQL()
+            var resultado = BDHelper.obtenerInstancia().consultar(consulta);
+
+            // Validamos que el resultado tenga al menos una fila.
+            if (resultado.Rows.Count > 0)
+            {
+                return ObjectMapping(resultado.Rows[0]);
+            }
+
+            return null;
+        }
+
+        private Es_Empleado ObjectMapping(DataRow row)
+        {
+            Es_Empleado oEmpleado = new Es_Empleado
+            {
+                //ID = Convert.ToInt32(row["ID"].ToString()),
+                //TipoDoc = row["TipoDoc"].ToString(),
+                //NroDoc = row["NroDoc"].ToString(),
+                //Nombre = row["Nombre"].ToString(),
+                //Apellido = row["Apellido"].ToString(),
+                //Password = row.Table.Columns.Contains("password") ? row["password"].ToString() : null,
+
+                
+            };
+
+            return oEmpleado;
+        }
+
     }
 }
