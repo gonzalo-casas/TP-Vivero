@@ -25,10 +25,14 @@ namespace Vivero
             fl = new FrmLogin();
             fl.ShowDialog();
 
-            if (!fl.LoginOk)
+            if (string.IsNullOrEmpty(fl.MiUsuario.Nombre))
                 this.Close();
             else
-                this.Text += "- Usuario: " + fl.MiUsuario.Id_usuario;
+            {
+                this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
+                this.LblNombreUsuario.Text = fl.MiUsuario.Nombre;
+            }
+                
 
             fl.Dispose();
 
@@ -57,6 +61,16 @@ namespace Vivero
         private void btnProveedor_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

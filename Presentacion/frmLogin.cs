@@ -15,8 +15,6 @@ namespace Vivero.Presentacion
     {
         private Usuario miUsuario = new Usuario();
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
-
-        internal bool LoginOk = false;
         public FrmLogin()
         {
             InitializeComponent();
@@ -49,11 +47,11 @@ namespace Vivero.Presentacion
 
             this.miUsuario.Id_usuario = int.Parse(this.txtUsuario.Text);
             this.miUsuario.Contrasena = this.txtContrasena.Text;
+            this.miUsuario.Nombre = this.MiUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena);
 
-            if (this.miUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena))
+            if (!string.IsNullOrEmpty(miUsuario.Nombre))
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoginOk = true;
                 this.Close();
             }
             else

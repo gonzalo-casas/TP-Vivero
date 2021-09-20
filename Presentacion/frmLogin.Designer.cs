@@ -72,7 +72,7 @@ namespace Vivero.Presentacion
             this.btnSalir.Location = new System.Drawing.Point(194, 151);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(112, 36);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
@@ -83,7 +83,7 @@ namespace Vivero.Presentacion
             this.btnIngresar.Location = new System.Drawing.Point(22, 151);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(112, 36);
-            this.btnIngresar.TabIndex = 5;
+            this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
