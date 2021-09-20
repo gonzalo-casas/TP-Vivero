@@ -42,7 +42,11 @@ namespace Vivero
         {
             ABMC_Empleados fl;
             fl = new ABMC_Empleados();
-            fl.ShowDialog();
+            fl.MdiParent = this;
+            fl.Show();
+            fl.Dock = DockStyle.Fill;
+            fl.WindowState = FormWindowState.Minimized;
+            fl.WindowState = FormWindowState.Maximized;
         }
 
         private void btnCatalogos_Click(object sender, EventArgs e)
@@ -62,12 +66,6 @@ namespace Vivero
         {
 
         }
-
-        private void panel4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
