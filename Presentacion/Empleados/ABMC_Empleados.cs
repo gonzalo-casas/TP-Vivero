@@ -33,9 +33,11 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_EditarEmpleado_Click(object sender, EventArgs e)
         {
-            ABM_Empleado formulario = new ABM_Empleado();
-            var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
-            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update, empleado);
+            
+            var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
+            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+            //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
+            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update);
             formulario.ShowDialog();
             btn_ConsultarEmpleado_Click(sender, e);
         }

@@ -16,11 +16,15 @@ namespace Vivero.Presentacion.Empleados
 {
     public partial class ABM_Empleado : Form
     {
-
+        
         public ABM_Empleado(int idEmpleado)
         {
             InitializeComponent();
             this.idEmpleado = idEmpleado;
+            oTipoDocService = new TipoDocService();
+            oEmpleadoService = new EmpleadoService();
+            oBarrioService = new BarrioService();
+            olocalidadService = new LocalidadService();
         }
 
         //declaro los objetos
@@ -32,7 +36,8 @@ namespace Vivero.Presentacion.Empleados
         private Es_Empleado oEmpleadoSeleccionado;
         private int idEmpleado;
 
-
+        // para hace la modificacion  necesito un idEmpleado
+        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public ABM_Empleado()
         {
             InitializeComponent();
@@ -58,7 +63,10 @@ namespace Vivero.Presentacion.Empleados
             LlenarCombo(cboBarrio, oBarrioService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboLocalidad, olocalidadService.traerTodo(), "Nombre", "ID");
 
-            //switch
+
+            
+
+            //switch para actualizar titulo y habilitar  txt y cbo
 
             switch (formMode)
             {
@@ -72,7 +80,8 @@ namespace Vivero.Presentacion.Empleados
                     {
                         this.Text = "Actualizar Usuario";
                         // Recuperar usuario seleccionado en la grilla 
-                        MostrarDatos();
+                        //MostrarDatos();
+                        actualizarCampos();
                         txt_NombreEmpleado.Enabled = true;
                         txt_ApellidoEmpleado.Enabled = true;
                         txtContrasena.Enabled = true;
@@ -105,6 +114,33 @@ namespace Vivero.Presentacion.Empleados
             
         }
 
+
+        private void actualizarCampos()
+        {
+            DataTable tabla = new DataTable();
+            EmpleadoService oEmpleadoSeleccionado = new EmpleadoService();
+            tabla = oEmpleadoSeleccionado.RecuperarPorId(idEmpleado);
+            //txt.Text = tabla.Rows[0]["ID"].ToString();
+           
+            cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
+            txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
+            txt_NombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
+            txt_ApellidoEmpleado.Text = tabla.Rows[0]["Apellido"].ToString();
+            txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
+            txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
+            txtNroCalle.Text = tabla.Rows[0]["Nro_Calle"].ToString();
+            cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
+            cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
+            txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+            //txt_criticidad.Text = tabla.Rows[0]["Estado"].ToString();
+
+
+
+            tabla.Clear();
+            
+
+        }
+
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
             cbo.DataSource = source;
@@ -133,30 +169,30 @@ namespace Vivero.Presentacion.Empleados
             return true;
         }
 
-        public void SeleccionarEmpleado(FormMode op, Es_Empleado empleadoSeleccionado)
+        public void SeleccionarEmpleado(FormMode op)
         {
             formMode = op;
-            oEmpleadoSeleccionado = empleadoSeleccionado;
+           
         }
 
-        private void MostrarDatos()
-        {
-            if (oEmpleadoSeleccionado != null)
-            {
+        //private void MostrarDatos()
+        //{
+        //    if (oEmpleadoSeleccionado != null)
+        //    {
                 
-                txt_NombreEmpleado.Text = oEmpleadoSeleccionado.Nombre;
-                txt_ApellidoEmpleado.Text = oEmpleadoSeleccionado.Apellido;
-                txtContrasena.Text = oEmpleadoSeleccionado.Contraseña;
-                txtRepetirContrasena.Text = txtContrasena.Text;
-                cboTipoDoc.Text = oEmpleadoSeleccionado.TipoDoc.Descripcion;
-                txtNroDoc.Text = oEmpleadoSeleccionado.Nro_Doc;
-                txtCalle.Text = oEmpleadoSeleccionado.Calle;
-                txtNroCalle.Text = oEmpleadoSeleccionado.Nro_Calle.ToString();
-                cboBarrio.Text = oEmpleadoSeleccionado.Barrio.Nombre;
-                cboLocalidad.Text = oEmpleadoSeleccionado.Localidad.Nombre;
-                txtTelefono.Text = oEmpleadoSeleccionado.Telefono;
-            }
-        }
+        //        txt_NombreEmpleado.Text = oEmpleadoSeleccionado.Nombre;
+        //        txt_ApellidoEmpleado.Text = oEmpleadoSeleccionado.Apellido;
+        //        txtContrasena.Text = oEmpleadoSeleccionado.Contraseña;
+        //        txtRepetirContrasena.Text = txtContrasena.Text;
+        //        cboTipoDoc.Text = oEmpleadoSeleccionado.TipoDoc.Descripcion;
+        //        txtNroDoc.Text = oEmpleadoSeleccionado.Nro_Doc;
+        //        txtCalle.Text = oEmpleadoSeleccionado.Calle;
+        //        txtNroCalle.Text = oEmpleadoSeleccionado.Nro_Calle.ToString();
+        //        cboBarrio.Text = oEmpleadoSeleccionado.Barrio.Nombre;
+        //        cboLocalidad.Text = oEmpleadoSeleccionado.Localidad.Nombre;
+        //        txtTelefono.Text = oEmpleadoSeleccionado.Telefono;
+        //    }
+        //}
 
 
         
@@ -182,7 +218,9 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.Telefono = txtTelefono.Text;
                                 oEmpleado.Calle = txtCalle.Text;
                                 oEmpleado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                                oEmpleado.Barrio = new Es_Barrio();
                                 oEmpleado.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                                oEmpleado.Localidad = new Es_Localidad();
                                 oEmpleado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
                                 oEmpleado.Estado = 1;
 
@@ -204,8 +242,10 @@ namespace Vivero.Presentacion.Empleados
                         if (ValidarCampos())
                         {
                             //actualizo los datos del empleado seleccionado
-                            
 
+                            Es_Empleado oEmpleadoSeleccionado = new Es_Empleado();
+
+                            oEmpleadoSeleccionado.ID = idEmpleado;
                             oEmpleadoSeleccionado.Nombre = txt_NombreEmpleado.Text;
                             oEmpleadoSeleccionado.Apellido = txt_ApellidoEmpleado.Text;
                             oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
@@ -216,7 +256,9 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
                             oEmpleadoSeleccionado.Calle = txtCalle.Text;
                             oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oEmpleadoSeleccionado.Barrio = new Es_Barrio();
                             oEmpleadoSeleccionado.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                            oEmpleadoSeleccionado.Localidad = new Es_Localidad();
                             oEmpleadoSeleccionado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
 
 

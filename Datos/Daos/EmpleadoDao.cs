@@ -104,23 +104,42 @@ namespace Vivero.Datos.Daos
 
         public bool Update(Es_Empleado oEmpleadoSeleccionado)
         {
-            string consulta = "UPDATE Usuarios " +
+            string consulta = "UPDATE Empleado " +
                              "SET TipoDoc=" + "'" + oEmpleadoSeleccionado.TipoDoc.IdTipoDoc + "'" + "," +
                              " NroDoc=" + "'" + oEmpleadoSeleccionado.Contraseña + "'" + "," +
                              " Nombre=" + "'" + oEmpleadoSeleccionado.Nombre + "'" + "," +
                              " Apellido=" + "'" + oEmpleadoSeleccionado.Apellido + "'" + "," +
-                             " Telefono=" + oEmpleadoSeleccionado.Telefono + "'" + "'" + "," +
-                             " Calle=" + oEmpleadoSeleccionado.Calle + "'" + "'" + "," +
-                             " Nro_Calle=" + oEmpleadoSeleccionado.Nro_Calle + "'" + "'" + "," +
-                             " Barrio=" + oEmpleadoSeleccionado.Barrio + "'" + "'" + "," +
-                             " Localidad=" + oEmpleadoSeleccionado.Localidad + "'" + "'" + "," +
-                             " Contraseña=" + oEmpleadoSeleccionado.Contraseña + "'" + "'" + "," +
-                             " Estado=" + oEmpleadoSeleccionado.Estado + 
-                             " WHERE id_usuario=" + oEmpleadoSeleccionado.ID;
+                             " Telefono=" + "'" + oEmpleadoSeleccionado.Telefono + "'" + "," +
+                             " Calle=" + "'" + oEmpleadoSeleccionado.Calle + "'" +  "," +
+                             " Nro_Calle=" + "'" + oEmpleadoSeleccionado.Nro_Calle + "'" + "," +
+                             " Barrio=" + "'" + oEmpleadoSeleccionado.Barrio.IdBarrio + "'" +  "," +
+                             " Localidad=" + "'" + oEmpleadoSeleccionado.Localidad.IdLocalidad + "'" + "," +
+                             " Contraseña=" + "'" + oEmpleadoSeleccionado.Contraseña + "'" +  "," +
+                             " Estado=" + "'" + oEmpleadoSeleccionado.Estado +  "'" + 
+                             " WHERE ID=" +  oEmpleadoSeleccionado.ID ;
 
             //TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
+        }
+
+        public DataTable RecuperarPorId(int idEmpleado)
+        {
+            string consulta = "SELECT e.ID, t.Descripcion as TipoDoc, e.NroDoc, e.Nombre, e.Apellido, e.Telefono, e.Calle, e.Nro_Calle, b.Nombre as Barrio, l.Nombre as Localidad, e.Contraseña, e.Estado" +
+            " FROM Empleado e " +
+           "  JOIN TipoDoc t ON(t.ID = e.TipoDoc) " +
+            " JOIN Barrio b ON(b.ID = e.Barrio) " +
+           "  JOIN Localidad l ON(l.ID = e.Localidad) " +
+           "  WHERE e.ID =" +
+              idEmpleado;
+
+
+
+
+
+
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
     }

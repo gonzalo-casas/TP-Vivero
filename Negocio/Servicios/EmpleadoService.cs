@@ -39,8 +39,7 @@ namespace Vivero.Negocio
             //SIN PARAMETROS
             return dao.GetUserSinParametros(nombre, contrasena);
 
-            //CON PARAMETROS
-            // return oUsuarioDao.GetUserConParametros(usuario);
+            
         }
         public DataTable Todos_Los_Empleados()
         {
@@ -54,27 +53,17 @@ namespace Vivero.Negocio
 
 
 
-        //public DataTable Todos_Los_Empleados()
-        //{
-        //    string sql = "SELECT * FROM Empleado WHERE Estado = 1 or Estado = 2";
-        //    DBHelper oDatos = new DBHelper();
-        //    oDatos = _BD.Consulta(sql);
-        //    return oDatos;
-        //}
-        //public DataTable Buscar_empleado(string ID_emp, string nom_emp, string ap_emp)
-        //{
-        //    string sql = "SELECT * FROM Empleado WHERE ID LIKE '%" + ID_emp + "%' AND Nombre LIKE '%" + nom_emp + "%' AND Apellido LIKE '%" + ap_emp + "%'";
-        //    DBHelper oDatos = new DBHelper();
-        //    oDatos = _BD.Consulta(sql);
-        //    return oDatos;
-        //}
+  
 
         internal bool CrearUsuario(Es_Empleado oEmpleado)
         {
             return dao.Create(oEmpleado);
         }
 
-
+        public DataTable RecuperarPorId(int idEmpleado)
+        {
+            return dao.RecuperarPorId(idEmpleado);
+        }
 
     }
 }
