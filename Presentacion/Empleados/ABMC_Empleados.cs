@@ -91,6 +91,16 @@ namespace Vivero.Presentacion.Empleados
 
         }
 
+        private void btn_EliminarEmpleado_Click(object sender, EventArgs e)
+        {
+            var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
+            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+            //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
+            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.delete);
+            formulario.ShowDialog();
+            btn_ConsultarEmpleado_Click(sender, e);
+        }
+
         //private void InitializeDataGridView()
         //{
         //    // Cree un DataGridView no vinculado declarando un recuento de columnas.

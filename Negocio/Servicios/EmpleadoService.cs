@@ -65,5 +65,10 @@ namespace Vivero.Negocio
             return dao.RecuperarPorId(idEmpleado);
         }
 
+        public bool ModificarEstadoUsuario(Es_Empleado oEmpleado)
+        {
+            return dao.Delete(oEmpleado);
+        }
+
     }
 }
