@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Datos;
 using Vivero.Negocio;
+using Vivero.Negocio.EstructuraNegocio;
 
 namespace Vivero.Presentacion.Empleados
 {
@@ -20,20 +21,23 @@ namespace Vivero.Presentacion.Empleados
         public ABMC_Empleados()
         {
             InitializeComponent();
+            InitializeDataGridView();
         }
 
         private void btn_AgregarEmpleado_Click(object sender, EventArgs e)
         {
-            ALTA_Empleado fl;
-            fl = new ALTA_Empleado();
+            ABM_Empleado fl;
+            fl = new ABM_Empleado();
             fl.ShowDialog();
         }
 
         private void btn_EditarEmpleado_Click(object sender, EventArgs e)
         {
-            MODIFICACION_Empleado fl;
-            fl = new MODIFICACION_Empleado();
-            fl.ShowDialog();
+            ABM_Empleado formulario = new ABM_Empleado();
+            var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
+            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update, empleado);
+            formulario.ShowDialog();
+            btn_ConsultarEmpleado_Click(sender, e);
         }
 
         private void btn_SalirEmpleado_Click(object sender, EventArgs e)
@@ -84,5 +88,41 @@ namespace Vivero.Presentacion.Empleados
         {
 
         }
+
+        private void InitializeDataGridView()
+        {
+            // Cree un DataGridView no vinculado declarando un recuento de columnas.
+            dgv_Empleados.ColumnCount = 3;
+            dgv_Empleados.ColumnHeadersVisible = true;
+
+            // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
+            dgv_Empleados.AutoGenerateColumns = false;
+
+            // Cambia el estilo de la cabecera de la grilla.
+            DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
+
+            columnHeaderStyle.BackColor = Color.Beige;
+            columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
+            dgv_Empleados.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
+
+            // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
+            dgv_Empleados.Columns[0].Name = "Usuario";
+            dgv_Empleados.Columns[0].DataPropertyName = "NombreUsuario";
+            // Definimos el ancho de la columna.
+
+            dgv_Empleados.Columns[1].Name = "Email";
+            dgv_Empleados.Columns[1].DataPropertyName = "Email";
+
+            dgv_Empleados.Columns[2].Name = "Perfil";
+            dgv_Empleados.Columns[2].DataPropertyName = "Perfil";
+
+            // Cambia el tamaño de la altura de los encabezados de columna.
+            dgv_Empleados.AutoResizeColumnHeadersHeight();
+
+            // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
+            dgv_Empleados.AutoResizeRows(
+                DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+        }
+
     }
 }

@@ -47,7 +47,10 @@ namespace Vivero.Negocio
             return dao.Todos_Los_Empleados();
         }
 
-
+        internal bool ActualizarUsuario(Es_Empleado oEmpleadoSeleccionado)
+        {
+            return dao.Update(oEmpleadoSeleccionado);
+        }
 
 
 

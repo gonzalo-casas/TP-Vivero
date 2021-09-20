@@ -80,9 +80,9 @@ namespace Vivero.Datos.Daos
                             "'" + oEmpleado.Telefono + "'" + "," +
                             "'" + oEmpleado.Calle + "'" + "," +
                             "'" + oEmpleado.Nro_Calle + "'" + "," +
-                            "'" + oEmpleado.Barrio + "'" + "," +
-                            "'" + oEmpleado.Localidad + "'" + "," +
-                           oEmpleado.Contraseña  + " , 0)";
+                            "'" + oEmpleado.Barrio.IdBarrio + "'" + "," +
+                            "'" + oEmpleado.Localidad.IdLocalidad + "'" + "," +
+                           oEmpleado.Contraseña  + " , 1)";
            // "'" + oEmpleado.Estado + " )";
                                  //oUsuario.Perfil.IdPerfil + ",0)";
 
@@ -101,5 +101,27 @@ namespace Vivero.Datos.Daos
         //                        oEmpleado.Barrio = txtBarrio.Text;
         //                        oEmpleado.Localidad = txtLocalidad.Text;
         //                        oEmpleado.Estado = "1";
+
+        public bool Update(Es_Empleado oEmpleadoSeleccionado)
+        {
+            string consulta = "UPDATE Usuarios " +
+                             "SET TipoDoc=" + "'" + oEmpleadoSeleccionado.TipoDoc.IdTipoDoc + "'" + "," +
+                             " NroDoc=" + "'" + oEmpleadoSeleccionado.Contraseña + "'" + "," +
+                             " Nombre=" + "'" + oEmpleadoSeleccionado.Nombre + "'" + "," +
+                             " Apellido=" + "'" + oEmpleadoSeleccionado.Apellido + "'" + "," +
+                             " Telefono=" + oEmpleadoSeleccionado.Telefono + "'" + "'" + "," +
+                             " Calle=" + oEmpleadoSeleccionado.Calle + "'" + "'" + "," +
+                             " Nro_Calle=" + oEmpleadoSeleccionado.Nro_Calle + "'" + "'" + "," +
+                             " Barrio=" + oEmpleadoSeleccionado.Barrio + "'" + "'" + "," +
+                             " Localidad=" + oEmpleadoSeleccionado.Localidad + "'" + "'" + "," +
+                             " Contraseña=" + oEmpleadoSeleccionado.Contraseña + "'" + "'" + "," +
+                             " Estado=" + oEmpleadoSeleccionado.Estado + 
+                             " WHERE id_usuario=" + oEmpleadoSeleccionado.ID;
+
+            //TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado
+
+            return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
+        }
+
     }
 }

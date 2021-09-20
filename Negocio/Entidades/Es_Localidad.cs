@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Vivero.Negocio.Entidades
 {
-    public class Es_TipoDoc
+    public class Es_Localidad
     {
-        public int IdTipoDoc { get; set; }
-        public string Descripcion { get; set; }
+        public int IdLocalidad { get; set; }
+        public string Nombre { get; set; }
     }
 }
