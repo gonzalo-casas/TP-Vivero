@@ -16,5 +16,15 @@ namespace Vivero.Presentacion.Empleados
         {
             InitializeComponent();
         }
+
+        private void MODIFICACION_Empleado_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //hdpppppp
+        }
     }
 }
