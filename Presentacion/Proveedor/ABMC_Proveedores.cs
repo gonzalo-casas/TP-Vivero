@@ -51,6 +51,29 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_ConsultarEmpleado_Click(object sender, EventArgs e)
         {
+            var estado = "('0')";
+            if (chk_Activos.Checked == true)
+            {
+                estado = "('1')";
+            }
+            if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
+            {
+                estado = "('1','2')";
+            }
+
+            if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
+            {
+                Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text));
+                return;
+            }
+
+
+            if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
+            {
+                Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
+                return;
+            }
+
             if (chk_Activos.Checked == true)
             {
                 Cargar_Grilla(oProveedor.Proveedores_Activos());
@@ -61,15 +84,40 @@ namespace Vivero.Presentacion.Empleados
                 Cargar_Grilla(oProveedor.Proveedores_Inactivos());
                 return;
             }
-            if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
-            {
-                Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text));
-            }
+
+
+
             if (txt_IdProveedor.Text == "" || txt_Rs_Proveedor.Text == "" || txt_NombreProveedor.Text == "")
             {
                 Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
             }
         }
+
+
+
+
+
+
+        //{
+        //    if (chk_Activos.Checked == true)
+        //    {
+        //        Cargar_Grilla(oProveedor.Proveedores_Activos());
+        //        return;
+        //    }
+        //    if (chk_Inactivos.Checked == true)
+        //    {
+        //        Cargar_Grilla(oProveedor.Proveedores_Inactivos());
+        //        return;
+        //    }
+        //    if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
+        //    {
+        //        Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text));
+        //    }
+        //    if (txt_IdProveedor.Text == "" || txt_Rs_Proveedor.Text == "" || txt_NombreProveedor.Text == "")
+        //    {
+        //        Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
+        //    }
+        //}
 
         private void Cargar_Grilla(DataTable tabla)
         {
