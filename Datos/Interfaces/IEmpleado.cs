@@ -12,9 +12,7 @@ namespace Vivero.Datos.Interfaces
     {
         DataTable Empleados_Activos();
         DataTable Empleados_Inactivos();
-        DataTable Buscar_empleado(string ID_emp, string nom_emp, string ap_emp);
         DataTable Todos_Los_Empleados();
-        string GetUserSinParametros(string nombre, string contrasena);
         bool Create(Es_Empleado oEmpleado);
         bool Update(Es_Empleado oEmpleadoSeleccionado);
         bool Delete(Es_Empleado oEmpleado);
