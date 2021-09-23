@@ -33,13 +33,10 @@ namespace Vivero.Negocio.Servicios
         {
             return dao.Buscar_proveedor(ID_emp, nom_emp, ap_emp);
         }
-        //public string ObtenerProveedor(string nombre, string contrasena)
-        //{
-        //    //SIN PARAMETROS
-        //    return dao.GetUserSinParametros(nombre, contrasena);
-
-
-        //}
+        public string ObtenerProveedor(string idProveedor)
+        {
+            return dao.GetProveedor(idProveedor);
+        }
         public DataTable Todos_Los_Proveedores()
         {
             return dao.Todos_Los_Proveedores();

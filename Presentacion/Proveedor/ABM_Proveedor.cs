@@ -20,9 +20,9 @@ namespace Vivero.Presentacion.Proveedor
         public ABM_Proveedor(int idProveedor)
         {
             InitializeComponent();
-            this. = idProveedor;
+            this.idProveedor = idProveedor;
             //oTipoDocService = new TipoDocService();
-            //oEmpleadoService = new EmpleadoService();
+            oProveedorService = new ProveedorService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
 
@@ -30,20 +30,20 @@ namespace Vivero.Presentacion.Proveedor
 
         //declaro los objetos
         private FormMode formMode = FormMode.insert;
-        private readonly TipoDocService oTipoDocService;
-        private readonly EmpleadoService oEmpleadoService;
+        //private readonly TipoDocService oTipoDocService;
+        private readonly ProveedorService oProveedorService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-        private Es_Empleado oEmpleadoSeleccionado;
-        private int idEmpleado;
+        private Es_Proveedor oProveedorSeleccionado;
+        private int idProveedor;
 
         // para hace la modificacion  necesito un idEmpleado
-        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
+        public int IdProveedor { get => idProveedor; set => idProveedor = value; }
         public ABM_Proveedor()
         {
-           // InitializeComponent();
-             oTipoDocService = new TipoDocService();
-            oEmpleadoService = new EmpleadoService();
+            InitializeComponent();
+            // oTipoDocService = new TipoDocService();
+            oProveedorService = new ProveedorService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
 
@@ -58,9 +58,9 @@ namespace Vivero.Presentacion.Proveedor
 
 
 
-        private void ALTA_Empleado_Load(object sender, EventArgs e)
+        private void ALTA_Proveedor_Load(object sender, EventArgs e)
         {    // lleno los combos
-            LlenarCombo(cboTipoDoc, oTipoDocService.traerTodo(), "Descripcion", "ID");
+           // LlenarCombo(cboTipoDoc, oTipoDocService.traerTodo(), "Descripcion", "ID");
             LlenarCombo(cboBarrio, oBarrioService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboLocalidad, olocalidadService.traerTodo(), "Nombre", "ID");
 
@@ -73,22 +73,22 @@ namespace Vivero.Presentacion.Proveedor
             {
                 case FormMode.insert:
                     {
-                        this.Text = "Nuevo Usuario";
+                        this.Text = "Nuevo Proveedor";
                         break;
                     }
 
                 case FormMode.update:
                     {
-                        this.Text = "Actualizar Usuario";
+                        this.Text = "Actualizar Proveedor";
                         // Recuperar usuario seleccionado en la grilla 
                         //MostrarDatos();
                         actualizarCampos();
                         txtNombreProveedor.Enabled = true;
                         txtRSProv.Enabled = true;
-                        txtContrasena.Enabled = true;
-                        txtRepetirContrasena.Enabled = true;
-                        cboTipoDoc.Enabled = true;
-                        txtNroDoc.Enabled = true;
+                       // txtContrasena.Enabled = true;
+                        //txtRepetirContrasena.Enabled = true;
+                       // cboTipoDoc.Enabled = true;
+                      //  txtNroDoc.Enabled = true;
                         txtCalle.Enabled = true;
                         txtNroCalle.Enabled = true;
                         cboBarrio.Enabled = true;
@@ -104,10 +104,10 @@ namespace Vivero.Presentacion.Proveedor
                         this.Text = "Habilitar/Deshabilitar Usuario";
                         txtNombreProveedor.Enabled = false;
                         txtRSProv.Enabled = false;
-                        txtContrasena.Enabled = false;
-                        txtRepetirContrasena.Enabled = false;
-                        cboTipoDoc.Enabled = false;
-                        txtNroDoc.Enabled = false;
+                       // txtContrasena.Enabled = false;
+                       // txtRepetirContrasena.Enabled = false;
+                        //cboTipoDoc.Enabled = false;
+                       // txtNroDoc.Enabled = false;
                         txtCalle.Enabled = false;
                         txtNroCalle.Enabled = false;
                         cboBarrio.Enabled = false;
@@ -124,20 +124,20 @@ namespace Vivero.Presentacion.Proveedor
         private void actualizarCampos()
         {
             DataTable tabla = new DataTable();
-            EmpleadoService oEmpleadoSeleccionado = new EmpleadoService();
-            tabla = oEmpleadoSeleccionado.RecuperarPorId(idEmpleado);
+            ProveedorService oProveedorSeleccionado = new ProveedorService();
+            tabla = oProveedorSeleccionado.RecuperarPorId(idProveedor);
             //txt.Text = tabla.Rows[0]["ID"].ToString();
        
-            cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
-            txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
+            //cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
+           // txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
             txtNombreProveedor.Text = tabla.Rows[0]["Nombre"].ToString();
-            txtRSProv.Text = tabla.Rows[0]["Apellido"].ToString();
+            txtRSProv.Text = tabla.Rows[0]["Razon_Social"].ToString();
             txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
             txtCalle.Text = tabla.Rows[0]["Calle"].ToString();
             txtNroCalle.Text = tabla.Rows[0]["Nro_Calle"].ToString();
             cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
             cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
-            txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+           // txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
 
 
             //txt_criticidad.Text = tabla.Rows[0]["Estado"].ToString();
@@ -157,9 +157,9 @@ namespace Vivero.Presentacion.Proveedor
             cbo.SelectedIndex = -1;
         }
 
-        private bool ExisteUsuario()
+        private bool ExisteProveedor()
         {
-            return (oEmpleadoService.ObtenerEmpleado(txtNombreProveedor.Text, txtContrasena.Text) != string.Empty);
+            return (oProveedorService.ObtenerProveedor(idProveedor.ToString()) != string.Empty);
         }
 
         private bool ValidarCampos()
@@ -177,7 +177,7 @@ namespace Vivero.Presentacion.Proveedor
             return true;
         }
 
-        public void SeleccionarEmpleado(FormMode op)
+        public void SeleccionarProveedor(FormMode op)
         {
             formMode = op;
            
@@ -212,36 +212,36 @@ namespace Vivero.Presentacion.Proveedor
             {
                 case FormMode.insert:
                     {
-                        if (ExisteUsuario() == false)
+                        if (!ExisteProveedor())
                         {
                             if (ValidarCampos())
                             {
-                                var oEmpleado = new Es_Empleado();
-                                oEmpleado.Nombre = txtNombreProveedor.Text;
-                                oEmpleado.Apellido = txtRSProv.Text;
-                                oEmpleado.Contraseña = txtContrasena.Text;
-                                oEmpleado.TipoDoc = new Es_TipoDoc();
-                                oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
-                                oEmpleado.Nro_Doc = txtNroDoc.Text;
-                                oEmpleado.Telefono = txtTelefono.Text;
-                                oEmpleado.Calle = txtCalle.Text;
-                                oEmpleado.Nro_Calle = int.Parse(txtNroCalle.Text);
-                                oEmpleado.Barrio = new Es_Barrio();
-                                oEmpleado.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
-                                oEmpleado.Localidad = new Es_Localidad();
-                                oEmpleado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
-                                oEmpleado.Estado = 1;
+                                var oProveedor = new Es_Proveedor();
+                                oProveedor.Nombre = txtNombreProveedor.Text;
+                                oProveedor.Razon_Social = txtRSProv.Text;
+                                //oEmpleado.Contraseña = txtContrasena.Text;
+                                //oProveedor.TipoDoc = new Es_TipoDoc();
+                                // oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
+                                //oEmpleado.Nro_Doc = txtNroDoc.Text;
+                                oProveedor.Calle = txtCalle.Text;
+                                oProveedor.Telefono = txtTelefono.Text;
+                                oProveedor.Nro_Calle = int.Parse(txtNroCalle.Text);
+                                oProveedor.Barrio = new Es_Barrio();
+                                oProveedor.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
+                                oProveedor.Localidad = new Es_Localidad();
+                                oProveedor.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
+                                oProveedor.Estado = 1;
 
-                                if (oEmpleadoService.CrearUsuario(oEmpleado))
+                                if (oProveedorService.CrearProveedor(oProveedor))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Proveedor insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else { MessageBox.Show("Error"); }
                             }
                         }
                         else
-                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Proveedor encontrado!. Ingrese un proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     }
 
@@ -251,23 +251,23 @@ namespace Vivero.Presentacion.Proveedor
                         {
                             //actualizo los datos del empleado seleccionado
 
-                            Es_Empleado oEmpleadoSeleccionado = new Es_Empleado();
+                            Es_Proveedor oProveedorSeleccionado = new Es_Proveedor();
 
-                            oEmpleadoSeleccionado.ID = idEmpleado;
-                            oEmpleadoSeleccionado.Nombre = txtNombreProveedor.Text;
-                            oEmpleadoSeleccionado.Apellido = txtRSProv.Text;
-                            oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
+                            oProveedorSeleccionado.ID = idProveedor;
+                            oProveedorSeleccionado.Nombre = txtNombreProveedor.Text;
+                            oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
+                            //oProveedorSeleccionado.Contraseña = txtContrasena.Text;
 
-                            oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
-                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
-                            oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
-                            oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
-                            oEmpleadoSeleccionado.Calle = txtCalle.Text;
-                            oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
-                            oEmpleadoSeleccionado.Barrio = new Es_Barrio();
-                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
-                            oEmpleadoSeleccionado.Localidad = new Es_Localidad();
-                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
+                            //oProveedorSeleccionado.TipoDoc = new Es_TipoDoc();
+                           // oProveedorSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
+                            //oProveedorSeleccionado.Nro_Doc = txtNroDoc.Text;
+                            oProveedorSeleccionado.Telefono = txtTelefono.Text;
+                            oProveedorSeleccionado.Calle = txtCalle.Text;
+                            oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oProveedorSeleccionado.Barrio = new Es_Barrio();
+                            oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
+                            oProveedorSeleccionado.Localidad = new Es_Localidad();
+                            oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
 
                             
 
@@ -275,13 +275,13 @@ namespace Vivero.Presentacion.Proveedor
 
                           
 
-                            if (oEmpleadoService.ActualizarUsuario(oEmpleadoSeleccionado))
+                            if (oProveedorService.ActualizarUsuario(oProveedorSeleccionado))
                             {
-                                MessageBox.Show("Usuario actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Proveedor actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el Proveedor!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;
@@ -289,35 +289,35 @@ namespace Vivero.Presentacion.Proveedor
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el proveedor seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
 
-                            Es_Empleado oEmpleadoSeleccionado = new Es_Empleado();
+                            Es_Proveedor oProveedorSeleccionado = new Es_Proveedor();
 
-                            oEmpleadoSeleccionado.ID = idEmpleado;
-                            oEmpleadoSeleccionado.Nombre = txtNombreProveedor.Text;
-                            oEmpleadoSeleccionado.Apellido = txtRSProv.Text;
-                            oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
+                            oProveedorSeleccionado.ID = idProveedor;
+                            oProveedorSeleccionado.Nombre = txtNombreProveedor.Text;
+                            oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
+                            //oProveedorSeleccionado.Contraseña = txtContrasena.Text;
 
-                            oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
-                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex + 1);
-                            oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
-                            oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
-                            oEmpleadoSeleccionado.Calle = txtCalle.Text;
-                            oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
-                            oEmpleadoSeleccionado.Barrio = new Es_Barrio();
-                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex + 1);
-                            oEmpleadoSeleccionado.Localidad = new Es_Localidad();
-                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
+                            //oProveedorSeleccionado.TipoDoc = new Es_TipoDoc();
+                            //oProveedorSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex + 1);
+                            //oProveedorSeleccionado.Nro_Doc = txtNroDoc.Text;
+                            oProveedorSeleccionado.Telefono = txtTelefono.Text;
+                            oProveedorSeleccionado.Calle = txtCalle.Text;
+                            oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oProveedorSeleccionado.Barrio = new Es_Barrio();
+                            oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex + 1);
+                            oProveedorSeleccionado.Localidad = new Es_Localidad();
+                            oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
 
-                            if (oEmpleadoService.ModificarEstadoUsuario(oEmpleadoSeleccionado))
+                            if (oProveedorService.ModificarEstadoProveedor(oProveedorSeleccionado))
                             {
-                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Proveedor Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el proveedor!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                         break;

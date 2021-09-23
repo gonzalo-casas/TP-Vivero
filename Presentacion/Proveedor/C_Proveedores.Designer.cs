@@ -103,7 +103,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_AgregarProveedor.TabIndex = 0;
             this.btn_AgregarProveedor.Text = "Agregar";
             this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
-            this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarEmpleado_Click);
+            this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
             // 
             // btn_EditarProveedor
             // 
@@ -117,7 +117,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_EditarProveedor.TabIndex = 1;
             this.btn_EditarProveedor.Text = "Editar";
             this.btn_EditarProveedor.UseVisualStyleBackColor = false;
-            this.btn_EditarProveedor.Click += new System.EventHandler(this.btn_EditarEmpleado_Click);
+            this.btn_EditarProveedor.Click += new System.EventHandler(this.btn_EditarProveedor_Click);
             // 
             // btn_EliminarProveedor
             // 
@@ -131,7 +131,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_EliminarProveedor.TabIndex = 2;
             this.btn_EliminarProveedor.Text = "Eliminar";
             this.btn_EliminarProveedor.UseVisualStyleBackColor = false;
-            this.btn_EliminarProveedor.Click += new System.EventHandler(this.btn_EliminarEmpleado_Click);
+            this.btn_EliminarProveedor.Click += new System.EventHandler(this.btn_EliminarProveedor_Click);
             // 
             // btn_SalirProveedor
             // 
@@ -145,7 +145,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_SalirProveedor.TabIndex = 3;
             this.btn_SalirProveedor.Text = "Cerrar";
             this.btn_SalirProveedor.UseVisualStyleBackColor = false;
-            this.btn_SalirProveedor.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
+            this.btn_SalirProveedor.Click += new System.EventHandler(this.btn_SalirProveedor_Click);
             // 
             // txt_IdProveedor
             // 
@@ -182,7 +182,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_ConsultarProveedor.TabIndex = 7;
             this.btn_ConsultarProveedor.Text = "Consultar";
             this.btn_ConsultarProveedor.UseVisualStyleBackColor = false;
-            this.btn_ConsultarProveedor.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
+            this.btn_ConsultarProveedor.Click += new System.EventHandler(this.btn_ConsultarProveedor_Click);
             // 
             // label1
             // 

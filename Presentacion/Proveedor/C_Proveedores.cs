@@ -26,14 +26,14 @@ namespace Vivero.Presentacion.Empleados
             //InitializeDataGridView();
         }
 
-        private void btn_AgregarEmpleado_Click(object sender, EventArgs e)
+        private void btn_AgregarProveedor_Click(object sender, EventArgs e)
         {
-            ABM_Empleado fl;
-            fl = new ABM_Empleado();
+            ABM_Proveedor fl;
+            fl = new ABM_Proveedor();
             fl.ShowDialog();
         }
 
-        private void btn_EditarEmpleado_Click(object sender, EventArgs e)
+        private void btn_EditarProveedor_Click(object sender, EventArgs e)
         {
             
             var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
@@ -41,16 +41,16 @@ namespace Vivero.Presentacion.Empleados
             //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
             formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
             formulario.ShowDialog();
-            btn_ConsultarEmpleado_Click(sender, e);
+            btn_ConsultarProveedor_Click(sender, e);
         }
 
-        private void btn_SalirEmpleado_Click(object sender, EventArgs e)
+        private void btn_SalirProveedor_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
-        private void btn_ConsultarEmpleado_Click(object sender, EventArgs e)
+        private void btn_ConsultarProveedor_Click(object sender, EventArgs e)
         {
             var estado = "('0')";
             if (chk_Activos.Checked == true)
@@ -141,14 +141,14 @@ namespace Vivero.Presentacion.Empleados
 
         }
 
-        private void btn_EliminarEmpleado_Click(object sender, EventArgs e)
+        private void btn_EliminarProveedor_Click(object sender, EventArgs e)
         {
             var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
-            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+            ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
             //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
-            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.delete);
+            formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.delete);
             formulario.ShowDialog();
-            btn_ConsultarEmpleado_Click(sender, e);
+            btn_ConsultarProveedor_Click(sender, e);
         }
 
         //private void InitializeDataGridView()

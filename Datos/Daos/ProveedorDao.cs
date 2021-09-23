@@ -38,19 +38,19 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        //public string GetUserSinParametros(string nombreUsuario, string Contrasena)
-        //{
-        //    //Construimos la consulta sql para buscar el usuario en la base de datos.
-        //    string consulta = "SELECT * FROM Empleado WHERE nombre='" + nombreUsuario + "' AND contraseña='" + Contrasena + "'";
+        public string GetProveedor(string idProveedor)
+        {
+            //Construimos la consulta sql para buscar el usuario en la base de datos.
+            string consulta = "SELECT * FROM Proveedor WHERE ID='" + idProveedor + "'";
 
 
 
-        //    DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
-        //    if (tabla.Rows.Count > 0)
-        //        return (string)tabla.Rows[0][1];
-        //    else
-        //        return string.Empty;
-        //}
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
+            if (tabla.Rows.Count > 0)
+                return (string)tabla.Rows[0][1];
+            else
+                return string.Empty;
+        }
 
         public bool Create(Es_Proveedor oProveedor)
         {

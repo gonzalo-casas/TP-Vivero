@@ -228,7 +228,7 @@ namespace Vivero.Presentacion.Proveedor
             this.Name = "ABM_Proveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro Proveedor";
-            this.Load += new System.EventHandler(this.ALTA_Empleado_Load);
+            this.Load += new System.EventHandler(this.ALTA_Proveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
