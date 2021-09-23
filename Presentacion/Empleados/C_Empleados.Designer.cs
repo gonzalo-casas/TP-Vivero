@@ -79,6 +79,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -150,7 +151,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_IdEmpleado
             // 
             this.txt_IdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdEmpleado.Location = new System.Drawing.Point(249, 21);
+            this.txt_IdEmpleado.Location = new System.Drawing.Point(192, 50);
             this.txt_IdEmpleado.Name = "txt_IdEmpleado";
             this.txt_IdEmpleado.Size = new System.Drawing.Size(100, 26);
             this.txt_IdEmpleado.TabIndex = 4;
@@ -158,7 +159,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_NombreEmpleado
             // 
             this.txt_NombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreEmpleado.Location = new System.Drawing.Point(249, 54);
+            this.txt_NombreEmpleado.Location = new System.Drawing.Point(192, 83);
             this.txt_NombreEmpleado.Name = "txt_NombreEmpleado";
             this.txt_NombreEmpleado.Size = new System.Drawing.Size(100, 26);
             this.txt_NombreEmpleado.TabIndex = 5;
@@ -166,7 +167,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_ApellidoEmpleado
             // 
             this.txt_ApellidoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ApellidoEmpleado.Location = new System.Drawing.Point(249, 87);
+            this.txt_ApellidoEmpleado.Location = new System.Drawing.Point(192, 116);
             this.txt_ApellidoEmpleado.Name = "txt_ApellidoEmpleado";
             this.txt_ApellidoEmpleado.Size = new System.Drawing.Size(100, 26);
             this.txt_ApellidoEmpleado.TabIndex = 6;
@@ -176,7 +177,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_ConsultarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.btn_ConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(428, 67);
+            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(371, 96);
             this.btn_ConsultarEmpleado.Name = "btn_ConsultarEmpleado";
             this.btn_ConsultarEmpleado.Size = new System.Drawing.Size(129, 40);
             this.btn_ConsultarEmpleado.TabIndex = 7;
@@ -188,7 +189,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 24);
+            this.label1.Location = new System.Drawing.Point(96, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 8;
@@ -198,7 +199,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 57);
+            this.label2.Location = new System.Drawing.Point(117, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 9;
@@ -208,7 +209,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(174, 87);
+            this.label3.Location = new System.Drawing.Point(117, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 10;
@@ -252,7 +253,7 @@ namespace Vivero.Presentacion.Empleados
             this.dgv_Empleados.RowHeadersWidth = 51;
             this.dgv_Empleados.RowTemplate.Height = 40;
             this.dgv_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Empleados.Size = new System.Drawing.Size(807, 288);
+            this.dgv_Empleados.Size = new System.Drawing.Size(807, 242);
             this.dgv_Empleados.TabIndex = 11;
             // 
             // colID
@@ -303,7 +304,7 @@ namespace Vivero.Presentacion.Empleados
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(407, 24);
+            this.chk_Activos.Location = new System.Drawing.Point(350, 53);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 12;
@@ -314,7 +315,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(500, 24);
+            this.chk_Inactivos.Location = new System.Drawing.Point(443, 53);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 13;
@@ -377,6 +378,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_IdEmpleado);
             this.panel3.Controls.Add(this.txt_NombreEmpleado);
@@ -389,7 +391,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 176);
+            this.panel3.Size = new System.Drawing.Size(1007, 222);
             this.panel3.TabIndex = 16;
             // 
             // panel2
@@ -399,9 +401,9 @@ namespace Vivero.Presentacion.Empleados
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 176);
+            this.panel2.Location = new System.Drawing.Point(0, 222);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 388);
+            this.panel2.Size = new System.Drawing.Size(1007, 342);
             this.panel2.TabIndex = 17;
             // 
             // panel10
@@ -409,14 +411,14 @@ namespace Vivero.Presentacion.Empleados
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(907, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 288);
+            this.panel10.Size = new System.Drawing.Size(100, 242);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 288);
+            this.panel11.Location = new System.Drawing.Point(100, 242);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(907, 100);
             this.panel11.TabIndex = 14;
@@ -572,8 +574,16 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 388);
+            this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
+            // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(1007, 50);
+            this.panel24.TabIndex = 14;
             // 
             // C_Empleados
             // 
@@ -658,5 +668,6 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel24;
     }
 }

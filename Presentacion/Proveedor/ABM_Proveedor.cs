@@ -21,7 +21,6 @@ namespace Vivero.Presentacion.Proveedor
         {
             InitializeComponent();
             this.idProveedor = idProveedor;
-            //oTipoDocService = new TipoDocService();
             oProveedorService = new ProveedorService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
@@ -33,7 +32,6 @@ namespace Vivero.Presentacion.Proveedor
         private readonly ProveedorService oProveedorService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-        //private Es_Proveedor oProveedorSeleccionado;
         private int idProveedor;
         private int EstadoActual; 
 

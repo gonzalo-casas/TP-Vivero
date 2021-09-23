@@ -33,11 +33,10 @@ namespace Vivero.Presentacion.Empleados
         private readonly EmpleadoService oEmpleadoService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-       // private Es_Empleado oEmpleadoSeleccionado;
         private int idEmpleado;
         private int EstadoActual; // para el update
 
-        // para hace la modificacion  necesito un idEmpleado
+        // para hace la modificacion  necesito un idProveedor
         public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public ABM_Empleado()
         {
