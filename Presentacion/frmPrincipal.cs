@@ -9,14 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Presentacion;
 using Vivero.Presentacion.Empleados;
+using Vivero.Presentacion.Proveedor;
 
 namespace Vivero
 {
     public partial class FrmPrincipal : Form
     {
+        private readonly C_Empleados FrmC_Empleados = new C_Empleados();
+        private readonly ABMC_Proveedores FrmC_Proveedores = new ABMC_Proveedores();
         public FrmPrincipal()
         {
             InitializeComponent();
+            FrmC_Empleados.MdiParent = this;
+            FrmC_Proveedores.MdiParent = this;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -47,15 +52,14 @@ namespace Vivero
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null && ActiveMdiChild.GetType() != C_Empleados)
-                ActiveMdiChild.Close();
-            C_Empleados fl;
-            fl = new C_Empleados();
-            fl.MdiParent = this;
-            fl.Show();
-            fl.Dock = DockStyle.Fill;
-            fl.WindowState = FormWindowState.Minimized;
-            fl.WindowState = FormWindowState.Maximized;
+            if (ActiveMdiChild!= FrmC_Empleados)
+            {
+                FrmC_Empleados.Show();
+                FrmC_Empleados.Dock = DockStyle.Fill;
+                FrmC_Empleados.WindowState = FormWindowState.Minimized;
+                FrmC_Empleados.WindowState = FormWindowState.Maximized;
+            }
+                
         }
 
         private void btnCatalogos_Click(object sender, EventArgs e)
@@ -73,15 +77,14 @@ namespace Vivero
 
         private void BtnProveedor_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
-            ABMC_Proveedores fl;
-            fl = new ABMC_Proveedores();
-            fl.MdiParent = this;
-            fl.Show();
-            fl.Dock = DockStyle.Fill;
-            fl.WindowState = FormWindowState.Minimized;
-            fl.WindowState = FormWindowState.Maximized;
+            if (ActiveMdiChild != FrmC_Proveedores)
+            {
+                FrmC_Proveedores.Show();
+                FrmC_Proveedores.Dock = DockStyle.Fill;
+                FrmC_Proveedores.WindowState = FormWindowState.Minimized;
+                FrmC_Proveedores.WindowState = FormWindowState.Maximized;
+            }
+                
         }
         private void BtnSalir_Click(object sender, EventArgs e)
         {
