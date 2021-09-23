@@ -75,10 +75,10 @@ namespace Vivero.Datos.Daos
                             "'" + oProveedor.Nombre + "'" + "," +
                             "'" + oProveedor.Calle + "'" + "," +
                             "'" + oProveedor.Nro_Calle + "'" + "," +
-                            "'" + oProveedor.Barrio + "'" + "," +
-                            "'" + oProveedor.Localidad + "'" + "," +
+                            "'" + oProveedor.Barrio.IdBarrio + "'" + "," +
+                            "'" + oProveedor.Localidad.IdLocalidad + "'" + "," +
                             "'" + oProveedor.Telefono + "'" + "," +
-                            oProveedor.Razon_Social + " , 1)";
+                            "'" + oProveedor.Razon_Social + "' , 1)";
            // "'" + oEmpleado.Estado + " )";
                                  //oUsuario.Perfil.IdPerfil + ",0)";
 
@@ -100,12 +100,12 @@ namespace Vivero.Datos.Daos
 
         public bool Update(Es_Proveedor oProveedorSeleccionado)
         {
-            string consulta = "UPDATE Empleado " +
+            string consulta = "UPDATE Proveedor " +
                              "SET Nombre=" + "'" + oProveedorSeleccionado.Nombre + "'" + "," +
                              " Calle=" + "'" + oProveedorSeleccionado.Calle + "'" + "," +
                              " Nro_Calle=" + "'" + oProveedorSeleccionado.Nro_Calle + "'" + "," +
-                             " Barrio=" + "'" + oProveedorSeleccionado.Barrio + "'" + "," +
-                             " Localidad=" + "'" + oProveedorSeleccionado.Localidad + "'" + "," +
+                             " Barrio=" + "'" + oProveedorSeleccionado.Barrio.IdBarrio + "'" + "," +
+                             " Localidad=" + "'" + oProveedorSeleccionado.Localidad.IdLocalidad + "'" + "," +
                              " Telefono=" + "'" + oProveedorSeleccionado.Telefono + "'" +  "," +
                              " Razon_Social=" + "'" + oProveedorSeleccionado.Razon_Social + "'" + "," +
                              " Estado=" + "'" + oProveedorSeleccionado.Estado +  "'" + 
@@ -122,7 +122,7 @@ namespace Vivero.Datos.Daos
             " FROM Proveedor p " +
             " JOIN Barrio b ON(b.ID = p.Barrio) " +
            "  JOIN Localidad l ON(l.ID = p.Localidad) " +
-           "  WHERE e.ID =" +
+           "  WHERE p.ID =" +
               idProveedor;
 
             //BDHelper oDatos = new BDHelper();

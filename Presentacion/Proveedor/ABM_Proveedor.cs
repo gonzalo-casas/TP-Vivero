@@ -268,7 +268,7 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oProveedorSeleccionado.Localidad = new Es_Localidad();
                             oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
-
+                            oProveedorSeleccionado.Estado = 1;
                             
 
 

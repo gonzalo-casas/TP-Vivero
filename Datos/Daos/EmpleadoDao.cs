@@ -109,7 +109,7 @@ namespace Vivero.Datos.Daos
                             "'" + oEmpleado.Nro_Calle + "'" + "," +
                             "'" + oEmpleado.Barrio.IdBarrio + "'" + "," +
                             "'" + oEmpleado.Localidad.IdLocalidad + "'" + "," +
-                           oEmpleado.Contraseña  + " , 1)";
+                            "'" + oEmpleado.Contraseña  +"' , 1)";
           
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
             
