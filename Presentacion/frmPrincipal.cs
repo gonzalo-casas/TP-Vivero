@@ -54,10 +54,11 @@ namespace Vivero
         {
             if (ActiveMdiChild!= FrmC_Empleados)
             {
-                FrmC_Empleados.Show();
+                
                 FrmC_Empleados.Dock = DockStyle.Fill;
                 FrmC_Empleados.WindowState = FormWindowState.Minimized;
                 FrmC_Empleados.WindowState = FormWindowState.Maximized;
+                FrmC_Empleados.Show();
             }
                 
         }
@@ -79,10 +80,10 @@ namespace Vivero
         {
             if (ActiveMdiChild != FrmC_Proveedores)
             {
-                FrmC_Proveedores.Show();
                 FrmC_Proveedores.Dock = DockStyle.Fill;
                 FrmC_Proveedores.WindowState = FormWindowState.Minimized;
                 FrmC_Proveedores.WindowState = FormWindowState.Maximized;
+                FrmC_Proveedores.Show();
             }
                 
         }

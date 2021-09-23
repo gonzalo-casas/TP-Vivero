@@ -50,7 +50,7 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_SalirProveedor_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
 
         }
 

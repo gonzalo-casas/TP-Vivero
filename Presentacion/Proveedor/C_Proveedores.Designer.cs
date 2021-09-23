@@ -29,9 +29,9 @@ namespace Vivero.Presentacion.Empleados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_AgregarProveedor = new System.Windows.Forms.Button();
             this.btn_EditarProveedor = new System.Windows.Forms.Button();
             this.btn_EliminarProveedor = new System.Windows.Forms.Button();
@@ -79,6 +79,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -150,7 +151,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_IdProveedor
             // 
             this.txt_IdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdProveedor.Location = new System.Drawing.Point(249, 21);
+            this.txt_IdProveedor.Location = new System.Drawing.Point(192, 50);
             this.txt_IdProveedor.Name = "txt_IdProveedor";
             this.txt_IdProveedor.Size = new System.Drawing.Size(100, 26);
             this.txt_IdProveedor.TabIndex = 4;
@@ -158,7 +159,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_NombreProveedor
             // 
             this.txt_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreProveedor.Location = new System.Drawing.Point(249, 54);
+            this.txt_NombreProveedor.Location = new System.Drawing.Point(192, 83);
             this.txt_NombreProveedor.Name = "txt_NombreProveedor";
             this.txt_NombreProveedor.Size = new System.Drawing.Size(100, 26);
             this.txt_NombreProveedor.TabIndex = 5;
@@ -166,7 +167,7 @@ namespace Vivero.Presentacion.Empleados
             // txt_Rs_Proveedor
             // 
             this.txt_Rs_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rs_Proveedor.Location = new System.Drawing.Point(249, 87);
+            this.txt_Rs_Proveedor.Location = new System.Drawing.Point(192, 116);
             this.txt_Rs_Proveedor.Name = "txt_Rs_Proveedor";
             this.txt_Rs_Proveedor.Size = new System.Drawing.Size(100, 26);
             this.txt_Rs_Proveedor.TabIndex = 6;
@@ -176,7 +177,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_ConsultarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
             this.btn_ConsultarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarProveedor.Location = new System.Drawing.Point(428, 67);
+            this.btn_ConsultarProveedor.Location = new System.Drawing.Point(371, 96);
             this.btn_ConsultarProveedor.Name = "btn_ConsultarProveedor";
             this.btn_ConsultarProveedor.Size = new System.Drawing.Size(129, 40);
             this.btn_ConsultarProveedor.TabIndex = 7;
@@ -188,7 +189,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 24);
+            this.label1.Location = new System.Drawing.Point(96, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 8;
@@ -198,7 +199,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 57);
+            this.label2.Location = new System.Drawing.Point(117, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 9;
@@ -208,7 +209,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(136, 87);
+            this.label3.Location = new System.Drawing.Point(79, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 10;
@@ -218,17 +219,17 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.dgv_Proveedores.AllowUserToAddRows = false;
             this.dgv_Proveedores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dgv_Proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dgv_Proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Proveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -237,14 +238,14 @@ namespace Vivero.Presentacion.Empleados
             this.colNumCalle,
             this.colTelefono,
             this.colRS});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(164)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Proveedores.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(164)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Proveedores.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Proveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Proveedores.Location = new System.Drawing.Point(100, 0);
             this.dgv_Proveedores.Name = "dgv_Proveedores";
@@ -252,7 +253,7 @@ namespace Vivero.Presentacion.Empleados
             this.dgv_Proveedores.RowHeadersWidth = 51;
             this.dgv_Proveedores.RowTemplate.Height = 40;
             this.dgv_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Proveedores.Size = new System.Drawing.Size(807, 288);
+            this.dgv_Proveedores.Size = new System.Drawing.Size(807, 235);
             this.dgv_Proveedores.TabIndex = 11;
             // 
             // colID
@@ -303,7 +304,7 @@ namespace Vivero.Presentacion.Empleados
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(407, 24);
+            this.chk_Activos.Location = new System.Drawing.Point(350, 53);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 12;
@@ -314,7 +315,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(500, 24);
+            this.chk_Inactivos.Location = new System.Drawing.Point(443, 53);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 13;
@@ -377,6 +378,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_IdProveedor);
             this.panel3.Controls.Add(this.txt_NombreProveedor);
@@ -389,7 +391,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 176);
+            this.panel3.Size = new System.Drawing.Size(1007, 229);
             this.panel3.TabIndex = 16;
             // 
             // panel2
@@ -399,9 +401,9 @@ namespace Vivero.Presentacion.Empleados
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 176);
+            this.panel2.Location = new System.Drawing.Point(0, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 388);
+            this.panel2.Size = new System.Drawing.Size(1007, 335);
             this.panel2.TabIndex = 17;
             // 
             // panel10
@@ -409,14 +411,14 @@ namespace Vivero.Presentacion.Empleados
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(907, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 288);
+            this.panel10.Size = new System.Drawing.Size(100, 235);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 288);
+            this.panel11.Location = new System.Drawing.Point(100, 235);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(907, 100);
             this.panel11.TabIndex = 14;
@@ -572,8 +574,16 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 388);
+            this.panel9.Size = new System.Drawing.Size(100, 335);
             this.panel9.TabIndex = 12;
+            // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(1007, 50);
+            this.panel24.TabIndex = 14;
             // 
             // ABMC_Proveedores
             // 
@@ -658,5 +668,6 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRS;
+        private System.Windows.Forms.Panel panel24;
     }
 }
