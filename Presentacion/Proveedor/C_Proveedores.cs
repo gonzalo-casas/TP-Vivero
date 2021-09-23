@@ -11,6 +11,7 @@ using Vivero.Datos;
 using Vivero.Negocio;
 using Vivero.Negocio.EstructuraNegocio;
 using Vivero.Negocio.Servicios;
+using Vivero.Presentacion.Proveedor;
 
 namespace Vivero.Presentacion.Empleados
 {
@@ -36,9 +37,9 @@ namespace Vivero.Presentacion.Empleados
         {
             
             var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
-            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+            ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
             //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
-            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update);
+            formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
             formulario.ShowDialog();
             btn_ConsultarEmpleado_Click(sender, e);
         }

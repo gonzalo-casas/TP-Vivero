@@ -79,23 +79,17 @@
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
     <Compile Include="Negocio\Servicios\UsuarioService.cs" />
-    <Compile Include="Presentacion\Empleados\ABMC_Empleados.cs">
+    <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Empleados\ABMC_Empleados.Designer.cs">
-      <DependentUpon>ABMC_Empleados.cs</DependentUpon>
+    <Compile Include="Presentacion\Empleados\C_Empleados.Designer.cs">
+      <DependentUpon>C_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleados\ABM_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Empleados\ABM_Empleado.Designer.cs">
       <DependentUpon>ABM_Empleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Empleados\MODIFICACION_Empleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Empleados\MODIFICACION_Empleado.Designer.cs">
-      <DependentUpon>MODIFICACION_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>
@@ -109,22 +103,25 @@
     <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Proveedor\ABMC_Proveedores.cs">
+    <Compile Include="Presentacion\Proveedor\C_Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Proveedor\ABMC_Proveedores.Designer.cs">
-      <DependentUpon>ABMC_Proveedores.cs</DependentUpon>
+    <Compile Include="Presentacion\Proveedor\C_Proveedores.Designer.cs">
+      <DependentUpon>C_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Proveedor\ABM_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
+      <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\Empleados\ABMC_Empleados.resx">
-      <DependentUpon>ABMC_Empleados.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Empleados\C_Empleados.resx">
+      <DependentUpon>C_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleados\ABM_Empleado.resx">
       <DependentUpon>ABM_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Empleados\MODIFICACION_Empleado.resx">
-      <DependentUpon>MODIFICACION_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -132,8 +129,11 @@
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Proveedor\ABMC_Proveedores.resx">
-      <DependentUpon>ABMC_Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Proveedor\C_Proveedores.resx">
+      <DependentUpon>C_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
+      <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

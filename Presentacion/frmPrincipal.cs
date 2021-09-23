@@ -42,8 +42,8 @@ namespace Vivero
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
-            ABMC_Empleados fl;
-            fl = new ABMC_Empleados();
+            C_Empleados fl;
+            fl = new C_Empleados();
             fl.MdiParent = this;
             fl.Show();
             fl.Dock = DockStyle.Fill;

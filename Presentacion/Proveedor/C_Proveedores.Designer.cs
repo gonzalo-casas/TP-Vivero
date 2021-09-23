@@ -35,7 +35,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_AgregarProveedor = new System.Windows.Forms.Button();
             this.btn_EditarProveedor = new System.Windows.Forms.Button();
             this.btn_EliminarProveedor = new System.Windows.Forms.Button();
-            this.btn_SalirEmpleado = new System.Windows.Forms.Button();
+            this.btn_SalirProveedor = new System.Windows.Forms.Button();
             this.txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.txt_NombreProveedor = new System.Windows.Forms.TextBox();
             this.txt_Rs_Proveedor = new System.Windows.Forms.TextBox();
@@ -44,6 +44,12 @@ namespace Vivero.Presentacion.Empleados
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chk_Activos = new System.Windows.Forms.CheckBox();
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -73,12 +79,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -133,19 +133,19 @@ namespace Vivero.Presentacion.Empleados
             this.btn_EliminarProveedor.UseVisualStyleBackColor = false;
             this.btn_EliminarProveedor.Click += new System.EventHandler(this.btn_EliminarEmpleado_Click);
             // 
-            // btn_SalirEmpleado
+            // btn_SalirProveedor
             // 
-            this.btn_SalirEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_SalirEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirEmpleado.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirEmpleado.Name = "btn_SalirEmpleado";
-            this.btn_SalirEmpleado.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirEmpleado.TabIndex = 3;
-            this.btn_SalirEmpleado.Text = "Cerrar";
-            this.btn_SalirEmpleado.UseVisualStyleBackColor = false;
-            this.btn_SalirEmpleado.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
+            this.btn_SalirProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
+            this.btn_SalirProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirProveedor.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirProveedor.Name = "btn_SalirProveedor";
+            this.btn_SalirProveedor.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirProveedor.TabIndex = 3;
+            this.btn_SalirProveedor.Text = "Cerrar";
+            this.btn_SalirProveedor.UseVisualStyleBackColor = false;
+            this.btn_SalirProveedor.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
             // 
             // txt_IdProveedor
             // 
@@ -255,6 +255,48 @@ namespace Vivero.Presentacion.Empleados
             this.dgv_Proveedores.Size = new System.Drawing.Size(807, 288);
             this.dgv_Proveedores.TabIndex = 11;
             // 
+            // colID
+            // 
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colCalle
+            // 
+            this.colCalle.HeaderText = "Calle";
+            this.colCalle.MinimumWidth = 6;
+            this.colCalle.Name = "colCalle";
+            this.colCalle.ReadOnly = true;
+            // 
+            // colNumCalle
+            // 
+            this.colNumCalle.HeaderText = "NumeroCalle";
+            this.colNumCalle.MinimumWidth = 6;
+            this.colNumCalle.Name = "colNumCalle";
+            this.colNumCalle.ReadOnly = true;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.MinimumWidth = 6;
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            // 
+            // colRS
+            // 
+            this.colRS.HeaderText = "Razon Social";
+            this.colRS.MinimumWidth = 6;
+            this.colRS.Name = "colRS";
+            this.colRS.ReadOnly = true;
+            // 
             // chk_Activos
             // 
             this.chk_Activos.AutoSize = true;
@@ -290,7 +332,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_SalirEmpleado);
+            this.panel4.Controls.Add(this.btn_SalirProveedor);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
@@ -533,48 +575,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Size = new System.Drawing.Size(100, 388);
             this.panel9.TabIndex = 12;
             // 
-            // colID
-            // 
-            this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 6;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colCalle
-            // 
-            this.colCalle.HeaderText = "Calle";
-            this.colCalle.MinimumWidth = 6;
-            this.colCalle.Name = "colCalle";
-            this.colCalle.ReadOnly = true;
-            // 
-            // colNumCalle
-            // 
-            this.colNumCalle.HeaderText = "NumeroCalle";
-            this.colNumCalle.MinimumWidth = 6;
-            this.colNumCalle.Name = "colNumCalle";
-            this.colNumCalle.ReadOnly = true;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.MinimumWidth = 6;
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
-            // 
-            // colRS
-            // 
-            this.colRS.HeaderText = "Razon Social";
-            this.colRS.MinimumWidth = 6;
-            this.colRS.Name = "colRS";
-            this.colRS.ReadOnly = true;
-            // 
             // ABMC_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,7 +614,7 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.Button btn_AgregarProveedor;
         private System.Windows.Forms.Button btn_EditarProveedor;
         private System.Windows.Forms.Button btn_EliminarProveedor;
-        private System.Windows.Forms.Button btn_SalirEmpleado;
+        private System.Windows.Forms.Button btn_SalirProveedor;
         private System.Windows.Forms.TextBox txt_IdProveedor;
         private System.Windows.Forms.TextBox txt_NombreProveedor;
         private System.Windows.Forms.TextBox txt_Rs_Proveedor;
