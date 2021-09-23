@@ -35,6 +35,7 @@ namespace Vivero.Presentacion.Empleados
         private readonly LocalidadService olocalidadService;
         private Es_Empleado oEmpleadoSeleccionado;
         private int idEmpleado;
+        private int EstadoActual; // para el update
 
         // para hace la modificacion  necesito un idEmpleado
         public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
@@ -119,7 +120,7 @@ namespace Vivero.Presentacion.Empleados
             
         }
 
-
+        
         private void actualizarCampos()
         {
             DataTable tabla = new DataTable();
@@ -137,9 +138,8 @@ namespace Vivero.Presentacion.Empleados
             cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
             cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
             txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+            EstadoActual = Convert.ToInt32(tabla.Rows[0]["Estado"]);
 
-
-            //txt_criticidad.Text = tabla.Rows[0]["Estado"].ToString();
 
 
 
@@ -211,8 +211,7 @@ namespace Vivero.Presentacion.Empleados
             {
                 case FormMode.insert:
                     {
-                        if (ExisteUsuario() == false)
-                        {
+         
                             if (ValidarCampos())
                             {
                                 var oEmpleado = new Es_Empleado();
@@ -238,9 +237,8 @@ namespace Vivero.Presentacion.Empleados
                                 }
                                 else { MessageBox.Show("Error"); }
                             }
-                        }
-                        else
-                            MessageBox.Show("Nombre de usuario encontrado!. Ingrese un nombre diferente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        
                         break;
                     }
 
@@ -267,7 +265,7 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oEmpleadoSeleccionado.Localidad = new Es_Localidad();
                             oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
-
+                            oEmpleadoSeleccionado.Estado =  EstadoActual;
                             
 
 
