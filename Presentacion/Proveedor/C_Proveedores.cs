@@ -38,13 +38,13 @@ namespace Vivero.Presentacion.Empleados
             {
                 var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
                 ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-                formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
+                formulario.SeleccionarOpcion(ABM_Proveedor.FormMode.update);
                 formulario.ShowDialog();
                 btn_ConsultarProveedor_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un proveedor para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -131,13 +131,13 @@ namespace Vivero.Presentacion.Empleados
             {
                 var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
                 ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-                formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.delete);
+                formulario.SeleccionarOpcion(ABM_Proveedor.FormMode.delete);
                 formulario.ShowDialog();
                 btn_ConsultarProveedor_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un proveedor para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

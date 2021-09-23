@@ -38,13 +38,13 @@ namespace Vivero.Presentacion.Empleados
             {
                 var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
                 ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
-                formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update);
+                formulario.SeleccionarOpcion(ABM_Empleado.FormMode.update);
                 formulario.ShowDialog();
                 btn_ConsultarEmpleado_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un empleado para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -125,13 +125,13 @@ namespace Vivero.Presentacion.Empleados
             {
                 var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
                 ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
-                formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.delete);
+                formulario.SeleccionarOpcion(ABM_Empleado.FormMode.delete);
                 formulario.ShowDialog();
                 btn_ConsultarEmpleado_Click(sender, e);
             }
             else
             {
-                MessageBox.Show("Seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un empleado para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

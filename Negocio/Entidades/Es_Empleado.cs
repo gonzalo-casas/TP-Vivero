@@ -16,7 +16,7 @@ namespace Vivero.Negocio.EstructuraNegocio
         public string Nro_Doc { get; set; }
         public string Telefono  { get; set; }
         public string Calle { get; set; }
-        public int Nro_Calle { get; set; }
+        public string Nro_Calle { get; set; }
         public Es_Barrio Barrio { get; set; }
         public Es_Localidad Localidad { get; set; }
         public string Contraseña { get; set; }

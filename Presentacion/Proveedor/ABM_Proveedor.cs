@@ -148,6 +148,7 @@ namespace Vivero.Presentacion.Proveedor
             // campos obligatorios
             if (txtNombreProveedor.Text == string.Empty)
             {
+                MessageBox.Show("Ingrese nombre del Proveedor por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombreProveedor.BackColor = Color.Red;
                 txtNombreProveedor.Focus();
                 return false;
@@ -155,10 +156,34 @@ namespace Vivero.Presentacion.Proveedor
             else
                 txtNombreProveedor.BackColor = Color.White;
 
+            if (txtRSProv.Text == string.Empty)
+            {
+                MessageBox.Show("Ingrese Razon Social por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtRSProv.BackColor = Color.Red;
+                txtRSProv.Focus();
+                return false;
+            }
+            else
+                txtRSProv.BackColor = Color.White;
+
+            if (cboBarrio.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un barrio por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            if (cboLocalidad.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione una localidad por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+
             return true;
         }
 
-        public void SeleccionarProveedor(FormMode op)
+        public void SeleccionarOpcion(FormMode op)
         {
             formMode = op;
            
@@ -185,7 +210,7 @@ namespace Vivero.Presentacion.Proveedor
                                 oProveedor.Razon_Social = txtRSProv.Text;
                                 oProveedor.Calle = txtCalle.Text;
                                 oProveedor.Telefono = txtTelefono.Text;
-                                oProveedor.Nro_Calle = int.Parse(txtNroCalle.Text);
+                                oProveedor.Nro_Calle = txtNroCalle.Text;
                                 oProveedor.Barrio = new Es_Barrio();
                                 oProveedor.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
                                 oProveedor.Localidad = new Es_Localidad();
@@ -217,7 +242,7 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
                             oProveedorSeleccionado.Telefono = txtTelefono.Text;
                             oProveedorSeleccionado.Calle = txtCalle.Text;
-                            oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oProveedorSeleccionado.Nro_Calle = txtNroCalle.Text;
                             oProveedorSeleccionado.Barrio = new Es_Barrio();
                             oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oProveedorSeleccionado.Localidad = new Es_Localidad();
@@ -250,15 +275,6 @@ namespace Vivero.Presentacion.Proveedor
                             Es_Proveedor oProveedorSeleccionado = new Es_Proveedor();
 
                             oProveedorSeleccionado.ID = idProveedor;
-                            oProveedorSeleccionado.Nombre = txtNombreProveedor.Text;
-                            oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
-                            oProveedorSeleccionado.Telefono = txtTelefono.Text;
-                            oProveedorSeleccionado.Calle = txtCalle.Text;
-                            oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
-                            oProveedorSeleccionado.Barrio = new Es_Barrio();
-                            oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex + 1);
-                            oProveedorSeleccionado.Localidad = new Es_Localidad();
-                            oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
 
                             if (oProveedorService.ModificarEstadoProveedor(oProveedorSeleccionado))
                             {

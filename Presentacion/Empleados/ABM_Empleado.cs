@@ -33,7 +33,6 @@ namespace Vivero.Presentacion.Empleados
         private readonly EmpleadoService oEmpleadoService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-       // private Es_Empleado oEmpleadoSeleccionado;
         private int idEmpleado;
         private int EstadoActual; // para el update
 
@@ -157,9 +156,11 @@ namespace Vivero.Presentacion.Empleados
 
         private bool ValidarCampos()
         {
+           
             // campos obligatorios
             if (txt_NombreEmpleado.Text == string.Empty)
             {
+                MessageBox.Show("Ingrese nombre del empleado por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_NombreEmpleado.BackColor = Color.Red;
                 txt_NombreEmpleado.Focus();
                 return false;
@@ -167,10 +168,50 @@ namespace Vivero.Presentacion.Empleados
             else
                 txt_NombreEmpleado.BackColor = Color.White;
 
+            if (txtContrasena.Text == string.Empty)
+            {
+                MessageBox.Show("Ingrese una contraseña por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContrasena.BackColor = Color.Red;
+                txtContrasena.Focus();
+                return false;
+            }
+            else
+                txtContrasena.BackColor = Color.White;
+
+            if (txtContrasena.Text != txtRepetirContrasena.Text)
+            {
+                MessageBox.Show("La confirmacion de contraseña no coincide", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtRepetirContrasena.BackColor = Color.Red;
+                txtRepetirContrasena.Focus();
+                return false;
+            }
+            else
+                txtRepetirContrasena.BackColor = Color.White;
+
+            if (cboTipoDoc.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un tipo de documento por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; 
+            }
+
+                if (cboBarrio.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un barrio por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+             
+            
+            if (cboLocalidad.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione una localidad por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+           
+
             return true;
         }
 
-        public void SeleccionarEmpleado(FormMode op)
+        public void SeleccionarOpcion(FormMode op)
         {
             formMode = op;
            
@@ -200,7 +241,7 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.Nro_Doc = txtNroDoc.Text;
                                 oEmpleado.Telefono = txtTelefono.Text;
                                 oEmpleado.Calle = txtCalle.Text;
-                                oEmpleado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                                oEmpleado.Nro_Calle = txtNroCalle.Text;
                                 oEmpleado.Barrio = new Es_Barrio();
                                 oEmpleado.Barrio.IdBarrio = (int)cboBarrio.SelectedValue;
                                 oEmpleado.Localidad = new Es_Localidad();
@@ -231,13 +272,12 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Nombre = txt_NombreEmpleado.Text;
                             oEmpleadoSeleccionado.Apellido = txt_ApellidoEmpleado.Text;
                             oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
-
                             oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
                             oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
                             oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
                             oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
                             oEmpleadoSeleccionado.Calle = txtCalle.Text;
-                            oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
+                            oEmpleadoSeleccionado.Nro_Calle = txtNroCalle.Text;
                             oEmpleadoSeleccionado.Barrio = new Es_Barrio();
                             oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oEmpleadoSeleccionado.Localidad = new Es_Localidad();
@@ -270,20 +310,6 @@ namespace Vivero.Presentacion.Empleados
                             Es_Empleado oEmpleadoSeleccionado = new Es_Empleado();
 
                             oEmpleadoSeleccionado.ID = idEmpleado;
-                            oEmpleadoSeleccionado.Nombre = txt_NombreEmpleado.Text;
-                            oEmpleadoSeleccionado.Apellido = txt_ApellidoEmpleado.Text;
-                            oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
-
-                            oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
-                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex + 1);
-                            oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
-                            oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
-                            oEmpleadoSeleccionado.Calle = txtCalle.Text;
-                            oEmpleadoSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
-                            oEmpleadoSeleccionado.Barrio = new Es_Barrio();
-                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex + 1);
-                            oEmpleadoSeleccionado.Localidad = new Es_Localidad();
-                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
 
                             if (oEmpleadoService.ModificarEstadoEmpleado(oEmpleadoSeleccionado))
                             {
