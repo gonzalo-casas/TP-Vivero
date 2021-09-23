@@ -19,7 +19,7 @@ namespace Vivero.Datos.Daos
 
             DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             if (tabla.Rows.Count > 0)
-                return (string)tabla.Rows[0]["ID"].ToString();
+                return (string)tabla.Rows[0]["Nombre"].ToString();
             else
                 return string.Empty;
         }
