@@ -603,7 +603,7 @@ namespace Vivero.Presentacion.Empleados
             this.Name = "ABMC_Proveedores";
             this.ShowInTaskbar = false;
             this.Text = "Proveedores";
-            this.Load += new System.EventHandler(this.ABMC_Empleados_Load);
+            //this.Load += new System.EventHandler(this.ABMC_Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

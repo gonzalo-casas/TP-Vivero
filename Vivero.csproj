@@ -60,7 +60,6 @@
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
-    <Compile Include="Negocio\Entidades\Usuario.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />
@@ -78,7 +77,6 @@
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
-    <Compile Include="Negocio\Servicios\UsuarioService.cs" />
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>

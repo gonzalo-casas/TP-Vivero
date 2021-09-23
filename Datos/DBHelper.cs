@@ -26,7 +26,7 @@ namespace Vivero.Datos
 
         public static BDHelper obtenerInstancia()
         {
-            if (instancia == null) // las referencias a objetos se las evalua como nulas y no empty
+            if (instancia == null) 
             {
                 instancia = new BDHelper();
 

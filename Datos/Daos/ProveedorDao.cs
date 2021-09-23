@@ -11,19 +11,7 @@ namespace Vivero.Datos.Daos
 {
     class ProveedorDao : IProveedor
     {
-        public DataTable Proveedores_Activos()
-        {
-            string consulta = "SELECT * FROM Proveedor WHERE Estado = 1";
-            
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
-        public DataTable Proveedores_Inactivos()
-        {
-            string consulta = "SELECT * FROM Proveedor WHERE Estado = 0";
-   
-            return BDHelper.obtenerInstancia().consultar(consulta);
 
-        }
         public DataTable Buscar_proveedor(string ID_proveedor, string nom_proveedor, string rs_proveedor, string estado)
         {
 
@@ -48,17 +36,6 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
                
-        
-
-
-
-        public DataTable Todos_Los_Proveedores()
-        {
-            string consulta = "SELECT * FROM Proveedor WHERE Estado = 1 or Estado = 0";
-
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
-
 
         public bool Create(Es_Proveedor oProveedor)
         {

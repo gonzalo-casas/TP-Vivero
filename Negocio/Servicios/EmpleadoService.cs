@@ -20,20 +20,9 @@ namespace Vivero.Negocio
             dao = new EmpleadoDao();
         }
 
-        public DataTable Empleados_Activos()
+        public string ValidarUsuario(int Id_Usuario, string Contrasena)
         {
-            return dao.Empleados_Activos();
-        }
-
-        public DataTable Empleados_Inactivos()
-        {
-            return dao.Empleados_Inactivos();
-
-        }
-       
-        public DataTable Todos_Los_Empleados()
-        {
-            return dao.Todos_Los_Empleados();
+            return dao.ValidarUsuario(Id_Usuario, Contrasena);
         }
 
         internal bool ActualizarEmpleado(Es_Empleado oEmpleadoSeleccionado)

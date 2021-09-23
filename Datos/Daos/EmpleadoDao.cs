@@ -11,22 +11,20 @@ namespace Vivero.Datos.Daos
 {
     class EmpleadoDao : IEmpleado
     {
-
-        public DataTable Empleados_Activos()
+        public string ValidarUsuario(int Id_Usuario, string Contrasena)
         {
-            string consulta = "SELECT * FROM Empleado WHERE Estado = 1";
-            
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
-        public DataTable Empleados_Inactivos()
-        {
-            string consulta = "SELECT * FROM Empleado WHERE Estado = 0";
-   
-            return BDHelper.obtenerInstancia().consultar(consulta);
+            string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "'";
 
+
+
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
+            if (tabla.Rows.Count > 0)
+                return (string)tabla.Rows[0]["ID"].ToString();
+            else
+                return string.Empty;
         }
 
-        public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp, string estado)
+            public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp, string estado)
         {
            
             string consulta = "SELECT * FROM Empleado WHERE Estado in  " + estado;
@@ -53,12 +51,6 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public DataTable Todos_Los_Empleados()
-        {
-            string consulta = "SELECT * FROM Empleado WHERE Estado = 1 or Estado = 0";
-
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
 
 
         public bool Create(Es_Empleado oEmpleado)
@@ -125,7 +117,6 @@ namespace Vivero.Datos.Daos
             string consulta = "UPDATE Empleado " +
                             "SET Estado= '0'" +
                             " WHERE ID=" + oEmpleadoSeleccionado.ID;
-
 
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;

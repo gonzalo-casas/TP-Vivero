@@ -35,8 +35,6 @@ namespace Vivero.Presentacion.Proveedor
         private int idProveedor;
         private int EstadoActual; 
 
-
-        public int IdProveedor { get => idProveedor; set => idProveedor = value; }
         public ABM_Proveedor()
         {
             InitializeComponent();
@@ -93,7 +91,7 @@ namespace Vivero.Presentacion.Proveedor
                 case FormMode.delete:
                     {
                         actualizarCampos();
-                        this.Text = "Habilitar/Deshabilitar Proveedor";
+                        this.Text = "Deshabilitar Proveedor";
                         txtNombreProveedor.Enabled = false;
                         txtRSProv.Enabled = false;
                         txtCalle.Enabled = false;
@@ -187,12 +185,6 @@ namespace Vivero.Presentacion.Proveedor
            
         }
 
-  
-
-
-        
-
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             switch (formMode)
@@ -248,10 +240,6 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.Estado = EstadoActual;
                             
 
-
-
-                          
-
                             if (oProveedorService.ActualizarProveedor(oProveedorSeleccionado))
                             {
                                 MessageBox.Show("Proveedor actualizado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -266,7 +254,7 @@ namespace Vivero.Presentacion.Proveedor
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el proveedor seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea deshabilitar el proveedor seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
 
@@ -276,7 +264,7 @@ namespace Vivero.Presentacion.Proveedor
 
                             if (oProveedorService.ModificarEstadoProveedor(oProveedorSeleccionado))
                             {
-                                MessageBox.Show("Proveedor Habilitado/Deshabilitado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Proveedor Deshabilitado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else

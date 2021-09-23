@@ -37,7 +37,7 @@ namespace Vivero.Presentacion.Empleados
         private int EstadoActual; // para el update
 
         // para hace la modificacion  necesito un idProveedor
-        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
+
         public ABM_Empleado()
         {
             InitializeComponent();
@@ -99,7 +99,7 @@ namespace Vivero.Presentacion.Empleados
                 case FormMode.delete:
                     {
                         actualizarCampos();
-                        this.Text = "Habilitar/Deshabilitar Empleado";
+                        this.Text = "Deshabilitar Empleado";
                         txt_NombreEmpleado.Enabled = false;
                         txt_ApellidoEmpleado.Enabled = false;
                         txtContrasena.Enabled = false;
@@ -134,6 +134,7 @@ namespace Vivero.Presentacion.Empleados
             cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
             cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
             txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+            txtRepetirContrasena.Text = txtContrasena.Text;
             EstadoActual = Convert.ToInt32(tabla.Rows[0]["Estado"]);
 
 
@@ -217,12 +218,6 @@ namespace Vivero.Presentacion.Empleados
            
         }
 
-    
-
-
-        
-
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             switch (formMode)
@@ -284,10 +279,7 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
                             oEmpleadoSeleccionado.Estado =  EstadoActual;
                             
-
-
-
-                          
+       
 
                             if (oEmpleadoService.ActualizarEmpleado(oEmpleadoSeleccionado))
                             {
@@ -303,7 +295,7 @@ namespace Vivero.Presentacion.Empleados
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el empleado seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea deshabilitar el empleado seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
 
@@ -313,7 +305,7 @@ namespace Vivero.Presentacion.Empleados
 
                             if (oEmpleadoService.ModificarEstadoEmpleado(oEmpleadoSeleccionado))
                             {
-                                MessageBox.Show("Empleado Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Empleado Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else

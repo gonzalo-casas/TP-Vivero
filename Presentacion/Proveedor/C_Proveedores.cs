@@ -56,53 +56,21 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_ConsultarProveedor_Click(object sender, EventArgs e)
         {
-            var estado = "('0')";
-            if (chk_Activos.Checked == true)
+            var estado = "('0','1')";
+            if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
             {
                 estado = "('1')";
             }
-            if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
+            if (chk_Activos.Checked == false && chk_Inactivos.Checked == true)
             {
-                estado = "('1','2')";
+                estado = "('0')";
             }
 
-            if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
-            {
-                Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text, estado));
-                return;
-            }
+            Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text, estado));
+             return;
 
-
-            if (chk_Activos.Checked == true && chk_Inactivos.Checked == true)
-            {
-                Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
-                return;
-            }
-
-            if (chk_Activos.Checked == true)
-            {
-                Cargar_Grilla(oProveedor.Proveedores_Activos());
-                return;
-            }
-            if (chk_Inactivos.Checked == true)
-            {
-                Cargar_Grilla(oProveedor.Proveedores_Inactivos());
-                return;
-            }
-
-
-
-            if (txt_IdProveedor.Text == "" || txt_Rs_Proveedor.Text == "" || txt_NombreProveedor.Text == "")
-            {
-                Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
-            }
         }
 
-
-
-
-
-    
 
         private void Cargar_Grilla(DataTable tabla)
         {
@@ -118,11 +86,6 @@ namespace Vivero.Presentacion.Empleados
                 dgv_Proveedores.Rows[i].Cells[4].Value = tabla.Rows[i]["Telefono"].ToString();
                 dgv_Proveedores.Rows[i].Cells[5].Value = tabla.Rows[i]["Razon_Social"].ToString();
             }
-        }
-
-        private void ABMC_Empleados_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_EliminarProveedor_Click(object sender, EventArgs e)

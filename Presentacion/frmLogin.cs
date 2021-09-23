@@ -15,7 +15,7 @@ namespace Vivero.Presentacion
     public partial class FrmLogin : Form
     {
         private Usuario miUsuario = new Usuario();
-        UsuarioService oUsuario = new UsuarioService();
+        EmpleadoService oUsuario = new EmpleadoService();
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
         public FrmLogin()
         {

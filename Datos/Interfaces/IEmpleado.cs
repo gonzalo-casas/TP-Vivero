@@ -10,9 +10,7 @@ namespace Vivero.Datos.Interfaces
 {
     interface IEmpleado
     {
-        DataTable Empleados_Activos();
-        DataTable Empleados_Inactivos();
-        DataTable Todos_Los_Empleados();
+        string ValidarUsuario(int Id_Usuario, string Contrasena);
         bool Create(Es_Empleado oEmpleado);
         bool Update(Es_Empleado oEmpleadoSeleccionado);
         bool Delete(Es_Empleado oEmpleado);
