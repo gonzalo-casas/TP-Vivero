@@ -178,6 +178,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtNroDoc.Name = "txtNroDoc";
             this.txtNroDoc.Size = new System.Drawing.Size(100, 26);
             this.txtNroDoc.TabIndex = 6;
+            this.txtNroDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroDoc_KeyPress);
             // 
             // txtCalle
             // 
@@ -194,6 +195,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtNroCalle.Name = "txtNroCalle";
             this.txtNroCalle.Size = new System.Drawing.Size(100, 26);
             this.txtNroCalle.TabIndex = 8;
+            this.txtNroCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroCalle_KeyPress);
             // 
             // txtTelefono
             // 
@@ -202,6 +204,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 26);
             this.txtTelefono.TabIndex = 11;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtContrasena
             // 

@@ -34,11 +34,18 @@ namespace Vivero.Presentacion.Empleados
         private void btn_EditarEmpleado_Click(object sender, EventArgs e)
         {
             // tomo el id del empleado seleccionado en la grilla
-            var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
-            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
-            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update);
-            formulario.ShowDialog();
-            btn_ConsultarEmpleado_Click(sender, e);
+            if (dgv_Empleados.SelectedRows.Count > 0)
+            {
+                var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
+                ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+                formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.update);
+                formulario.ShowDialog();
+                btn_ConsultarEmpleado_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_SalirEmpleado_Click(object sender, EventArgs e)
@@ -114,11 +121,19 @@ namespace Vivero.Presentacion.Empleados
         private void btn_EliminarEmpleado_Click(object sender, EventArgs e)
         {
             // tomo el id del empleado seleccionado en la grilla
-            var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
-            ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
-            formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.delete);
-            formulario.ShowDialog();
-            btn_ConsultarEmpleado_Click(sender, e);
+            if (dgv_Empleados.SelectedRows.Count > 0)
+            {
+                var value = dgv_Empleados.CurrentRow.Cells[0].Value.ToString();
+                ABM_Empleado formulario = new ABM_Empleado(int.Parse(value));
+                formulario.SeleccionarEmpleado(ABM_Empleado.FormMode.delete);
+                formulario.ShowDialog();
+                btn_ConsultarEmpleado_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         

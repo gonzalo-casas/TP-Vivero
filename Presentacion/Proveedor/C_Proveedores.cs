@@ -34,12 +34,18 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_EditarProveedor_Click(object sender, EventArgs e)
         {
-            
-            var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
-            ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-            formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
-            formulario.ShowDialog();
-            btn_ConsultarProveedor_Click(sender, e);
+            if (dgv_Proveedores.SelectedRows.Count > 0)
+            {
+                var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
+                ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
+                formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
+                formulario.ShowDialog();
+                btn_ConsultarProveedor_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_SalirProveedor_Click(object sender, EventArgs e)
@@ -121,13 +127,18 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_EliminarProveedor_Click(object sender, EventArgs e)
         {
-            var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
-            ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-            formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.delete);
-            formulario.ShowDialog();
-            btn_ConsultarProveedor_Click(sender, e);
+            if (dgv_Proveedores.SelectedRows.Count > 0)
+            {
+                var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
+                ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
+                formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.delete);
+                formulario.ShowDialog();
+                btn_ConsultarProveedor_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
-
     }
 }

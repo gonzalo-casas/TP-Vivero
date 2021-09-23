@@ -279,6 +279,24 @@ namespace Vivero.Presentacion.Proveedor
         {
             this.Close();
         }
+
+        private void txtNroCalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                //LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                //LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
+            }
+        }
     }
 
 }

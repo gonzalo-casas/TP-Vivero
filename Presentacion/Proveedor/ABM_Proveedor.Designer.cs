@@ -148,6 +148,7 @@ namespace Vivero.Presentacion.Proveedor
             this.txtNroCalle.Name = "txtNroCalle";
             this.txtNroCalle.Size = new System.Drawing.Size(100, 26);
             this.txtNroCalle.TabIndex = 8;
+            this.txtNroCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroCalle_KeyPress);
             // 
             // txtTelefono
             // 
@@ -156,6 +157,7 @@ namespace Vivero.Presentacion.Proveedor
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 26);
             this.txtTelefono.TabIndex = 11;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // btnAceptar
             // 
