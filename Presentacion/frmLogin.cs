@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Negocio;
 using Vivero.Negocio.Entidades;
+using Vivero.Negocio.EstructuraNegocio;
 
 namespace Vivero.Presentacion
 {
     public partial class FrmLogin : Form
     {
-        private Usuario miUsuario = new Usuario();
+        private Es_Empleado miUsuario = new Es_Empleado();
         EmpleadoService oUsuario = new EmpleadoService();
-        internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
+        internal Es_Empleado MiUsuario { get => miUsuario; set => miUsuario = value; }
         public FrmLogin()
         {
             InitializeComponent();
@@ -47,11 +48,11 @@ namespace Vivero.Presentacion
                 return;
             }
 
-            this.miUsuario.Id_usuario = int.Parse(this.txtUsuario.Text);
-            this.miUsuario.Contrasena = this.txtContrasena.Text;
-            this.miUsuario.Nombre = this.oUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena);
+            this.miUsuario.ID = int.Parse(this.txtUsuario.Text);
+            this.miUsuario.Contraseña = this.txtContrasena.Text;
+            this.miUsuario.Nombre = this.oUsuario.ValidarUsuario(miUsuario.ID, miUsuario.Contraseña);
 
-            if (this.oUsuario.ValidarUsuario(miUsuario.Id_usuario, miUsuario.Contrasena) != String.Empty)
+            if (this.oUsuario.ValidarUsuario(miUsuario.ID, miUsuario.Contraseña) != String.Empty)
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
