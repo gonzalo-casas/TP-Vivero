@@ -30,19 +30,18 @@ namespace Vivero.Presentacion.Proveedor
 
         //declaro los objetos
         private FormMode formMode = FormMode.insert;
-        //private readonly TipoDocService oTipoDocService;
         private readonly ProveedorService oProveedorService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-        private Es_Proveedor oProveedorSeleccionado;
+        //private Es_Proveedor oProveedorSeleccionado;
         private int idProveedor;
+        private int EstadoActual; 
 
-        // para hace la modificacion  necesito un idEmpleado
+
         public int IdProveedor { get => idProveedor; set => idProveedor = value; }
         public ABM_Proveedor()
         {
             InitializeComponent();
-            // oTipoDocService = new TipoDocService();
             oProveedorService = new ProveedorService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
@@ -59,8 +58,7 @@ namespace Vivero.Presentacion.Proveedor
 
 
         private void ALTA_Proveedor_Load(object sender, EventArgs e)
-        {    // lleno los combos
-           // LlenarCombo(cboTipoDoc, oTipoDocService.traerTodo(), "Descripcion", "ID");
+        {   
             LlenarCombo(cboBarrio, oBarrioService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboLocalidad, olocalidadService.traerTodo(), "Nombre", "ID");
 
@@ -81,14 +79,10 @@ namespace Vivero.Presentacion.Proveedor
                     {
                         this.Text = "Actualizar Proveedor";
                         // Recuperar usuario seleccionado en la grilla 
-                        //MostrarDatos();
+                 
                         actualizarCampos();
                         txtNombreProveedor.Enabled = true;
-                        txtRSProv.Enabled = true;
-                       // txtContrasena.Enabled = true;
-                        //txtRepetirContrasena.Enabled = true;
-                       // cboTipoDoc.Enabled = true;
-                      //  txtNroDoc.Enabled = true;
+                        txtRSProv.Enabled = true;                       
                         txtCalle.Enabled = true;
                         txtNroCalle.Enabled = true;
                         cboBarrio.Enabled = true;
@@ -101,13 +95,9 @@ namespace Vivero.Presentacion.Proveedor
                 case FormMode.delete:
                     {
                         actualizarCampos();
-                        this.Text = "Habilitar/Deshabilitar Usuario";
+                        this.Text = "Habilitar/Deshabilitar Proveedor";
                         txtNombreProveedor.Enabled = false;
                         txtRSProv.Enabled = false;
-                       // txtContrasena.Enabled = false;
-                       // txtRepetirContrasena.Enabled = false;
-                        //cboTipoDoc.Enabled = false;
-                       // txtNroDoc.Enabled = false;
                         txtCalle.Enabled = false;
                         txtNroCalle.Enabled = false;
                         cboBarrio.Enabled = false;
@@ -126,10 +116,7 @@ namespace Vivero.Presentacion.Proveedor
             DataTable tabla = new DataTable();
             ProveedorService oProveedorSeleccionado = new ProveedorService();
             tabla = oProveedorSeleccionado.RecuperarPorId(idProveedor);
-            //txt.Text = tabla.Rows[0]["ID"].ToString();
-       
-            //cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
-           // txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
+           
             txtNombreProveedor.Text = tabla.Rows[0]["Nombre"].ToString();
             txtRSProv.Text = tabla.Rows[0]["Razon_Social"].ToString();
             txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
@@ -137,10 +124,8 @@ namespace Vivero.Presentacion.Proveedor
             txtNroCalle.Text = tabla.Rows[0]["Nro_Calle"].ToString();
             cboBarrio.Text = tabla.Rows[0]["Barrio"].ToString();
             cboLocalidad.Text = tabla.Rows[0]["Localidad"].ToString();
-           // txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
+            EstadoActual = Convert.ToInt32(tabla.Rows[0]["Estado"]);
 
-
-            //txt_criticidad.Text = tabla.Rows[0]["Estado"].ToString();
 
 
 
@@ -157,10 +142,6 @@ namespace Vivero.Presentacion.Proveedor
             cbo.SelectedIndex = -1;
         }
 
-        private bool ExisteProveedor()
-        {
-            return (oProveedorService.ObtenerProveedor(idProveedor.ToString()) != string.Empty);
-        }
 
         private bool ValidarCampos()
         {
@@ -183,24 +164,7 @@ namespace Vivero.Presentacion.Proveedor
            
         }
 
-        //private void MostrarDatos()
-        //{
-        //    if (oEmpleadoSeleccionado != null)
-        //    {
-                
-        //        txt_NombreEmpleado.Text = oEmpleadoSeleccionado.Nombre;
-        //        txt_ApellidoEmpleado.Text = oEmpleadoSeleccionado.Apellido;
-        //        txtContrasena.Text = oEmpleadoSeleccionado.Contraseña;
-        //        txtRepetirContrasena.Text = txtContrasena.Text;
-        //        cboTipoDoc.Text = oEmpleadoSeleccionado.TipoDoc.Descripcion;
-        //        txtNroDoc.Text = oEmpleadoSeleccionado.Nro_Doc;
-        //        txtCalle.Text = oEmpleadoSeleccionado.Calle;
-        //        txtNroCalle.Text = oEmpleadoSeleccionado.Nro_Calle.ToString();
-        //        cboBarrio.Text = oEmpleadoSeleccionado.Barrio.Nombre;
-        //        cboLocalidad.Text = oEmpleadoSeleccionado.Localidad.Nombre;
-        //        txtTelefono.Text = oEmpleadoSeleccionado.Telefono;
-        //    }
-        //}
+  
 
 
         
@@ -212,17 +176,13 @@ namespace Vivero.Presentacion.Proveedor
             {
                 case FormMode.insert:
                     {
-                        if (!ExisteProveedor())
-                        {
+                       
+                        
                             if (ValidarCampos())
                             {
                                 var oProveedor = new Es_Proveedor();
                                 oProveedor.Nombre = txtNombreProveedor.Text;
                                 oProveedor.Razon_Social = txtRSProv.Text;
-                                //oEmpleado.Contraseña = txtContrasena.Text;
-                                //oProveedor.TipoDoc = new Es_TipoDoc();
-                                // oEmpleado.TipoDoc.IdTipoDoc = (int)cboTipoDoc.SelectedValue;
-                                //oEmpleado.Nro_Doc = txtNroDoc.Text;
                                 oProveedor.Calle = txtCalle.Text;
                                 oProveedor.Telefono = txtTelefono.Text;
                                 oProveedor.Nro_Calle = int.Parse(txtNroCalle.Text);
@@ -239,9 +199,8 @@ namespace Vivero.Presentacion.Proveedor
                                 }
                                 else { MessageBox.Show("Error","Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                             }
-                        }
-                        else
-                            MessageBox.Show("Proveedor encontrado!. Ingrese un proveedor", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        
                         break;
                     }
 
@@ -249,18 +208,13 @@ namespace Vivero.Presentacion.Proveedor
                     {
                         if (ValidarCampos())
                         {
-                            //actualizo los datos del empleado seleccionado
+                            //actualizo los datos del proveedor seleccionado
 
                             Es_Proveedor oProveedorSeleccionado = new Es_Proveedor();
 
                             oProveedorSeleccionado.ID = idProveedor;
                             oProveedorSeleccionado.Nombre = txtNombreProveedor.Text;
                             oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
-                            //oProveedorSeleccionado.Contraseña = txtContrasena.Text;
-
-                            //oProveedorSeleccionado.TipoDoc = new Es_TipoDoc();
-                           // oProveedorSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
-                            //oProveedorSeleccionado.Nro_Doc = txtNroDoc.Text;
                             oProveedorSeleccionado.Telefono = txtTelefono.Text;
                             oProveedorSeleccionado.Calle = txtCalle.Text;
                             oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);
@@ -268,14 +222,14 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
                             oProveedorSeleccionado.Localidad = new Es_Localidad();
                             oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
-                            oProveedorSeleccionado.Estado = 1;
+                            oProveedorSeleccionado.Estado = EstadoActual;
                             
 
 
 
                           
 
-                            if (oProveedorService.ActualizarUsuario(oProveedorSeleccionado))
+                            if (oProveedorService.ActualizarProveedor(oProveedorSeleccionado))
                             {
                                 MessageBox.Show("Proveedor actualizado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
@@ -298,11 +252,6 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.ID = idProveedor;
                             oProveedorSeleccionado.Nombre = txtNombreProveedor.Text;
                             oProveedorSeleccionado.Razon_Social = txtRSProv.Text;
-                            //oProveedorSeleccionado.Contraseña = txtContrasena.Text;
-
-                            //oProveedorSeleccionado.TipoDoc = new Es_TipoDoc();
-                            //oProveedorSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex + 1);
-                            //oProveedorSeleccionado.Nro_Doc = txtNroDoc.Text;
                             oProveedorSeleccionado.Telefono = txtTelefono.Text;
                             oProveedorSeleccionado.Calle = txtCalle.Text;
                             oProveedorSeleccionado.Nro_Calle = int.Parse(txtNroCalle.Text);

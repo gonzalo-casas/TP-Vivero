@@ -23,7 +23,6 @@ namespace Vivero.Presentacion.Empleados
         public ABMC_Proveedores()
         {
             InitializeComponent();
-            //InitializeDataGridView();
         }
 
         private void btn_AgregarProveedor_Click(object sender, EventArgs e)
@@ -38,7 +37,6 @@ namespace Vivero.Presentacion.Empleados
             
             var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
             ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-            //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
             formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.update);
             formulario.ShowDialog();
             btn_ConsultarProveedor_Click(sender, e);
@@ -64,7 +62,7 @@ namespace Vivero.Presentacion.Empleados
 
             if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
             {
-                Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text));
+                Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text, estado));
                 return;
             }
 
@@ -98,27 +96,7 @@ namespace Vivero.Presentacion.Empleados
 
 
 
-
-        //{
-        //    if (chk_Activos.Checked == true)
-        //    {
-        //        Cargar_Grilla(oProveedor.Proveedores_Activos());
-        //        return;
-        //    }
-        //    if (chk_Inactivos.Checked == true)
-        //    {
-        //        Cargar_Grilla(oProveedor.Proveedores_Inactivos());
-        //        return;
-        //    }
-        //    if (txt_IdProveedor.Text != "" || txt_Rs_Proveedor.Text != "" || txt_NombreProveedor.Text != "")
-        //    {
-        //        Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text));
-        //    }
-        //    if (txt_IdProveedor.Text == "" || txt_Rs_Proveedor.Text == "" || txt_NombreProveedor.Text == "")
-        //    {
-        //        Cargar_Grilla(oProveedor.Todos_Los_Proveedores());
-        //    }
-        //}
+    
 
         private void Cargar_Grilla(DataTable tabla)
         {
@@ -145,46 +123,11 @@ namespace Vivero.Presentacion.Empleados
         {
             var value = dgv_Proveedores.CurrentRow.Cells[0].Value.ToString();
             ABM_Proveedor formulario = new ABM_Proveedor(int.Parse(value));
-            //var empleado = (Es_Empleado)dgv_Empleados.CurrentRow.DataBoundItem;
             formulario.SeleccionarProveedor(ABM_Proveedor.FormMode.delete);
             formulario.ShowDialog();
             btn_ConsultarProveedor_Click(sender, e);
         }
 
-        //private void InitializeDataGridView()
-        //{
-        //    // Cree un DataGridView no vinculado declarando un recuento de columnas.
-        //    dgv_Empleados.ColumnCount = 3;
-        //    dgv_Empleados.ColumnHeadersVisible = true;
-
-        //    // Configuramos la AutoGenerateColumns en false para que no se autogeneren las columnas
-        //    dgv_Empleados.AutoGenerateColumns = false;
-
-        //    // Cambia el estilo de la cabecera de la grilla.
-        //    DataGridViewCellStyle columnHeaderStyle = new DataGridViewCellStyle();
-
-        //    columnHeaderStyle.BackColor = Color.Beige;
-        //    columnHeaderStyle.Font = new Font("Verdana", 8, FontStyle.Bold);
-        //    dgv_Empleados.ColumnHeadersDefaultCellStyle = columnHeaderStyle;
-
-        //    // Definimos el nombre de la columnas y el DataPropertyName que se asocia a DataSource
-        //    dgv_Empleados.Columns[0].Name = "Usuario";
-        //    dgv_Empleados.Columns[0].DataPropertyName = "NombreUsuario";
-        //    // Definimos el ancho de la columna.
-
-        //    dgv_Empleados.Columns[1].Name = "Email";
-        //    dgv_Empleados.Columns[1].DataPropertyName = "Email";
-
-        //    dgv_Empleados.Columns[2].Name = "Perfil";
-        //    dgv_Empleados.Columns[2].DataPropertyName = "Perfil";
-
-        //    // Cambia el tamaño de la altura de los encabezados de columna.
-        //    dgv_Empleados.AutoResizeColumnHeadersHeight();
-
-        //    // Cambia el tamaño de todas las alturas de fila para ajustar el contenido de todas las celdas que no sean de encabezado.
-        //    dgv_Empleados.AutoResizeRows(
-        //        DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
-        //}
 
     }
 }

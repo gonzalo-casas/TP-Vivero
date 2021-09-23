@@ -29,20 +29,17 @@ namespace Vivero.Negocio.Servicios
             return dao.Proveedores_Inactivos();
 
         }
-        public DataTable Buscar_proveedor(string ID_emp, string nom_emp, string ap_emp)
+        public DataTable Buscar_proveedor(string ID_emp, string nom_emp, string ap_emp, string estado)
         {
-            return dao.Buscar_proveedor(ID_emp, nom_emp, ap_emp);
+            return dao.Buscar_proveedor(ID_emp, nom_emp, ap_emp, estado);
         }
-        public string ObtenerProveedor(string idProveedor)
-        {
-            return dao.GetProveedor(idProveedor);
-        }
+
         public DataTable Todos_Los_Proveedores()
         {
             return dao.Todos_Los_Proveedores();
         }
 
-        internal bool ActualizarUsuario(Es_Proveedor oProveedorSeleccionado)
+        internal bool ActualizarProveedor(Es_Proveedor oProveedorSeleccionado)
         {
             return dao.Update(oProveedorSeleccionado);
         }

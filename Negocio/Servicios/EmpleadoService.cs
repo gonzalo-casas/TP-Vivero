@@ -30,23 +30,13 @@ namespace Vivero.Negocio
             return dao.Empleados_Inactivos();
 
         }
-        public DataTable Buscar_empleado(string ID_emp, string nom_emp, string ap_emp)
-        {
-            return dao.Buscar_empleado(ID_emp, nom_emp, ap_emp);
-        }
-        public string ObtenerEmpleado(string nombre, string contrasena)
-        {
-            //SIN PARAMETROS
-            return dao.GetUserSinParametros(nombre, contrasena);
-
-            
-        }
+       
         public DataTable Todos_Los_Empleados()
         {
             return dao.Todos_Los_Empleados();
         }
 
-        internal bool ActualizarUsuario(Es_Empleado oEmpleadoSeleccionado)
+        internal bool ActualizarEmpleado(Es_Empleado oEmpleadoSeleccionado)
         {
             return dao.Update(oEmpleadoSeleccionado);
         }
@@ -57,9 +47,7 @@ namespace Vivero.Negocio
         }
 
 
-
-
-        internal bool CrearUsuario(Es_Empleado oEmpleado)
+        internal bool CrearEmpleado(Es_Empleado oEmpleado)
         {
             return dao.Create(oEmpleado);
         }
@@ -69,7 +57,7 @@ namespace Vivero.Negocio
             return dao.RecuperarPorId(idEmpleado);
         }
 
-        public bool ModificarEstadoUsuario(Es_Empleado oEmpleado)
+        public bool ModificarEstadoEmpleado(Es_Empleado oEmpleado)
         {
             return dao.Delete(oEmpleado);
         }

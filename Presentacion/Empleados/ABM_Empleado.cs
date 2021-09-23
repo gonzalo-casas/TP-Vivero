@@ -33,7 +33,7 @@ namespace Vivero.Presentacion.Empleados
         private readonly EmpleadoService oEmpleadoService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
-        private Es_Empleado oEmpleadoSeleccionado;
+       // private Es_Empleado oEmpleadoSeleccionado;
         private int idEmpleado;
         private int EstadoActual; // para el update
 
@@ -42,7 +42,7 @@ namespace Vivero.Presentacion.Empleados
         public ABM_Empleado()
         {
             InitializeComponent();
-             oTipoDocService = new TipoDocService();
+            oTipoDocService = new TipoDocService();
             oEmpleadoService = new EmpleadoService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
@@ -73,15 +73,14 @@ namespace Vivero.Presentacion.Empleados
             {
                 case FormMode.insert:
                     {
-                        this.Text = "Nuevo Usuario";
+                        this.Text = "Nuevo Empleado";
                         break;
                     }
 
                 case FormMode.update:
                     {
-                        this.Text = "Actualizar Usuario";
+                        this.Text = "Actualizar Empleado";
                         // Recuperar usuario seleccionado en la grilla 
-                        //MostrarDatos();
                         actualizarCampos();
                         txt_NombreEmpleado.Enabled = true;
                         txt_ApellidoEmpleado.Enabled = true;
@@ -101,7 +100,7 @@ namespace Vivero.Presentacion.Empleados
                 case FormMode.delete:
                     {
                         actualizarCampos();
-                        this.Text = "Habilitar/Deshabilitar Usuario";
+                        this.Text = "Habilitar/Deshabilitar Empleado";
                         txt_NombreEmpleado.Enabled = false;
                         txt_ApellidoEmpleado.Enabled = false;
                         txtContrasena.Enabled = false;
@@ -126,8 +125,6 @@ namespace Vivero.Presentacion.Empleados
             DataTable tabla = new DataTable();
             EmpleadoService oEmpleadoSeleccionado = new EmpleadoService();
             tabla = oEmpleadoSeleccionado.RecuperarPorId(idEmpleado);
-            //txt.Text = tabla.Rows[0]["ID"].ToString();
-       
             cboTipoDoc.Text = tabla.Rows[0]["TipoDoc"].ToString();
             txtNroDoc.Text = tabla.Rows[0]["NroDoc"].ToString();
             txt_NombreEmpleado.Text = tabla.Rows[0]["Nombre"].ToString();
@@ -156,10 +153,7 @@ namespace Vivero.Presentacion.Empleados
             cbo.SelectedIndex = -1;
         }
 
-        private bool ExisteUsuario()
-        {
-            return (oEmpleadoService.ObtenerEmpleado(txt_NombreEmpleado.Text, txtContrasena.Text) != string.Empty);
-        }
+    
 
         private bool ValidarCampos()
         {
@@ -182,24 +176,7 @@ namespace Vivero.Presentacion.Empleados
            
         }
 
-        //private void MostrarDatos()
-        //{
-        //    if (oEmpleadoSeleccionado != null)
-        //    {
-                
-        //        txt_NombreEmpleado.Text = oEmpleadoSeleccionado.Nombre;
-        //        txt_ApellidoEmpleado.Text = oEmpleadoSeleccionado.Apellido;
-        //        txtContrasena.Text = oEmpleadoSeleccionado.Contraseña;
-        //        txtRepetirContrasena.Text = txtContrasena.Text;
-        //        cboTipoDoc.Text = oEmpleadoSeleccionado.TipoDoc.Descripcion;
-        //        txtNroDoc.Text = oEmpleadoSeleccionado.Nro_Doc;
-        //        txtCalle.Text = oEmpleadoSeleccionado.Calle;
-        //        txtNroCalle.Text = oEmpleadoSeleccionado.Nro_Calle.ToString();
-        //        cboBarrio.Text = oEmpleadoSeleccionado.Barrio.Nombre;
-        //        cboLocalidad.Text = oEmpleadoSeleccionado.Localidad.Nombre;
-        //        txtTelefono.Text = oEmpleadoSeleccionado.Telefono;
-        //    }
-        //}
+    
 
 
         
@@ -230,9 +207,9 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
                                 oEmpleado.Estado = 1;
 
-                                if (oEmpleadoService.CrearUsuario(oEmpleado))
+                                if (oEmpleadoService.CrearEmpleado(oEmpleado))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Empleado insertado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else { MessageBox.Show("Error","Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -272,13 +249,13 @@ namespace Vivero.Presentacion.Empleados
 
                           
 
-                            if (oEmpleadoService.ActualizarUsuario(oEmpleadoSeleccionado))
+                            if (oEmpleadoService.ActualizarEmpleado(oEmpleadoSeleccionado))
                             {
-                                MessageBox.Show("Usuario actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Empleado actualizado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al actualizar el Empleado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
@@ -286,7 +263,7 @@ namespace Vivero.Presentacion.Empleados
 
                 case FormMode.delete:
                     {
-                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el usuario seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (MessageBox.Show("Seguro que desea habilitar/deshabilitar el empleado seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
 
 
@@ -308,13 +285,13 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Localidad = new Es_Localidad();
                             oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex + 1);
 
-                            if (oEmpleadoService.ModificarEstadoUsuario(oEmpleadoSeleccionado))
+                            if (oEmpleadoService.ModificarEstadoEmpleado(oEmpleadoSeleccionado))
                             {
-                                MessageBox.Show("Usuario Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Empleado Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error al actualizar el empleado!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
