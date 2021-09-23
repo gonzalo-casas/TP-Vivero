@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icons8-employee-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-employee-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-user-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-user-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-exit-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-exit-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-exit-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-exit-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-cleaning-products-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-cleaning-products-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-customer-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-customer-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-user-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-user-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-truck-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-truck-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-user-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-user-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-plant-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-plant-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-catalog-49" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-catalog-49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-user-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-user-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ws_Spring_Plants_2560x1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Imagenes\ws_Spring_Plants_2560x1600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -183,6 +183,7 @@ namespace Vivero.Presentacion.Proveedor
             // 
             // cboBarrio
             // 
+            this.cboBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(235, 211);
@@ -193,6 +194,7 @@ namespace Vivero.Presentacion.Proveedor
             // 
             // cboLocalidad
             // 
+            this.cboLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalidad.FormattingEnabled = true;
             this.cboLocalidad.Location = new System.Drawing.Point(235, 251);

@@ -234,10 +234,10 @@ namespace Vivero.Presentacion.Proveedor
 
                                 if (oProveedorService.CrearProveedor(oProveedor))
                                 {
-                                    MessageBox.Show("Proveedor insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Proveedor insertado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
-                                else { MessageBox.Show("Error"); }
+                                else { MessageBox.Show("Error","Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                             }
                         }
                         else
@@ -277,11 +277,11 @@ namespace Vivero.Presentacion.Proveedor
 
                             if (oProveedorService.ActualizarUsuario(oProveedorSeleccionado))
                             {
-                                MessageBox.Show("Proveedor actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Proveedor actualizado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el Proveedor!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el Proveedor!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
@@ -313,11 +313,11 @@ namespace Vivero.Presentacion.Proveedor
 
                             if (oProveedorService.ModificarEstadoProveedor(oProveedorSeleccionado))
                             {
-                                MessageBox.Show("Proveedor Habilitado/Deshabilitado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Proveedor Habilitado/Deshabilitado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el proveedor!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el proveedor!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;

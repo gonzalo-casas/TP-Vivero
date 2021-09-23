@@ -21,6 +21,14 @@ namespace Vivero
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            frmInicio fi;
+            fi = new frmInicio();
+            fi.MdiParent = this;
+            fi.Show();
+            fi.Dock = DockStyle.Fill;
+            fi.WindowState = FormWindowState.Minimized;
+            fi.WindowState = FormWindowState.Maximized;
+
             FrmLogin fl;
             fl = new FrmLogin();
             fl.ShowDialog();
@@ -35,12 +43,11 @@ namespace Vivero
                 
 
             fl.Dispose();
-
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
+            if (ActiveMdiChild != null && ActiveMdiChild.GetType() != C_Empleados)
                 ActiveMdiChild.Close();
             C_Empleados fl;
             fl = new C_Empleados();

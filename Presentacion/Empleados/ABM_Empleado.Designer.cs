@@ -208,15 +208,17 @@ namespace Vivero.Presentacion.Empleados
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.Location = new System.Drawing.Point(205, 106);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '●';
             this.txtContrasena.Size = new System.Drawing.Size(100, 26);
             this.txtContrasena.TabIndex = 3;
             // 
             // cboTipoDoc
             // 
+            this.cboTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDoc.FormattingEnabled = true;
             this.cboTipoDoc.Location = new System.Drawing.Point(205, 141);
-            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(100, 28);
             this.cboTipoDoc.TabIndex = 5;
@@ -236,6 +238,7 @@ namespace Vivero.Presentacion.Empleados
             this.txtRepetirContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepetirContrasena.Location = new System.Drawing.Point(502, 106);
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
+            this.txtRepetirContrasena.PasswordChar = '●';
             this.txtRepetirContrasena.Size = new System.Drawing.Size(100, 26);
             this.txtRepetirContrasena.TabIndex = 4;
             // 
@@ -243,7 +246,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(205, 428);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 40);
             this.btnAceptar.TabIndex = 12;
@@ -255,7 +258,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(403, 428);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 40);
             this.btnCancelar.TabIndex = 13;
@@ -265,20 +268,22 @@ namespace Vivero.Presentacion.Empleados
             // 
             // cboBarrio
             // 
+            this.cboBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(205, 282);
-            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(100, 28);
             this.cboBarrio.TabIndex = 9;
             // 
             // cboLocalidad
             // 
+            this.cboLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalidad.FormattingEnabled = true;
             this.cboLocalidad.Location = new System.Drawing.Point(205, 318);
-            this.cboLocalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLocalidad.Margin = new System.Windows.Forms.Padding(2);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.Size = new System.Drawing.Size(100, 28);
             this.cboLocalidad.TabIndex = 10;

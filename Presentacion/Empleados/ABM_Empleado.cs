@@ -233,10 +233,10 @@ namespace Vivero.Presentacion.Empleados
 
                                 if (oEmpleadoService.CrearUsuario(oEmpleado))
                                 {
-                                    MessageBox.Show("Usuario insertado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Usuario insertado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
-                                else { MessageBox.Show("Error"); }
+                                else { MessageBox.Show("Error","Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                             }
                         }
                         else
@@ -280,7 +280,7 @@ namespace Vivero.Presentacion.Empleados
                                 this.Dispose();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
@@ -316,7 +316,7 @@ namespace Vivero.Presentacion.Empleados
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Error al actualizar el usuario!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Error al actualizar el usuario!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                         break;
