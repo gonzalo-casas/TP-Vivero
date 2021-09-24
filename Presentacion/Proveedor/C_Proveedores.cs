@@ -15,7 +15,7 @@ using Vivero.Presentacion.Proveedor;
 
 namespace Vivero.Presentacion.Empleados
 {
-    
+
     public partial class ABMC_Proveedores : Form
     {
         ProveedorService oProveedor = new ProveedorService();
@@ -51,6 +51,7 @@ namespace Vivero.Presentacion.Empleados
         private void btn_SalirProveedor_Click(object sender, EventArgs e)
         {
             this.Hide();
+            this.dgv_Proveedores.Rows.Clear();
         }
 
         private void btn_ConsultarProveedor_Click(object sender, EventArgs e)
@@ -66,11 +67,9 @@ namespace Vivero.Presentacion.Empleados
             }
 
             Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text, estado));
-             return;
+            return;
 
         }
-
-
         private void Cargar_Grilla(DataTable tabla)
         {
             dgv_Proveedores.Rows.Clear();

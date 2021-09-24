@@ -50,8 +50,8 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_SalirEmpleado_Click(object sender, EventArgs e)
         {
+            this.dgv_Empleados.Rows.Clear();
             this.Hide();
-
         }
 
         private void btn_ConsultarEmpleado_Click(object sender, EventArgs e)
