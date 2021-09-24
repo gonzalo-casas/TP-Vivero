@@ -59,6 +59,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -79,7 +80,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -394,6 +394,14 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Size = new System.Drawing.Size(1007, 229);
             this.panel3.TabIndex = 16;
             // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(1007, 50);
+            this.panel24.TabIndex = 14;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Proveedores);
@@ -577,14 +585,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Size = new System.Drawing.Size(100, 335);
             this.panel9.TabIndex = 12;
             // 
-            // panel24
-            // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
-            // 
             // ABMC_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,7 +603,6 @@ namespace Vivero.Presentacion.Empleados
             this.Name = "ABMC_Proveedores";
             this.ShowInTaskbar = false;
             this.Text = "Proveedores";
-            //this.Load += new System.EventHandler(this.ABMC_Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

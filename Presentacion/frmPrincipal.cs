@@ -91,5 +91,34 @@ namespace Vivero
         {
             this.Close();
         }
+
+        private void FrmPrincipal_MdiChildActivate(object sender, EventArgs e)
+        {
+            Color colorDefault = Color.LightSteelBlue;
+            //Color colorFocus = Color.LightSlateGray;
+            Color colorFocus = Color.FromArgb(203, 211, 222);
+            btnClientes.BackColor = colorDefault;
+            PanelClientes.BackColor = colorDefault;
+            BtnProveedor.BackColor = colorDefault;
+            panelProveedores.BackColor = colorDefault;
+            btnEmpleados.BackColor = colorDefault;
+            panelEmpleados.BackColor = colorDefault;
+            btnProductos.BackColor = colorDefault;
+            panelProductos.BackColor = colorDefault;
+            btnPlantas.BackColor = colorDefault;
+            panelPlantas.BackColor = colorDefault;
+            btnCatalogos.BackColor = colorDefault;
+            panelCatalogos.BackColor = colorDefault;
+            if (ActiveMdiChild == FrmC_Proveedores)
+            {
+                BtnProveedor.BackColor = colorFocus;
+                panelProveedores.BackColor = colorFocus;
+            }
+            if (ActiveMdiChild == FrmC_Empleados)
+            {
+                btnEmpleados.BackColor = colorFocus;
+                panelEmpleados.BackColor = colorFocus;
+            }
+        }
     }
 }

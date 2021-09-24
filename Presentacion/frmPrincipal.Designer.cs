@@ -31,17 +31,17 @@ namespace Vivero
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panelCatalogos = new System.Windows.Forms.Panel();
             this.btnCatalogos = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.Plantas = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelPlantas = new System.Windows.Forms.Panel();
+            this.btnPlantas = new System.Windows.Forms.Button();
+            this.panelProductos = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelEmpleados = new System.Windows.Forms.Panel();
             this.btnEmpleados = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelProveedores = new System.Windows.Forms.Panel();
             this.BtnProveedor = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.PanelClientes = new System.Windows.Forms.Panel();
             this.btnClientes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnSalir = new System.Windows.Forms.Button();
@@ -51,12 +51,12 @@ namespace Vivero
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panelCatalogos.SuspendLayout();
+            this.panelPlantas.SuspendLayout();
+            this.panelProductos.SuspendLayout();
+            this.panelEmpleados.SuspendLayout();
+            this.panelProveedores.SuspendLayout();
+            this.PanelClientes.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,26 +77,26 @@ namespace Vivero
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel11);
-            this.panel5.Controls.Add(this.panel10);
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.panelCatalogos);
+            this.panel5.Controls.Add(this.panelPlantas);
+            this.panel5.Controls.Add(this.panelProductos);
+            this.panel5.Controls.Add(this.panelEmpleados);
+            this.panel5.Controls.Add(this.panelProveedores);
+            this.panel5.Controls.Add(this.PanelClientes);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 72);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 430);
             this.panel5.TabIndex = 2;
             // 
-            // panel11
+            // panelCatalogos
             // 
-            this.panel11.Controls.Add(this.btnCatalogos);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 350);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 70);
-            this.panel11.TabIndex = 5;
+            this.panelCatalogos.Controls.Add(this.btnCatalogos);
+            this.panelCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCatalogos.Location = new System.Drawing.Point(0, 350);
+            this.panelCatalogos.Name = "panelCatalogos";
+            this.panelCatalogos.Size = new System.Drawing.Size(200, 70);
+            this.panelCatalogos.TabIndex = 5;
             // 
             // btnCatalogos
             // 
@@ -116,39 +116,39 @@ namespace Vivero
             this.btnCatalogos.UseVisualStyleBackColor = true;
             this.btnCatalogos.Click += new System.EventHandler(this.btnCatalogos_Click);
             // 
-            // panel10
+            // panelPlantas
             // 
-            this.panel10.Controls.Add(this.Plantas);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 280);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 70);
-            this.panel10.TabIndex = 4;
+            this.panelPlantas.Controls.Add(this.btnPlantas);
+            this.panelPlantas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPlantas.Location = new System.Drawing.Point(0, 280);
+            this.panelPlantas.Name = "panelPlantas";
+            this.panelPlantas.Size = new System.Drawing.Size(200, 70);
+            this.panelPlantas.TabIndex = 4;
             // 
-            // Plantas
+            // btnPlantas
             // 
-            this.Plantas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Plantas.FlatAppearance.BorderSize = 0;
-            this.Plantas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Plantas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Plantas.Image = global::Vivero.Properties.Resources.icons8_plant_60;
-            this.Plantas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Plantas.Location = new System.Drawing.Point(12, 0);
-            this.Plantas.Name = "Plantas";
-            this.Plantas.Size = new System.Drawing.Size(188, 70);
-            this.Plantas.TabIndex = 2;
-            this.Plantas.Text = "Plantas";
-            this.Plantas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Plantas.UseVisualStyleBackColor = true;
+            this.btnPlantas.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPlantas.FlatAppearance.BorderSize = 0;
+            this.btnPlantas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlantas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlantas.Image = global::Vivero.Properties.Resources.icons8_plant_60;
+            this.btnPlantas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlantas.Location = new System.Drawing.Point(12, 0);
+            this.btnPlantas.Name = "btnPlantas";
+            this.btnPlantas.Size = new System.Drawing.Size(188, 70);
+            this.btnPlantas.TabIndex = 2;
+            this.btnPlantas.Text = "Plantas";
+            this.btnPlantas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPlantas.UseVisualStyleBackColor = true;
             // 
-            // panel9
+            // panelProductos
             // 
-            this.panel9.Controls.Add(this.btnProductos);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 210);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 70);
-            this.panel9.TabIndex = 3;
+            this.panelProductos.Controls.Add(this.btnProductos);
+            this.panelProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProductos.Location = new System.Drawing.Point(0, 210);
+            this.panelProductos.Name = "panelProductos";
+            this.panelProductos.Size = new System.Drawing.Size(200, 70);
+            this.panelProductos.TabIndex = 3;
             // 
             // btnProductos
             // 
@@ -166,14 +166,14 @@ namespace Vivero
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProductos.UseVisualStyleBackColor = true;
             // 
-            // panel8
+            // panelEmpleados
             // 
-            this.panel8.Controls.Add(this.btnEmpleados);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 140);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 70);
-            this.panel8.TabIndex = 2;
+            this.panelEmpleados.Controls.Add(this.btnEmpleados);
+            this.panelEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEmpleados.Location = new System.Drawing.Point(0, 140);
+            this.panelEmpleados.Name = "panelEmpleados";
+            this.panelEmpleados.Size = new System.Drawing.Size(200, 70);
+            this.panelEmpleados.TabIndex = 2;
             // 
             // btnEmpleados
             // 
@@ -189,20 +189,22 @@ namespace Vivero
             this.btnEmpleados.TabIndex = 0;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.UseVisualStyleBackColor = false;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
-            // panel7
+            // panelProveedores
             // 
-            this.panel7.Controls.Add(this.BtnProveedor);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 70);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 70);
-            this.panel7.TabIndex = 1;
+            this.panelProveedores.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelProveedores.Controls.Add(this.BtnProveedor);
+            this.panelProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelProveedores.Location = new System.Drawing.Point(0, 70);
+            this.panelProveedores.Name = "panelProveedores";
+            this.panelProveedores.Size = new System.Drawing.Size(200, 70);
+            this.panelProveedores.TabIndex = 1;
             // 
             // BtnProveedor
             // 
+            this.BtnProveedor.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BtnProveedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnProveedor.FlatAppearance.BorderSize = 0;
             this.BtnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,17 +217,17 @@ namespace Vivero
             this.BtnProveedor.TabIndex = 4;
             this.BtnProveedor.Text = "Proveedores";
             this.BtnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnProveedor.UseVisualStyleBackColor = true;
+            this.BtnProveedor.UseVisualStyleBackColor = false;
             this.BtnProveedor.Click += new System.EventHandler(this.BtnProveedor_Click);
             // 
-            // panel6
+            // PanelClientes
             // 
-            this.panel6.Controls.Add(this.btnClientes);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 70);
-            this.panel6.TabIndex = 0;
+            this.PanelClientes.Controls.Add(this.btnClientes);
+            this.PanelClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelClientes.Location = new System.Drawing.Point(0, 0);
+            this.PanelClientes.Name = "PanelClientes";
+            this.PanelClientes.Size = new System.Drawing.Size(200, 70);
+            this.PanelClientes.TabIndex = 0;
             // 
             // btnClientes
             // 
@@ -270,6 +272,7 @@ namespace Vivero
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
             this.panel2.Controls.Add(this.LblNombreUsuario);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -321,14 +324,15 @@ namespace Vivero
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.MdiChildActivate += new System.EventHandler(this.FrmPrincipal_MdiChildActivate);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panelCatalogos.ResumeLayout(false);
+            this.panelPlantas.ResumeLayout(false);
+            this.panelProductos.ResumeLayout(false);
+            this.panelEmpleados.ResumeLayout(false);
+            this.panelProveedores.ResumeLayout(false);
+            this.PanelClientes.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -342,7 +346,7 @@ namespace Vivero
 
         private System.Windows.Forms.Button btnEmpleados;
         private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.Button Plantas;
+        private System.Windows.Forms.Button btnPlantas;
         private System.Windows.Forms.Button btnCatalogos;
         private System.Windows.Forms.Button BtnProveedor;
         private System.Windows.Forms.Button btnProductos;
@@ -354,12 +358,12 @@ namespace Vivero
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelCatalogos;
+        private System.Windows.Forms.Panel panelPlantas;
+        private System.Windows.Forms.Panel panelProductos;
+        private System.Windows.Forms.Panel panelEmpleados;
+        private System.Windows.Forms.Panel panelProveedores;
+        private System.Windows.Forms.Panel PanelClientes;
     }
 }
 

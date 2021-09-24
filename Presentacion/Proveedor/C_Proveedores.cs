@@ -51,7 +51,6 @@ namespace Vivero.Presentacion.Empleados
         private void btn_SalirProveedor_Click(object sender, EventArgs e)
         {
             this.Hide();
-
         }
 
         private void btn_ConsultarProveedor_Click(object sender, EventArgs e)
