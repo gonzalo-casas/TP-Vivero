@@ -15,24 +15,20 @@ namespace Vivero
 {
     public partial class FrmPrincipal : Form
     {
-        private readonly C_Empleados FrmC_Empleados = new C_Empleados();
-        private readonly ABMC_Proveedores FrmC_Proveedores = new ABMC_Proveedores();
         public FrmPrincipal()
         {
             InitializeComponent();
-            FrmC_Empleados.MdiParent = this;
-            FrmC_Proveedores.MdiParent = this;
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            frmInicio fi;
-            fi = new frmInicio();
-            fi.MdiParent = this;
-            fi.Show();
-            fi.Dock = DockStyle.Fill;
-            fi.WindowState = FormWindowState.Minimized;
-            fi.WindowState = FormWindowState.Maximized;
+            //frmInicio fi;
+            //fi = new frmInicio();
+            //fi.MdiParent = this;
+            //fi.Show();
+            //fi.Dock = DockStyle.Fill;
+            //fi.WindowState = FormWindowState.Minimized;
+            //fi.WindowState = FormWindowState.Maximized;
 
             FrmLogin fl;
             fl = new FrmLogin();
@@ -52,15 +48,8 @@ namespace Vivero
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild!= FrmC_Empleados)
-            {
-                
-                FrmC_Empleados.Dock = DockStyle.Fill;
-                FrmC_Empleados.WindowState = FormWindowState.Minimized;
-                FrmC_Empleados.WindowState = FormWindowState.Maximized;
-                FrmC_Empleados.Show();
-            }
-                
+            AbrirFormulario<C_Empleados>();
+            btnEmpleados.BackColor = Color.FromArgb(205, 241, 231);
         }
 
         private void btnCatalogos_Click(object sender, EventArgs e)
@@ -78,47 +67,46 @@ namespace Vivero
 
         private void BtnProveedor_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != FrmC_Proveedores)
-            {
-                FrmC_Proveedores.Dock = DockStyle.Fill;
-                FrmC_Proveedores.WindowState = FormWindowState.Minimized;
-                FrmC_Proveedores.WindowState = FormWindowState.Maximized;
-                FrmC_Proveedores.Show();
-            }
-                
+            AbrirFormulario<C_Proveedores>();
+            BtnProveedor.BackColor = Color.FromArgb(205, 241, 231);
         }
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void FrmPrincipal_MdiChildActivate(object sender, EventArgs e)
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
-            Color colorDefault = Color.LightSteelBlue;
-            //Color colorFocus = Color.LightSlateGray;
-            Color colorFocus = Color.FromArgb(203, 211, 222);
-            btnClientes.BackColor = colorDefault;
-            PanelClientes.BackColor = colorDefault;
-            BtnProveedor.BackColor = colorDefault;
-            panelProveedores.BackColor = colorDefault;
-            btnEmpleados.BackColor = colorDefault;
-            panelEmpleados.BackColor = colorDefault;
-            btnProductos.BackColor = colorDefault;
-            panelProductos.BackColor = colorDefault;
-            btnPlantas.BackColor = colorDefault;
-            panelPlantas.BackColor = colorDefault;
-            btnCatalogos.BackColor = colorDefault;
-            panelCatalogos.BackColor = colorDefault;
-            if (ActiveMdiChild == FrmC_Proveedores)
+            Form formulario;
+            formulario = panelForms.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            //si el formulario/instancia no existe
+            if (formulario == null)
             {
-                BtnProveedor.BackColor = colorFocus;
-                panelProveedores.BackColor = colorFocus;
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelForms.Controls.Add(formulario);
+                panelForms.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
-            if (ActiveMdiChild == FrmC_Empleados)
+            //si el formulario/instancia existe
+            else
             {
-                btnEmpleados.BackColor = colorFocus;
-                panelEmpleados.BackColor = colorFocus;
+                formulario.BringToFront();
             }
+        }
+
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["C_Empleados"] == null)
+                btnEmpleados.BackColor = Color.FromArgb(135, 181, 168);
+            if (Application.OpenForms["C_Proveedores"] == null)
+                BtnProveedor.BackColor = Color.FromArgb(135, 181, 168);
+            //if (Application.OpenForms["Form3"] == null)
+            //    button3.BackColor = Color.FromArgb(4, 41, 68);
         }
     }
 }

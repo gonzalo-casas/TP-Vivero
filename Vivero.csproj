@@ -77,6 +77,9 @@
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
+    <Compile Include="Presentacion\BotonRedondeado.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +91,6 @@
     </Compile>
     <Compile Include="Presentacion\Empleados\ABM_Empleado.Designer.cs">
       <DependentUpon>ABM_Empleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmInicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmInicio.Designer.cs">
-      <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>
@@ -126,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleados\ABM_Empleado.resx">
       <DependentUpon>ABM_Empleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmInicio.resx">
-      <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -209,6 +203,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Presentacion\Recursos\Imagenes\ws_Spring_Plants_2560x1600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Imagenes\ImagenFondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagenFondo1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Imagenes\ImagenInicio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

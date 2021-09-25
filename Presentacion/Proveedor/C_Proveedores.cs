@@ -16,11 +16,11 @@ using Vivero.Presentacion.Proveedor;
 namespace Vivero.Presentacion.Empleados
 {
 
-    public partial class ABMC_Proveedores : Form
+    public partial class C_Proveedores : Form
     {
         ProveedorService oProveedor = new ProveedorService();
 
-        public ABMC_Proveedores()
+        public C_Proveedores()
         {
             InitializeComponent();
         }
@@ -50,8 +50,7 @@ namespace Vivero.Presentacion.Empleados
 
         private void btn_SalirProveedor_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.dgv_Proveedores.Rows.Clear();
+            this.Close();
         }
 
         private void btn_ConsultarProveedor_Click(object sender, EventArgs e)

@@ -183,9 +183,9 @@ namespace Vivero.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ws_Spring_Plants_2560x1600 {
+        internal static System.Drawing.Bitmap ImagenInicio {
             get {
-                object obj = ResourceManager.GetObject("ws_Spring_Plants_2560x1600", resourceCulture);
+                object obj = ResourceManager.GetObject("ImagenInicio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

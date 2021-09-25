@@ -29,17 +29,12 @@ namespace Vivero.Presentacion.Empleados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_AgregarEmpleado = new System.Windows.Forms.Button();
-            this.btn_EditarEmpleado = new System.Windows.Forms.Button();
-            this.btn_EliminarEmpleado = new System.Windows.Forms.Button();
-            this.btn_SalirEmpleado = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.txt_NombreEmpleado = new System.Windows.Forms.TextBox();
             this.txt_ApellidoEmpleado = new System.Windows.Forms.TextBox();
-            this.btn_ConsultarEmpleado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +54,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -79,7 +75,12 @@ namespace Vivero.Presentacion.Empleados
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.btn_EliminarEmpleado = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_EditarEmpleado = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_AgregarEmpleado = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_ConsultarEmpleado = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_SalirEmpleado = new Vivero.Presentacion.BotonRedondeado();
+            this.lblTituloEmpleados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -91,62 +92,6 @@ namespace Vivero.Presentacion.Empleados
             this.panelEditar.SuspendLayout();
             this.panelAgregar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_AgregarEmpleado
-            // 
-            this.btn_AgregarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_AgregarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarEmpleado.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarEmpleado.Name = "btn_AgregarEmpleado";
-            this.btn_AgregarEmpleado.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarEmpleado.TabIndex = 0;
-            this.btn_AgregarEmpleado.Text = "Agregar";
-            this.btn_AgregarEmpleado.UseVisualStyleBackColor = false;
-            this.btn_AgregarEmpleado.Click += new System.EventHandler(this.btn_AgregarEmpleado_Click);
-            // 
-            // btn_EditarEmpleado
-            // 
-            this.btn_EditarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_EditarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EditarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditarEmpleado.Location = new System.Drawing.Point(40, 20);
-            this.btn_EditarEmpleado.Name = "btn_EditarEmpleado";
-            this.btn_EditarEmpleado.Size = new System.Drawing.Size(120, 60);
-            this.btn_EditarEmpleado.TabIndex = 1;
-            this.btn_EditarEmpleado.Text = "Editar";
-            this.btn_EditarEmpleado.UseVisualStyleBackColor = false;
-            this.btn_EditarEmpleado.Click += new System.EventHandler(this.btn_EditarEmpleado_Click);
-            // 
-            // btn_EliminarEmpleado
-            // 
-            this.btn_EliminarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_EliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarEmpleado.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarEmpleado.Name = "btn_EliminarEmpleado";
-            this.btn_EliminarEmpleado.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarEmpleado.TabIndex = 2;
-            this.btn_EliminarEmpleado.Text = "Eliminar";
-            this.btn_EliminarEmpleado.UseVisualStyleBackColor = false;
-            this.btn_EliminarEmpleado.Click += new System.EventHandler(this.btn_EliminarEmpleado_Click);
-            // 
-            // btn_SalirEmpleado
-            // 
-            this.btn_SalirEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_SalirEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirEmpleado.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirEmpleado.Name = "btn_SalirEmpleado";
-            this.btn_SalirEmpleado.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirEmpleado.TabIndex = 3;
-            this.btn_SalirEmpleado.Text = "Cerrar";
-            this.btn_SalirEmpleado.UseVisualStyleBackColor = false;
-            this.btn_SalirEmpleado.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
             // 
             // txt_IdEmpleado
             // 
@@ -171,19 +116,6 @@ namespace Vivero.Presentacion.Empleados
             this.txt_ApellidoEmpleado.Name = "txt_ApellidoEmpleado";
             this.txt_ApellidoEmpleado.Size = new System.Drawing.Size(100, 26);
             this.txt_ApellidoEmpleado.TabIndex = 6;
-            // 
-            // btn_ConsultarEmpleado
-            // 
-            this.btn_ConsultarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(216)))), ((int)(((byte)(210)))));
-            this.btn_ConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(371, 96);
-            this.btn_ConsultarEmpleado.Name = "btn_ConsultarEmpleado";
-            this.btn_ConsultarEmpleado.Size = new System.Drawing.Size(129, 40);
-            this.btn_ConsultarEmpleado.TabIndex = 7;
-            this.btn_ConsultarEmpleado.Text = "Consultar";
-            this.btn_ConsultarEmpleado.UseVisualStyleBackColor = false;
-            this.btn_ConsultarEmpleado.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
             // 
             // label1
             // 
@@ -219,17 +151,18 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.dgv_Empleados.AllowUserToAddRows = false;
             this.dgv_Empleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.dgv_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(206)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Empleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -238,18 +171,19 @@ namespace Vivero.Presentacion.Empleados
             this.colTelefono,
             this.colCalle,
             this.colNumCalle});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(164)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Empleados.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Empleados.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Empleados.Location = new System.Drawing.Point(100, 0);
             this.dgv_Empleados.Name = "dgv_Empleados";
             this.dgv_Empleados.ReadOnly = true;
+            this.dgv_Empleados.RowHeadersVisible = false;
             this.dgv_Empleados.RowHeadersWidth = 51;
             this.dgv_Empleados.RowTemplate.Height = 40;
             this.dgv_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -378,6 +312,8 @@ namespace Vivero.Presentacion.Empleados
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblTituloEmpleados);
+            this.panel3.Controls.Add(this.btn_ConsultarEmpleado);
             this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_IdEmpleado);
@@ -385,7 +321,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Controls.Add(this.chk_Inactivos);
             this.panel3.Controls.Add(this.txt_ApellidoEmpleado);
             this.panel3.Controls.Add(this.chk_Activos);
-            this.panel3.Controls.Add(this.btn_ConsultarEmpleado);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -393,6 +328,14 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1007, 222);
             this.panel3.TabIndex = 16;
+            // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(1007, 50);
+            this.panel24.TabIndex = 14;
             // 
             // panel2
             // 
@@ -577,31 +520,130 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
             // 
-            // panel24
+            // btn_EliminarEmpleado
             // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
+            this.btn_EliminarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarEmpleado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarEmpleado.BorderRadius = 30;
+            this.btn_EliminarEmpleado.BorderSize = 0;
+            this.btn_EliminarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarEmpleado.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarEmpleado.Name = "btn_EliminarEmpleado";
+            this.btn_EliminarEmpleado.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarEmpleado.TabIndex = 7;
+            this.btn_EliminarEmpleado.Text = "Eliminar";
+            this.btn_EliminarEmpleado.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarEmpleado.UseVisualStyleBackColor = false;
+            this.btn_EliminarEmpleado.Click += new System.EventHandler(this.btn_EliminarEmpleado_Click);
+            // 
+            // btn_EditarEmpleado
+            // 
+            this.btn_EditarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarEmpleado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EditarEmpleado.BorderRadius = 30;
+            this.btn_EditarEmpleado.BorderSize = 0;
+            this.btn_EditarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EditarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btn_EditarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditarEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarEmpleado.Location = new System.Drawing.Point(40, 20);
+            this.btn_EditarEmpleado.Name = "btn_EditarEmpleado";
+            this.btn_EditarEmpleado.Size = new System.Drawing.Size(120, 60);
+            this.btn_EditarEmpleado.TabIndex = 6;
+            this.btn_EditarEmpleado.Text = "Editar";
+            this.btn_EditarEmpleado.TextColor = System.Drawing.Color.White;
+            this.btn_EditarEmpleado.UseVisualStyleBackColor = false;
+            this.btn_EditarEmpleado.Click += new System.EventHandler(this.btn_EditarEmpleado_Click);
+            // 
+            // btn_AgregarEmpleado
+            // 
+            this.btn_AgregarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarEmpleado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarEmpleado.BorderRadius = 30;
+            this.btn_AgregarEmpleado.BorderSize = 0;
+            this.btn_AgregarEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarEmpleado.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarEmpleado.Name = "btn_AgregarEmpleado";
+            this.btn_AgregarEmpleado.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarEmpleado.TabIndex = 5;
+            this.btn_AgregarEmpleado.Text = "Agregar";
+            this.btn_AgregarEmpleado.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarEmpleado.UseVisualStyleBackColor = false;
+            this.btn_AgregarEmpleado.Click += new System.EventHandler(this.btn_AgregarEmpleado_Click);
+            // 
+            // btn_ConsultarEmpleado
+            // 
+            this.btn_ConsultarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarEmpleado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarEmpleado.BorderRadius = 20;
+            this.btn_ConsultarEmpleado.BorderSize = 0;
+            this.btn_ConsultarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarEmpleado.Name = "btn_ConsultarEmpleado";
+            this.btn_ConsultarEmpleado.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarEmpleado.TabIndex = 15;
+            this.btn_ConsultarEmpleado.Text = "Consultar";
+            this.btn_ConsultarEmpleado.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarEmpleado.UseVisualStyleBackColor = false;
+            this.btn_ConsultarEmpleado.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
+            // 
+            // btn_SalirEmpleado
+            // 
+            this.btn_SalirEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirEmpleado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirEmpleado.BorderRadius = 20;
+            this.btn_SalirEmpleado.BorderSize = 0;
+            this.btn_SalirEmpleado.FlatAppearance.BorderSize = 0;
+            this.btn_SalirEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirEmpleado.Location = new System.Drawing.Point(48, 16);
+            this.btn_SalirEmpleado.Name = "btn_SalirEmpleado";
+            this.btn_SalirEmpleado.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirEmpleado.TabIndex = 16;
+            this.btn_SalirEmpleado.Text = "Cerrar";
+            this.btn_SalirEmpleado.TextColor = System.Drawing.Color.White;
+            this.btn_SalirEmpleado.UseVisualStyleBackColor = false;
+            this.btn_SalirEmpleado.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
+            // 
+            // lblTituloEmpleados
+            // 
+            this.lblTituloEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTituloEmpleados.AutoSize = true;
+            this.lblTituloEmpleados.Font = new System.Drawing.Font("Berlin Sans FB", 44F);
+            this.lblTituloEmpleados.Location = new System.Drawing.Point(611, 86);
+            this.lblTituloEmpleados.Name = "lblTituloEmpleados";
+            this.lblTituloEmpleados.Size = new System.Drawing.Size(296, 65);
+            this.lblTituloEmpleados.TabIndex = 16;
+            this.lblTituloEmpleados.Text = "Empleados";
             // 
             // C_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(211)))), ((int)(((byte)(222)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1007, 637);
-            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "C_Empleados";
-            this.ShowInTaskbar = false;
             this.Text = "Empleados";
             this.Load += new System.EventHandler(this.ABMC_Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Empleados)).EndInit();
@@ -620,15 +662,9 @@ namespace Vivero.Presentacion.Empleados
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_AgregarEmpleado;
-        private System.Windows.Forms.Button btn_EditarEmpleado;
-        private System.Windows.Forms.Button btn_EliminarEmpleado;
-        private System.Windows.Forms.Button btn_SalirEmpleado;
         private System.Windows.Forms.TextBox txt_IdEmpleado;
         private System.Windows.Forms.TextBox txt_NombreEmpleado;
         private System.Windows.Forms.TextBox txt_ApellidoEmpleado;
-        private System.Windows.Forms.Button btn_ConsultarEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -669,5 +705,11 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel24;
+        private BotonRedondeado btn_ConsultarEmpleado;
+        private BotonRedondeado btn_AgregarEmpleado;
+        private BotonRedondeado btn_SalirEmpleado;
+        private BotonRedondeado btn_EliminarEmpleado;
+        private BotonRedondeado btn_EditarEmpleado;
+        private System.Windows.Forms.Label lblTituloEmpleados;
     }
 }
