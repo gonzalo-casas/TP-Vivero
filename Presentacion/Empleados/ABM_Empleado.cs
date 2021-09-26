@@ -25,6 +25,7 @@ namespace Vivero.Presentacion.Empleados
             oEmpleadoService = new EmpleadoService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
+            operfilService = new PerfilService();
         }
 
         //declaro los objetos
@@ -33,6 +34,7 @@ namespace Vivero.Presentacion.Empleados
         private readonly EmpleadoService oEmpleadoService;
         private readonly BarrioService oBarrioService;
         private readonly LocalidadService olocalidadService;
+        private readonly PerfilService operfilService;
         private int idEmpleado;
         private int EstadoActual; // para el update
 
@@ -45,6 +47,7 @@ namespace Vivero.Presentacion.Empleados
             oEmpleadoService = new EmpleadoService();
             oBarrioService = new BarrioService();
             olocalidadService = new LocalidadService();
+            operfilService = new PerfilService();
 
         }
 
@@ -62,6 +65,7 @@ namespace Vivero.Presentacion.Empleados
             LlenarCombo(cboTipoDoc, oTipoDocService.traerTodo(), "Descripcion", "ID");
             LlenarCombo(cboBarrio, oBarrioService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboLocalidad, olocalidadService.traerTodo(), "Nombre", "ID");
+            LlenarCombo(cboPerfil, operfilService.traerTodo(), "Descripcion", "ID");
 
 
             
@@ -92,6 +96,7 @@ namespace Vivero.Presentacion.Empleados
                         cboBarrio.Enabled = true;
                         cboLocalidad.Enabled = true;
                         txtTelefono.Enabled = true;
+                        cboPerfil.Enabled = true;
 
                         break;
                     }
@@ -111,6 +116,7 @@ namespace Vivero.Presentacion.Empleados
                         cboBarrio.Enabled = false;
                         cboLocalidad.Enabled = false;
                         txtTelefono.Enabled = false;
+                        cboPerfil.Enabled = false;
                         break;
                     }
             }
@@ -136,6 +142,7 @@ namespace Vivero.Presentacion.Empleados
             txtContrasena.Text = tabla.Rows[0]["Contraseña"].ToString();
             txtRepetirContrasena.Text = txtContrasena.Text;
             EstadoActual = Convert.ToInt32(tabla.Rows[0]["Estado"]);
+            cboPerfil.Text = tabla.Rows[0]["Perfil"].ToString();
 
 
 
@@ -207,7 +214,12 @@ namespace Vivero.Presentacion.Empleados
                 MessageBox.Show("Seleccione una localidad por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-           
+            if (cboPerfil.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un perfil por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
 
             return true;
         }
@@ -242,8 +254,11 @@ namespace Vivero.Presentacion.Empleados
                                 oEmpleado.Localidad = new Es_Localidad();
                                 oEmpleado.Localidad.IdLocalidad = (int)cboLocalidad.SelectedValue;
                                 oEmpleado.Estado = 1;
+                                oEmpleado.Perfil = new Es_Perfil();
+                                oEmpleado.Perfil.IdPerfil = (int)cboPerfil.SelectedValue;
 
-                                if (oEmpleadoService.CrearEmpleado(oEmpleado))
+
+                            if (oEmpleadoService.CrearEmpleado(oEmpleado))
                                 {
                                     MessageBox.Show("Empleado insertado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
@@ -268,18 +283,20 @@ namespace Vivero.Presentacion.Empleados
                             oEmpleadoSeleccionado.Apellido = txt_ApellidoEmpleado.Text;
                             oEmpleadoSeleccionado.Contraseña = txtContrasena.Text;
                             oEmpleadoSeleccionado.TipoDoc = new Es_TipoDoc();
-                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedIndex+1);
+                            oEmpleadoSeleccionado.TipoDoc.IdTipoDoc = ((int)cboTipoDoc.SelectedValue);
                             oEmpleadoSeleccionado.Nro_Doc = txtNroDoc.Text;
                             oEmpleadoSeleccionado.Telefono = txtTelefono.Text;
                             oEmpleadoSeleccionado.Calle = txtCalle.Text;
                             oEmpleadoSeleccionado.Nro_Calle = txtNroCalle.Text;
                             oEmpleadoSeleccionado.Barrio = new Es_Barrio();
-                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
+                            oEmpleadoSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedValue);
                             oEmpleadoSeleccionado.Localidad = new Es_Localidad();
-                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
+                            oEmpleadoSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedValue);
                             oEmpleadoSeleccionado.Estado =  EstadoActual;
-                            
-       
+                            oEmpleadoSeleccionado.Perfil = new Es_Perfil();
+                            oEmpleadoSeleccionado.Perfil.IdPerfil = ((int)cboPerfil.SelectedValue);
+
+
 
                             if (oEmpleadoService.ActualizarEmpleado(oEmpleadoSeleccionado))
                             {

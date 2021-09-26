@@ -20,7 +20,7 @@ namespace Vivero.Negocio
             dao = new EmpleadoDao();
         }
 
-        public string ValidarUsuario(int Id_Usuario, string Contrasena)
+        public Array ValidarUsuario(int Id_Usuario, string Contrasena)
         {
             return dao.ValidarUsuario(Id_Usuario, Contrasena);
         }
@@ -30,9 +30,9 @@ namespace Vivero.Negocio
             return dao.Update(oEmpleadoSeleccionado);
         }
 
-        public DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado)
+        public DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado, string Perfil)
         {
-            return dao.BuscarEmpleado( ID_emp,  nom_emp,  ap_emp,  estado);
+            return dao.BuscarEmpleado( ID_emp,  nom_emp,  ap_emp,  estado, Perfil);
         }
 
 

@@ -10,13 +10,15 @@ using System.Windows.Forms;
 using Vivero.Datos;
 using Vivero.Negocio;
 using Vivero.Negocio.EstructuraNegocio;
+using Vivero.Negocio.Servicios;
 
 namespace Vivero.Presentacion.Empleados
 {
     
     public partial class C_Empleados : Form
     {
-        EmpleadoService oEmpleado = new EmpleadoService ();
+        EmpleadoService oEmpleado = new EmpleadoService();
+        PerfilService oPerfil = new PerfilService();
 
         public C_Empleados()
         {
@@ -54,7 +56,8 @@ namespace Vivero.Presentacion.Empleados
         }
 
         private void btn_ConsultarEmpleado_Click(object sender, EventArgs e)
-        {   
+        {
+            var perfil = cboPerfil.SelectedValue  != null ? cboPerfil.SelectedValue.ToString() : "";
             var estado = "('0','1')";
             if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
             {
@@ -65,7 +68,7 @@ namespace Vivero.Presentacion.Empleados
                 estado = "('0')";
             }
 
-            Cargar_Grilla(oEmpleado.BuscarEmpleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text, estado));
+            Cargar_Grilla(oEmpleado.BuscarEmpleado(txt_IdEmpleado.Text, txt_NombreEmpleado.Text, txt_ApellidoEmpleado.Text, estado, perfil));
             return;
 
         }
@@ -86,9 +89,19 @@ namespace Vivero.Presentacion.Empleados
             }
         }
 
+       
+
         private void ABMC_Empleados_Load(object sender, EventArgs e)
         {
+            LlenarCombo(cboPerfil, oPerfil.traerTodo(), "Descripcion", "ID");
+        }
 
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
         }
 
         private void btn_EliminarEmpleado_Click(object sender, EventArgs e)

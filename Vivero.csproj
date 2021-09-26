@@ -49,15 +49,18 @@
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
+    <Compile Include="Datos\Daos\PerfilDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
+    <Compile Include="Datos\Interfaces\IPerfil.cs" />
     <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
+    <Compile Include="Negocio\Entidades\Es_Perfil.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoProducto.cs" />
     <Compile Include="Negocio\Servicios\LocalidadService.cs" />
+    <Compile Include="Negocio\Servicios\PerfilService.cs" />
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />

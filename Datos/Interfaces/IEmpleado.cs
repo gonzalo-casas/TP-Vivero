@@ -10,12 +10,12 @@ namespace Vivero.Datos.Interfaces
 {
     interface IEmpleado
     {
-        string ValidarUsuario(int Id_Usuario, string Contrasena);
+        Array ValidarUsuario(int Id_Usuario, string Contrasena);
         bool Create(Es_Empleado oEmpleado);
         bool Update(Es_Empleado oEmpleadoSeleccionado);
         bool Delete(Es_Empleado oEmpleado);
         DataTable RecuperarPorId(int idEmpleado);
-        DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado);
+        DataTable BuscarEmpleado(string ID_emp, string nom_emp, string ap_emp, string estado, string Perfil);
 
     }
 }

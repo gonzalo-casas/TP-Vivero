@@ -21,5 +21,6 @@ namespace Vivero.Negocio.EstructuraNegocio
         public Es_Localidad Localidad { get; set; }
         public string Contraseña { get; set; }
         public int Estado { get; set; }
+        public Es_Perfil Perfil { get; set; }
     }
 }

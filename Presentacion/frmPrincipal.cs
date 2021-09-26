@@ -40,10 +40,26 @@ namespace Vivero
             {
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
                 this.LblNombreUsuario.Text = fl.MiUsuario.Nombre;
+
+                if (fl.MiUsuario.Perfil.IdPerfil.Equals(1)) // si es administrador...
+                    habilitarOpciones(true);
+                else
+                    habilitarOpciones(false);
+
             }
                 
 
             fl.Dispose();
+        }
+
+        private void habilitarOpciones(bool x)
+        {
+            btnClientes.Enabled = x;
+            BtnProveedor.Enabled = x;
+            btnEmpleados.Enabled = x;
+            btnProductos.Enabled = x;
+            btnPlantas.Enabled = x;
+            btnCatalogos.Enabled = x;
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

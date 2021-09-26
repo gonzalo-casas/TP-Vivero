@@ -234,9 +234,9 @@ namespace Vivero.Presentacion.Proveedor
                             oProveedorSeleccionado.Calle = txtCalle.Text;
                             oProveedorSeleccionado.Nro_Calle = txtNroCalle.Text;
                             oProveedorSeleccionado.Barrio = new Es_Barrio();
-                            oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedIndex+1);
+                            oProveedorSeleccionado.Barrio.IdBarrio = ((int)cboBarrio.SelectedValue);
                             oProveedorSeleccionado.Localidad = new Es_Localidad();
-                            oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedIndex+1);
+                            oProveedorSeleccionado.Localidad.IdLocalidad = ((int)cboLocalidad.SelectedValue);
                             oProveedorSeleccionado.Estado = EstadoActual;
                             
 

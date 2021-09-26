@@ -37,24 +37,28 @@ namespace Vivero.Presentacion
         {
             if (string.IsNullOrEmpty(this.txtUsuario.Text))
             {
-                MessageBox.Show("Ingrese su usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese su usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.txtUsuario.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(this.txtContrasena.Text))
             {
-                MessageBox.Show("Ingrese la contraseña","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.txtContrasena.Focus();
                 return;
             }
 
             this.miUsuario.ID = int.Parse(this.txtUsuario.Text);
             this.miUsuario.Contraseña = this.txtContrasena.Text;
-            this.miUsuario.Nombre = this.oUsuario.ValidarUsuario(miUsuario.ID, miUsuario.Contraseña);
+            Array arrayUsuario = this.oUsuario.ValidarUsuario(miUsuario.ID, miUsuario.Contraseña);
+            this.miUsuario.Nombre = arrayUsuario.GetValue(0).ToString();
+            
 
-            if (this.oUsuario.ValidarUsuario(miUsuario.ID, miUsuario.Contraseña) != String.Empty)
+            if (this.miUsuario.Nombre != string.Empty)
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                miUsuario.Perfil = new Es_Perfil();
+                this.miUsuario.Perfil.IdPerfil = int.Parse(arrayUsuario.GetValue(1).ToString());
                 this.Close();
             }
             else
