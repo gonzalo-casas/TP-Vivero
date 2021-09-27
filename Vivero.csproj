@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Daos\BarrioDao.cs" />
+    <Compile Include="Datos\Daos\CatalogoDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
+    <Compile Include="Datos\Interfaces\ICatalogo.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
     <Compile Include="Datos\Interfaces\IPerfil.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
+    <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />
     <Compile Include="Negocio\Entidades\Es_Catalogo.cs" />
@@ -83,6 +86,18 @@
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\ABM_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\ABM_Catalogo.Designer.cs">
+      <DependentUpon>ABM_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\C_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\C_Catalogo.Designer.cs">
+      <DependentUpon>C_Catalogo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
@@ -122,6 +137,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Catalogos\ABM_Catalogo.resx">
+      <DependentUpon>ABM_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Catalogos\C_Catalogo.resx">
+      <DependentUpon>C_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleados\C_Empleados.resx">
       <DependentUpon>C_Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +185,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentacion\Catalogos\" />
     <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Presentacion\Productos\" />

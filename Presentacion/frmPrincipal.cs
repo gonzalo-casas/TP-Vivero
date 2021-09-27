@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Presentacion;
+using Vivero.Presentacion.Catalogos;
 using Vivero.Presentacion.Empleados;
 using Vivero.Presentacion.Proveedor;
 
@@ -70,7 +71,8 @@ namespace Vivero
 
         private void btnCatalogos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario<C_Catalogo>();
+            btnEmpleados.BackColor = Color.FromArgb(205, 241, 231);
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
