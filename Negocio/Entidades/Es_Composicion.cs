@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Vivero.Negocio.EstructuraNegocio
 {
-    class Es_ProductoCompuesto
+    class Es_Composicion
     {
-        public string ID { get; set; }
         public string Cod_Prod_Compuesto { get; set; }
         public string Cod_Prod_Componente { get; set; }
-        public string Cant_Compuesto { get; set; }
         public string Cant_Componente { get; set; }
     }
 }
