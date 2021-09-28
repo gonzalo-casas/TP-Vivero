@@ -14,7 +14,7 @@ namespace Vivero.Datos.Daos
         public DataTable Buscar_Catalogo(string ID, string Puntos_Necesarios, string estado)
         {
 
-            string consulta = "SELECT * FROM Catalogo WHERE Estado in  " + estado;
+            string consulta = "SELECT * FROM Catalogo c JOIN Planta p on (c.Id_Planta = p.Codigo) WHERE c.Estado in  " + estado;
 
 
             if (!String.IsNullOrEmpty(ID))
@@ -26,7 +26,7 @@ namespace Vivero.Datos.Daos
 
             if (!String.IsNullOrEmpty(Puntos_Necesarios))
             {
-                consulta += " AND Apellido LIKE " + "'" + Puntos_Necesarios + "'";
+                consulta += " AND Puntos_Necesarios LIKE " + "'" + Puntos_Necesarios + "'";
             }
            
             return BDHelper.obtenerInstancia().consultar(consulta);
@@ -38,10 +38,11 @@ namespace Vivero.Datos.Daos
         {
 
 
-            string consulta = "INSERT INTO Catalogo (ID, Id_Planta,Puntos_Necesarios, Estado)" +
+            string consulta = "INSERT INTO Catalogo  (ID,Puntos_Necesarios, Estado)" +
                             " VALUES (" +
                             "'" + oCatalogo.ID + "'" + "," +
-                            "'" + oCatalogo.Id_Planta + "'" + "," +
+                           "'" + oCatalogo.Id_Planta + "'" + "," +
+                           //"'" + oPlanta.NombreComun + "'" + "," +
                             "'" + oCatalogo.Puntos_Necesarios + "' , 1)";
 
 

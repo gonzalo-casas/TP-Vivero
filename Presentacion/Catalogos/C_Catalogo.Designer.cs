@@ -76,7 +76,7 @@ namespace Vivero.Presentacion.Catalogos
             this.panel28 = new System.Windows.Forms.Panel();
             this.dgv_Catalogos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreComun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Punt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -528,7 +528,7 @@ namespace Vivero.Presentacion.Catalogos
             this.dgv_Catalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Catalogos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.ID_Planta,
+            this.NombreComun,
             this.Punt});
             this.dgv_Catalogos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Catalogos.Location = new System.Drawing.Point(100, 225);
@@ -549,13 +549,13 @@ namespace Vivero.Presentacion.Catalogos
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
-            // ID_Planta
+            // NombreComun
             // 
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_Planta.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ID_Planta.HeaderText = "ID_Planta";
-            this.ID_Planta.Name = "ID_Planta";
-            this.ID_Planta.ReadOnly = true;
+            this.NombreComun.DefaultCellStyle = dataGridViewCellStyle2;
+            this.NombreComun.HeaderText = "Nombre Planta";
+            this.NombreComun.Name = "NombreComun";
+            this.NombreComun.ReadOnly = true;
             // 
             // Punt
             // 
@@ -640,7 +640,7 @@ namespace Vivero.Presentacion.Catalogos
         private System.Windows.Forms.CheckBox chk_Activos;
         private System.Windows.Forms.CheckBox chk_Inactivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Planta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreComun;
         private System.Windows.Forms.DataGridViewTextBoxColumn Punt;
     }
 }

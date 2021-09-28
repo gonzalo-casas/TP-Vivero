@@ -48,7 +48,7 @@ namespace Vivero.Presentacion.Catalogos
             {
                 dgv_Catalogos.Rows.Add();
                 dgv_Catalogos.Rows[i].Cells[0].Value = tabla.Rows[i]["ID"].ToString();
-                dgv_Catalogos.Rows[i].Cells[1].Value = tabla.Rows[i]["Id_Planta"].ToString();
+                dgv_Catalogos.Rows[i].Cells[1].Value = tabla.Rows[i]["NombreComun"].ToString();
                 dgv_Catalogos.Rows[i].Cells[2].Value = tabla.Rows[i]["Puntos_Necesarios"].ToString();
 
             }
@@ -58,7 +58,18 @@ namespace Vivero.Presentacion.Catalogos
 
         private void btn_EditarCatalogo_Click(object sender, EventArgs e)
         {
-           
+          /*  if (dgv_Catalogos.SelectedRows.Count > 0)
+            {
+                var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
+                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
+                formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.update);
+                formulario.ShowDialog();
+                btn_ConsultarCatalogo_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proveedor para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }*/
         }
 
         private void btn_ConsultarCatalogo_Click(object sender, EventArgs e)
@@ -78,7 +89,18 @@ namespace Vivero.Presentacion.Catalogos
 
         private void btn_EliminarCatalogo_Click(object sender, EventArgs e)
         {
-
+           /* if (dgv_Catalogos.SelectedRows.Count > 0)
+            {
+                var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
+                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
+                formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.delete);
+                formulario.ShowDialog();
+                btn_ConsultarCatalogo_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Catalogo para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }*/
         }
     }
     

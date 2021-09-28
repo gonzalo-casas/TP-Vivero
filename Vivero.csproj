@@ -185,7 +185,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Presentacion\Productos\" />
   </ItemGroup>
