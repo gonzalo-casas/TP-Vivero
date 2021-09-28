@@ -1,25 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Data;
-//using System.Drawing;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Windows.Forms;
-
-//namespace Vivero.Presentacion.Clientes
-//{
-//    public partial class C_Clientes : Form
-//    {
-//        public C_Clientes()
-//        {
-//            InitializeComponent();
-//        }
-//    }
-//}
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
