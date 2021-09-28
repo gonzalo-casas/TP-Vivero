@@ -10,6 +10,7 @@ namespace Vivero.Datos.Interfaces
 {
     interface ICatalogo
     {
+        DataTable Buscar_Planta();
         DataTable Buscar_Catalogo(string ID, string Puntos_Necesarios, string estado);
         bool Create(Es_Catalogo oCatalogo);
         bool Update(Es_Catalogo oCatalogoSeleccionado);

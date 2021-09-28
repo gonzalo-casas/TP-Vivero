@@ -11,6 +11,11 @@ namespace Vivero.Datos.Daos
 {
     class CatalogoDao : ICatalogo
     {
+        public DataTable Buscar_Planta()
+        {
+            string consulta = "SELECT NombreComun FROM Planta WHERE Estado = 1 ";
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
         public DataTable Buscar_Catalogo(string ID, string Puntos_Necesarios, string estado)
         {
 

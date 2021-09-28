@@ -23,6 +23,7 @@ namespace Vivero.Presentacion.Catalogos
         //declaro los objetos
         private FormMode formMode = FormMode.insert;
         private readonly CatalogoService oCatalogoService;
+        DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
         private int idCatalogo;
         private int EstadoActual;
         public ABM_Catalogo()
@@ -38,9 +39,41 @@ namespace Vivero.Presentacion.Catalogos
         }
 
 
-        private void ALTA_Proveedor_Load(object sender, EventArgs e)
+        private void ALTA_Catalogo_Load(object sender, EventArgs e)
         {
-            
+            this.dgv_Planta.RowTemplate.Height = 29;
+
+            cmb.HeaderText = "Componente";
+            cmb.Name = "cmb";
+            cmb.MaxDropDownItems = 4;
+            DataTable tablaCatalogo = oCatalogoService.Buscar_Planta();
+            DataRow filaDefault = tablaCatalogo.NewRow();
+            filaDefault[1] = "Seleccionar";
+            filaDefault[4] = 0;
+            filaDefault[5] = 0;
+            filaDefault[6] = 0;
+            tablaCatalogo.Rows.Add(filaDefault);
+            cmb.DataSource = tablaCatalogo;
+            cmb.DisplayMember = "Nombre";
+            cmb.DisplayIndex = 0;
+            cmb.ValueMember = "Nombre";
+            for (int i = 0; i < tablaCatalogo.Rows.Count; i++)
+            {
+                if (tablaCatalogo.Rows[i]["Nombre"].ToString() == "Seleccionar")
+                {
+                    cmb.DefaultCellStyle.NullValue = tablaCatalogo.Rows[i]["Nombre"];
+                }
+            }
+            if (dgv_Planta.ColumnCount != 2)
+            {
+                dgv_Planta.Columns.Insert(0, cmb);
+            }
+        
+            else
+            {
+                this.Size = new Size(500, 510);
+                this.gbPlantas.Visible = false;
+            }
 
             //switch para actualizar titulo y habilitar  txt y cbo
 
@@ -241,14 +274,14 @@ namespace Vivero.Presentacion.Catalogos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            dgv_Componentes.Rows.Add();
+            dgv_Planta.Rows.Add();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow fila in dgv_Componentes.SelectedRows)
+            foreach (DataGridViewRow fila in dgv_Planta.SelectedRows)
             {
-                dgv_Componentes.Rows.RemoveAt(fila.Index);
+                dgv_Planta.Rows.RemoveAt(fila.Index);
             }
         }
 
