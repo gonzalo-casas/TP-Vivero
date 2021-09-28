@@ -11,44 +11,48 @@ namespace Vivero.Datos.Daos
 {
     class EmpleadoDao : IEmpleado
     {
-        public string ValidarUsuario(int Id_Usuario, string Contrasena)
+        public Array ValidarUsuario(int Id_Usuario, string Contrasena)
         {
             string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "'";
 
-
+            string[] array;
 
             DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             if (tabla.Rows.Count > 0)
-                return (string)tabla.Rows[0]["Nombre"].ToString();
+               return  array = new string [2]{ (string)tabla.Rows[0]["Nombre"].ToString(), (string)tabla.Rows[0]["Perfil"].ToString()};
             else
-                return string.Empty;
+                return array= new string[1] {string.Empty};
         }
 
-        public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp, string estado)
+            public DataTable BuscarEmpleado (string ID_emp, string nom_emp, string ap_emp, string estado, string Perfil)
         {
            
-        string consulta = "SELECT * FROM Empleado WHERE Estado in  " + estado;
+            string consulta = "SELECT * FROM Empleado WHERE Estado in  " + estado;
             
 
-        if (!String.IsNullOrEmpty(ID_emp))
-        {
-            consulta += " AND ID LIKE " + ID_emp;
+            if (!String.IsNullOrEmpty(ID_emp))
+            {
+                consulta += " AND ID LIKE " + ID_emp;
 
-        } 
+            } 
 
-        if (!String.IsNullOrEmpty(nom_emp))
-        {
-            consulta += " AND Nombre LIKE " + "'" + nom_emp + "'";
-        }
+            if (!String.IsNullOrEmpty(nom_emp))
+            {
+                consulta += " AND Nombre LIKE " + "'" + nom_emp + "'";
+            }
 
-        if (!String.IsNullOrEmpty(ap_emp))
-        {
-            consulta += " AND Apellido LIKE " + "'" + ap_emp + "'";
-        }
+            if (!String.IsNullOrEmpty(ap_emp))
+            {
+                consulta += " AND Apellido LIKE " + "'" + ap_emp + "'";
+            }
+            if (!String.IsNullOrEmpty(Perfil))
+            {
+                consulta += " AND Perfil LIKE " + "'" + Perfil + "'";
+            }
 
 
 
-        return BDHelper.obtenerInstancia().consultar(consulta);
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
 
@@ -57,7 +61,7 @@ namespace Vivero.Datos.Daos
         {
            
 
-            string consulta = "INSERT INTO Empleado (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Contraseña, Estado)" +
+            string consulta = "INSERT INTO Empleado (TipoDoc, NroDoc, Nombre, Apellido, Telefono, Calle, Nro_Calle, Barrio, Localidad, Perfil ,Contraseña, Estado)" +
                             " VALUES (" +
                             "'" + oEmpleado.TipoDoc.IdTipoDoc + "'" + "," +
                             "'" + oEmpleado.Nro_Doc + "'" + "," +
@@ -68,6 +72,7 @@ namespace Vivero.Datos.Daos
                             "'" + oEmpleado.Nro_Calle + "'" + "," +
                             "'" + oEmpleado.Barrio.IdBarrio + "'" + "," +
                             "'" + oEmpleado.Localidad.IdLocalidad + "'" + "," +
+                            "'" + oEmpleado.Perfil.IdPerfil + "'" + "," +
                             "'" + oEmpleado.Contraseña  +"' , 1)";
           
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
@@ -87,6 +92,7 @@ namespace Vivero.Datos.Daos
                              " Nro_Calle=" + "'" + oEmpleadoSeleccionado.Nro_Calle + "'" + "," +
                              " Barrio=" + "'" + oEmpleadoSeleccionado.Barrio.IdBarrio + "'" +  "," +
                              " Localidad=" + "'" + oEmpleadoSeleccionado.Localidad.IdLocalidad + "'" + "," +
+                             " Perfil=" + "'" + oEmpleadoSeleccionado.Perfil.IdPerfil + "'" + "," +
                              " Contraseña=" + "'" + oEmpleadoSeleccionado.Contraseña + "'" +  "," +
                              " Estado=" + "'" + oEmpleadoSeleccionado.Estado +  "'" + 
                              " WHERE ID=" +  oEmpleadoSeleccionado.ID ;
@@ -98,11 +104,12 @@ namespace Vivero.Datos.Daos
 
         public DataTable RecuperarPorId(int idEmpleado)
         {
-            string consulta = "SELECT e.ID, t.Descripcion as TipoDoc, e.NroDoc, e.Nombre, e.Apellido, e.Telefono, e.Calle, e.Nro_Calle, b.Nombre as Barrio, l.Nombre as Localidad, e.Contraseña, e.Estado" +
+            string consulta = "SELECT e.ID, t.Descripcion as TipoDoc, e.NroDoc, e.Nombre, e.Apellido, e.Telefono, e.Calle, e.Nro_Calle, b.Nombre as Barrio, l.Nombre as Localidad, e.Contraseña, e.Estado, p.Descripcion as Perfil" +
             " FROM Empleado e " +
            "  JOIN TipoDoc t ON(t.ID = e.TipoDoc) " +
             " JOIN Barrio b ON(b.ID = e.Barrio) " +
            "  JOIN Localidad l ON(l.ID = e.Localidad) " +
+           "  JOIN Perfil p ON(p.ID = e.Perfil) " +
            "  WHERE e.ID =" +
               idEmpleado;
 

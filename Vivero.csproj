@@ -48,8 +48,11 @@
   <ItemGroup>
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\ComposicionDao.cs" />
+    <Compile Include="Datos\Daos\CatalogoDao.cs" />
+    <Compile Include="Datos\Daos\ClienteDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
+    <Compile Include="Datos\Daos\PerfilDao.cs" />
     <Compile Include="Datos\Daos\ProductoDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
@@ -57,16 +60,21 @@
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
     <Compile Include="Datos\Interfaces\IComposicion.cs" />
+    <Compile Include="Datos\Interfaces\ICatalogo.cs" />
+    <Compile Include="Datos\Interfaces\ICliente.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
     <Compile Include="Datos\Interfaces\ITipoProducto.cs" />
     <Compile Include="Datos\Interfaces\IProducto.cs" />
+    <Compile Include="Datos\Interfaces\IPerfil.cs" />
     <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
+    <Compile Include="Negocio\Entidades\Es_Perfil.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
+    <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\ComposicionService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />
@@ -81,6 +89,7 @@
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoProducto.cs" />
     <Compile Include="Negocio\Servicios\LocalidadService.cs" />
+    <Compile Include="Negocio\Servicios\PerfilService.cs" />
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
     <Compile Include="Negocio\Servicios\ProductoService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
@@ -88,6 +97,30 @@
     <Compile Include="Negocio\Servicios\TipoProductoService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\ABM_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\ABM_Catalogo.Designer.cs">
+      <DependentUpon>ABM_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\C_Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Catalogos\C_Catalogo.Designer.cs">
+      <DependentUpon>C_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.Designer.cs">
+      <DependentUpon>ABM_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.Designer.cs">
+      <DependentUpon>C_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
@@ -139,6 +172,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Catalogos\ABM_Catalogo.resx">
+      <DependentUpon>ABM_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Catalogos\C_Catalogo.resx">
+      <DependentUpon>C_Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleados\C_Empleados.resx">
       <DependentUpon>C_Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,8 +226,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentacion\Catalogos\" />
-    <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
   </ItemGroup>
   <ItemGroup>
