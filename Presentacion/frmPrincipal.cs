@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Presentacion;
 using Vivero.Presentacion.Catalogos;
+using Vivero.Presentacion.Clientes;
 using Vivero.Presentacion.Empleados;
+using Vivero.Presentacion.Productos;
 using Vivero.Presentacion.Proveedor;
 
 namespace Vivero
@@ -72,7 +74,7 @@ namespace Vivero
         private void btnCatalogos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<C_Catalogo>();
-            btnEmpleados.BackColor = Color.FromArgb(205, 241, 231);
+            btnCatalogos.BackColor = Color.FromArgb(205, 241, 231);
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -88,6 +90,13 @@ namespace Vivero
             AbrirFormulario<C_Proveedores>();
             BtnProveedor.BackColor = Color.FromArgb(205, 241, 231);
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<C_Clientes>();
+            btnClientes.BackColor = Color.FromArgb(205, 241, 231);
+        }
+
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -123,8 +132,23 @@ namespace Vivero
                 btnEmpleados.BackColor = Color.FromArgb(135, 181, 168);
             if (Application.OpenForms["C_Proveedores"] == null)
                 BtnProveedor.BackColor = Color.FromArgb(135, 181, 168);
+
+            if (Application.OpenForms["C_Clientes"] == null)
+                btnClientes.BackColor = Color.FromArgb(135, 181, 168);
+            if (Application.OpenForms["C_Catalogo"] == null)
+                btnCatalogos.BackColor = Color.FromArgb(135, 181, 168);
             //if (Application.OpenForms["Form3"] == null)
             //    button3.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["C_Productos"] == null)
+                btnProductos.BackColor = Color.FromArgb(135, 181, 168);
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<C_Productos>();
+            btnProductos.BackColor = Color.FromArgb(205, 241, 231);
+        }
+
+       
     }
 }

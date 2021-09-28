@@ -47,17 +47,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Daos\BarrioDao.cs" />
+    <Compile Include="Datos\Daos\ComposicionDao.cs" />
     <Compile Include="Datos\Daos\CatalogoDao.cs" />
+    <Compile Include="Datos\Daos\ClienteDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
+    <Compile Include="Datos\Daos\ProductoDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
+    <Compile Include="Datos\Daos\TipoProductoDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
+    <Compile Include="Datos\Interfaces\IComposicion.cs" />
     <Compile Include="Datos\Interfaces\ICatalogo.cs" />
+    <Compile Include="Datos\Interfaces\ICliente.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
+    <Compile Include="Datos\Interfaces\ITipoProducto.cs" />
+    <Compile Include="Datos\Interfaces\IProducto.cs" />
     <Compile Include="Datos\Interfaces\IPerfil.cs" />
     <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
@@ -68,13 +76,14 @@
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
     <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
+    <Compile Include="Negocio\Servicios\ComposicionService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />
     <Compile Include="Negocio\Entidades\Es_Catalogo.cs" />
     <Compile Include="Negocio\Entidades\Es_Cliente.cs" />
     <Compile Include="Negocio\Entidades\Es_Empleado.cs" />
     <Compile Include="Negocio\Entidades\Es_Planta.cs" />
     <Compile Include="Negocio\Entidades\Es_Producto.cs" />
-    <Compile Include="Negocio\Entidades\Es_ProductoCompuesto.cs" />
+    <Compile Include="Negocio\Entidades\Es_Composicion.cs" />
     <Compile Include="Negocio\Entidades\Es_Proveedor.cs" />
     <Compile Include="Negocio\Entidades\Es_Puntos.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
@@ -82,8 +91,10 @@
     <Compile Include="Negocio\Servicios\LocalidadService.cs" />
     <Compile Include="Negocio\Servicios\PerfilService.cs" />
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
+    <Compile Include="Negocio\Servicios\ProductoService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
+    <Compile Include="Negocio\Servicios\TipoProductoService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -98,6 +109,18 @@
     </Compile>
     <Compile Include="Presentacion\Catalogos\C_Catalogo.Designer.cs">
       <DependentUpon>C_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.Designer.cs">
+      <DependentUpon>ABM_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.Designer.cs">
+      <DependentUpon>C_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
@@ -122,6 +145,18 @@
     </Compile>
     <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Productos\ABM_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Productos\ABM_Producto.Designer.cs">
+      <DependentUpon>ABM_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Productos\C_Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Productos\C_Productos.Designer.cs">
+      <DependentUpon>C_Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Proveedor\C_Proveedores.cs">
       <SubType>Form</SubType>
@@ -155,6 +190,12 @@
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Productos\ABM_Producto.resx">
+      <DependentUpon>ABM_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Productos\C_Productos.resx">
+      <DependentUpon>C_Productos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Proveedor\C_Proveedores.resx">
       <DependentUpon>C_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,7 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentacion\Plantas\" />
-    <Folder Include="Presentacion\Productos\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Presentacion\Recursos\Iconos\icons8-user-64.png" />
