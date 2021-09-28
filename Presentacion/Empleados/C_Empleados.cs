@@ -89,12 +89,7 @@ namespace Vivero.Presentacion.Empleados
             }
         }
 
-       
 
-        private void ABMC_Empleados_Load(object sender, EventArgs e)
-        {
-            LlenarCombo(cboPerfil, oPerfil.traerTodo(), "Descripcion", "ID");
-        }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
@@ -122,6 +117,9 @@ namespace Vivero.Presentacion.Empleados
 
         }
 
-
+        private void cboPerfil_Click(object sender, EventArgs e)
+        {
+            LlenarCombo(cboPerfil, oPerfil.traerTodo(), "Descripcion", "ID");
+        }
     }
 }

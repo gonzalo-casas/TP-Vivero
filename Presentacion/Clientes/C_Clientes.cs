@@ -23,9 +23,10 @@ namespace Vivero.Presentacion.Clientes
         public C_Clientes()
         {
             InitializeComponent();
-
+            
         }
 
+        
         private void btn_AgregarCliente_Click(object sender, EventArgs e)
         {
             ABM_Cliente fl;
@@ -92,12 +93,6 @@ namespace Vivero.Presentacion.Clientes
         }
 
 
-
-        private void C_Clientes_Load(object sender, EventArgs e)
-        {
-            LlenarCombo(cboTipoDoc, oTipoDoc.traerTodo(), "Descripcion", "ID");
-        }
-
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
             cbo.DataSource = source;
@@ -138,6 +133,10 @@ namespace Vivero.Presentacion.Clientes
 
         }
 
+        private void cboTipoDoc_Click(object sender, EventArgs e)
+        {
+            LlenarCombo(cboTipoDoc, oTipoDoc.traerTodo(), "Descripcion", "ID");
+        }
     }
 
 
