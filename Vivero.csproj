@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Datos\Daos\BarrioDao.cs" />
     <Compile Include="Datos\Daos\CatalogoDao.cs" />
+    <Compile Include="Datos\Daos\ClienteDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
     <Compile Include="Datos\Interfaces\ICatalogo.cs" />
+    <Compile Include="Datos\Interfaces\ICliente.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
     <Compile Include="Datos\Interfaces\IPerfil.cs" />
@@ -98,6 +100,18 @@
     </Compile>
     <Compile Include="Presentacion\Catalogos\C_Catalogo.Designer.cs">
       <DependentUpon>C_Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\ABM_Cliente.Designer.cs">
+      <DependentUpon>ABM_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\C_Clientes.Designer.cs">
+      <DependentUpon>C_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleados\C_Empleados.cs">
       <SubType>Form</SubType>
@@ -185,7 +199,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentacion\Clientes\" />
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Presentacion\Productos\" />
   </ItemGroup>
