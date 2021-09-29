@@ -58,7 +58,7 @@ namespace Vivero.Presentacion.Catalogos
 
         private void btn_EditarCatalogo_Click(object sender, EventArgs e)
         {
-          /*  if (dgv_Catalogos.SelectedRows.Count > 0)
+            if (dgv_Catalogos.SelectedRows.Count > 0)
             {
                 var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
                 ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
@@ -68,8 +68,8 @@ namespace Vivero.Presentacion.Catalogos
             }
             else
             {
-                MessageBox.Show("Seleccione un proveedor para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
+                MessageBox.Show("Seleccione un Catalogo para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_ConsultarCatalogo_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace Vivero.Presentacion.Catalogos
 
         private void btn_EliminarCatalogo_Click(object sender, EventArgs e)
         {
-           /* if (dgv_Catalogos.SelectedRows.Count > 0)
+            if (dgv_Catalogos.SelectedRows.Count > 0)
             {
                 var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
                 ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
@@ -100,7 +100,7 @@ namespace Vivero.Presentacion.Catalogos
             else
             {
                 MessageBox.Show("Seleccione un Catalogo para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
+            }
         }
     }
     

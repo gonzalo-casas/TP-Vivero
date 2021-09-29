@@ -28,7 +28,10 @@ namespace Vivero.Negocio.Servicios
         {
             return dao.Buscar_Catalogo(ID, Puntos_Necesarios, estado );
         }
-
+        public DataTable Buscar_Planta()
+        {
+            return dao.Buscar_Planta();
+        }
 
         internal bool CrearCatalogo(Es_Catalogo oCatalogo)
         {

@@ -51,11 +51,14 @@
     <Compile Include="Datos\Daos\CatalogoDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
+    <Compile Include="Datos\Daos\EstadoPlantaDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
+    <Compile Include="Datos\Daos\PlantaDao.cs" />
     <Compile Include="Datos\Daos\ProductoDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
+    <Compile Include="Datos\Daos\TipoPlantaDao.cs" />
     <Compile Include="Datos\Daos\TipoProductoDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
@@ -63,7 +66,10 @@
     <Compile Include="Datos\Interfaces\ICatalogo.cs" />
     <Compile Include="Datos\Interfaces\ICliente.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
+    <Compile Include="Datos\Interfaces\IEstadoPlanta.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
+    <Compile Include="Datos\Interfaces\IPlanta.cs" />
+    <Compile Include="Datos\Interfaces\ITipoPlanta.cs" />
     <Compile Include="Datos\Interfaces\ITipoProducto.cs" />
     <Compile Include="Datos\Interfaces\IProducto.cs" />
     <Compile Include="Datos\Interfaces\IPerfil.cs" />
@@ -88,12 +94,14 @@
     <Compile Include="Negocio\Entidades\Es_Puntos.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoProducto.cs" />
+    <Compile Include="Negocio\Servicios\EstadoPlantaService.cs" />
     <Compile Include="Negocio\Servicios\LocalidadService.cs" />
     <Compile Include="Negocio\Servicios\PerfilService.cs" />
     <Compile Include="Negocio\Servicios\PlantasService.cs" />
     <Compile Include="Negocio\Servicios\ProductoService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
+    <Compile Include="Negocio\Servicios\TipoPlantaService.cs" />
     <Compile Include="Negocio\Servicios\TipoProductoService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">
       <SubType>Component</SubType>
@@ -145,6 +153,18 @@
     </Compile>
     <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Plantas\ABM_Planta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Plantas\ABM_Planta.Designer.cs">
+      <DependentUpon>ABM_Planta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Plantas\C_Planta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Plantas\C_Planta.Designer.cs">
+      <DependentUpon>C_Planta.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmSalir.cs">
       <SubType>Form</SubType>
@@ -199,6 +219,12 @@
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Plantas\ABM_Planta.resx">
+      <DependentUpon>ABM_Planta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Plantas\C_Planta.resx">
+      <DependentUpon>C_Planta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmSalir.resx">
       <DependentUpon>frmSalir.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +263,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Folder Include="Presentacion\Plantas\" />
     <Folder Include="Resources\" />

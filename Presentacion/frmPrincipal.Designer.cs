@@ -77,7 +77,7 @@ namespace Vivero
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1086);
+            this.panel1.Size = new System.Drawing.Size(200, 1061);
             this.panel1.TabIndex = 7;
             // 
             // panel5
@@ -145,6 +145,7 @@ namespace Vivero
             this.btnPlantas.Text = "Plantas";
             this.btnPlantas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPlantas.UseVisualStyleBackColor = true;
+            this.btnPlantas.Click += new System.EventHandler(this.btnPlantas_Click);
             // 
             // panelProductos
             // 
@@ -254,7 +255,7 @@ namespace Vivero
             // 
             this.panel4.Controls.Add(this.BtnSalir);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 1019);
+            this.panel4.Location = new System.Drawing.Point(0, 994);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 67);
             this.panel4.TabIndex = 1;
@@ -326,14 +327,14 @@ namespace Vivero
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Location = new System.Drawing.Point(200, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(984, 1086);
+            this.panelForms.Size = new System.Drawing.Size(984, 1061);
             this.panelForms.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = global::Vivero.Properties.Resources.ImagenInicio;
-            this.pictureBox2.Location = new System.Drawing.Point(263, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(263, -13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(737, 1086);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -354,7 +355,7 @@ namespace Vivero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 1086);
+            this.ClientSize = new System.Drawing.Size(1184, 1061);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1200, 650);
