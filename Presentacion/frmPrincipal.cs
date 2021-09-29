@@ -11,6 +11,7 @@ using Vivero.Presentacion;
 using Vivero.Presentacion.Catalogos;
 using Vivero.Presentacion.Clientes;
 using Vivero.Presentacion.Empleados;
+using Vivero.Presentacion.Plantas;
 using Vivero.Presentacion.Productos;
 using Vivero.Presentacion.Proveedor;
 
@@ -149,6 +150,10 @@ namespace Vivero
             btnProductos.BackColor = Color.FromArgb(205, 241, 231);
         }
 
-       
+        private void btnPlantas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<C_Planta>();
+            btnCatalogos.BackColor = Color.FromArgb(205, 241, 231);
+        }
     }
 }

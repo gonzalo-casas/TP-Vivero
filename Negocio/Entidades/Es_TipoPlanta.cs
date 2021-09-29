@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Vivero.Negocio.EstructuraNegocio
 {
-    class Es_TipoPlanta
+    public class Es_TipoPlanta
     {
-        public string ID { get; set; }
+        internal int Id;
+
+        public int ID { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
