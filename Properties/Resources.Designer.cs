@@ -63,6 +63,36 @@ namespace Vivero.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap apagar {
+            get {
+                object obj = ResourceManager.GetObject("apagar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar {
+            get {
+                object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_catalog_49 {
             get {
                 object obj = ResourceManager.GetObject("icons8-catalog-49", resourceCulture);
@@ -186,6 +216,26 @@ namespace Vivero.Properties {
         internal static System.Drawing.Bitmap ImagenInicio {
             get {
                 object obj = ResourceManager.GetObject("ImagenInicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ojo {
+            get {
+                object obj = ResourceManager.GetObject("ojo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ojo_pintado {
+            get {
+                object obj = ResourceManager.GetObject("ojo-pintado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

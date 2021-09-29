@@ -146,6 +146,12 @@
     <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmSalir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSalir.designer.cs">
+      <DependentUpon>frmSalir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Productos\ABM_Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSalir.resx">
+      <DependentUpon>frmSalir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Productos\ABM_Producto.resx">
       <DependentUpon>ABM_Producto.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentacion\Plantas\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Presentacion\Recursos\Iconos\icons8-user-64.png" />
@@ -274,10 +284,22 @@
     <None Include="Presentacion\Recursos\Imagenes\ImagenFondo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ImagenFondo1.bmp" />
+    <None Include="Presentacion\Recursos\Imagenes\ImagenInicio.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Presentacion\Recursos\Imagenes\ImagenInicio.png" />
+    <None Include="Presentacion\Recursos\Iconos\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\ojo-pintado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
