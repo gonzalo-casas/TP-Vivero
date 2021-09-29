@@ -110,6 +110,7 @@ namespace Vivero.Presentacion
             {
                 txtContrasena.Text = string.Empty;
                 txtContrasena.ForeColor = Color.White;
+                txtContrasena.PasswordChar = '\u25CF';
                 txtContrasena.UseSystemPasswordChar = true;
             }
         }
@@ -120,6 +121,7 @@ namespace Vivero.Presentacion
             {
                 txtContrasena.Text = "Contraseña";
                 txtContrasena.ForeColor = Color.White;
+                txtContrasena.PasswordChar = '\0';
                 txtContrasena.UseSystemPasswordChar = false;
             }
         }
@@ -130,15 +132,19 @@ namespace Vivero.Presentacion
             
             if (pbOjo.Image == ojo)
             {
+                pbOjo.Image = ojoPintado;
                 txtContrasena.PasswordChar = '\0';
                 txtContrasena.UseSystemPasswordChar = false;
-                pbOjo.Image = ojoPintado;
+
             }
             else
             {
-                txtContrasena.PasswordChar = '\u25CF';
-                txtContrasena.UseSystemPasswordChar = true;
                 pbOjo.Image = ojo;
+                if (txtContrasena.Text != "Contraseña")
+                {
+                    txtContrasena.PasswordChar = '\u25CF';
+                    txtContrasena.UseSystemPasswordChar = true;
+                }
             }
 
         }
