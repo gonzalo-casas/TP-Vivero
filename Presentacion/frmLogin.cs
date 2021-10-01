@@ -18,6 +18,9 @@ namespace Vivero.Presentacion
         private Es_Empleado miUsuario = new Es_Empleado();
         EmpleadoService oUsuario = new EmpleadoService();
         internal Es_Empleado MiUsuario { get => miUsuario; set => miUsuario = value; }
+
+        Image ojo = (Image)Properties.Resources.ojo;
+        Image ojoPintado = (Image)Properties.Resources.ojo_pintado;
         public FrmLogin()
         {
             InitializeComponent();
@@ -25,14 +28,13 @@ namespace Vivero.Presentacion
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            txtContrasena.PasswordChar = '\0';
+            txtContrasena.UseSystemPasswordChar = false;
+
+            pbOjo.Image = ojo;
+
 
         }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(this.txtUsuario.Text))
@@ -77,6 +79,74 @@ namespace Vivero.Presentacion
                 e.Handled = true;
                 LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
             }
+        }
+
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "Usuario")
+            {
+                txtUsuario.Text = string.Empty;
+                txtUsuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtContrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtContrasena.Text == "Contraseña")
+            {
+                txtContrasena.Text = string.Empty;
+                txtContrasena.ForeColor = Color.White;
+                txtContrasena.PasswordChar = '\u25CF';
+                txtContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtContrasena_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtContrasena.Text))
+            {
+                txtContrasena.Text = "Contraseña";
+                txtContrasena.ForeColor = Color.White;
+                txtContrasena.PasswordChar = '\0';
+                txtContrasena.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void pbOjo_Click(object sender, EventArgs e)
+        {
+            
+            
+            if (pbOjo.Image == ojo)
+            {
+                pbOjo.Image = ojoPintado;
+                txtContrasena.PasswordChar = '\0';
+                txtContrasena.UseSystemPasswordChar = false;
+
+            }
+            else
+            {
+                pbOjo.Image = ojo;
+                if (txtContrasena.Text != "Contraseña")
+                {
+                    txtContrasena.PasswordChar = '\u25CF';
+                    txtContrasena.UseSystemPasswordChar = true;
+                }
+            }
+
         }
     }
 }

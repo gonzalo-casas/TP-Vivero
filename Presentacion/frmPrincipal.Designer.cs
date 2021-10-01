@@ -51,6 +51,7 @@ namespace Vivero
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelForms = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblRolUsuario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelCatalogos.SuspendLayout();
@@ -76,7 +77,7 @@ namespace Vivero
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1086);
+            this.panel1.Size = new System.Drawing.Size(200, 1061);
             this.panel1.TabIndex = 7;
             // 
             // panel5
@@ -144,6 +145,7 @@ namespace Vivero
             this.btnPlantas.Text = "Plantas";
             this.btnPlantas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPlantas.UseVisualStyleBackColor = true;
+            this.btnPlantas.Click += new System.EventHandler(this.btnPlantas_Click);
             // 
             // panelProductos
             // 
@@ -253,7 +255,7 @@ namespace Vivero
             // 
             this.panel4.Controls.Add(this.BtnSalir);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 1019);
+            this.panel4.Location = new System.Drawing.Point(0, 994);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 67);
             this.panel4.TabIndex = 1;
@@ -277,6 +279,7 @@ namespace Vivero
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(87)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.lblRolUsuario);
             this.panel2.Controls.Add(this.LblNombreUsuario);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -287,14 +290,14 @@ namespace Vivero
             // 
             // LblNombreUsuario
             // 
-            this.LblNombreUsuario.AutoSize = true;
             this.LblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.LblNombreUsuario.Location = new System.Drawing.Point(82, 25);
+            this.LblNombreUsuario.Location = new System.Drawing.Point(69, 9);
             this.LblNombreUsuario.Name = "LblNombreUsuario";
             this.LblNombreUsuario.Size = new System.Drawing.Size(115, 24);
             this.LblNombreUsuario.TabIndex = 1;
             this.LblNombreUsuario.Text = "Bienvenido";
+            this.LblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel3
             // 
@@ -324,25 +327,35 @@ namespace Vivero
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Location = new System.Drawing.Point(200, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(984, 1086);
+            this.panelForms.Size = new System.Drawing.Size(984, 1061);
             this.panelForms.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.Image = global::Vivero.Properties.Resources.ImagenInicio;
-            this.pictureBox2.Location = new System.Drawing.Point(263, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(263, -13);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(737, 1086);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // lblRolUsuario
+            // 
+            this.lblRolUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblRolUsuario.Location = new System.Drawing.Point(71, 33);
+            this.lblRolUsuario.Name = "lblRolUsuario";
+            this.lblRolUsuario.Size = new System.Drawing.Size(113, 24);
+            this.lblRolUsuario.TabIndex = 2;
+            this.lblRolUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 1086);
+            this.ClientSize = new System.Drawing.Size(1184, 1061);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1200, 650);
@@ -361,7 +374,6 @@ namespace Vivero
             this.PanelClientes.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelForms.ResumeLayout(false);
@@ -394,6 +406,7 @@ namespace Vivero
         private System.Windows.Forms.Panel PanelClientes;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblRolUsuario;
     }
 }
 

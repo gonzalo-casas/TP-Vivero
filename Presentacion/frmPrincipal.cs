@@ -11,6 +11,7 @@ using Vivero.Presentacion;
 using Vivero.Presentacion.Catalogos;
 using Vivero.Presentacion.Clientes;
 using Vivero.Presentacion.Empleados;
+using Vivero.Presentacion.Plantas;
 using Vivero.Presentacion.Productos;
 using Vivero.Presentacion.Proveedor;
 
@@ -25,29 +26,30 @@ namespace Vivero
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            //frmInicio fi;
-            //fi = new frmInicio();
-            //fi.MdiParent = this;
-            //fi.Show();
-            //fi.Dock = DockStyle.Fill;
-            //fi.WindowState = FormWindowState.Minimized;
-            //fi.WindowState = FormWindowState.Maximized;
-
             FrmLogin fl;
             fl = new FrmLogin();
             fl.ShowDialog();
 
             if (string.IsNullOrEmpty(fl.MiUsuario.Nombre))
-                this.Close();
+                Application.Exit();
             else
             {
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
                 this.LblNombreUsuario.Text = fl.MiUsuario.Nombre;
 
-                if (fl.MiUsuario.Perfil.IdPerfil.Equals(1)) // si es administrador...
+                if (fl.MiUsuario.Perfil.IdPerfil.Equals(1))                 // si es administrador...
+                {
                     habilitarOpciones(true);
+                    lblRolUsuario.Text = "Administrador";
+                }
+
+
+
                 else
+                {
                     habilitarOpciones(false);
+                    lblRolUsuario.Text = "Vendedor";
+                }
 
             }
                 
@@ -99,7 +101,9 @@ namespace Vivero
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmSalir fl;
+            fl = new FrmSalir();
+            fl.ShowDialog();
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -132,13 +136,10 @@ namespace Vivero
                 btnEmpleados.BackColor = Color.FromArgb(135, 181, 168);
             if (Application.OpenForms["C_Proveedores"] == null)
                 BtnProveedor.BackColor = Color.FromArgb(135, 181, 168);
-
             if (Application.OpenForms["C_Clientes"] == null)
                 btnClientes.BackColor = Color.FromArgb(135, 181, 168);
             if (Application.OpenForms["C_Catalogo"] == null)
                 btnCatalogos.BackColor = Color.FromArgb(135, 181, 168);
-            //if (Application.OpenForms["Form3"] == null)
-            //    button3.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["C_Productos"] == null)
                 btnProductos.BackColor = Color.FromArgb(135, 181, 168);
         }
@@ -149,6 +150,10 @@ namespace Vivero
             btnProductos.BackColor = Color.FromArgb(205, 241, 231);
         }
 
-       
+        private void btnPlantas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<C_Planta>();
+            btnCatalogos.BackColor = Color.FromArgb(205, 241, 231);
+        }
     }
 }
