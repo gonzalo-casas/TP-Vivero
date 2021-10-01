@@ -10,11 +10,15 @@ namespace Vivero.Datos.Interfaces
 {
     interface ICatalogo
     {
-        DataTable Buscar_Planta();
-        DataTable Buscar_Catalogo(string ID, string Puntos_Necesarios, string estado);
+        DataTable Buscar_Planta(string estado);
+        DataTable Buscar_PlantaId(string id_Planta);
+        DataTable Buscar_Catalogo(string Nombre,string puntos, string estado);
         bool Create(Es_Catalogo oCatalogo);
         bool Update(Es_Catalogo oCatalogoSeleccionado);
         bool Delete(Es_Catalogo oCatalogo);
-        DataTable RecuperarPorId(int idCatalogo, int id_Planta);
+        DataTable RecuperarPorId(int idCatalogo);
+       // DataTable Buscar_Catalogo2(string ID);
+        DataTable BuscarUnSoloCatalogo(string nom_cat);
+        DataTable Buscar_CatalogoId(string nombre);
     }
 }

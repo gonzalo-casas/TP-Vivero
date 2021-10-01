@@ -10,30 +10,22 @@ using Vivero.Negocio.EstructuraNegocio;
 namespace Vivero.Datos.Daos
 {
     class CatalogoDao : ICatalogo
-    {
-        public DataTable Buscar_Planta()
-        {
-            string consulta = "SELECT NombreComun FROM Planta WHERE Estado = 1 ";
-            return BDHelper.obtenerInstancia().consultar(consulta);
-        }
-        public DataTable Buscar_Catalogo(string ID, string Puntos_Necesarios, string estado)
+    {       
+        public DataTable Buscar_Catalogo(string Nombre,string puntos, string estado)
         {
 
-            string consulta = "SELECT * FROM Catalogo c JOIN Planta p on (c.Id_Planta = p.Codigo) WHERE c.Estado in  " + estado;
+            string consulta = "  select c.ID,c.Nombre,pl.NombreComun as Planta,dt.Puntos_Necesarios as Puntos from DetalleCatalogo dt join Catalogo c on (dt.ID_Catalogo = c.ID) JOIN Planta pl on(dt.Id_Planta = pl.Codigo) WHERE c.Estado in  " + estado;
 
-
-            if (!String.IsNullOrEmpty(ID))
+            if (!String.IsNullOrEmpty(Nombre))
             {
-                consulta += " AND ID LIKE " + ID;
+                consulta += " AND Nombre LIKE " + "'" + Nombre + "'" ;
 
             }
-
-
-            if (!String.IsNullOrEmpty(Puntos_Necesarios))
+            if (!String.IsNullOrEmpty(puntos))
             {
-                consulta += " AND Puntos_Necesarios LIKE " + "'" + Puntos_Necesarios + "'";
+                consulta += " AND Puntos_Necesarios LIKE " + puntos ;
+
             }
-           
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
@@ -41,14 +33,17 @@ namespace Vivero.Datos.Daos
 
         public bool Create(Es_Catalogo oCatalogo)
         {
+            string consulta = "INSERT INTO Catalogo (Nombre, Estado) " +
+                " VALUES (" +
+                            "'" + oCatalogo.Nombre + "' , 1)";
+                           
 
-
-            string consulta = "INSERT INTO Catalogo  (ID,Puntos_Necesarios, Estado)" +
+            /*string consulta = "INSERT INTO Catalogo  (ID,Id_Planta,Puntos_Necesarios, Estado)" +
                             " VALUES (" +
                             "'" + oCatalogo.ID + "'" + "," +
                            "'" + oCatalogo.Id_Planta + "'" + "," +
                            //"'" + oPlanta.NombreComun + "'" + "," +
-                            "'" + oCatalogo.Puntos_Necesarios + "' , 1)";
+                            "'" + oCatalogo.Puntos_Necesarios + "' , 1)";*/
 
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
@@ -59,23 +54,28 @@ namespace Vivero.Datos.Daos
         public bool Update(Es_Catalogo oCatalogoSeleccionado)
         {
             string consulta = "UPDATE Catalogo " +
-                             "SET Puntos_Necesarios =" + "'" + oCatalogoSeleccionado.Puntos_Necesarios + "'" + "," +
+                             "SET Nombre =" + "'" + oCatalogoSeleccionado.Nombre + "'" + "," +
                              " Estado=" + "'" + oCatalogoSeleccionado.Estado + "'" +
-                             " WHERE ID =" + oCatalogoSeleccionado.ID +
-                             " and Id_Planta ="+ oCatalogoSeleccionado.Id_Planta;
+                             " WHERE ID =" + oCatalogoSeleccionado.ID;
+                             
 
 
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
         }
 
-        public DataTable RecuperarPorId(int idCatalogo,int id_Planta)
+        public DataTable RecuperarPorId(int idCatalogo)
         {
-            string consulta = "SELECT c.ID,c.Id_Planta,c.Puntos_Necesarios,c.Estado" +
-            " FROM Catalogo c " +
-           "  JOIN Planta pl ON(c.Id_Planta = pl.Codigo) " +
-           "  WHERE c.ID ="+ idCatalogo +
-              "AND Id_Planta="+ id_Planta;
+            //  string consulta = "SELECT c.ID,c.Id_Planta,c.Puntos_Necesarios,c.Estado" +
+            //  " FROM Catalogo c " +
+            // "  JOIN Planta pl ON(c.Id_Planta = pl.Codigo) " +
+            // "  WHERE c.ID =" + idCatalogo;
+            // "AND Id_Planta="+ id_Planta;
+
+            string consulta = "SELECT c.ID, c.Nombre, c.Estado" +
+           " FROM Catalogo c " +
+           " WHERE ID =" +
+             idCatalogo;
 
 
             return BDHelper.obtenerInstancia().consultar(consulta);
@@ -86,11 +86,54 @@ namespace Vivero.Datos.Daos
 
 
             string consulta = "UPDATE Catalogo " +
-                            "SET Estado= '0'" +
-                            " WHERE ID=" + oCatalogoSeleccionado.ID;
+                            "SET Estado = '0'" +
+                            " WHERE ID =" + oCatalogoSeleccionado.ID;
 
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
+        }
+        /*public DataTable Buscar_Catalogo2(string ID)
+        {
+
+            string consulta = "SELECT * FROM Catalogo c JOIN Planta p on (c.Id_Planta = p.Codigo) WHERE ID LIKE  "+ ID ;
+
+
+                        
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+        */
+        public DataTable BuscarUnSoloCatalogo(string nom_cat)
+        {
+            string consulta = "SELECT TOP 1 * FROM Catalogo WHERE Nombre = '" + nom_cat+"'";
+              
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
+        public DataTable Buscar_Planta(string estado)
+        {
+            string consulta = "SELECT NombreComun as Planta FROM Planta where Estado = "+ estado ;
+            
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+        public DataTable Buscar_PlantaId(string nombre) 
+        {
+            string consulta = "SELECT Codigo FROM Planta WHERE NombreComun ="+"'" + nombre +"'";
+
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+
+
+        }
+        public DataTable Buscar_CatalogoId(string nombre)
+        {
+            string consulta = "SELECT ID FROM Catalogo WHERE Nombre =" + "'" + nombre + "'";
+
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+
+
         }
     }
 }

@@ -31,12 +31,12 @@ namespace Vivero.Presentacion.Catalogos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Puntos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_NumeroID = new System.Windows.Forms.TextBox();
+            this.Nombre = new System.Windows.Forms.Label();
+            this.txt_NombreCatalogo = new System.Windows.Forms.TextBox();
             this.txt_puntos = new System.Windows.Forms.TextBox();
             this.lblTituloCatalogo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,9 +44,11 @@ namespace Vivero.Presentacion.Catalogos
             this.panel3 = new System.Windows.Forms.Panel();
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.chk_Activos = new System.Windows.Forms.CheckBox();
+            this.btn_ConsultarCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_SalirCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -54,16 +56,19 @@ namespace Vivero.Presentacion.Catalogos
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.btn_EliminarCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.btn_EditarCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.btn_AgregarCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -73,11 +78,6 @@ namespace Vivero.Presentacion.Catalogos
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_EliminarCatalogo = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_EditarCatalogo = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_AgregarCatalogo = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirCatalogo = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_ConsultarCatalogo = new Vivero.Presentacion.BotonRedondeado();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -98,25 +98,24 @@ namespace Vivero.Presentacion.Catalogos
             this.Puntos.Size = new System.Drawing.Size(63, 20);
             this.Puntos.TabIndex = 1;
             this.Puntos.Text = "Puntos:";
-            this.Puntos.Click += new System.EventHandler(this.Puntos_Click);
             // 
-            // label1
+            // Nombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(87, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Numero ID :";
+            this.Nombre.AutoSize = true;
+            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Nombre.Location = new System.Drawing.Point(87, 29);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(73, 20);
+            this.Nombre.TabIndex = 3;
+            this.Nombre.Text = "Nombre :";
             // 
-            // txt_NumeroID
+            // txt_NombreCatalogo
             // 
-            this.txt_NumeroID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_NumeroID.Location = new System.Drawing.Point(189, 23);
-            this.txt_NumeroID.Name = "txt_NumeroID";
-            this.txt_NumeroID.Size = new System.Drawing.Size(100, 26);
-            this.txt_NumeroID.TabIndex = 4;
+            this.txt_NombreCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_NombreCatalogo.Location = new System.Drawing.Point(189, 23);
+            this.txt_NombreCatalogo.Name = "txt_NombreCatalogo";
+            this.txt_NombreCatalogo.Size = new System.Drawing.Size(100, 26);
+            this.txt_NombreCatalogo.TabIndex = 4;
             // 
             // txt_puntos
             // 
@@ -136,7 +135,7 @@ namespace Vivero.Presentacion.Catalogos
             this.lblTituloCatalogo.Name = "lblTituloCatalogo";
             this.lblTituloCatalogo.Size = new System.Drawing.Size(270, 65);
             this.lblTituloCatalogo.TabIndex = 16;
-            this.lblTituloCatalogo.Text = "Catalogos";
+            this.lblTituloCatalogo.Text = "Catálogos";
             // 
             // panel1
             // 
@@ -154,7 +153,6 @@ namespace Vivero.Presentacion.Catalogos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(963, 50);
             this.panel2.TabIndex = 15;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -162,9 +160,9 @@ namespace Vivero.Presentacion.Catalogos
             this.panel3.Controls.Add(this.chk_Activos);
             this.panel3.Controls.Add(this.lblTituloCatalogo);
             this.panel3.Controls.Add(this.btn_ConsultarCatalogo);
-            this.panel3.Controls.Add(this.txt_NumeroID);
+            this.panel3.Controls.Add(this.txt_NombreCatalogo);
             this.panel3.Controls.Add(this.Puntos);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.Nombre);
             this.panel3.Controls.Add(this.txt_puntos);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 50);
@@ -196,6 +194,26 @@ namespace Vivero.Presentacion.Catalogos
             this.chk_Activos.Text = "Activos";
             this.chk_Activos.UseVisualStyleBackColor = true;
             // 
+            // btn_ConsultarCatalogo
+            // 
+            this.btn_ConsultarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarCatalogo.BorderRadius = 20;
+            this.btn_ConsultarCatalogo.BorderSize = 0;
+            this.btn_ConsultarCatalogo.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_ConsultarCatalogo.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarCatalogo.Location = new System.Drawing.Point(366, 66);
+            this.btn_ConsultarCatalogo.Name = "btn_ConsultarCatalogo";
+            this.btn_ConsultarCatalogo.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarCatalogo.TabIndex = 15;
+            this.btn_ConsultarCatalogo.Text = "Consultar";
+            this.btn_ConsultarCatalogo.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarCatalogo.UseVisualStyleBackColor = false;
+            this.btn_ConsultarCatalogo.Click += new System.EventHandler(this.btn_ConsultarCatalogo_Click);
+            // 
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(0, 231);
@@ -224,6 +242,27 @@ namespace Vivero.Presentacion.Catalogos
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(247, 73);
             this.panel6.TabIndex = 5;
+            // 
+            // btn_SalirCatalogo
+            // 
+            this.btn_SalirCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirCatalogo.BorderRadius = 20;
+            this.btn_SalirCatalogo.BorderSize = 0;
+            this.btn_SalirCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirCatalogo.FlatAppearance.BorderSize = 0;
+            this.btn_SalirCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_SalirCatalogo.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirCatalogo.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirCatalogo.Name = "btn_SalirCatalogo";
+            this.btn_SalirCatalogo.Size = new System.Drawing.Size(152, 40);
+            this.btn_SalirCatalogo.TabIndex = 16;
+            this.btn_SalirCatalogo.Text = "Cerrar";
+            this.btn_SalirCatalogo.TextColor = System.Drawing.Color.White;
+            this.btn_SalirCatalogo.UseVisualStyleBackColor = false;
+            this.btn_SalirCatalogo.Click += new System.EventHandler(this.btn_SalirCatalogo_Click);
             // 
             // panel7
             // 
@@ -288,6 +327,27 @@ namespace Vivero.Presentacion.Catalogos
             this.panel23.Size = new System.Drawing.Size(200, 100);
             this.panel23.TabIndex = 2;
             // 
+            // btn_EliminarCatalogo
+            // 
+            this.btn_EliminarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarCatalogo.BorderRadius = 30;
+            this.btn_EliminarCatalogo.BorderSize = 0;
+            this.btn_EliminarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarCatalogo.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_EliminarCatalogo.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarCatalogo.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarCatalogo.Name = "btn_EliminarCatalogo";
+            this.btn_EliminarCatalogo.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarCatalogo.TabIndex = 19;
+            this.btn_EliminarCatalogo.Text = "Eliminar";
+            this.btn_EliminarCatalogo.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarCatalogo.UseVisualStyleBackColor = false;
+            this.btn_EliminarCatalogo.Click += new System.EventHandler(this.btn_EliminarCatalogo_Click);
+            // 
             // panel27
             // 
             this.panel27.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -331,6 +391,27 @@ namespace Vivero.Presentacion.Catalogos
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(200, 100);
             this.panel18.TabIndex = 1;
+            // 
+            // btn_EditarCatalogo
+            // 
+            this.btn_EditarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EditarCatalogo.BorderRadius = 30;
+            this.btn_EditarCatalogo.BorderSize = 0;
+            this.btn_EditarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EditarCatalogo.FlatAppearance.BorderSize = 0;
+            this.btn_EditarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_EditarCatalogo.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarCatalogo.Location = new System.Drawing.Point(40, 20);
+            this.btn_EditarCatalogo.Name = "btn_EditarCatalogo";
+            this.btn_EditarCatalogo.Size = new System.Drawing.Size(120, 60);
+            this.btn_EditarCatalogo.TabIndex = 19;
+            this.btn_EditarCatalogo.Text = "Editar";
+            this.btn_EditarCatalogo.TextColor = System.Drawing.Color.White;
+            this.btn_EditarCatalogo.UseVisualStyleBackColor = false;
+            this.btn_EditarCatalogo.Click += new System.EventHandler(this.btn_EditarCatalogo_Click);
             // 
             // panel22
             // 
@@ -376,6 +457,27 @@ namespace Vivero.Presentacion.Catalogos
             this.panel13.Size = new System.Drawing.Size(200, 100);
             this.panel13.TabIndex = 0;
             // 
+            // btn_AgregarCatalogo
+            // 
+            this.btn_AgregarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarCatalogo.BorderRadius = 30;
+            this.btn_AgregarCatalogo.BorderSize = 0;
+            this.btn_AgregarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarCatalogo.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_AgregarCatalogo.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarCatalogo.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarCatalogo.Name = "btn_AgregarCatalogo";
+            this.btn_AgregarCatalogo.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarCatalogo.TabIndex = 5;
+            this.btn_AgregarCatalogo.Text = "Agregar";
+            this.btn_AgregarCatalogo.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarCatalogo.UseVisualStyleBackColor = false;
+            this.btn_AgregarCatalogo.Click += new System.EventHandler(this.btn_AgregarCatalogo_Click);
+            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -420,31 +522,31 @@ namespace Vivero.Presentacion.Catalogos
             // 
             this.dgv_Catalogos.AllowUserToAddRows = false;
             this.dgv_Catalogos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Catalogos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Catalogos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Catalogos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Catalogos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Catalogos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Catalogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Catalogos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCod,
             this.colNombre,
             this.colStock});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Catalogos.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Catalogos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Catalogos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Catalogos.Location = new System.Drawing.Point(100, 225);
             this.dgv_Catalogos.Name = "dgv_Catalogos";
@@ -458,14 +560,14 @@ namespace Vivero.Presentacion.Catalogos
             // 
             // colCod
             // 
-            this.colCod.HeaderText = "ID";
+            this.colCod.HeaderText = "Nombre";
             this.colCod.MinimumWidth = 6;
             this.colCod.Name = "colCod";
             this.colCod.ReadOnly = true;
             // 
             // colNombre
             // 
-            this.colNombre.HeaderText = "Nombre Comun";
+            this.colNombre.HeaderText = "Planta";
             this.colNombre.MinimumWidth = 6;
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
@@ -476,110 +578,6 @@ namespace Vivero.Presentacion.Catalogos
             this.colStock.MinimumWidth = 6;
             this.colStock.Name = "colStock";
             this.colStock.ReadOnly = true;
-            // 
-            // btn_EliminarCatalogo
-            // 
-            this.btn_EliminarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarCatalogo.BorderRadius = 30;
-            this.btn_EliminarCatalogo.BorderSize = 0;
-            this.btn_EliminarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarCatalogo.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_EliminarCatalogo.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarCatalogo.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarCatalogo.Name = "btn_EliminarCatalogo";
-            this.btn_EliminarCatalogo.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarCatalogo.TabIndex = 19;
-            this.btn_EliminarCatalogo.Text = "Eliminar";
-            this.btn_EliminarCatalogo.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarCatalogo.UseVisualStyleBackColor = false;
-            this.btn_EliminarCatalogo.Click += new System.EventHandler(this.btn_EliminarCatalogo_Click);
-            // 
-            // btn_EditarCatalogo
-            // 
-            this.btn_EditarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EditarCatalogo.BorderRadius = 30;
-            this.btn_EditarCatalogo.BorderSize = 0;
-            this.btn_EditarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EditarCatalogo.FlatAppearance.BorderSize = 0;
-            this.btn_EditarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_EditarCatalogo.ForeColor = System.Drawing.Color.White;
-            this.btn_EditarCatalogo.Location = new System.Drawing.Point(40, 20);
-            this.btn_EditarCatalogo.Name = "btn_EditarCatalogo";
-            this.btn_EditarCatalogo.Size = new System.Drawing.Size(120, 60);
-            this.btn_EditarCatalogo.TabIndex = 19;
-            this.btn_EditarCatalogo.Text = "Editar";
-            this.btn_EditarCatalogo.TextColor = System.Drawing.Color.White;
-            this.btn_EditarCatalogo.UseVisualStyleBackColor = false;
-            this.btn_EditarCatalogo.Click += new System.EventHandler(this.btn_EditarCatalogo_Click);
-            // 
-            // btn_AgregarCatalogo
-            // 
-            this.btn_AgregarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarCatalogo.BorderRadius = 30;
-            this.btn_AgregarCatalogo.BorderSize = 0;
-            this.btn_AgregarCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarCatalogo.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_AgregarCatalogo.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarCatalogo.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarCatalogo.Name = "btn_AgregarCatalogo";
-            this.btn_AgregarCatalogo.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarCatalogo.TabIndex = 5;
-            this.btn_AgregarCatalogo.Text = "Agregar";
-            this.btn_AgregarCatalogo.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarCatalogo.UseVisualStyleBackColor = false;
-            this.btn_AgregarCatalogo.Click += new System.EventHandler(this.btn_AgregarCatalogo_Click);
-            // 
-            // btn_SalirCatalogo
-            // 
-            this.btn_SalirCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirCatalogo.BorderRadius = 20;
-            this.btn_SalirCatalogo.BorderSize = 0;
-            this.btn_SalirCatalogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirCatalogo.FlatAppearance.BorderSize = 0;
-            this.btn_SalirCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_SalirCatalogo.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirCatalogo.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirCatalogo.Name = "btn_SalirCatalogo";
-            this.btn_SalirCatalogo.Size = new System.Drawing.Size(152, 40);
-            this.btn_SalirCatalogo.TabIndex = 16;
-            this.btn_SalirCatalogo.Text = "Cerrar";
-            this.btn_SalirCatalogo.TextColor = System.Drawing.Color.White;
-            this.btn_SalirCatalogo.UseVisualStyleBackColor = false;
-            this.btn_SalirCatalogo.Click += new System.EventHandler(this.btn_SalirCatalogo_Click);
-            // 
-            // btn_ConsultarCatalogo
-            // 
-            this.btn_ConsultarCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarCatalogo.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarCatalogo.BorderRadius = 20;
-            this.btn_ConsultarCatalogo.BorderSize = 0;
-            this.btn_ConsultarCatalogo.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_ConsultarCatalogo.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarCatalogo.Location = new System.Drawing.Point(366, 66);
-            this.btn_ConsultarCatalogo.Name = "btn_ConsultarCatalogo";
-            this.btn_ConsultarCatalogo.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarCatalogo.TabIndex = 15;
-            this.btn_ConsultarCatalogo.Text = "Consultar";
-            this.btn_ConsultarCatalogo.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarCatalogo.UseVisualStyleBackColor = false;
-            this.btn_ConsultarCatalogo.Click += new System.EventHandler(this.btn_ConsultarCatalogo_Click);
             // 
             // C_Catalogo
             // 
@@ -615,8 +613,8 @@ namespace Vivero.Presentacion.Catalogos
 
         #endregion
         private System.Windows.Forms.Label Puntos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_NumeroID;
+        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.TextBox txt_NombreCatalogo;
         private System.Windows.Forms.TextBox txt_puntos;
         private BotonRedondeado btn_AgregarCatalogo;
         private BotonRedondeado btn_SalirCatalogo;

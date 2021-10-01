@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,21 +15,13 @@ namespace Vivero.Presentacion.Catalogos
     public partial class C_Catalogo : Form
     {
         CatalogoService oCatalogo = new CatalogoService();
+       
         public C_Catalogo()
         {
             InitializeComponent();
         }
 
-        private void Puntos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+              
         private void btn_SalirCatalogo_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -44,14 +37,15 @@ namespace Vivero.Presentacion.Catalogos
         {
             dgv_Catalogos.Rows.Clear();
 
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                dgv_Catalogos.Rows.Add();
-                dgv_Catalogos.Rows[i].Cells[0].Value = tabla.Rows[i]["ID"].ToString();
-                dgv_Catalogos.Rows[i].Cells[1].Value = tabla.Rows[i]["NombreComun"].ToString();
-                dgv_Catalogos.Rows[i].Cells[2].Value = tabla.Rows[i]["Puntos_Necesarios"].ToString();
+             for (int i = 0; i < tabla.Rows.Count; i++)
+             {
+                 dgv_Catalogos.Rows.Add();
+                 dgv_Catalogos.Rows[i].Cells[0].Value = tabla.Rows[i]["Nombre"].ToString();
+                 dgv_Catalogos.Rows[i].Cells[1].Value = tabla.Rows[i]["Planta"].ToString();
+                 dgv_Catalogos.Rows[i].Cells[2].Value = tabla.Rows[i]["Puntos"].ToString();
 
-            }
+             }
+           
         }
 
        
@@ -60,8 +54,16 @@ namespace Vivero.Presentacion.Catalogos
         {
             if (dgv_Catalogos.SelectedRows.Count > 0)
             {
+                /* var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
+                 DataTable tabla = oCatalogo.Buscar_Catalogo(value, null, null);
+                 var id_Planta = tabla.Rows[0]["id_Planta"].ToString();
+                 ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value), int.Parse(id_Planta));
+                 formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.delete);
+                 formulario.ShowDialog();
+                 btn_ConsultarCatalogo_Click(sender, e);*/
                 var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
-                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
+                var id = oCatalogo.Buscar_CatalogoId(value).Rows[0][0].ToString();
+                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(id));
                 formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.update);
                 formulario.ShowDialog();
                 btn_ConsultarCatalogo_Click(sender, e);
@@ -83,16 +85,26 @@ namespace Vivero.Presentacion.Catalogos
             {
                 estado = "('0')";
             }
-            Cargar_Grilla(oCatalogo.Buscar_Catalogo(txt_NumeroID.Text, txt_puntos.Text, estado ));
+            Cargar_Grilla(oCatalogo.Buscar_Catalogo(txt_NombreCatalogo.Text,txt_puntos.Text, estado));
+
             return;
         }
 
         private void btn_EliminarCatalogo_Click(object sender, EventArgs e)
         {
+            //CatalogoService oCatalogo = new CatalogoService();
             if (dgv_Catalogos.SelectedRows.Count > 0)
             {
+                /*  var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
+                  DataTable tabla = oCatalogo.Buscar_Catalogo2(value);
+                  var id_Planta = tabla.Rows[0]["id_Planta"].ToString();
+                  ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value),int.Parse(id_Planta));
+                  formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.delete);
+                  formulario.ShowDialog();
+                  btn_ConsultarCatalogo_Click(sender, e);*/
                 var value = dgv_Catalogos.CurrentRow.Cells[0].Value.ToString();
-                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(value));
+                var id = oCatalogo.Buscar_CatalogoId(value).Rows[0][0].ToString();
+                ABM_Catalogo formulario = new ABM_Catalogo(int.Parse(id));
                 formulario.SeleccionarOpcion(ABM_Catalogo.FormMode.delete);
                 formulario.ShowDialog();
                 btn_ConsultarCatalogo_Click(sender, e);
@@ -101,6 +113,10 @@ namespace Vivero.Presentacion.Catalogos
             {
                 MessageBox.Show("Seleccione un Catalogo para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
+
+            
         }
     }
     

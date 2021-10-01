@@ -29,20 +29,18 @@ namespace Vivero.Presentacion.Catalogos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_Numero_ID = new System.Windows.Forms.Label();
-            this.txt_Puntos = new System.Windows.Forms.Label();
             this.gbPlantas = new System.Windows.Forms.GroupBox();
-            this.dgv_Planta = new System.Windows.Forms.DataGridView();
-            this.colPlantas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtNumeroId = new System.Windows.Forms.TextBox();
-            this.txtPuntos = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
-            this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
             this.btnEliminar = new Vivero.Presentacion.BotonRedondeado();
             this.btnAgregar = new Vivero.Presentacion.BotonRedondeado();
+            this.dgv_Planta = new System.Windows.Forms.DataGridView();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNombreCatalogo = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
+            this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
             this.gbPlantas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Planta)).BeginInit();
             this.SuspendLayout();
@@ -52,19 +50,9 @@ namespace Vivero.Presentacion.Catalogos
             this.txt_Numero_ID.AutoSize = true;
             this.txt_Numero_ID.Location = new System.Drawing.Point(12, 17);
             this.txt_Numero_ID.Name = "txt_Numero_ID";
-            this.txt_Numero_ID.Size = new System.Drawing.Size(64, 13);
+            this.txt_Numero_ID.Size = new System.Drawing.Size(50, 13);
             this.txt_Numero_ID.TabIndex = 14;
-            this.txt_Numero_ID.Text = "Numero ID :";
-            // 
-            // txt_Puntos
-            // 
-            this.txt_Puntos.AutoSize = true;
-            this.txt_Puntos.Location = new System.Drawing.Point(12, 62);
-            this.txt_Puntos.Name = "txt_Puntos";
-            this.txt_Puntos.Size = new System.Drawing.Size(46, 13);
-            this.txt_Puntos.TabIndex = 15;
-            this.txt_Puntos.Text = "Puntos :";
-            this.txt_Puntos.Click += new System.EventHandler(this.txt_Puntos_Click);
+            this.txt_Numero_ID.Text = "Nombre :";
             // 
             // gbPlantas
             // 
@@ -77,102 +65,6 @@ namespace Vivero.Presentacion.Catalogos
             this.gbPlantas.TabIndex = 26;
             this.gbPlantas.TabStop = false;
             this.gbPlantas.Text = "Plantas/s";
-            // 
-            // dgv_Planta
-            // 
-            this.dgv_Planta.AllowUserToAddRows = false;
-            this.dgv_Planta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Planta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Planta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Planta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Planta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Planta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colPlantas});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Planta.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Planta.Location = new System.Drawing.Point(209, 38);
-            this.dgv_Planta.Name = "dgv_Planta";
-            this.dgv_Planta.RowHeadersWidth = 51;
-            this.dgv_Planta.RowTemplate.Height = 40;
-            this.dgv_Planta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Planta.Size = new System.Drawing.Size(312, 164);
-            this.dgv_Planta.TabIndex = 12;
-            // 
-            // colPlantas
-            // 
-            this.colPlantas.HeaderText = "Planta/s";
-            this.colPlantas.Name = "colPlantas";
-            // 
-            // txtNumeroId
-            // 
-            this.txtNumeroId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroId.Location = new System.Drawing.Point(92, 9);
-            this.txtNumeroId.Name = "txtNumeroId";
-            this.txtNumeroId.Size = new System.Drawing.Size(100, 26);
-            this.txtNumeroId.TabIndex = 28;
-            // 
-            // txtPuntos
-            // 
-            this.txtPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuntos.Location = new System.Drawing.Point(92, 54);
-            this.txtPuntos.Name = "txtPuntos";
-            this.txtPuntos.Size = new System.Drawing.Size(100, 26);
-            this.txtPuntos.TabIndex = 29;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancelar.BorderRadius = 20;
-            this.btnCancelar.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(389, 349);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 43);
-            this.btnCancelar.TabIndex = 31;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextColor = System.Drawing.Color.White;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btnAceptar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAceptar.BorderRadius = 20;
-            this.btnAceptar.BorderSize = 0;
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(118, 349);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(89, 43);
-            this.btnAceptar.TabIndex = 30;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextColor = System.Drawing.Color.White;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnEliminar
             // 
@@ -214,6 +106,94 @@ namespace Vivero.Presentacion.Catalogos
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dgv_Planta
+            // 
+            this.dgv_Planta.AllowUserToAddRows = false;
+            this.dgv_Planta.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Planta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Planta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Planta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Planta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Planta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colPuntos});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Planta.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_Planta.Location = new System.Drawing.Point(209, 38);
+            this.dgv_Planta.Name = "dgv_Planta";
+            this.dgv_Planta.RowHeadersWidth = 51;
+            this.dgv_Planta.RowTemplate.Height = 40;
+            this.dgv_Planta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Planta.Size = new System.Drawing.Size(312, 164);
+            this.dgv_Planta.TabIndex = 12;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            // 
+            // txtNombreCatalogo
+            // 
+            this.txtNombreCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCatalogo.Location = new System.Drawing.Point(92, 9);
+            this.txtNombreCatalogo.Name = "txtNombreCatalogo";
+            this.txtNombreCatalogo.Size = new System.Drawing.Size(100, 26);
+            this.txtNombreCatalogo.TabIndex = 28;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelar.BorderRadius = 20;
+            this.btnCancelar.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(389, 349);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(89, 43);
+            this.btnCancelar.TabIndex = 31;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextColor = System.Drawing.Color.White;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAceptar.BorderRadius = 20;
+            this.btnAceptar.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(118, 349);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(89, 43);
+            this.btnAceptar.TabIndex = 30;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextColor = System.Drawing.Color.White;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // ABM_Catalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,10 +202,8 @@ namespace Vivero.Presentacion.Catalogos
             this.ClientSize = new System.Drawing.Size(647, 422);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtPuntos);
-            this.Controls.Add(this.txtNumeroId);
+            this.Controls.Add(this.txtNombreCatalogo);
             this.Controls.Add(this.gbPlantas);
-            this.Controls.Add(this.txt_Puntos);
             this.Controls.Add(this.txt_Numero_ID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -233,6 +211,7 @@ namespace Vivero.Presentacion.Catalogos
             this.Name = "ABM_Catalogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro Catalogo";
+            this.Load += new System.EventHandler(this.ALTA_Catalogo_Load);
             this.gbPlantas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Planta)).EndInit();
             this.ResumeLayout(false);
@@ -242,15 +221,13 @@ namespace Vivero.Presentacion.Catalogos
 
         #endregion
         private System.Windows.Forms.Label txt_Numero_ID;
-        private System.Windows.Forms.Label txt_Puntos;
         private System.Windows.Forms.GroupBox gbPlantas;
         private BotonRedondeado btnEliminar;
         private BotonRedondeado btnAgregar;
         private System.Windows.Forms.DataGridView dgv_Planta;
-        private System.Windows.Forms.TextBox txtNumeroId;
-        private System.Windows.Forms.TextBox txtPuntos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlantas;
+        private System.Windows.Forms.TextBox txtNombreCatalogo;
         private BotonRedondeado btnAceptar;
         private BotonRedondeado btnCancelar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
     }
 }

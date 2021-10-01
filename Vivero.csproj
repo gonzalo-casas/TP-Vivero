@@ -50,6 +50,7 @@
     <Compile Include="Datos\Daos\ComposicionDao.cs" />
     <Compile Include="Datos\Daos\CatalogoDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
+    <Compile Include="Datos\Daos\DetalleCatalogoDao.cs" />
     <Compile Include="Datos\Daos\EmpleadoDao.cs" />
     <Compile Include="Datos\Daos\LocalidadDao.cs" />
     <Compile Include="Datos\Daos\PerfilDao.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Datos\Interfaces\IComposicion.cs" />
     <Compile Include="Datos\Interfaces\ICatalogo.cs" />
     <Compile Include="Datos\Interfaces\ICliente.cs" />
+    <Compile Include="Datos\Interfaces\IDetalleCatalogo.cs" />
     <Compile Include="Datos\Interfaces\IEmpleado.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
     <Compile Include="Datos\Interfaces\ITipoProducto.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
+    <Compile Include="Negocio\Entidades\Es_DetalleCatalogo.cs" />
     <Compile Include="Negocio\Entidades\Es_Perfil.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\ComposicionService.cs" />
+    <Compile Include="Negocio\Servicios\DetalleCatalogoService.cs" />
     <Compile Include="Negocio\Servicios\EmpleadoService.cs" />
     <Compile Include="Negocio\Entidades\Es_Catalogo.cs" />
     <Compile Include="Negocio\Entidades\Es_Cliente.cs" />
