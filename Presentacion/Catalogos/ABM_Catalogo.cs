@@ -427,5 +427,10 @@ namespace Vivero.Presentacion.Catalogos
                 //LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
             }
         }
+
+        private void dgv_Planta_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            //ignorar
+        }
     }
 }
