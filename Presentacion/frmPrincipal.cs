@@ -142,6 +142,8 @@ namespace Vivero
                 btnCatalogos.BackColor = Color.FromArgb(135, 181, 168);
             if (Application.OpenForms["C_Productos"] == null)
                 btnProductos.BackColor = Color.FromArgb(135, 181, 168);
+            if (Application.OpenForms["C_Planta"] == null)
+                btnPlantas.BackColor = Color.FromArgb(135, 181, 168);
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -153,7 +155,7 @@ namespace Vivero
         private void btnPlantas_Click(object sender, EventArgs e)
         {
             AbrirFormulario<C_Planta>();
-            btnCatalogos.BackColor = Color.FromArgb(205, 241, 231);
+            btnPlantas.BackColor = Color.FromArgb(205, 241, 231);
         }
     }
 }
