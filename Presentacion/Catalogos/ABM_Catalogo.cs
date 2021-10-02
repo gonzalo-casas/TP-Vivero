@@ -230,7 +230,7 @@ namespace Vivero.Presentacion.Catalogos
                 return false;
             }
 
-            if (sumaComponentes != 100)
+            /*if (sumaComponentes != 100)
             {
                 MessageBox.Show("La suma de las cantidades de cada componente no es igual al 100%", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dgv_Planta.Columns[1].DefaultCellStyle.BackColor = Color.Red;
@@ -239,7 +239,7 @@ namespace Vivero.Presentacion.Catalogos
             else
             {
                 dgv_Planta.Columns[1].DefaultCellStyle.BackColor = Color.White;
-            }
+            }*/
             return true;
         }
         public void SeleccionarOpcion(FormMode op)
