@@ -163,6 +163,16 @@ namespace Vivero.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_purchase_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-purchase-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_truck_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-truck-64", resourceCulture);

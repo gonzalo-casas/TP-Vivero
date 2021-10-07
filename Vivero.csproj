@@ -267,9 +267,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Presentacion\Plantas\" />
+    <None Include="Presentacion\Recursos\Iconos\icons8-purchase-64.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
