@@ -83,6 +83,7 @@ namespace Vivero.Datos
             {
                 if (t != null)
                     t.Rollback();
+                throw ex;
             }
             finally
             {

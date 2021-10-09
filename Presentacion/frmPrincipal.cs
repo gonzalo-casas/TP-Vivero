@@ -32,6 +32,7 @@ namespace Vivero
 
             if (string.IsNullOrEmpty(fl.MiUsuario.Nombre))
                 Application.Exit();
+                
             else
             {
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;

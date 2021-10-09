@@ -37,7 +37,6 @@ namespace Vivero.Presentacion.Plantas
         }
         private FormMode formMode = FormMode.insert;
         private readonly PlantasService oPlantasService;
-        private readonly PerfilService operfilService;
         private readonly TipoPlantaService oTipoPlantaService;
         private readonly EstadoPlantaService oEstadoPlantaService;
         private int idPlanta;
