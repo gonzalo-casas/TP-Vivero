@@ -204,6 +204,12 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ventas\ABM_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventas\ABM_Ventas.Designer.cs">
+      <DependentUpon>ABM_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventas\C_Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventas\ABM_Ventas.resx">
+      <DependentUpon>ABM_Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventas\C_Ventas.resx">
       <DependentUpon>C_Ventas.cs</DependentUpon>
