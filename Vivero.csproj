@@ -355,5 +355,14 @@
   <ItemGroup>
     <None Include="Presentacion\Recursos\Iconos\ojo-pintado.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-add-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-check-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Presentacion\Recursos\Iconos\icons8-cancel-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

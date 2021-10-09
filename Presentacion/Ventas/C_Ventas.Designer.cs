@@ -1,5 +1,4 @@
-﻿
-namespace Vivero.Presentacion.Ventas
+﻿namespace Vivero.Presentacion.Ventas
 {
     partial class C_Ventas
     {
@@ -32,13 +31,13 @@ namespace Vivero.Presentacion.Ventas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txt_IdProveedor = new System.Windows.Forms.TextBox();
-            this.txt_NombreProveedor = new System.Windows.Forms.TextBox();
-            this.txt_Rs_Proveedor = new System.Windows.Forms.TextBox();
+            this.txt_NroFactura = new System.Windows.Forms.TextBox();
+            this.txt_Documento = new System.Windows.Forms.TextBox();
+            this.txt_Empleado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
+            this.dgv_Ventas = new System.Windows.Forms.DataGridView();
             this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +52,9 @@ namespace Vivero.Presentacion.Ventas
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTituloProveedores = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTituloVentas = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -70,11 +71,11 @@ namespace Vivero.Presentacion.Ventas
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btn_EliminarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_AgregarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_ConsultarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirProveedor = new Vivero.Presentacion.BotonRedondeado();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
+            this.btn_EliminarVenta = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,29 +86,29 @@ namespace Vivero.Presentacion.Ventas
             this.panelAgregar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_IdProveedor
+            // txt_NroFactura
             // 
-            this.txt_IdProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdProveedor.Location = new System.Drawing.Point(192, 50);
-            this.txt_IdProveedor.Name = "txt_IdProveedor";
-            this.txt_IdProveedor.Size = new System.Drawing.Size(100, 26);
-            this.txt_IdProveedor.TabIndex = 4;
+            this.txt_NroFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NroFactura.Location = new System.Drawing.Point(192, 50);
+            this.txt_NroFactura.Name = "txt_NroFactura";
+            this.txt_NroFactura.Size = new System.Drawing.Size(100, 26);
+            this.txt_NroFactura.TabIndex = 4;
             // 
-            // txt_NombreProveedor
+            // txt_Documento
             // 
-            this.txt_NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreProveedor.Location = new System.Drawing.Point(192, 83);
-            this.txt_NombreProveedor.Name = "txt_NombreProveedor";
-            this.txt_NombreProveedor.Size = new System.Drawing.Size(100, 26);
-            this.txt_NombreProveedor.TabIndex = 5;
+            this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Documento.Location = new System.Drawing.Point(192, 83);
+            this.txt_Documento.Name = "txt_Documento";
+            this.txt_Documento.Size = new System.Drawing.Size(100, 26);
+            this.txt_Documento.TabIndex = 5;
             // 
-            // txt_Rs_Proveedor
+            // txt_Empleado
             // 
-            this.txt_Rs_Proveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Rs_Proveedor.Location = new System.Drawing.Point(192, 116);
-            this.txt_Rs_Proveedor.Name = "txt_Rs_Proveedor";
-            this.txt_Rs_Proveedor.Size = new System.Drawing.Size(100, 26);
-            this.txt_Rs_Proveedor.TabIndex = 6;
+            this.txt_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Empleado.Location = new System.Drawing.Point(192, 116);
+            this.txt_Empleado.Name = "txt_Empleado";
+            this.txt_Empleado.Size = new System.Drawing.Size(100, 26);
+            this.txt_Empleado.TabIndex = 6;
             // 
             // label1
             // 
@@ -115,38 +116,38 @@ namespace Vivero.Presentacion.Ventas
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(96, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Numero ID:";
+            this.label1.Text = "N° Factura:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 86);
+            this.label2.Location = new System.Drawing.Point(88, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "Documento:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(79, 116);
+            this.label3.Location = new System.Drawing.Point(99, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 20);
+            this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Razon Social:";
+            this.label3.Text = "Empleado:";
             // 
-            // dgv_Proveedores
+            // dgv_Ventas
             // 
-            this.dgv_Proveedores.AllowUserToAddRows = false;
-            this.dgv_Proveedores.AllowUserToDeleteRows = false;
+            this.dgv_Ventas.AllowUserToAddRows = false;
+            this.dgv_Ventas.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Proveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,9 +155,9 @@ namespace Vivero.Presentacion.Ventas
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTipo,
             this.colNumero,
             this.colDocumento,
@@ -171,17 +172,17 @@ namespace Vivero.Presentacion.Ventas
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Proveedores.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Proveedores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Proveedores.Location = new System.Drawing.Point(100, 0);
-            this.dgv_Proveedores.Name = "dgv_Proveedores";
-            this.dgv_Proveedores.ReadOnly = true;
-            this.dgv_Proveedores.RowHeadersVisible = false;
-            this.dgv_Proveedores.RowHeadersWidth = 51;
-            this.dgv_Proveedores.RowTemplate.Height = 40;
-            this.dgv_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Proveedores.Size = new System.Drawing.Size(807, 242);
-            this.dgv_Proveedores.TabIndex = 11;
+            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Ventas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Ventas.Location = new System.Drawing.Point(100, 0);
+            this.dgv_Ventas.Name = "dgv_Ventas";
+            this.dgv_Ventas.ReadOnly = true;
+            this.dgv_Ventas.RowHeadersVisible = false;
+            this.dgv_Ventas.RowHeadersWidth = 51;
+            this.dgv_Ventas.RowTemplate.Height = 40;
+            this.dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Ventas.Size = new System.Drawing.Size(807, 242);
+            this.dgv_Ventas.TabIndex = 11;
             // 
             // colTipo
             // 
@@ -242,7 +243,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_SalirProveedor);
+            this.panel4.Controls.Add(this.btn_SalirVenta);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
@@ -287,13 +288,15 @@ namespace Vivero.Presentacion.Ventas
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lblTituloProveedores);
-            this.panel3.Controls.Add(this.btn_ConsultarProveedor);
+            this.panel3.Controls.Add(this.dtpFecha);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.lblTituloVentas);
+            this.panel3.Controls.Add(this.btn_ConsultarVentas);
             this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txt_IdProveedor);
-            this.panel3.Controls.Add(this.txt_NombreProveedor);
-            this.panel3.Controls.Add(this.txt_Rs_Proveedor);
+            this.panel3.Controls.Add(this.txt_NroFactura);
+            this.panel3.Controls.Add(this.txt_Documento);
+            this.panel3.Controls.Add(this.txt_Empleado);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -302,16 +305,35 @@ namespace Vivero.Presentacion.Ventas
             this.panel3.Size = new System.Drawing.Size(1007, 222);
             this.panel3.TabIndex = 16;
             // 
-            // lblTituloProveedores
+            // dtpFecha
             // 
-            this.lblTituloProveedores.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTituloProveedores.AutoSize = true;
-            this.lblTituloProveedores.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloProveedores.Location = new System.Drawing.Point(578, 86);
-            this.lblTituloProveedores.Name = "lblTituloProveedores";
-            this.lblTituloProveedores.Size = new System.Drawing.Size(329, 65);
-            this.lblTituloProveedores.TabIndex = 17;
-            this.lblTituloProveedores.Text = "Proveedores";
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(192, 148);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(100, 26);
+            this.dtpFecha.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(126, 148);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Fecha:";
+            // 
+            // lblTituloVentas
+            // 
+            this.lblTituloVentas.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTituloVentas.AutoSize = true;
+            this.lblTituloVentas.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloVentas.Location = new System.Drawing.Point(712, 89);
+            this.lblTituloVentas.Name = "lblTituloVentas";
+            this.lblTituloVentas.Size = new System.Drawing.Size(240, 65);
+            this.lblTituloVentas.TabIndex = 17;
+            this.lblTituloVentas.Text = "Facturas";
             // 
             // panel24
             // 
@@ -323,7 +345,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dgv_Proveedores);
+            this.panel2.Controls.Add(this.dgv_Ventas);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
@@ -362,7 +384,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             // panelEliminar
             // 
-            this.panelEliminar.Controls.Add(this.btn_EliminarProveedor);
+            this.panelEliminar.Controls.Add(this.btn_EliminarVenta);
             this.panelEliminar.Controls.Add(this.panel20);
             this.panelEliminar.Controls.Add(this.panel21);
             this.panelEliminar.Controls.Add(this.panel22);
@@ -407,7 +429,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             // panelAgregar
             // 
-            this.panelAgregar.Controls.Add(this.btn_AgregarProveedor);
+            this.panelAgregar.Controls.Add(this.btn_AgregarVenta);
             this.panelAgregar.Controls.Add(this.panel15);
             this.panelAgregar.Controls.Add(this.panel14);
             this.panelAgregar.Controls.Add(this.panel13);
@@ -458,85 +480,87 @@ namespace Vivero.Presentacion.Ventas
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
             // 
-            // btn_EliminarProveedor
+            // btn_EliminarVenta
             // 
-            this.btn_EliminarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarProveedor.BorderRadius = 30;
-            this.btn_EliminarProveedor.BorderSize = 0;
-            this.btn_EliminarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarProveedor.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarProveedor.Name = "btn_EliminarProveedor";
-            this.btn_EliminarProveedor.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarProveedor.TabIndex = 19;
-            this.btn_EliminarProveedor.Text = "Eliminar";
-            this.btn_EliminarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarProveedor.UseVisualStyleBackColor = false;
+            this.btn_EliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarVenta.BorderRadius = 30;
+            this.btn_EliminarVenta.BorderSize = 0;
+            this.btn_EliminarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarVenta.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarVenta.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarVenta.Name = "btn_EliminarVenta";
+            this.btn_EliminarVenta.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarVenta.TabIndex = 19;
+            this.btn_EliminarVenta.Text = "Eliminar";
+            this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarVenta.UseVisualStyleBackColor = false;
             // 
-            // btn_AgregarProveedor
+            // btn_AgregarVenta
             // 
-            this.btn_AgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarProveedor.BorderRadius = 30;
-            this.btn_AgregarProveedor.BorderSize = 0;
-            this.btn_AgregarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarProveedor.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarProveedor.Name = "btn_AgregarProveedor";
-            this.btn_AgregarProveedor.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarProveedor.TabIndex = 17;
-            this.btn_AgregarProveedor.Text = "Agregar";
-            this.btn_AgregarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
-            this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
+            this.btn_AgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarVenta.BorderRadius = 30;
+            this.btn_AgregarVenta.BorderSize = 0;
+            this.btn_AgregarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarVenta.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarVenta.Name = "btn_AgregarVenta";
+            this.btn_AgregarVenta.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarVenta.TabIndex = 17;
+            this.btn_AgregarVenta.Text = "Agregar";
+            this.btn_AgregarVenta.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.UseVisualStyleBackColor = false;
+            this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
             // 
-            // btn_ConsultarProveedor
+            // btn_ConsultarVentas
             // 
-            this.btn_ConsultarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarProveedor.BorderRadius = 20;
-            this.btn_ConsultarProveedor.BorderSize = 0;
-            this.btn_ConsultarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarProveedor.Location = new System.Drawing.Point(366, 116);
-            this.btn_ConsultarProveedor.Name = "btn_ConsultarProveedor";
-            this.btn_ConsultarProveedor.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarProveedor.TabIndex = 16;
-            this.btn_ConsultarProveedor.Text = "Consultar";
-            this.btn_ConsultarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarProveedor.UseVisualStyleBackColor = false;
+            this.btn_ConsultarVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarVentas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarVentas.BorderRadius = 20;
+            this.btn_ConsultarVentas.BorderSize = 0;
+            this.btn_ConsultarVentas.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarVentas.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarVentas.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarVentas.Name = "btn_ConsultarVentas";
+            this.btn_ConsultarVentas.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarVentas.TabIndex = 16;
+            this.btn_ConsultarVentas.Text = "Consultar";
+            this.btn_ConsultarVentas.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarVentas.UseVisualStyleBackColor = false;
+            this.btn_ConsultarVentas.Click += new System.EventHandler(this.btn_ConsultarVentas_Click);
             // 
-            // btn_SalirProveedor
+            // btn_SalirVenta
             // 
-            this.btn_SalirProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirProveedor.BorderRadius = 20;
-            this.btn_SalirProveedor.BorderSize = 0;
-            this.btn_SalirProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_SalirProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirProveedor.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirProveedor.Name = "btn_SalirProveedor";
-            this.btn_SalirProveedor.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirProveedor.TabIndex = 17;
-            this.btn_SalirProveedor.Text = "Cerrar";
-            this.btn_SalirProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_SalirProveedor.UseVisualStyleBackColor = false;
+            this.btn_SalirVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirVenta.BorderRadius = 20;
+            this.btn_SalirVenta.BorderSize = 0;
+            this.btn_SalirVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirVenta.FlatAppearance.BorderSize = 0;
+            this.btn_SalirVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirVenta.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirVenta.Name = "btn_SalirVenta";
+            this.btn_SalirVenta.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirVenta.TabIndex = 17;
+            this.btn_SalirVenta.Text = "Cerrar";
+            this.btn_SalirVenta.TextColor = System.Drawing.Color.White;
+            this.btn_SalirVenta.UseVisualStyleBackColor = false;
+            this.btn_SalirVenta.Click += new System.EventHandler(this.btn_SalirVenta_Click);
             // 
             // C_Ventas
             // 
@@ -548,8 +572,8 @@ namespace Vivero.Presentacion.Ventas
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "C_Ventas";
-            this.Text = "Proveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).EndInit();
+            this.Text = "Ventas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -564,13 +588,13 @@ namespace Vivero.Presentacion.Ventas
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_IdProveedor;
-        private System.Windows.Forms.TextBox txt_NombreProveedor;
-        private System.Windows.Forms.TextBox txt_Rs_Proveedor;
+        private System.Windows.Forms.TextBox txt_NroFactura;
+        private System.Windows.Forms.TextBox txt_Documento;
+        private System.Windows.Forms.TextBox txt_Empleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgv_Proveedores;
+        private System.Windows.Forms.DataGridView dgv_Ventas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
@@ -594,11 +618,11 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel24;
-        private BotonRedondeado btn_ConsultarProveedor;
-        private BotonRedondeado btn_EliminarProveedor;
-        private BotonRedondeado btn_AgregarProveedor;
-        private BotonRedondeado btn_SalirProveedor;
-        private System.Windows.Forms.Label lblTituloProveedores;
+        private BotonRedondeado btn_ConsultarVentas;
+        private BotonRedondeado btn_EliminarVenta;
+        private BotonRedondeado btn_AgregarVenta;
+        private BotonRedondeado btn_SalirVenta;
+        private System.Windows.Forms.Label lblTituloVentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDocumento;
@@ -606,5 +630,25 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMonto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label4;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
