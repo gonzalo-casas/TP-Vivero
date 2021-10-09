@@ -47,6 +47,7 @@
             this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,26 +56,26 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloVentas = new System.Windows.Forms.Label();
+            this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.panelEliminar = new System.Windows.Forms.Panel();
+            this.btn_EliminarVenta = new Vivero.Presentacion.BotonRedondeado();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panelAgregar = new System.Windows.Forms.Panel();
+            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btn_EliminarVenta = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
+            this.chk_Todos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -254,6 +255,27 @@
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 4;
             // 
+            // btn_SalirVenta
+            // 
+            this.btn_SalirVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirVenta.BorderRadius = 20;
+            this.btn_SalirVenta.BorderSize = 0;
+            this.btn_SalirVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirVenta.FlatAppearance.BorderSize = 0;
+            this.btn_SalirVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirVenta.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirVenta.Name = "btn_SalirVenta";
+            this.btn_SalirVenta.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirVenta.TabIndex = 17;
+            this.btn_SalirVenta.Text = "Cerrar";
+            this.btn_SalirVenta.TextColor = System.Drawing.Color.White;
+            this.btn_SalirVenta.UseVisualStyleBackColor = false;
+            this.btn_SalirVenta.Click += new System.EventHandler(this.btn_SalirVenta_Click);
+            // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -288,6 +310,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.chk_Todos);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloVentas);
@@ -334,6 +357,26 @@
             this.lblTituloVentas.Size = new System.Drawing.Size(240, 65);
             this.lblTituloVentas.TabIndex = 17;
             this.lblTituloVentas.Text = "Facturas";
+            // 
+            // btn_ConsultarVentas
+            // 
+            this.btn_ConsultarVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarVentas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarVentas.BorderRadius = 20;
+            this.btn_ConsultarVentas.BorderSize = 0;
+            this.btn_ConsultarVentas.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarVentas.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarVentas.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarVentas.Name = "btn_ConsultarVentas";
+            this.btn_ConsultarVentas.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarVentas.TabIndex = 16;
+            this.btn_ConsultarVentas.Text = "Consultar";
+            this.btn_ConsultarVentas.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarVentas.UseVisualStyleBackColor = false;
+            this.btn_ConsultarVentas.Click += new System.EventHandler(this.btn_ConsultarVentas_Click);
             // 
             // panel24
             // 
@@ -395,6 +438,26 @@
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
             // 
+            // btn_EliminarVenta
+            // 
+            this.btn_EliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarVenta.BorderRadius = 30;
+            this.btn_EliminarVenta.BorderSize = 0;
+            this.btn_EliminarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarVenta.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarVenta.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarVenta.Name = "btn_EliminarVenta";
+            this.btn_EliminarVenta.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarVenta.TabIndex = 19;
+            this.btn_EliminarVenta.Text = "Eliminar";
+            this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarVenta.UseVisualStyleBackColor = false;
+            // 
             // panel20
             // 
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
@@ -440,6 +503,27 @@
             this.panelAgregar.Size = new System.Drawing.Size(200, 100);
             this.panelAgregar.TabIndex = 14;
             // 
+            // btn_AgregarVenta
+            // 
+            this.btn_AgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarVenta.BorderRadius = 30;
+            this.btn_AgregarVenta.BorderSize = 0;
+            this.btn_AgregarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarVenta.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarVenta.Name = "btn_AgregarVenta";
+            this.btn_AgregarVenta.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarVenta.TabIndex = 17;
+            this.btn_AgregarVenta.Text = "Agregar";
+            this.btn_AgregarVenta.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.UseVisualStyleBackColor = false;
+            this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
+            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -480,87 +564,15 @@
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
             // 
-            // btn_EliminarVenta
+            // chk_Todos
             // 
-            this.btn_EliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarVenta.BorderRadius = 30;
-            this.btn_EliminarVenta.BorderSize = 0;
-            this.btn_EliminarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarVenta.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarVenta.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarVenta.Name = "btn_EliminarVenta";
-            this.btn_EliminarVenta.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarVenta.TabIndex = 19;
-            this.btn_EliminarVenta.Text = "Eliminar";
-            this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarVenta.UseVisualStyleBackColor = false;
-            // 
-            // btn_AgregarVenta
-            // 
-            this.btn_AgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarVenta.BorderRadius = 30;
-            this.btn_AgregarVenta.BorderSize = 0;
-            this.btn_AgregarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarVenta.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarVenta.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarVenta.Name = "btn_AgregarVenta";
-            this.btn_AgregarVenta.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarVenta.TabIndex = 17;
-            this.btn_AgregarVenta.Text = "Agregar";
-            this.btn_AgregarVenta.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarVenta.UseVisualStyleBackColor = false;
-            this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
-            // 
-            // btn_ConsultarVentas
-            // 
-            this.btn_ConsultarVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarVentas.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarVentas.BorderRadius = 20;
-            this.btn_ConsultarVentas.BorderSize = 0;
-            this.btn_ConsultarVentas.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarVentas.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarVentas.Location = new System.Drawing.Point(366, 116);
-            this.btn_ConsultarVentas.Name = "btn_ConsultarVentas";
-            this.btn_ConsultarVentas.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarVentas.TabIndex = 16;
-            this.btn_ConsultarVentas.Text = "Consultar";
-            this.btn_ConsultarVentas.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarVentas.UseVisualStyleBackColor = false;
-            this.btn_ConsultarVentas.Click += new System.EventHandler(this.btn_ConsultarVentas_Click);
-            // 
-            // btn_SalirVenta
-            // 
-            this.btn_SalirVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirVenta.BorderRadius = 20;
-            this.btn_SalirVenta.BorderSize = 0;
-            this.btn_SalirVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirVenta.FlatAppearance.BorderSize = 0;
-            this.btn_SalirVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirVenta.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirVenta.Name = "btn_SalirVenta";
-            this.btn_SalirVenta.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirVenta.TabIndex = 17;
-            this.btn_SalirVenta.Text = "Cerrar";
-            this.btn_SalirVenta.TextColor = System.Drawing.Color.White;
-            this.btn_SalirVenta.UseVisualStyleBackColor = false;
-            this.btn_SalirVenta.Click += new System.EventHandler(this.btn_SalirVenta_Click);
+            this.chk_Todos.AutoSize = true;
+            this.chk_Todos.Location = new System.Drawing.Point(384, 186);
+            this.chk_Todos.Name = "chk_Todos";
+            this.chk_Todos.Size = new System.Drawing.Size(56, 17);
+            this.chk_Todos.TabIndex = 21;
+            this.chk_Todos.Text = "Todas";
+            this.chk_Todos.UseVisualStyleBackColor = true;
             // 
             // C_Ventas
             // 
@@ -632,6 +644,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox chk_Todos;
     }
 }
 
