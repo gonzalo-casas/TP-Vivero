@@ -31,8 +31,8 @@ namespace Vivero
             fl.ShowDialog();
 
             if (string.IsNullOrEmpty(fl.MiUsuario.Nombre))
-                Application.Exit();
-                
+                Application.ExitThread();
+
             else
             {
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
@@ -44,8 +44,6 @@ namespace Vivero
                     lblRolUsuario.Text = "Administrador";
                 }
 
-
-
                 else
                 {
                     habilitarOpciones(false);
@@ -53,7 +51,7 @@ namespace Vivero
                 }
 
             }
-                
+
 
             fl.Dispose();
         }
@@ -83,9 +81,18 @@ namespace Vivero
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro de que desea salir?", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
                 e.Cancel = false;
+
+            }
+
             else
+            {                
                 e.Cancel = true;
+
+            }
+
+
         }
 
         private void BtnProveedor_Click(object sender, EventArgs e)
@@ -158,5 +165,7 @@ namespace Vivero
             AbrirFormulario<C_Planta>();
             btnPlantas.BackColor = Color.FromArgb(205, 241, 231);
         }
+
+        
     }
 }

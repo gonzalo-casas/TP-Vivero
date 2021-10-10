@@ -83,7 +83,13 @@ namespace Vivero.Presentacion
 
         private void pbCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro de que desea salir?", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                this.Close();
+
+            
+
+            //e.Cancel = true;
+            
         }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
