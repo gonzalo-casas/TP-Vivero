@@ -23,7 +23,11 @@ namespace Vivero.Presentacion.Ventas
         ClienteService oClienteService;
         ProductoService oProductoService;
         PlantasService oPlataService;
-    
+        bool flag;
+
+      
+
+
 
         public ABM_Ventas()
         {
@@ -95,9 +99,13 @@ namespace Vivero.Presentacion.Ventas
         }
 
  
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // es el boton de quitar 
         {
-
+            if (dgv_Items.CurrentRow != null)
+            {
+                var detalleSeleccionado = (Es_DetalleFactura)dgv_Items.CurrentRow.DataBoundItem;
+                listaFacturaDetalle.Remove(detalleSeleccionado);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -108,25 +116,30 @@ namespace Vivero.Presentacion.Ventas
         private void rbProducto_CheckedChanged(object sender, EventArgs e)
         {
           
-            if (rbProducto.Checked)
-            {
+           
                 cboItem.Enabled = false;
                 LlenarCombo(cboItem, oProductoService.traerTodo(), "Nombre", "Codigo");
+                txtPrecio.Clear(); // para que cuando cambie de combo, que borre el precio e importe anterior
+                txtImporte.Clear();
                 cboItem.Enabled = true;
-            }
-            if (rbPlanta.Checked)
-            {
-                cboItem.Enabled = false;
-                LlenarCombo(cboItem, oPlataService.Todas_las_Plantas(), "NombreComun", "Codigo");
-                cboItem.Enabled = true;
-            }
+          
 
 
         }
 
-        
+        private void rbPlanta_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            cboItem.Enabled = false;
+            LlenarCombo(cboItem, oPlataService.Todas_las_Plantas(), "NombreComun", "Codigo");
+            txtPrecio.Clear();
+            txtImporte.Clear();
+            cboItem.Enabled = true;
+           
+        }
 
-       
+
+
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
@@ -134,8 +147,10 @@ namespace Vivero.Presentacion.Ventas
             if (cboItem.Enabled.Equals(true))
             {
                 int cantidad = 0;
-                int.TryParse(txtCantidad.Text, out cantidad);           
-                txtImporte.Text = (int.Parse(txtPrecio.Text) * cantidad).ToString();
+                int precio = 0;
+                int.TryParse(txtCantidad.Text, out cantidad);
+                int.TryParse(txtPrecio.Text, out precio);
+                txtImporte.Text = (precio * cantidad).ToString();
             }
         }
 
@@ -145,7 +160,7 @@ namespace Vivero.Presentacion.Ventas
         {
             if (cboItem.Enabled.Equals(true)) 
             {
-                //MessageBox.Show(cboItem.SelectedValue.ToString());
+                
                 var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"]; 
                 txtPrecio.Text = precio.ToString();
                 txtCantidad.Enabled = true;
@@ -166,6 +181,7 @@ namespace Vivero.Presentacion.Ventas
                 var nombre = cboItem.Text.ToString();
                 var producto = new Es_Producto();
                 var planta = new Es_Planta();
+                 flag = rbPlanta.Checked ? true : false;  // bandera para saber si es producto o planta
 
                 if (rbProducto.Checked)
                 {
@@ -179,7 +195,7 @@ namespace Vivero.Presentacion.Ventas
                
                 
 
-                listaFacturaDetalle.Add(new Es_DetalleFactura()
+                listaFacturaDetalle.Add(new Es_DetalleFactura(flag)
                 {
                     NroItem = listaFacturaDetalle.Count + 1,
                     Producto = producto,
@@ -212,7 +228,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void InicializarDetalle()
         {
-            //cboItem.SelectedIndex = -1;
+            /*cboItem.SelectedIndex = -1*/;
             txtCantidad.Text = "";
             txtPrecio.Text = "";
             txtImporte.Text = "";
@@ -222,22 +238,27 @@ namespace Vivero.Presentacion.Ventas
 
         public bool ValidarCampos()
         {
-            //if (string.IsNullOrEmpty(txtCantidad.Text) || int.Parse(txtCantidad.Text) > 0)
-            //{
-            //    MessageBox.Show("Ingrese el precio del producto por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    txtCantidad.BackColor = Color.Red;
-            //    txtCantidad.Focus();
-            //    return false;
-            //}
-            //else
-            //    txtCantidad.BackColor = Color.White;
+            if (string.IsNullOrEmpty(txtCantidad.Text) || int.Parse(txtCantidad.Text) <= 0)
+            {
+                MessageBox.Show("Ingrese un precio del producto y que sea mayor a 0 por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCantidad.BackColor = Color.Red;
+                txtCantidad.Focus();
+                return false;
+            }
+            else
+                txtCantidad.BackColor = Color.White;
 
-            //if (cboItem.SelectedIndex.Equals(-1))
-            //{
-            //    MessageBox.Show("Seleccione un tipo de producto por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return false;
-            //}
+            if (cboItem.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un tipo de producto por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return true;
+        }
+
+        private void txtDescuento_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotales();
         }
     }
 }

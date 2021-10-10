@@ -4,11 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vivero.Negocio.EstructuraNegocio;
+using Vivero.Presentacion.Ventas;
 
 namespace Vivero.Negocio.Entidades
 {
    public class Es_DetalleFactura
     {
+        bool EsPlanta;
+
+        public Es_DetalleFactura(bool flag)
+        {
+            EsPlanta = flag;
+
+        }
+
         public int Tipo_Factura { get; set; }
         public int Nro_Factura { get; set; }
         public Es_Planta Planta { get; set; }
@@ -43,16 +52,33 @@ namespace Vivero.Negocio.Entidades
         public string Nombre
         {
             get
-            {
-                return Producto.Nombre;
+            {  
+                if(EsPlanta)
+                {
+                    return Planta.NombreComun;
+                }
+                else
+                {
+                    return Producto.Nombre;
+                }
+
+                
             }
         }
 
         public string Codigo
         {
             get
-            {
-                return Producto.Codigo.ToString();
+            { 
+                if (EsPlanta)
+                {
+                    return Planta.Codigo;
+                }
+                else
+                {
+                    return Producto.Codigo.ToString();
+
+                }
             }
         }
 
@@ -60,7 +86,15 @@ namespace Vivero.Negocio.Entidades
         {
             get
             {
-                return "Producto";
+                if (EsPlanta)
+                {
+                    return "Planta";
+                }
+                else
+                {
+                    return "Producto";
+
+                }
             }
         }
 
