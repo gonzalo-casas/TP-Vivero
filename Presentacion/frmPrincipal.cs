@@ -32,7 +32,7 @@ namespace Vivero
             fl.ShowDialog();
 
             if (string.IsNullOrEmpty(fl.MiUsuario.Nombre))
-                Application.Exit();
+                Application.ExitThread();
                 
             else
             {
