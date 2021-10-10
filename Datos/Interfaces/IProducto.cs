@@ -14,6 +14,7 @@ namespace Vivero.Datos.Interfaces
         bool Create(Es_Producto oProducto);
         bool Update(Es_Producto oProductoSeleccionado);
         bool Delete(Es_Producto oProducto);
+        DataTable traerTodo();
         DataTable RecuperarPorCod(int CodProducto);
         DataTable BuscarUnSoloProducto(string nom_prod, int tipo, string stock, string costo, string precio);
     }

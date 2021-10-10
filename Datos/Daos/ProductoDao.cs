@@ -109,6 +109,13 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
+        public DataTable traerTodo()
+        {
+            string consulta = "SELECT * FROM Producto ";
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
+
         //falta recuperar Composicion de producto
     }
 }

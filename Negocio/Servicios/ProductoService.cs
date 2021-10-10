@@ -19,6 +19,11 @@ namespace Vivero.Negocio.Servicios
             dao = new ProductoDao();
         }
 
+        public DataTable traerTodo()
+        {
+            return dao.traerTodo();
+        }
+
         public DataTable Buscar_producto(string codigo, string nom_prod, decimal precio_min, decimal precio_max, string estado)
         {
             return dao.Buscar_producto(codigo, nom_prod, precio_min, precio_max, estado);

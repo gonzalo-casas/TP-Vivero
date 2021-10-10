@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vivero.Negocio;
+using Vivero.Negocio.Servicios;
 
 namespace Vivero.Presentacion.Ventas
 {
     public partial class ABM_Ventas : Form
     {
+        //declaro objetos
+        TipoFacturaService oTipoFacturaService;
+        ClienteService oClienteService;
+        ProductoService oProductoService;
+        PlantasService oPlataService;
+
+
         public ABM_Ventas()
         {
             InitializeComponent();
+            oTipoFacturaService = new TipoFacturaService();
+            oClienteService = new ClienteService();
+            oProductoService = new ProductoService();
+            oPlataService = new PlantasService();
         }
 
         private FormMode formMode = FormMode.insert;
@@ -24,10 +37,15 @@ namespace Vivero.Presentacion.Ventas
             insert,
             delete
         }
-
+        
         private void ABM_Ventas_Load(object sender, EventArgs e)
         {
             this.Location = new Point(300, 50);
+        
+            LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
+            LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
+            LlenarCombo(cboItem, oProductoService.traerTodo(), "Nombre", "Codigo");
+
 
             switch (formMode)
             {
@@ -55,6 +73,20 @@ namespace Vivero.Presentacion.Ventas
             }
         }
 
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            
+            cbo.DataSource = source;
+            cbo.DisplayMember = display;
+            cbo.ValueMember = value;
+            cbo.SelectedIndex = -1;
+
+        }
+
+     
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -63,6 +95,41 @@ namespace Vivero.Presentacion.Ventas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rbProducto_CheckedChanged(object sender, EventArgs e)
+        {
+            //cboItem.DataSource = null;
+            //cboItem.Items.Clear();
+            LlenarCombo(cboItem, oProductoService.traerTodo(), "Nombre", "Codigo");
+            
+        }
+
+        private void rbPlanta_CheckedChanged(object sender, EventArgs e)
+        {
+            //cboItem.DataSource = null;
+            //cboItem.Items.Clear();
+            LlenarCombo(cboItem, oPlataService.Todas_las_Plantas(), "NombreComun", "Codigo");
+            
+        }
+
+       
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+            txtImporte.Text = (int.Parse(txtCantidad.Text) * int.Parse(txtPrecio.Text)).ToString();
+        }
+
+        private void cboItem_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void cboItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

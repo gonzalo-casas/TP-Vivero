@@ -111,6 +111,13 @@ namespace Vivero.Datos.Daos
 
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
         }
+
+        public DataTable traerTodo()
+        {
+            string consulta = "SELECT NroDoc, (NroDoc + ' - ' + Apellido + ' ' + Nombre) as FullName FROM CLIENTE";
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
     }
 }
 

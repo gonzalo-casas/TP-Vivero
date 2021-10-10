@@ -15,6 +15,7 @@ namespace Vivero.Datos.Interfaces
         bool Delete(Es_Cliente oClienteSeleccionado);
         DataTable RecuperarPorTipoDoc_NroDoc(int TipoDoc, string NroDoc);
         DataTable BuscarCliente(string TipoDoc, string NroDoc, string Nombre, string Apellido, string estado);
+        DataTable traerTodo();
     }
 }
 

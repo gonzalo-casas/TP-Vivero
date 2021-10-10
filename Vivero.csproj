@@ -60,6 +60,7 @@
     <Compile Include="Datos\Daos\ProductoDao.cs" />
     <Compile Include="Datos\Daos\ProveedorDao.cs" />
     <Compile Include="Datos\Daos\TipoDocDao.cs" />
+    <Compile Include="Datos\Daos\TipoFacturaDao.cs" />
     <Compile Include="Datos\Daos\TipoPlantaDao.cs" />
     <Compile Include="Datos\Daos\TipoProductoDao.cs" />
     <Compile Include="Datos\DBHelper.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Datos\Interfaces\IFactura.cs" />
     <Compile Include="Datos\Interfaces\ILocalidad.cs" />
     <Compile Include="Datos\Interfaces\IPlanta.cs" />
+    <Compile Include="Datos\Interfaces\ITipoFactura.cs" />
     <Compile Include="Datos\Interfaces\ITipoPlanta.cs" />
     <Compile Include="Datos\Interfaces\ITipoProducto.cs" />
     <Compile Include="Datos\Interfaces\IProducto.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Negocio\Entidades\Es_Perfil.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
+    <Compile Include="Negocio\Entidades\Es_TipoFactura.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
     <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
@@ -109,6 +112,7 @@
     <Compile Include="Negocio\Servicios\ProductoService.cs" />
     <Compile Include="Negocio\Servicios\ProveedorService.cs" />
     <Compile Include="Negocio\Servicios\TipoDocService.cs" />
+    <Compile Include="Negocio\Servicios\TipoFacturaService.cs" />
     <Compile Include="Negocio\Servicios\TipoPlantaService.cs" />
     <Compile Include="Negocio\Servicios\TipoProductoService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">

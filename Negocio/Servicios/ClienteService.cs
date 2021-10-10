@@ -18,6 +18,11 @@ namespace Vivero.Negocio
             dao = new ClienteDao();
         }
 
+        public DataTable traerTodo()
+        {
+            return dao.traerTodo();
+        }
+
         internal bool ActualizarCliente(Es_Cliente oClienteSeleccionado)
         {
             return dao.Update(oClienteSeleccionado);
