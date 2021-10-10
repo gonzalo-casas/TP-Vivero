@@ -84,6 +84,7 @@
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
     <Compile Include="Negocio\Entidades\Es_DetalleCatalogo.cs" />
     <Compile Include="Negocio\Entidades\Es_Factura.cs" />
+    <Compile Include="Negocio\Entidades\Es_DetalleFactura.cs" />
     <Compile Include="Negocio\Entidades\Es_Perfil.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />

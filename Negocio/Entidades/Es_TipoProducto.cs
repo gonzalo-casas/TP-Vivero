@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vivero.Negocio.EstructuraNegocio
 {
-    class Es_TipoProducto
+   public class Es_TipoProducto
     {
         public int ID { get; set; }
         public string Nombre { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vivero.Negocio.EstructuraNegocio
 {
-    class Es_Planta
+    public class Es_Planta
     {
         //internal Es_TipoPlanta Descripcion;
 
