@@ -23,6 +23,12 @@ namespace Vivero.Negocio.Servicios
             return dao.Buscar_Todas_Facturas();
         }
 
+       public DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado)
+        {
+            return dao.BuscarFactura(nro_factura, nro_doc, id_empleado, fecha, estado);
+        }
+
+       
     }
    
 }

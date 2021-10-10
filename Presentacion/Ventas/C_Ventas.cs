@@ -18,7 +18,7 @@ namespace Vivero.Presentacion.Ventas
 
     public partial class C_Ventas : Form
     {
-        FacturaService factura = new FacturaService();
+        FacturaService oFactura = new FacturaService();
 
         public C_Ventas()
         {
@@ -41,59 +41,23 @@ namespace Vivero.Presentacion.Ventas
 
         private void btn_ConsultarVentas_Click(object sender, EventArgs e)
         {
+            var fecha = dtpFecha.Enabled.Equals(true) ? dtpFecha.Text : "";
+
+            var estado = "('0','1')";
+            if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
             {
-                if (txt_Documento.Text == "" && chk_Todos.Checked == false)
-                {
-                    MessageBox.Show("No hay restricciones para realizar la búsqueda");
-                    return;
-                }
-                if (chk_Todos.Checked == true)
-                {
-                    Cargar_Grilla(factura.Buscar_Todas_Facturas());
-                    return;
-                }
-                //if (txt_Documento.Text != "")
-                //{
-                //    Cargar_Grilla(factura.Buscar_Factura(txt_NroDoc.Text));
-                //    return;
-                //}
+                estado = "('1')";
             }
-            //{
-            //    if (txt_NroDoc.Text == "" && chk_Activos.Checked == false)
-            //    {
-            //        MessageBox.Show("No hay restricciones para realizar la búsqueda");
-            //        return;
-            //    }
-            //    if (chk_Todos.Checked == true)
-            //    {
-            //        Cargar_Grilla(factura.Buscar_Todas_Facturas());
-            //        return;
-            //    }
-            //    if (txt_NroDoc.Text != "")
-            //    {
-            //        Cargar_Grilla(factura.Buscar_Factura(txt_NroDoc.Text));
-            //        return;
-            //    }
-            //}
+            if (chk_Activos.Checked == false && chk_Inactivos.Checked == true)
+            {
+                estado = "('0')";
+            }
 
-            //Cargar_Grilla(oProveedor.Buscar_proveedor(txt_IdProveedor.Text, txt_NombreProveedor.Text, txt_Rs_Proveedor.Text, estado));
+            Cargar_Grilla(oFactura.BuscarFactura(txt_NroFactura.Text, txt_Documento.Text, txt_Empleado.Text, fecha, estado));
             return;
-        }
-        //private void Cargar_Grilla(DataTable tabla)
-        //{
-        //    dgv_Proveedores.Rows.Clear();
 
-        //    for (int i = 0; i < tabla.Rows.Count; i++)
-        //    {
-        //        dgv_Proveedores.Rows.Add();
-        //        dgv_Proveedores.Rows[i].Cells[0].Value = tabla.Rows[i]["ID"].ToString();
-        //        dgv_Proveedores.Rows[i].Cells[1].Value = tabla.Rows[i]["Nombre"].ToString();
-        //        dgv_Proveedores.Rows[i].Cells[2].Value = tabla.Rows[i]["Calle"].ToString();
-        //        dgv_Proveedores.Rows[i].Cells[3].Value = tabla.Rows[i]["Nro_Calle"].ToString();
-        //        dgv_Proveedores.Rows[i].Cells[4].Value = tabla.Rows[i]["Telefono"].ToString();
-        //        dgv_Proveedores.Rows[i].Cells[5].Value = tabla.Rows[i]["Razon_Social"].ToString();
-        //    }
-        //}
+        }
+
         private void Cargar_Grilla(DataTable tabla)
         {
             dgv_Ventas.Rows.Clear();
@@ -101,13 +65,13 @@ namespace Vivero.Presentacion.Ventas
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 dgv_Ventas.Rows.Add();
-                dgv_Ventas.Rows[i].Cells[0].Value = tabla.Rows[i]["Tipo_Factura"].ToString();
+                dgv_Ventas.Rows[i].Cells[0].Value = tabla.Rows[i]["Nombre"].ToString(); // es el nombre del tipo factura
                 dgv_Ventas.Rows[i].Cells[1].Value = tabla.Rows[i]["Nro_Factura"].ToString();
-                dgv_Ventas.Rows[i].Cells[2].Value = tabla.Rows[i]["TipoDoc"].ToString();
-                dgv_Ventas.Rows[i].Cells[3].Value = tabla.Rows[i]["NroDoc"].ToString();
-                dgv_Ventas.Rows[i].Cells[4].Value = tabla.Rows[i]["Fecha"].ToString();
-                dgv_Ventas.Rows[i].Cells[5].Value = tabla.Rows[i]["Id_Empleado"].ToString();
-                dgv_Ventas.Rows[i].Cells[6].Value = tabla.Rows[i]["Monto"].ToString();
+                dgv_Ventas.Rows[i].Cells[2].Value = tabla.Rows[i]["NroDoc"].ToString(); // nro doc del cliente
+                dgv_Ventas.Rows[i].Cells[3].Value = tabla.Rows[i]["Fecha"].ToString();
+                dgv_Ventas.Rows[i].Cells[4].Value = tabla.Rows[i]["Id_Empleado"].ToString();
+                dgv_Ventas.Rows[i].Cells[5].Value = tabla.Rows[i]["Monto"].ToString();
+                dgv_Ventas.Rows[i].Cells[6].Value = tabla.Rows[i]["Puntos"].ToString();
             }
         }
 
@@ -126,6 +90,11 @@ namespace Vivero.Presentacion.Ventas
             {
                 MessageBox.Show("Seleccione un proveedor para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void chk_fecha_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpFecha.Enabled = dtpFecha.Enabled.Equals(true) ? false : true;
         }
     }
 }

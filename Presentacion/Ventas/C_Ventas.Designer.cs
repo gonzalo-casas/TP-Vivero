@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_NroFactura = new System.Windows.Forms.TextBox();
             this.txt_Documento = new System.Windows.Forms.TextBox();
             this.txt_Empleado = new System.Windows.Forms.TextBox();
@@ -53,6 +53,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chk_Inactivos = new System.Windows.Forms.CheckBox();
+            this.chk_Activos = new System.Windows.Forms.CheckBox();
+            this.chk_fecha = new System.Windows.Forms.CheckBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloVentas = new System.Windows.Forms.Label();
@@ -75,7 +78,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.chk_Todos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -145,18 +147,18 @@
             // 
             this.dgv_Ventas.AllowUserToAddRows = false;
             this.dgv_Ventas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTipo,
@@ -166,14 +168,14 @@
             this.colEmpleado,
             this.colMonto,
             this.colPuntos});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Ventas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Ventas.Location = new System.Drawing.Point(100, 0);
             this.dgv_Ventas.Name = "dgv_Ventas";
@@ -310,7 +312,9 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.chk_Todos);
+            this.panel3.Controls.Add(this.chk_Inactivos);
+            this.panel3.Controls.Add(this.chk_Activos);
+            this.panel3.Controls.Add(this.chk_fecha);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloVentas);
@@ -328,8 +332,44 @@
             this.panel3.Size = new System.Drawing.Size(1007, 222);
             this.panel3.TabIndex = 16;
             // 
+            // chk_Inactivos
+            // 
+            this.chk_Inactivos.AutoSize = true;
+            this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Inactivos.Location = new System.Drawing.Point(454, 52);
+            this.chk_Inactivos.Name = "chk_Inactivos";
+            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
+            this.chk_Inactivos.TabIndex = 23;
+            this.chk_Inactivos.Text = "Inactivos";
+            this.chk_Inactivos.UseVisualStyleBackColor = true;
+            // 
+            // chk_Activos
+            // 
+            this.chk_Activos.AutoSize = true;
+            this.chk_Activos.Checked = true;
+            this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Activos.Location = new System.Drawing.Point(361, 52);
+            this.chk_Activos.Name = "chk_Activos";
+            this.chk_Activos.Size = new System.Drawing.Size(79, 24);
+            this.chk_Activos.TabIndex = 22;
+            this.chk_Activos.Text = "Activos";
+            this.chk_Activos.UseVisualStyleBackColor = true;
+            // 
+            // chk_fecha
+            // 
+            this.chk_fecha.AutoSize = true;
+            this.chk_fecha.Location = new System.Drawing.Point(314, 157);
+            this.chk_fecha.Name = "chk_fecha";
+            this.chk_fecha.Size = new System.Drawing.Size(107, 17);
+            this.chk_fecha.TabIndex = 21;
+            this.chk_fecha.Text = "Buscar por fecha";
+            this.chk_fecha.UseVisualStyleBackColor = true;
+            this.chk_fecha.CheckedChanged += new System.EventHandler(this.chk_fecha_CheckedChanged);
+            // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(192, 148);
@@ -351,10 +391,10 @@
             // 
             this.lblTituloVentas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloVentas.AutoSize = true;
-            this.lblTituloVentas.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloVentas.Location = new System.Drawing.Point(712, 89);
             this.lblTituloVentas.Name = "lblTituloVentas";
-            this.lblTituloVentas.Size = new System.Drawing.Size(240, 65);
+            this.lblTituloVentas.Size = new System.Drawing.Size(260, 67);
             this.lblTituloVentas.TabIndex = 17;
             this.lblTituloVentas.Text = "Facturas";
             // 
@@ -369,7 +409,7 @@
             this.btn_ConsultarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarVentas.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarVentas.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarVentas.Location = new System.Drawing.Point(373, 102);
             this.btn_ConsultarVentas.Name = "btn_ConsultarVentas";
             this.btn_ConsultarVentas.Size = new System.Drawing.Size(150, 40);
             this.btn_ConsultarVentas.TabIndex = 16;
@@ -564,16 +604,6 @@
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
             // 
-            // chk_Todos
-            // 
-            this.chk_Todos.AutoSize = true;
-            this.chk_Todos.Location = new System.Drawing.Point(384, 186);
-            this.chk_Todos.Name = "chk_Todos";
-            this.chk_Todos.Size = new System.Drawing.Size(56, 17);
-            this.chk_Todos.TabIndex = 21;
-            this.chk_Todos.Text = "Todas";
-            this.chk_Todos.UseVisualStyleBackColor = true;
-            // 
             // C_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,7 +674,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chk_Todos;
+        private System.Windows.Forms.CheckBox chk_fecha;
+        private System.Windows.Forms.CheckBox chk_Inactivos;
+        private System.Windows.Forms.CheckBox chk_Activos;
     }
 }
 
