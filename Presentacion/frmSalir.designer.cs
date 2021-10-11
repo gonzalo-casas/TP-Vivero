@@ -56,7 +56,7 @@
             this.lblCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCerrarSesion.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.lblCerrarSesion.Location = new System.Drawing.Point(82, 203);
+            this.lblCerrarSesion.Location = new System.Drawing.Point(325, 200);
             this.lblCerrarSesion.Name = "lblCerrarSesion";
             this.lblCerrarSesion.Size = new System.Drawing.Size(153, 23);
             this.lblCerrarSesion.TabIndex = 10;
@@ -69,7 +69,7 @@
             this.lblSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSalir.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalir.ForeColor = System.Drawing.Color.White;
-            this.lblSalir.Location = new System.Drawing.Point(369, 203);
+            this.lblSalir.Location = new System.Drawing.Point(120, 200);
             this.lblSalir.Name = "lblSalir";
             this.lblSalir.Size = new System.Drawing.Size(61, 23);
             this.lblSalir.TabIndex = 11;
@@ -78,8 +78,9 @@
             // 
             // pbSalir
             // 
+            this.pbSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSalir.Image = global::Vivero.Properties.Resources.apagar;
-            this.pbSalir.Location = new System.Drawing.Point(350, 100);
+            this.pbSalir.Location = new System.Drawing.Point(101, 97);
             this.pbSalir.Name = "pbSalir";
             this.pbSalir.Size = new System.Drawing.Size(100, 100);
             this.pbSalir.TabIndex = 9;
@@ -90,7 +91,7 @@
             // 
             this.pbCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCerrarSesion.Image = global::Vivero.Properties.Resources.cerrar_sesion;
-            this.pbCerrarSesion.Location = new System.Drawing.Point(100, 100);
+            this.pbCerrarSesion.Location = new System.Drawing.Point(343, 97);
             this.pbCerrarSesion.Name = "pbCerrarSesion";
             this.pbCerrarSesion.Size = new System.Drawing.Size(100, 100);
             this.pbCerrarSesion.TabIndex = 8;
