@@ -98,5 +98,10 @@ namespace Vivero.Presentacion.Ventas
             dtpFecha.MaxDate = DateTime.Today;
             dtpFecha.Checked = false;
         }
+
+        private void btn_EliminarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

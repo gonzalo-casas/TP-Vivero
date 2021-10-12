@@ -38,6 +38,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Ventas = new System.Windows.Forms.DataGridView();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
@@ -70,13 +77,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -185,6 +185,54 @@
             this.dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Ventas.Size = new System.Drawing.Size(807, 242);
             this.dgv_Ventas.TabIndex = 11;
+            // 
+            // colTipo
+            // 
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.MinimumWidth = 6;
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            // 
+            // colNumero
+            // 
+            this.colNumero.HeaderText = "Numero";
+            this.colNumero.MinimumWidth = 6;
+            this.colNumero.Name = "colNumero";
+            this.colNumero.ReadOnly = true;
+            // 
+            // colDocumento
+            // 
+            this.colDocumento.HeaderText = "Doc Cliente";
+            this.colDocumento.MinimumWidth = 6;
+            this.colDocumento.Name = "colDocumento";
+            this.colDocumento.ReadOnly = true;
+            // 
+            // colFecha
+            // 
+            this.colFecha.HeaderText = "Fecha";
+            this.colFecha.MinimumWidth = 6;
+            this.colFecha.Name = "colFecha";
+            this.colFecha.ReadOnly = true;
+            // 
+            // colEmpleado
+            // 
+            this.colEmpleado.HeaderText = "Empleado";
+            this.colEmpleado.MinimumWidth = 6;
+            this.colEmpleado.Name = "colEmpleado";
+            this.colEmpleado.ReadOnly = true;
+            // 
+            // colMonto
+            // 
+            this.colMonto.HeaderText = "Monto";
+            this.colMonto.MinimumWidth = 6;
+            this.colMonto.Name = "colMonto";
+            this.colMonto.ReadOnly = true;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
             // 
             // panel1
             // 
@@ -436,6 +484,7 @@
             this.btn_EliminarVenta.Text = "Eliminar";
             this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
             this.btn_EliminarVenta.UseVisualStyleBackColor = false;
+            this.btn_EliminarVenta.Click += new System.EventHandler(this.btn_EliminarVenta_Click);
             // 
             // panel20
             // 
@@ -542,54 +591,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
-            // 
-            // colTipo
-            // 
-            this.colTipo.HeaderText = "Tipo";
-            this.colTipo.MinimumWidth = 6;
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
-            // 
-            // colNumero
-            // 
-            this.colNumero.HeaderText = "Numero";
-            this.colNumero.MinimumWidth = 6;
-            this.colNumero.Name = "colNumero";
-            this.colNumero.ReadOnly = true;
-            // 
-            // colDocumento
-            // 
-            this.colDocumento.HeaderText = "Doc Cliente";
-            this.colDocumento.MinimumWidth = 6;
-            this.colDocumento.Name = "colDocumento";
-            this.colDocumento.ReadOnly = true;
-            // 
-            // colFecha
-            // 
-            this.colFecha.HeaderText = "Fecha";
-            this.colFecha.MinimumWidth = 6;
-            this.colFecha.Name = "colFecha";
-            this.colFecha.ReadOnly = true;
-            // 
-            // colEmpleado
-            // 
-            this.colEmpleado.HeaderText = "Empleado";
-            this.colEmpleado.MinimumWidth = 6;
-            this.colEmpleado.Name = "colEmpleado";
-            this.colEmpleado.ReadOnly = true;
-            // 
-            // colMonto
-            // 
-            this.colMonto.HeaderText = "Monto";
-            this.colMonto.MinimumWidth = 6;
-            this.colMonto.Name = "colMonto";
-            this.colMonto.ReadOnly = true;
-            // 
-            // colPuntos
-            // 
-            this.colPuntos.HeaderText = "Puntos";
-            this.colPuntos.Name = "colPuntos";
-            this.colPuntos.ReadOnly = true;
             // 
             // C_Ventas
             // 
