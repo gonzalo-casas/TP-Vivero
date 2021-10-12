@@ -225,7 +225,8 @@ namespace Vivero.Presentacion.Ventas
         {
             var importeTotal = listaFacturaDetalle.Sum(p => p.Importe);
             txtTotal.Text = importeTotal.ToString();
-            txtPuntos.Text = "100";
+            int puntos = (Convert.ToInt32(txtTotal.Text) / 20);
+            txtPuntos.Text = puntos.ToString();
         }
 
         private void InicializarDetalle()
