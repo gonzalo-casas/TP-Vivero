@@ -196,7 +196,6 @@
             this.dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Ventas.Size = new System.Drawing.Size(811, 214);
             this.dgv_Ventas.TabIndex = 11;
-            this.dgv_Ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ventas_CellClick);
             this.dgv_Ventas.SelectionChanged += new System.EventHandler(this.dgv_Ventas_SelectionChanged);
             // 
             // colTipo

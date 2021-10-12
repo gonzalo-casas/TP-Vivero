@@ -75,6 +75,8 @@ namespace Vivero.Presentacion.Ventas
             }
 
             dgv_Ventas.Enabled = true;
+            int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
+            Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
         }
 
         private void Cargar_GrillaDetalle(DataTable tabla)
@@ -132,12 +134,6 @@ namespace Vivero.Presentacion.Ventas
                 int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
                 Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
             }
-        }
-
-        private void dgv_Ventas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
-            //Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
         }
     }
 }
