@@ -23,7 +23,7 @@ namespace Vivero.Presentacion.Ventas
         ClienteService oClienteService;
         ProductoService oProductoService;
         PlantasService oPlataService;
-        FacturaService factura;
+        FacturaService oFacturaService;
         string tipoDoc { get; set; }
         bool flag;
 
@@ -41,7 +41,7 @@ namespace Vivero.Presentacion.Ventas
             cboItem.Enabled = false;
             dgv_Items.AutoGenerateColumns = false;
             listaFacturaDetalle = new BindingList<Es_DetalleFactura>();
-            factura = new FacturaService();
+            oFacturaService = new FacturaService();
         }
 
         private FormMode formMode = FormMode.insert;
@@ -266,46 +266,96 @@ namespace Vivero.Presentacion.Ventas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
+            //DataTable tabla = new DataTable();
+            //tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
 
-            DataTable tabla2 = new DataTable();
-            tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
+            //DataTable tabla2 = new DataTable();
+            //tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
 
-            DataTable tabla3 = new DataTable();
-            tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
+            //DataTable tabla3 = new DataTable();
+            //tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
 
 
 
-            if (tabla.Rows.Count > 0)
+            //if (tabla.Rows.Count > 0)
+            //{
+            //    if (tabla2.Rows.Count > 0)
+            //    {
+            //        if (txtImporte.Text.ToString() != "")
+            //        {
+            //            //tipoDoc = tabla3.Rows[0]["TipoDoc"].ToString();
+            //            //factura.insertar(cboTipoFactura.SelectedValue.ToString(), factura.NuevoId(), tipoDoc, txt_NroDoc.Text,
+            //            //dtpFecha.Value, txt_IdEmpleado.Text, txtImporte.Text, grid_Plantas, grid_Productos);
+            //            //Form CargaPuntos = new Frm_CargaPuntos();
+            //            //CargaPuntos.Show();
+
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Falta calcular el importe");
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("No se encontró el Empleado");
+            //    }
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("El cliente no está registrado");
+            //}
+
+            try
             {
-                if (tabla2.Rows.Count > 0)
+                var factura = new Es_Factura 
                 {
-                    if (txtImporte.Text.ToString() != "")
-                    {
-                        tipoDoc = tabla3.Rows[0]["TipoDoc"].ToString();
-                        factura.insertar(cboTipoFactura.SelectedValue.ToString(), factura.NuevoId(), tipoDoc, txt_NroDoc.Text,
-                        dtpFecha.Value, txt_IdEmpleado.Text, txtImporte.Text, grid_Plantas, grid_Productos);
-                        //Form CargaPuntos = new Frm_CargaPuntos();
-                        //CargaPuntos.Show();
+                    Fecha = dtpFecha.Value,
+                    Cliente = (Es_Cliente)cboCliente.SelectedItem,
+                    Tipo_Factura = (Es_TipoFactura)cboTipoFactura.SelectedItem,
+                    FacturaDetalle = listaFacturaDetalle,
+                    Monto = double.Parse(txtTotal.Text),
+                    //Descuento = double.Parse(txtDescuento.Text)
+                    Puntos = int.Parse(txtPuntos.Text)
+                };
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Falta calcular el importe");
-
-                    }
-                }
-                else
+                if (oFacturaService.ValidarDatos(factura))
                 {
-                    MessageBox.Show("No se encontró el Empleado");
+                    oFacturaService.Crear(factura);
+
+                    MessageBox.Show(string.Concat("La factura nro: ", factura.Numero_Factura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    InicializarFormulario();
                 }
 
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("El cliente no está registrado");
+                MessageBox.Show("Error al registrar la factura! " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            
+
+        }
+        private void InicializarFormulario()
+        {
+            // Despues ver bien esto
+
+            //_btnAgregar.Enabled = false;
+            //txtDescuento.Text = (0).ToString("N2");
+            //txtNroFact.Text = "1";
+            //cboTipoFact.SelectedIndex = -1;
+            //txtNroFact.Text = "";
+
+            //cboCliente.SelectedIndex = -1;
+            //txtDireccion.Text = "";
+            //txtCUIT.Text = "";
+
+            InicializarDetalle();
+
+            dgv_Items.DataSource = null;
+
         }
 
     }

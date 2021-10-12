@@ -9,13 +9,13 @@ namespace Vivero.Negocio.Entidades
 {
     class Es_Factura
     {
-        public int Tipo_Factura { get; set; }
+        public Es_TipoFactura Tipo_Factura { get; set; }
         public int Numero_Factura { get; set; }
-        public Es_TipoDoc  Tipo_Doc { get; set; }
-        public string Numero_Doc { get; set; }
+        public Es_Cliente Cliente { get; set; }
         public DateTime Fecha { get; set; }
-        public Es_Empleado ID { get; set; }
-        public decimal Monto { get; set; }
+        public Es_Empleado Id_Empleado { get; set; }
+        public IList<Es_DetalleFactura> FacturaDetalle { get; set; }
+        public double Monto { get; set; }
         public int Puntos { get; set; }
     }
 }

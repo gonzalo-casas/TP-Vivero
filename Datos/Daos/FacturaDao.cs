@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vivero.Datos.Interfaces;
+using Vivero.Negocio.Entidades;
 
 namespace Vivero.Datos.Daos
 {
     class FacturaDao : IFactura
     {
+
+
         public DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado)
         {
             string consulta = "SELECT * FROM Factura f JOIN  TipoFactura tf ON (f.Tipo_Factura = tf.ID) WHERE f.Estado in  " + estado;
@@ -81,10 +84,111 @@ namespace Vivero.Datos.Daos
             return NuevaId.ToString();
         }
 
-       
+        public  bool Create(Es_Factura factura)
+        {
+            DataManager dm = new DataManager();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+
+                string sql = string.Concat("INSERT INTO [dbo].[Factura] ",
+                                            "           ([Nro_factura]   ",
+                                            "           ,[fecha]         ",
+                                            "           ,[NroDoc]       ",
+                                            "           ,[Tipo_Factura]   ",
+                                            "           ,[Monto]    ",
+                                            //"           ,[descuento]    ",
+                                            "           ,[Estado])      ",
+                                            "     VALUES                 ",
+                                            "           (@nro_factura   ",
+                                            "           ,@fecha          ",
+                                            "           ,@cliente        ",
+                                            "           ,@tipoFactura    ",
+                                            "           ,@subtotal     ",
+                                            "           ,@descuento     ",
+                                            "           ,@borrado)       ");
+
+
+                var parametros = new Dictionary<string, object>();
+                parametros.Add("Nro_factura", factura.Numero_Factura);
+                parametros.Add("fecha", factura.Fecha);
+                parametros.Add("NroDoc", factura.Cliente.NroDoc);
+                parametros.Add("Tipo_Factura", factura.Tipo_Factura.ID);
+                parametros.Add("Monto", factura.Monto);
+                //parametros.Add("descuento", factura.Descuento);
+                parametros.Add("Estado", 1); // ni idea pq pone false
+                dm.EjecutarSQLCONPARAMETROS(sql, parametros);
+
+                var newId = dm.ConsultaSQLScalar(" SELECT @@IDENTITY");
+                factura.Numero_Factura = Convert.ToInt32(newId);
+
+
+                foreach (var itemFactura in factura.FacturaDetalle)
+                {
+                    string sqlDetalle = string.Concat(" INSERT INTO [dbo].[FacturasDetalle] ",
+                                                        "           ([id_factura]           ",
+                                                        "           ,[id_producto]          ",
+                                                        "           ,[precio_unitario]      ",
+                                                        "           ,[cantidad]             ",
+                                                        "           ,[borrado])             ",
+                                                        "     VALUES                        ",
+                                                        "           (@id_factura            ",
+                                                        "           ,@id_producto           ",
+                                                        "           ,@precio_unitario       ",
+                                                        "           ,@cantidad              ",
+                                                        "           ,@borrado)               ");
+
+                    
+
+                    var paramDetalle = new Dictionary<string, object>();
+                    paramDetalle.Add("id_factura", factura.Numero_Factura);
+
+                    if (itemFactura.TipoItem) // si es planta
+                    {
+                       
+                        paramDetalle.Add("id_producto", itemFactura.Planta.Codigo);
+                        paramDetalle.Add("id_producto", null);
+                    }
+
+                       
+                    else  // entonces es producto
+                    {
+                        paramDetalle.Add("id_producto", itemFactura.Producto.Codigo);
+                        paramDetalle.Add("id_producto", null);
+                    }
+                      
+
+                    paramDetalle.Add("precio", itemFactura.Precio);
+                    paramDetalle.Add("cantidad", itemFactura.Cantidad);
+                    paramDetalle.Add("borrado", false);
+
+                    dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
+                }
 
 
 
+                dm.Commit();
 
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+            return true;
+        }
+
+        
     }
+
+
+
+
 }
+

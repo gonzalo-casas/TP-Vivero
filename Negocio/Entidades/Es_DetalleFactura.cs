@@ -25,6 +25,7 @@ namespace Vivero.Negocio.Entidades
         public int NroItem { get; set; }
         public int Cantidad { get; set; }
         public double Precio { get; set; }
+        
 
         //public int IdProducto
         //{
@@ -94,6 +95,21 @@ namespace Vivero.Negocio.Entidades
                 {
                     return "Producto";
 
+                }
+            }
+        }
+
+        public bool TipoItem
+        {
+            get
+            {
+                if (EsPlanta)
+                {
+                    return true;
+                }
+                 else
+                {
+                   return  false;
                 }
             }
         }
