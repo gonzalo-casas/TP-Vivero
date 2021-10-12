@@ -55,9 +55,13 @@ namespace Vivero.Presentacion.Ventas
         private void ABM_Ventas_Load(object sender, EventArgs e)
         {
             this.Location = new Point(300, 50);
-        
+            
             LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
+            lblDireccion.Visible = false;
+            lblTelefono.Visible = false;
+            lblNroDoc.Visible = false;
+            cboCliente.Enabled = true;
 
             dgv_Items.DataSource = listaFacturaDetalle;
 
@@ -81,10 +85,8 @@ namespace Vivero.Presentacion.Ventas
                     this.cboItem.Enabled = false;
                     this.txtCantidad.Enabled = false;
                     this.btnNueva.Enabled = false;
-                    this.btnConfirmar.Enabled = false;
                     this.btnEliminar.Enabled = false;
                     this.dgv_Items.Enabled = false;
-                    this.txtDescuento.Enabled = false;
                     break;
                 default:
                     break;
@@ -102,7 +104,7 @@ namespace Vivero.Presentacion.Ventas
         }
 
  
-        private void button3_Click(object sender, EventArgs e) // es el boton de quitar 
+        private void btnEliminar_Click(object sender, EventArgs e) // es el boton de quitar 
         {
             if (dgv_Items.CurrentRow != null)
             {
@@ -167,6 +169,7 @@ namespace Vivero.Presentacion.Ventas
                 var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"]; 
                 txtPrecio.Text = precio.ToString();
                 txtCantidad.Enabled = true;
+                txtCantidad.Text = "1";
                 int cantidad = 0;
                 int.TryParse(txtCantidad.Text, out cantidad);
                 txtImporte.Text = (int.Parse(txtPrecio.Text) * cantidad).ToString();
@@ -219,13 +222,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void CalcularTotales()
         {
-            var subtotal = listaFacturaDetalle.Sum(p => p.Importe);
-            txtSubTotal.Text = subtotal.ToString();
-
-            double descuento = 0;
-            double.TryParse(txtDescuento.Text, out descuento);
-
-            var importeTotal = subtotal - subtotal * descuento / 100;
+            var importeTotal = listaFacturaDetalle.Sum(p => p.Importe);
             txtTotal.Text = importeTotal.ToString();
         }
 
@@ -266,46 +263,68 @@ namespace Vivero.Presentacion.Ventas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
+            //DataTable tabla = new DataTable();
+            //tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
 
-            DataTable tabla2 = new DataTable();
-            tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
+            //DataTable tabla2 = new DataTable();
+            //tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
 
-            DataTable tabla3 = new DataTable();
-            tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
+            //DataTable tabla3 = new DataTable();
+            //tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
 
 
 
-            if (tabla.Rows.Count > 0)
+            //if (tabla.Rows.Count > 0)
+            //{
+            //    if (tabla2.Rows.Count > 0)
+            //    {
+            //        if (txtImporte.Text.ToString() != "")
+            //        {
+            //            tipoDoc = tabla3.Rows[0]["TipoDoc"].ToString();
+            //            factura.insertar(cboTipoFactura.SelectedValue.ToString(), factura.NuevoId(), tipoDoc, txt_NroDoc.Text,
+            //            dtpFecha.Value, txt_IdEmpleado.Text, txtImporte.Text, grid_Plantas, grid_Productos);
+            //            //Form CargaPuntos = new Frm_CargaPuntos();
+            //            //CargaPuntos.Show();
+
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Falta calcular el importe");
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("No se encontró el Empleado");
+            //    }
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("El cliente no está registrado");
+            //}
+        }
+
+        private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCliente.Enabled)
             {
-                if (tabla2.Rows.Count > 0)
-                {
-                    if (txtImporte.Text.ToString() != "")
-                    {
-                        tipoDoc = tabla3.Rows[0]["TipoDoc"].ToString();
-                        factura.insertar(cboTipoFactura.SelectedValue.ToString(), factura.NuevoId(), tipoDoc, txt_NroDoc.Text,
-                        dtpFecha.Value, txt_IdEmpleado.Text, txtImporte.Text, grid_Plantas, grid_Productos);
-                        //Form CargaPuntos = new Frm_CargaPuntos();
-                        //CargaPuntos.Show();
+                string seleccionCbo = cboCliente.SelectedValue.ToString();
+                Es_Cliente oCliente = new Es_Cliente();
+                DataTable clienteSeleccionado = oClienteService.BuscarCliente("", seleccionCbo, "", "", "(1)");
+                oCliente.Calle = clienteSeleccionado.Rows[0]["Calle"].ToString();
+                oCliente.NroCalle = clienteSeleccionado.Rows[0]["NroCalle"].ToString();
+                oCliente.Telefono = clienteSeleccionado.Rows[0]["Telefono"].ToString();
+                oCliente.NroDoc = seleccionCbo;
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Falta calcular el importe");
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró el Empleado");
-                }
-
+                lblDireccion.Text = oCliente.Calle + " " + oCliente.NroCalle;
+                lblTelefono.Text = oCliente.Telefono;
+                lblNroDoc.Text = oCliente.NroDoc;
+                if (!lblDireccion.Visible) lblDireccion.Visible = true;
+                if (!lblTelefono.Visible) lblTelefono.Visible = true;
+                if (!lblNroDoc.Visible) lblNroDoc.Visible = true;
             }
-            else
-            {
-                MessageBox.Show("El cliente no está registrado");
-            }
+            
         }
 
     }
