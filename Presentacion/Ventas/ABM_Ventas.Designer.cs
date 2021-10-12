@@ -30,9 +30,9 @@ namespace Vivero.Presentacion.Ventas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,6 @@ namespace Vivero.Presentacion.Ventas
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtImporte = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -63,25 +62,17 @@ namespace Vivero.Presentacion.Ventas
             this.cboTipoFactura = new System.Windows.Forms.ComboBox();
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtCuit = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPuntos = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.toolTipABMFactura = new System.Windows.Forms.ToolTip(this.components);
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblNroDoc = new System.Windows.Forms.Label();
             this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
             this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
-            this.txt_NroDoc = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.gbDetalleFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Items)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +81,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(143, 25);
+            this.label1.Location = new System.Drawing.Point(124, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 20);
             this.label1.TabIndex = 0;
@@ -130,18 +121,17 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(935, 66);
+            this.label5.Location = new System.Drawing.Point(923, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 20);
+            this.label5.Size = new System.Drawing.Size(58, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "CUIT";
+            this.label5.Text = "N° Doc";
             // 
             // gbDetalleFactura
             // 
             this.gbDetalleFactura.Controls.Add(this.btnNueva);
             this.gbDetalleFactura.Controls.Add(this.dgv_Items);
             this.gbDetalleFactura.Controls.Add(this.btnEliminar);
-            this.gbDetalleFactura.Controls.Add(this.btnConfirmar);
             this.gbDetalleFactura.Controls.Add(this.txtPrecio);
             this.gbDetalleFactura.Controls.Add(this.txtImporte);
             this.gbDetalleFactura.Controls.Add(this.txtCantidad);
@@ -163,7 +153,7 @@ namespace Vivero.Presentacion.Ventas
             this.btnNueva.FlatAppearance.BorderSize = 0;
             this.btnNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNueva.Image = global::Vivero.Properties.Resources.icons8_add_641;
-            this.btnNueva.Location = new System.Drawing.Point(918, 27);
+            this.btnNueva.Location = new System.Drawing.Point(951, 27);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(45, 45);
             this.btnNueva.TabIndex = 20;
@@ -175,17 +165,17 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.dgv_Items.AllowUserToAddRows = false;
             this.dgv_Items.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Items.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNroItem,
@@ -196,14 +186,14 @@ namespace Vivero.Presentacion.Ventas
             this.colCantidad,
             this.colPrecio,
             this.colImporte});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Items.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Items.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Items.Location = new System.Drawing.Point(16, 93);
             this.dgv_Items.Name = "dgv_Items";
             this.dgv_Items.ReadOnly = true;
@@ -294,19 +284,7 @@ namespace Vivero.Presentacion.Ventas
             this.btnEliminar.TabIndex = 18;
             this.toolTipABMFactura.SetToolTip(this.btnEliminar, "Eliminar");
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Image = global::Vivero.Properties.Resources.icons8_check_641;
-            this.btnConfirmar.Location = new System.Drawing.Point(969, 27);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(45, 45);
-            this.btnConfirmar.TabIndex = 17;
-            this.toolTipABMFactura.SetToolTip(this.btnConfirmar, "Confirmar");
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtPrecio
             // 
@@ -402,92 +380,41 @@ namespace Vivero.Presentacion.Ventas
             // 
             // cboTipoFactura
             // 
+            this.cboTipoFactura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoFactura.FormattingEnabled = true;
-            this.cboTipoFactura.Location = new System.Drawing.Point(268, 22);
+            this.cboTipoFactura.Location = new System.Drawing.Point(248, 21);
             this.cboTipoFactura.Name = "cboTipoFactura";
-            this.cboTipoFactura.Size = new System.Drawing.Size(186, 28);
+            this.cboTipoFactura.Size = new System.Drawing.Size(206, 28);
             this.cboTipoFactura.TabIndex = 6;
             // 
             // cboCliente
             // 
+            this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCliente.Enabled = false;
             this.cboCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCliente.FormattingEnabled = true;
             this.cboCliente.Location = new System.Drawing.Point(676, 21);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(225, 28);
             this.cboCliente.TabIndex = 7;
+            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.cboCliente_SelectedIndexChanged);
             // 
             // dtpFecha
             // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy";
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.Location = new System.Drawing.Point(1006, 22);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(123, 26);
             this.dtpFecha.TabIndex = 9;
             // 
-            // txtCuit
-            // 
-            this.txtCuit.Enabled = false;
-            this.txtCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuit.Location = new System.Drawing.Point(1006, 66);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(123, 26);
-            this.txtCuit.TabIndex = 10;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Enabled = false;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(676, 66);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(225, 26);
-            this.txtTelefono.TabIndex = 11;
-            // 
-            // txtSubTotal
-            // 
-            this.txtSubTotal.Enabled = false;
-            this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(1010, 585);
-            this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(123, 26);
-            this.txtSubTotal.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(925, 585);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Subtotal";
-            // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescuento.Location = new System.Drawing.Point(1010, 627);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(123, 26);
-            this.txtDescuento.TabIndex = 19;
-            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(907, 627);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Descuento";
-            // 
             // txtTotal
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(1010, 665);
+            this.txtTotal.Location = new System.Drawing.Point(1006, 586);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(123, 26);
             this.txtTotal.TabIndex = 21;
@@ -496,7 +423,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(950, 665);
+            this.label11.Location = new System.Drawing.Point(937, 588);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 20);
             this.label11.TabIndex = 20;
@@ -521,15 +448,6 @@ namespace Vivero.Presentacion.Ventas
             this.label12.TabIndex = 22;
             this.label12.Text = "Puntos";
             // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(231, 66);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(223, 26);
-            this.txtDireccion.TabIndex = 27;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -539,6 +457,36 @@ namespace Vivero.Presentacion.Ventas
             this.label13.Size = new System.Drawing.Size(75, 20);
             this.label13.TabIndex = 26;
             this.label13.Text = "Direccion";
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(264, 66);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(75, 20);
+            this.lblDireccion.TabIndex = 28;
+            this.lblDireccion.Text = "Direccion";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(672, 66);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(71, 20);
+            this.lblTelefono.TabIndex = 29;
+            this.lblTelefono.Text = "Telefono";
+            // 
+            // lblNroDoc
+            // 
+            this.lblNroDoc.AutoSize = true;
+            this.lblNroDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroDoc.Location = new System.Drawing.Point(1002, 66);
+            this.lblNroDoc.Name = "lblNroDoc";
+            this.lblNroDoc.Size = new System.Drawing.Size(38, 20);
+            this.lblNroDoc.TabIndex = 30;
+            this.lblNroDoc.Text = "Doc";
             // 
             // btnCancelar
             // 
@@ -551,7 +499,7 @@ namespace Vivero.Presentacion.Ventas
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(751, 706);
+            this.btnCancelar.Location = new System.Drawing.Point(751, 666);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 51);
             this.btnCancelar.TabIndex = 25;
@@ -571,7 +519,7 @@ namespace Vivero.Presentacion.Ventas
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(288, 706);
+            this.btnAceptar.Location = new System.Drawing.Point(288, 666);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(99, 51);
             this.btnAceptar.TabIndex = 24;
@@ -580,49 +528,15 @@ namespace Vivero.Presentacion.Ventas
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txt_NroDoc
-            // 
-            this.txt_NroDoc.Location = new System.Drawing.Point(204, 2);
-            this.txt_NroDoc.Name = "txt_NroDoc";
-            this.txt_NroDoc.Size = new System.Drawing.Size(100, 20);
-            this.txt_NroDoc.TabIndex = 28;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(152, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 13);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "NroDoc:";
-            // 
-            // txt_IdEmpleado
-            // 
-            this.txt_IdEmpleado.Location = new System.Drawing.Point(641, -1);
-            this.txt_IdEmpleado.Name = "txt_IdEmpleado";
-            this.txt_IdEmpleado.Size = new System.Drawing.Size(100, 20);
-            this.txt_IdEmpleado.TabIndex = 30;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(570, 2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 13);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Id empleado";
-            // 
             // ABM_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(181)))), ((int)(((byte)(168)))));
-            this.ClientSize = new System.Drawing.Size(1154, 778);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txt_IdEmpleado);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.txt_NroDoc);
-            this.Controls.Add(this.txtDireccion);
+            this.ClientSize = new System.Drawing.Size(1154, 739);
+            this.Controls.Add(this.lblNroDoc);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -630,12 +544,6 @@ namespace Vivero.Presentacion.Ventas
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtDescuento);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtSubTotal);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.cboTipoFactura);
@@ -674,10 +582,7 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.ComboBox cboTipoFactura;
         private System.Windows.Forms.ComboBox cboCliente;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtCuit;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtImporte;
         private System.Windows.Forms.TextBox txtCantidad;
@@ -685,10 +590,6 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.RadioButton rbProducto;
         private System.Windows.Forms.ComboBox cboItem;
         private System.Windows.Forms.DataGridView dgv_Items;
-        private System.Windows.Forms.TextBox txtSubTotal;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPuntos;
@@ -697,7 +598,6 @@ namespace Vivero.Presentacion.Ventas
         private BotonRedondeado btnCancelar;
         private System.Windows.Forms.Button btnNueva;
         private System.Windows.Forms.ToolTip toolTipABMFactura;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNroItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
@@ -707,9 +607,8 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
-        private System.Windows.Forms.TextBox txt_NroDoc;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txt_IdEmpleado;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblNroDoc;
     }
 }

@@ -114,7 +114,7 @@ namespace Vivero.Datos.Daos
 
         public DataTable traerTodo()
         {
-            string consulta = "SELECT NroDoc, (NroDoc + ' - ' + Apellido + ' ' + Nombre) as FullName FROM CLIENTE";
+            string consulta = "SELECT NroDoc, (Apellido + ' ' + Nombre) as FullName FROM CLIENTE WHERE Estado = 1";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }

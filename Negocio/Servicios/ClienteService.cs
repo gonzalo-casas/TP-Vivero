@@ -28,9 +28,9 @@ namespace Vivero.Negocio
             return dao.Update(oClienteSeleccionado);
         }
 
-        public DataTable BuscarCliente(string ID_emp, string nom_emp, string ap_emp, string estado, string Perfil)
+        public DataTable BuscarCliente(string TipoDoc, string NroDoc, string Nombre, string Apellido, string estado)
         {
-            return dao.BuscarCliente(ID_emp, nom_emp, ap_emp, estado, Perfil);
+            return dao.BuscarCliente( TipoDoc,  NroDoc,  Nombre,  Apellido,  estado);
         }
 
 
