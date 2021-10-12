@@ -73,6 +73,32 @@ namespace Vivero.Presentacion.Ventas
                 dgv_Ventas.Rows[i].Cells[5].Value = tabla.Rows[i]["Monto"].ToString();
                 dgv_Ventas.Rows[i].Cells[6].Value = tabla.Rows[i]["Puntos"].ToString();
             }
+
+            dgv_Ventas.Enabled = true;
+        }
+
+        private void Cargar_GrillaDetalle(DataTable tabla)
+        {
+            dgv_DetalleFactura.Rows.Clear();
+
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                dgv_DetalleFactura.Rows.Add();
+                dgv_DetalleFactura.Rows[i].Cells[0].Value = tabla.Rows[i]["NroItem"].ToString(); // es el nombre del tipo factura
+                if (tabla.Rows[i]["Nombre_Producto"].ToString() == "")
+                {
+                    dgv_DetalleFactura.Rows[i].Cells[1].Value = "Planta";
+                    dgv_DetalleFactura.Rows[i].Cells[2].Value = tabla.Rows[i]["Nombre_Planta"].ToString();
+                }
+                if (tabla.Rows[i]["Nombre_Planta"].ToString() == "")
+                {
+                    dgv_DetalleFactura.Rows[i].Cells[1].Value = "Producto";
+                    dgv_DetalleFactura.Rows[i].Cells[2].Value = tabla.Rows[i]["Nombre_Producto"].ToString();
+                }
+                //dgv_DetalleFactura.Rows[i].Cells[1].Value = tabla.Rows[i]["Nro_Factura"].ToString();
+                dgv_DetalleFactura.Rows[i].Cells[3].Value = tabla.Rows[i]["Cantidad"].ToString(); // nro doc del cliente
+                dgv_DetalleFactura.Rows[i].Cells[4].Value = tabla.Rows[i]["Precio"].ToString();
+            }
         }
 
         private void btn_EliminarProveedor_Click(object sender, EventArgs e)
@@ -99,9 +125,19 @@ namespace Vivero.Presentacion.Ventas
             dtpFecha.Checked = false;
         }
 
-        private void btn_EliminarVenta_Click(object sender, EventArgs e)
+        private void dgv_Ventas_SelectionChanged(object sender, EventArgs e)
         {
+            if (dgv_Ventas.Enabled)
+            {
+                int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
+                Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
+            }
+        }
 
+        private void dgv_Ventas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
+            //Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
         }
     }
 }

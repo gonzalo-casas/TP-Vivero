@@ -18,6 +18,11 @@ namespace Vivero.Negocio.Servicios
         {
             dao = new FacturaDao();
         }
+
+        public DataTable BuscarDetalle(string tipo_factura, string nro_factura)
+        {
+            return dao.BuscarDetalle(tipo_factura, nro_factura);
+        }
         public DataTable Buscar_Todas_Facturas()
         {
 

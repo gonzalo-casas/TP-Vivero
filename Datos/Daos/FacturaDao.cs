@@ -12,7 +12,11 @@ namespace Vivero.Datos.Daos
     class FacturaDao : IFactura
     {
 
-
+        public DataTable BuscarDetalle(string tipo_factura, string nro_factura)
+        {
+            string consulta = "SELECT pl.NombreComun AS Nombre_Planta, p.Nombre AS Nombre_Producto, df.NroItem, df.Cantidad, df.Precio FROM DetalleFactura df JOIN TipoFactura tf ON (tf.ID = df.Tipo_Factura) LEFT JOIN Producto p ON (p.Codigo = df.Id_Producto) LEFT JOIN Planta pl ON (pl.Codigo = df.Id_Planta) WHERE tf.Nombre = '" + tipo_factura + "' AND Nro_Factura = " + nro_factura;
+            return BDHelper.obtenerInstancia().consultar(consulta);
+        }
         public DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado)
         {
             string consulta = "SELECT tf.Nombre, Nro_Factura, f.NroDoc, f.Fecha, (e.Nombre + ' ' + e.Apellido) AS Empleado, Monto, Puntos FROM Factura f JOIN  TipoFactura tf ON (f.Tipo_Factura = tf.ID) " +
