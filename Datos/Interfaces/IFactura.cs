@@ -11,5 +11,10 @@ namespace Vivero.Datos.Interfaces
     {
         DataTable Buscar_Todas_Facturas();
         DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado);
+        DataTable RecuperarCliente(string dni);
+        DataTable RecuperarTipoDoc(string dni);
+        DataTable RecuperarEmp(string ID);
+        string NuevoId();
+
     }
 }

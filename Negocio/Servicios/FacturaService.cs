@@ -28,7 +28,40 @@ namespace Vivero.Negocio.Servicios
             return dao.BuscarFactura(nro_factura, nro_doc, id_empleado, fecha, estado);
         }
 
-       
+        public DataTable RecuperarCliente(string dni)
+        {
+            return dao.RecuperarCliente(dni);
+
+
+        }
+        public DataTable RecuperarTipoDoc(string dni)
+        {
+            return dao.RecuperarTipoDoc(dni);
+
+        }
+
+        public DataTable RecuperarEmp(string ID)
+        {
+
+            return dao.RecuperarEmp(ID);
+
+        }
+
+        public string NuevoId()
+        {
+
+            return dao.NuevoId();
+        }
+
+
+
+
+
+
+
+
+
+
     }
    
 }

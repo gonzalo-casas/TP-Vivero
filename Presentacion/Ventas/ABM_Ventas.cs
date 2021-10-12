@@ -23,6 +23,8 @@ namespace Vivero.Presentacion.Ventas
         ClienteService oClienteService;
         ProductoService oProductoService;
         PlantasService oPlataService;
+        FacturaService factura;
+        string tipoDoc { get; set; }
         bool flag;
 
       
@@ -39,6 +41,7 @@ namespace Vivero.Presentacion.Ventas
             cboItem.Enabled = false;
             dgv_Items.AutoGenerateColumns = false;
             listaFacturaDetalle = new BindingList<Es_DetalleFactura>();
+            factura = new FacturaService();
         }
 
         private FormMode formMode = FormMode.insert;
@@ -260,5 +263,50 @@ namespace Vivero.Presentacion.Ventas
         {
             CalcularTotales();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            DataTable tabla = new DataTable();
+            tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
+
+            DataTable tabla2 = new DataTable();
+            tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
+
+            DataTable tabla3 = new DataTable();
+            tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
+
+
+
+            if (tabla.Rows.Count > 0)
+            {
+                if (tabla2.Rows.Count > 0)
+                {
+                    if (txtImporte.Text.ToString() != "")
+                    {
+                        tipoDoc = tabla3.Rows[0]["TipoDoc"].ToString();
+                        factura.insertar(cboTipoFactura.SelectedValue.ToString(), factura.NuevoId(), tipoDoc, txt_NroDoc.Text,
+                        dtpFecha.Value, txt_IdEmpleado.Text, txtImporte.Text, grid_Plantas, grid_Productos);
+                        //Form CargaPuntos = new Frm_CargaPuntos();
+                        //CargaPuntos.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Falta calcular el importe");
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el Empleado");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("El cliente no está registrado");
+            }
+        }
+
     }
 }

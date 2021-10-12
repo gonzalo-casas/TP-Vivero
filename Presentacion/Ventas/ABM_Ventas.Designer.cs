@@ -30,9 +30,9 @@ namespace Vivero.Presentacion.Ventas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +41,14 @@ namespace Vivero.Presentacion.Ventas
             this.gbDetalleFactura = new System.Windows.Forms.GroupBox();
             this.btnNueva = new System.Windows.Forms.Button();
             this.dgv_Items = new System.Windows.Forms.DataGridView();
+            this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -68,16 +76,12 @@ namespace Vivero.Presentacion.Ventas
             this.toolTipABMFactura = new System.Windows.Forms.ToolTip(this.components);
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
             this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
+            this.txt_NroDoc = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.gbDetalleFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Items)).BeginInit();
             this.SuspendLayout();
@@ -171,17 +175,17 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.dgv_Items.AllowUserToAddRows = false;
             this.dgv_Items.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Items.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Items.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNroItem,
@@ -192,14 +196,14 @@ namespace Vivero.Presentacion.Ventas
             this.colCantidad,
             this.colPrecio,
             this.colImporte});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Items.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Items.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Items.Location = new System.Drawing.Point(16, 93);
             this.dgv_Items.Name = "dgv_Items";
             this.dgv_Items.ReadOnly = true;
@@ -209,6 +213,75 @@ namespace Vivero.Presentacion.Ventas
             this.dgv_Items.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Items.Size = new System.Drawing.Size(1090, 357);
             this.dgv_Items.TabIndex = 19;
+            // 
+            // colNroItem
+            // 
+            this.colNroItem.DataPropertyName = "NroItem";
+            this.colNroItem.FillWeight = 406.0913F;
+            this.colNroItem.HeaderText = "N° Item";
+            this.colNroItem.Name = "colNroItem";
+            this.colNroItem.ReadOnly = true;
+            this.colNroItem.Width = 50;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.DataPropertyName = "Codigo";
+            this.colCodigo.FillWeight = 56.27267F;
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
+            this.colCodigo.Width = 77;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "Nombre";
+            this.colNombre.FillWeight = 56.27267F;
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 310;
+            // 
+            // colTipo
+            // 
+            this.colTipo.DataPropertyName = "Tipo";
+            this.colTipo.FillWeight = 56.27267F;
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            this.colTipo.Width = 150;
+            // 
+            // colStock
+            // 
+            this.colStock.FillWeight = 56.27267F;
+            this.colStock.HeaderText = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.ReadOnly = true;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.DataPropertyName = "Cantidad";
+            this.colCantidad.FillWeight = 56.27267F;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "Precio";
+            this.colPrecio.FillWeight = 56.27267F;
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            this.colPrecio.Width = 150;
+            // 
+            // colImporte
+            // 
+            this.colImporte.DataPropertyName = "Importe";
+            this.colImporte.FillWeight = 56.27267F;
+            this.colImporte.HeaderText = "Importe";
+            this.colImporte.Name = "colImporte";
+            this.colImporte.ReadOnly = true;
+            this.colImporte.Width = 150;
             // 
             // btnEliminar
             // 
@@ -467,75 +540,6 @@ namespace Vivero.Presentacion.Ventas
             this.label13.TabIndex = 26;
             this.label13.Text = "Direccion";
             // 
-            // colNroItem
-            // 
-            this.colNroItem.DataPropertyName = "NroItem";
-            this.colNroItem.FillWeight = 406.0913F;
-            this.colNroItem.HeaderText = "N° Item";
-            this.colNroItem.Name = "colNroItem";
-            this.colNroItem.ReadOnly = true;
-            this.colNroItem.Width = 50;
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.DataPropertyName = "Codigo";
-            this.colCodigo.FillWeight = 56.27267F;
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.ReadOnly = true;
-            this.colCodigo.Width = 77;
-            // 
-            // colNombre
-            // 
-            this.colNombre.DataPropertyName = "Nombre";
-            this.colNombre.FillWeight = 56.27267F;
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 310;
-            // 
-            // colTipo
-            // 
-            this.colTipo.DataPropertyName = "Tipo";
-            this.colTipo.FillWeight = 56.27267F;
-            this.colTipo.HeaderText = "Tipo";
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
-            this.colTipo.Width = 150;
-            // 
-            // colStock
-            // 
-            this.colStock.FillWeight = 56.27267F;
-            this.colStock.HeaderText = "Stock";
-            this.colStock.Name = "colStock";
-            this.colStock.ReadOnly = true;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.DataPropertyName = "Cantidad";
-            this.colCantidad.FillWeight = 56.27267F;
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.DataPropertyName = "Precio";
-            this.colPrecio.FillWeight = 56.27267F;
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            this.colPrecio.Width = 150;
-            // 
-            // colImporte
-            // 
-            this.colImporte.DataPropertyName = "Importe";
-            this.colImporte.FillWeight = 56.27267F;
-            this.colImporte.HeaderText = "Importe";
-            this.colImporte.Name = "colImporte";
-            this.colImporte.ReadOnly = true;
-            this.colImporte.Width = 150;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
@@ -574,6 +578,39 @@ namespace Vivero.Presentacion.Ventas
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // txt_NroDoc
+            // 
+            this.txt_NroDoc.Location = new System.Drawing.Point(204, 2);
+            this.txt_NroDoc.Name = "txt_NroDoc";
+            this.txt_NroDoc.Size = new System.Drawing.Size(100, 20);
+            this.txt_NroDoc.TabIndex = 28;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(152, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "NroDoc:";
+            // 
+            // txt_IdEmpleado
+            // 
+            this.txt_IdEmpleado.Location = new System.Drawing.Point(641, -1);
+            this.txt_IdEmpleado.Name = "txt_IdEmpleado";
+            this.txt_IdEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdEmpleado.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(570, 2);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Id empleado";
             // 
             // ABM_Ventas
             // 
@@ -581,6 +618,10 @@ namespace Vivero.Presentacion.Ventas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(181)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(1154, 778);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txt_IdEmpleado);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txt_NroDoc);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnCancelar);
@@ -666,5 +707,9 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
+        private System.Windows.Forms.TextBox txt_NroDoc;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_IdEmpleado;
+        private System.Windows.Forms.Label label15;
     }
 }

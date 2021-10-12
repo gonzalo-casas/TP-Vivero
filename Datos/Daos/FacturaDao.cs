@@ -45,5 +45,46 @@ namespace Vivero.Datos.Daos
             DataTable tabla = new DataTable();
             return BDHelper.obtenerInstancia().consultar(sql);
         }
+
+
+
+        public DataTable RecuperarCliente(string dni)
+        {
+            string sql = "SELECT * FROM Cliente WHERE NroDoc = '" + dni + "'";
+            return BDHelper.obtenerInstancia().consultar(sql);
+
+
+        }
+        public DataTable RecuperarTipoDoc(string dni)
+        {
+
+            string sql = "SELECT * FROM Cliente WHERE NroDoc = '" + dni + "'";
+            return BDHelper.obtenerInstancia().consultar(sql);
+
+        }
+
+        public DataTable RecuperarEmp(string ID)
+        {
+
+            string sql = ("SELECT * FROM Empleado WHERE ID = " + ID);
+            return BDHelper.obtenerInstancia().consultar(sql);
+            //ojo capaz aca a la izquierda del ID le falte + "'"
+
+        }
+        public string NuevoId()
+        {
+            DataTable tabla = new DataTable();
+            string sql = "SELECT * FROM Factura";
+            tabla = BDHelper.obtenerInstancia().consultar(sql);
+            int id = tabla.Rows.Count;
+            int NuevaId = id;
+            return NuevaId.ToString();
+        }
+
+       
+
+
+
+
     }
 }
