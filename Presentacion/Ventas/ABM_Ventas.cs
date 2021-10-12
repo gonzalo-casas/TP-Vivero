@@ -24,10 +24,11 @@ namespace Vivero.Presentacion.Ventas
         ProductoService oProductoService;
         PlantasService oPlataService;
         FacturaService oFacturaService;
+        Es_Cliente oCliente = new Es_Cliente();
         string tipoDoc { get; set; }
         bool flag;
 
-      
+
 
 
 
@@ -51,11 +52,11 @@ namespace Vivero.Presentacion.Ventas
             insert,
             delete
         }
-        
+
         private void ABM_Ventas_Load(object sender, EventArgs e)
         {
             this.Location = new Point(300, 50);
-            
+
             LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
             lblDireccion.Visible = false;
@@ -65,7 +66,7 @@ namespace Vivero.Presentacion.Ventas
 
             dgv_Items.DataSource = listaFacturaDetalle;
 
-            
+
 
 
 
@@ -95,7 +96,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
         {
-            
+
             cbo.DataSource = source;
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
@@ -103,7 +104,7 @@ namespace Vivero.Presentacion.Ventas
 
         }
 
- 
+
         private void btnEliminar_Click(object sender, EventArgs e) // es el boton de quitar 
         {
             if (dgv_Items.CurrentRow != null)
@@ -120,27 +121,27 @@ namespace Vivero.Presentacion.Ventas
 
         private void rbProducto_CheckedChanged(object sender, EventArgs e)
         {
-          
-           
-                cboItem.Enabled = false;
-                LlenarCombo(cboItem, oProductoService.traerTodo(), "Nombre", "Codigo");
-                txtPrecio.Clear(); // para que cuando cambie de combo, que borre el precio e importe anterior
-                txtImporte.Clear();
-                cboItem.Enabled = true;
-          
+
+
+            cboItem.Enabled = false;
+            LlenarCombo(cboItem, oProductoService.traerTodo(), "Nombre", "Codigo");
+            txtPrecio.Clear(); // para que cuando cambie de combo, que borre el precio e importe anterior
+            txtImporte.Clear();
+            cboItem.Enabled = true;
+
 
 
         }
 
         private void rbPlanta_CheckedChanged(object sender, EventArgs e)
         {
-           
+
             cboItem.Enabled = false;
             LlenarCombo(cboItem, oPlataService.Todas_las_Plantas(), "NombreComun", "Codigo");
             txtPrecio.Clear();
             txtImporte.Clear();
             cboItem.Enabled = true;
-           
+
         }
 
 
@@ -159,47 +160,47 @@ namespace Vivero.Presentacion.Ventas
             }
         }
 
-        
+
 
         private void cboItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboItem.Enabled.Equals(true)) 
+            if (cboItem.Enabled.Equals(true))
             {
-                
-                var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"]; 
+
+                var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"];
                 txtPrecio.Text = precio.ToString();
                 txtCantidad.Enabled = true;
                 txtCantidad.Text = "1";
                 int cantidad = 0;
                 int.TryParse(txtCantidad.Text, out cantidad);
                 txtImporte.Text = (int.Parse(txtPrecio.Text) * cantidad).ToString();
-               
+
             }
 
 
-         
+
         }
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos()){
+            if (ValidarCampos()) {
                 var codigo = int.Parse(cboItem.SelectedValue.ToString());
                 var nombre = cboItem.Text.ToString();
                 var producto = new Es_Producto();
                 var planta = new Es_Planta();
-                 flag = rbPlanta.Checked ? true : false;  // bandera para saber si es producto o planta
+                flag = rbPlanta.Checked ? true : false;  // bandera para saber si es producto o planta
 
                 if (rbProducto.Checked)
                 {
                     producto.Codigo = codigo;
                     producto.Nombre = nombre;
-                }else
+                } else
                 {
                     planta.Codigo = codigo.ToString();
                     planta.NombreComun = nombre;
                 }
-               
-                
+
+
 
                 listaFacturaDetalle.Add(new Es_DetalleFactura(flag)
                 {
@@ -207,7 +208,7 @@ namespace Vivero.Presentacion.Ventas
                     Producto = producto,
                     Planta = planta,
                     Cantidad = int.Parse(txtCantidad.Text),
-                    Precio = int.Parse(txtPrecio.Text)
+                    Precio = int.Parse(txtPrecio.Text),
                 }); 
 
                 CalcularTotales();
@@ -215,7 +216,7 @@ namespace Vivero.Presentacion.Ventas
                 InicializarDetalle();
             }
 
-           
+
 
 
         }
@@ -224,11 +225,13 @@ namespace Vivero.Presentacion.Ventas
         {
             var importeTotal = listaFacturaDetalle.Sum(p => p.Importe);
             txtTotal.Text = importeTotal.ToString();
+            txtPuntos.Text = "100";
         }
 
         private void InicializarDetalle()
         {
-            /*cboItem.SelectedIndex = -1*/;
+            /*cboItem.SelectedIndex = -1*/
+            ;
             txtCantidad.Text = "";
             txtPrecio.Text = "";
             txtImporte.Text = "";
@@ -263,50 +266,39 @@ namespace Vivero.Presentacion.Ventas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //DataTable tabla = new DataTable();
-            //tabla = factura.RecuperarCliente(txt_NroDoc.Text.ToString());
 
-            //DataTable tabla2 = new DataTable();
-            //tabla2 = factura.RecuperarEmp(txt_IdEmpleado.Text.ToString());
-
-            //DataTable tabla3 = new DataTable();
-            //tabla3 = factura.RecuperarTipoDoc(txt_NroDoc.Text.ToString());
-
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("No se encontró el Empleado");
-            //    }
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("El cliente no está registrado");
-            //}
 
             try
             {
-                var factura = new Es_Factura 
-                {
-                    Fecha = dtpFecha.Value,
-                    Cliente = (Es_Cliente)cboCliente.SelectedItem,
-                    Tipo_Factura = (Es_TipoFactura)cboTipoFactura.SelectedItem,
-                    FacturaDetalle = listaFacturaDetalle,
-                    Monto = double.Parse(txtTotal.Text),
-                    //Descuento = double.Parse(txtDescuento.Text)
-                    Puntos = int.Parse(txtPuntos.Text)
-                };
+                var factura = new Es_Factura();
+
+                    factura.Fecha = dtpFecha.Value;
+                    factura.Cliente = oCliente;
+                factura.Tipo_Factura = new Es_TipoFactura();
+                factura.Tipo_Factura.ID = int.Parse(cboTipoFactura.SelectedValue.ToString());
+                factura.FacturaDetalle = listaFacturaDetalle;
+                factura.Monto = double.Parse(txtTotal.Text);
+                //Descuento = double.Parse(txtDescuento.Text)
+                factura.Puntos = int.Parse(txtPuntos.Text);
+                factura.Id_Empleado = new Es_Empleado();
+                factura.Id_Empleado.ID = FrmPrincipal.idUsuario;
+                
+               
 
                 if (oFacturaService.ValidarDatos(factura))
                 {
                     oFacturaService.Crear(factura);
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("El cliente no está registrado");
-            //}
+                    MessageBox.Show(string.Concat("La factura nro: ", factura.Numero_Factura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //InicializarFormulario();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar la factura! " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -314,22 +306,24 @@ namespace Vivero.Presentacion.Ventas
             if (cboCliente.Enabled)
             {
                 string seleccionCbo = cboCliente.SelectedValue.ToString();
-                Es_Cliente oCliente = new Es_Cliente();
+                
                 DataTable clienteSeleccionado = oClienteService.BuscarCliente("", seleccionCbo, "", "", "(1)");
                 oCliente.Calle = clienteSeleccionado.Rows[0]["Calle"].ToString();
                 oCliente.NroCalle = clienteSeleccionado.Rows[0]["NroCalle"].ToString();
                 oCliente.Telefono = clienteSeleccionado.Rows[0]["Telefono"].ToString();
                 oCliente.NroDoc = seleccionCbo;
-
+                oCliente.TipoDoc = new Es_TipoDoc();
+                oCliente.TipoDoc.IdTipoDoc = int.Parse(clienteSeleccionado.Rows[0]["TipoDoc"].ToString());
                 lblDireccion.Text = oCliente.Calle + " " + oCliente.NroCalle;
                 lblTelefono.Text = oCliente.Telefono;
                 lblNroDoc.Text = oCliente.NroDoc;
+                
                 if (!lblDireccion.Visible) lblDireccion.Visible = true;
                 if (!lblTelefono.Visible) lblTelefono.Visible = true;
                 if (!lblNroDoc.Visible) lblNroDoc.Visible = true;
             }
-            
+
         }
 
-    }
+    } 
 }

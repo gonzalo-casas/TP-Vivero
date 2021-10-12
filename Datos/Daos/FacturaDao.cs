@@ -93,29 +93,32 @@ namespace Vivero.Datos.Daos
                 dm.BeginTransaction();
 
                 string sql = string.Concat("INSERT INTO [dbo].[Factura] ",
-                                            "           ([Nro_factura]   ",
-                                            "           ,[fecha]         ",
+                                            "           ([fecha]         ",
                                             "           ,[NroDoc]       ",
+                                            "           ,[TipoDoc]    ",
                                             "           ,[Tipo_Factura]   ",
                                             "           ,[Monto]    ",
+                                            "           ,[Id_Empleado]    ",
                                             //"           ,[descuento]    ",
                                             "           ,[Estado])      ",
                                             "     VALUES                 ",
-                                            "           (@nro_factura   ",
-                                            "           ,@fecha          ",
-                                            "           ,@cliente        ",
-                                            "           ,@tipoFactura    ",
-                                            "           ,@subtotal     ",
-                                            "           ,@descuento     ",
-                                            "           ,@borrado)       ");
+                                            "           (@fecha          ",
+                                            "           ,@NroDoc        ",
+                                            "           ,@TipoDoc",
+                                            "           ,@Tipo_Factura    ",
+                                            "           ,@Monto     ",
+                                              "           ,@Id_Empleado     ",
+                                            //"           ,@descuento     ",
+                                            "           ,@Estado)       ");
 
 
                 var parametros = new Dictionary<string, object>();
-                parametros.Add("Nro_factura", factura.Numero_Factura);
                 parametros.Add("fecha", factura.Fecha);
                 parametros.Add("NroDoc", factura.Cliente.NroDoc);
+                parametros.Add("TipoDoc", factura.Cliente.TipoDoc.IdTipoDoc);
                 parametros.Add("Tipo_Factura", factura.Tipo_Factura.ID);
                 parametros.Add("Monto", factura.Monto);
+                parametros.Add("Id_Empleado", factura.Id_Empleado.ID);
                 //parametros.Add("descuento", factura.Descuento);
                 parametros.Add("Estado", 1); // ni idea pq pone false
                 dm.EjecutarSQLCONPARAMETROS(sql, parametros);
@@ -126,42 +129,47 @@ namespace Vivero.Datos.Daos
 
                 foreach (var itemFactura in factura.FacturaDetalle)
                 {
-                    string sqlDetalle = string.Concat(" INSERT INTO [dbo].[FacturasDetalle] ",
-                                                        "           ([id_factura]           ",
-                                                        "           ,[id_producto]          ",
-                                                        "           ,[precio_unitario]      ",
-                                                        "           ,[cantidad]             ",
-                                                        "           ,[borrado])             ",
+                    string sqlDetalle = string.Concat(" INSERT INTO [dbo].[DetalleFactura] ",
+                                                        "           ([Nro_Factura]           ",
+                                                       "           ,[Tipo_Factura]          ",
+                                                        "           ,[Id_Planta]          ",
+                                                        "           ,[Id_Producto]      ",
+                                                        "           ,[Precio]             ",
+                                                          "          ,[NroItem]             ",
+                                                        "           ,[Cantidad])             ",
                                                         "     VALUES                        ",
-                                                        "           (@id_factura            ",
-                                                        "           ,@id_producto           ",
-                                                        "           ,@precio_unitario       ",
-                                                        "           ,@cantidad              ",
-                                                        "           ,@borrado)               ");
+                                                        "           (@Nro_Factura            ",
+                                                        "           ,@Id_Planta           ",
+                                                          "           ,@Tipo_Factura           ",
+                                                        "           ,@Id_Producto       ",
+                                                        "           ,@Precio              ",
+                                                        "          ,@NroItem              ",
+                                                        "           ,@Cantidad)           ");
 
                     
 
                     var paramDetalle = new Dictionary<string, object>();
-                    paramDetalle.Add("id_factura", factura.Numero_Factura);
+                    paramDetalle.Add("Nro_Factura", factura.Numero_Factura);
+                    paramDetalle.Add("Tipo_Factura", factura.Tipo_Factura.ID);
 
                     if (itemFactura.TipoItem) // si es planta
                     {
                        
-                        paramDetalle.Add("id_producto", itemFactura.Planta.Codigo);
-                        paramDetalle.Add("id_producto", null);
+                        paramDetalle.Add("Id_Planta", itemFactura.Planta.Codigo);
+                        paramDetalle.Add("Id_Producto", DBNull.Value);
                     }
 
                        
                     else  // entonces es producto
                     {
-                        paramDetalle.Add("id_producto", itemFactura.Producto.Codigo);
-                        paramDetalle.Add("id_producto", null);
+                        paramDetalle.Add("Id_Producto", itemFactura.Producto.Codigo);
+                        paramDetalle.Add("Id_Planta", DBNull.Value);
                     }
                       
 
-                    paramDetalle.Add("precio", itemFactura.Precio);
-                    paramDetalle.Add("cantidad", itemFactura.Cantidad);
-                    paramDetalle.Add("borrado", false);
+                    paramDetalle.Add("Precio", itemFactura.Precio);
+                    paramDetalle.Add("Cantidad", itemFactura.Cantidad);
+                    paramDetalle.Add("NroItem", itemFactura.NroItem);
 
                     dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
                 }
