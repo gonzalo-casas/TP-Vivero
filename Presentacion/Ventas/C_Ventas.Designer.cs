@@ -489,7 +489,6 @@
             this.btn_EliminarVenta.Text = "Eliminar";
             this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
             this.btn_EliminarVenta.UseVisualStyleBackColor = false;
-            this.btn_EliminarVenta.Click += new System.EventHandler(this.btn_EliminarVenta_Click);
             // 
             // panel20
             // 
