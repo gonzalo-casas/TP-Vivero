@@ -12,7 +12,8 @@ namespace Vivero.Datos.Daos
     {
         public DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado)
         {
-            string consulta = "SELECT * FROM Factura f JOIN  TipoFactura tf ON (f.Tipo_Factura = tf.ID) WHERE f.Estado in  " + estado;
+            string consulta = "SELECT tf.Nombre, Nro_Factura, f.NroDoc, f.Fecha, (e.Nombre + ' ' + e.Apellido) AS Empleado, Monto, Puntos FROM Factura f JOIN  TipoFactura tf ON (f.Tipo_Factura = tf.ID) " +
+                              "JOIN Empleado e ON (e.ID = f.Id_Empleado) WHERE f.Estado in  " + estado;
 
 
             if (!String.IsNullOrEmpty(nro_factura))
@@ -32,7 +33,7 @@ namespace Vivero.Datos.Daos
             }
             if (!String.IsNullOrEmpty(fecha.ToString()))
             {
-                consulta += " AND f.Fecha = CONVERT(datetime, " +"'" + fecha.ToString() + "', " + "101)";
+                consulta += " AND f.Fecha = CONVERT(datetime, " +"'" + fecha.ToString() + "', " + "103)";
             }
 
           

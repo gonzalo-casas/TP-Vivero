@@ -69,7 +69,7 @@ namespace Vivero.Presentacion.Ventas
                 dgv_Ventas.Rows[i].Cells[1].Value = tabla.Rows[i]["Nro_Factura"].ToString();
                 dgv_Ventas.Rows[i].Cells[2].Value = tabla.Rows[i]["NroDoc"].ToString(); // nro doc del cliente
                 dgv_Ventas.Rows[i].Cells[3].Value = tabla.Rows[i]["Fecha"].ToString();
-                dgv_Ventas.Rows[i].Cells[4].Value = tabla.Rows[i]["Id_Empleado"].ToString();
+                dgv_Ventas.Rows[i].Cells[4].Value = tabla.Rows[i]["Empleado"].ToString();
                 dgv_Ventas.Rows[i].Cells[5].Value = tabla.Rows[i]["Monto"].ToString();
                 dgv_Ventas.Rows[i].Cells[6].Value = tabla.Rows[i]["Puntos"].ToString();
             }

@@ -54,7 +54,7 @@ namespace Vivero.Presentacion.Ventas
         
         private void ABM_Ventas_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(300, 50);
+            //this.Location = new Point(300, 50);
             
             LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
@@ -62,7 +62,7 @@ namespace Vivero.Presentacion.Ventas
             lblTelefono.Visible = false;
             lblNroDoc.Visible = false;
             cboCliente.Enabled = true;
-
+            dtpFecha.MaxDate = DateTime.Today;
             dgv_Items.DataSource = listaFacturaDetalle;
 
             

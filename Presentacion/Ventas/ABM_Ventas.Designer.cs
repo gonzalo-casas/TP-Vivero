@@ -557,7 +557,7 @@ namespace Vivero.Presentacion.Ventas
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ABM_Ventas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM_Ventas";
             this.Load += new System.EventHandler(this.ABM_Ventas_Load);
             this.gbDetalleFactura.ResumeLayout(false);
