@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_NroFactura = new System.Windows.Forms.TextBox();
             this.txt_Documento = new System.Windows.Forms.TextBox();
             this.txt_Empleado = new System.Windows.Forms.TextBox();
@@ -38,6 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Ventas = new System.Windows.Forms.DataGridView();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
@@ -52,7 +62,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloVentas = new System.Windows.Forms.Label();
             this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
-            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -70,13 +79,13 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.dgv_DetalleFactura = new System.Windows.Forms.DataGridView();
+            this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,12 +95,13 @@
             this.panelBotones.SuspendLayout();
             this.panelEliminar.SuspendLayout();
             this.panelAgregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_NroFactura
             // 
             this.txt_NroFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NroFactura.Location = new System.Drawing.Point(192, 50);
+            this.txt_NroFactura.Location = new System.Drawing.Point(192, 22);
             this.txt_NroFactura.Name = "txt_NroFactura";
             this.txt_NroFactura.Size = new System.Drawing.Size(127, 26);
             this.txt_NroFactura.TabIndex = 4;
@@ -99,7 +109,7 @@
             // txt_Documento
             // 
             this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Documento.Location = new System.Drawing.Point(192, 83);
+            this.txt_Documento.Location = new System.Drawing.Point(192, 55);
             this.txt_Documento.Name = "txt_Documento";
             this.txt_Documento.Size = new System.Drawing.Size(127, 26);
             this.txt_Documento.TabIndex = 5;
@@ -107,7 +117,7 @@
             // txt_Empleado
             // 
             this.txt_Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Empleado.Location = new System.Drawing.Point(192, 116);
+            this.txt_Empleado.Location = new System.Drawing.Point(192, 88);
             this.txt_Empleado.Name = "txt_Empleado";
             this.txt_Empleado.Size = new System.Drawing.Size(127, 26);
             this.txt_Empleado.TabIndex = 6;
@@ -116,7 +126,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 53);
+            this.label1.Location = new System.Drawing.Point(96, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 8;
@@ -126,7 +136,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 86);
+            this.label2.Location = new System.Drawing.Point(88, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 9;
@@ -136,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 116);
+            this.label3.Location = new System.Drawing.Point(99, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 20);
             this.label3.TabIndex = 10;
@@ -176,6 +186,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Ventas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_Ventas.Enabled = false;
             this.dgv_Ventas.Location = new System.Drawing.Point(100, 0);
             this.dgv_Ventas.Name = "dgv_Ventas";
             this.dgv_Ventas.ReadOnly = true;
@@ -183,16 +194,66 @@
             this.dgv_Ventas.RowHeadersWidth = 51;
             this.dgv_Ventas.RowTemplate.Height = 40;
             this.dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Ventas.Size = new System.Drawing.Size(807, 242);
+            this.dgv_Ventas.Size = new System.Drawing.Size(811, 214);
             this.dgv_Ventas.TabIndex = 11;
+            this.dgv_Ventas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Ventas_CellClick);
+            this.dgv_Ventas.SelectionChanged += new System.EventHandler(this.dgv_Ventas_SelectionChanged);
+            // 
+            // colTipo
+            // 
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.MinimumWidth = 6;
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            // 
+            // colNumero
+            // 
+            this.colNumero.HeaderText = "Numero";
+            this.colNumero.MinimumWidth = 6;
+            this.colNumero.Name = "colNumero";
+            this.colNumero.ReadOnly = true;
+            // 
+            // colDocumento
+            // 
+            this.colDocumento.HeaderText = "Doc Cliente";
+            this.colDocumento.MinimumWidth = 6;
+            this.colDocumento.Name = "colDocumento";
+            this.colDocumento.ReadOnly = true;
+            // 
+            // colFecha
+            // 
+            this.colFecha.HeaderText = "Fecha";
+            this.colFecha.MinimumWidth = 6;
+            this.colFecha.Name = "colFecha";
+            this.colFecha.ReadOnly = true;
+            // 
+            // colEmpleado
+            // 
+            this.colEmpleado.HeaderText = "Empleado";
+            this.colEmpleado.MinimumWidth = 6;
+            this.colEmpleado.Name = "colEmpleado";
+            this.colEmpleado.ReadOnly = true;
+            // 
+            // colMonto
+            // 
+            this.colMonto.HeaderText = "Monto";
+            this.colMonto.MinimumWidth = 6;
+            this.colMonto.Name = "colMonto";
+            this.colMonto.ReadOnly = true;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 564);
+            this.panel1.Location = new System.Drawing.Point(0, 814);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1007, 73);
+            this.panel1.Size = new System.Drawing.Size(1011, 73);
             this.panel1.TabIndex = 14;
             // 
             // panel4
@@ -203,7 +264,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(760, 0);
+            this.panel4.Location = new System.Drawing.Point(764, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 4;
@@ -269,7 +330,6 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloVentas);
             this.panel3.Controls.Add(this.btn_ConsultarVentas);
-            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_NroFactura);
             this.panel3.Controls.Add(this.txt_Documento);
@@ -279,14 +339,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 222);
+            this.panel3.Size = new System.Drawing.Size(1011, 165);
             this.panel3.TabIndex = 16;
             // 
             // chk_Inactivos
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(454, 52);
+            this.chk_Inactivos.Location = new System.Drawing.Point(454, 24);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 23;
@@ -299,7 +359,7 @@
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(361, 52);
+            this.chk_Activos.Location = new System.Drawing.Point(361, 24);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 22;
@@ -310,7 +370,7 @@
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(192, 148);
+            this.dtpFecha.Location = new System.Drawing.Point(192, 120);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.ShowCheckBox = true;
             this.dtpFecha.Size = new System.Drawing.Size(127, 26);
@@ -320,7 +380,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(126, 148);
+            this.label4.Location = new System.Drawing.Point(126, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 19;
@@ -331,7 +391,7 @@
             this.lblTituloVentas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloVentas.AutoSize = true;
             this.lblTituloVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloVentas.Location = new System.Drawing.Point(712, 89);
+            this.lblTituloVentas.Location = new System.Drawing.Point(716, 32);
             this.lblTituloVentas.Name = "lblTituloVentas";
             this.lblTituloVentas.Size = new System.Drawing.Size(260, 67);
             this.lblTituloVentas.TabIndex = 17;
@@ -348,7 +408,7 @@
             this.btn_ConsultarVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarVentas.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarVentas.Location = new System.Drawing.Point(373, 102);
+            this.btn_ConsultarVentas.Location = new System.Drawing.Point(373, 74);
             this.btn_ConsultarVentas.Name = "btn_ConsultarVentas";
             this.btn_ConsultarVentas.Size = new System.Drawing.Size(150, 40);
             this.btn_ConsultarVentas.TabIndex = 16;
@@ -357,41 +417,35 @@
             this.btn_ConsultarVentas.UseVisualStyleBackColor = false;
             this.btn_ConsultarVentas.Click += new System.EventHandler(this.btn_ConsultarVentas_Click);
             // 
-            // panel24
-            // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Ventas);
-            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel16);
+            this.panel2.Controls.Add(this.dgv_DetalleFactura);
             this.panel2.Controls.Add(this.panel11);
+            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 222);
+            this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 342);
+            this.panel2.Size = new System.Drawing.Size(1011, 649);
             this.panel2.TabIndex = 17;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(907, 0);
+            this.panel10.Location = new System.Drawing.Point(911, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 242);
+            this.panel10.Size = new System.Drawing.Size(100, 649);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 242);
+            this.panel11.Location = new System.Drawing.Point(100, 549);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(907, 100);
+            this.panel11.Size = new System.Drawing.Size(811, 100);
             this.panel11.TabIndex = 14;
             // 
             // panelBotones
@@ -401,7 +455,7 @@
             this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBotones.Location = new System.Drawing.Point(0, 0);
             this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(907, 100);
+            this.panelBotones.Size = new System.Drawing.Size(811, 100);
             this.panelBotones.TabIndex = 15;
             // 
             // panelEliminar
@@ -540,63 +594,95 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 342);
+            this.panel9.Size = new System.Drawing.Size(100, 649);
             this.panel9.TabIndex = 12;
             // 
-            // colTipo
+            // panel16
             // 
-            this.colTipo.HeaderText = "Tipo";
-            this.colTipo.MinimumWidth = 6;
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(100, 214);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(811, 40);
+            this.panel16.TabIndex = 15;
             // 
-            // colNumero
+            // dgv_DetalleFactura
             // 
-            this.colNumero.HeaderText = "Numero";
-            this.colNumero.MinimumWidth = 6;
-            this.colNumero.Name = "colNumero";
-            this.colNumero.ReadOnly = true;
+            this.dgv_DetalleFactura.AllowUserToAddRows = false;
+            this.dgv_DetalleFactura.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_DetalleFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_DetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DetalleFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNroItem,
+            this.colTipoItem,
+            this.colNombreItem,
+            this.colCantidad,
+            this.colPrecio});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_DetalleFactura.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_DetalleFactura.Location = new System.Drawing.Point(100, 254);
+            this.dgv_DetalleFactura.Name = "dgv_DetalleFactura";
+            this.dgv_DetalleFactura.ReadOnly = true;
+            this.dgv_DetalleFactura.RowHeadersVisible = false;
+            this.dgv_DetalleFactura.RowHeadersWidth = 51;
+            this.dgv_DetalleFactura.RowTemplate.Height = 40;
+            this.dgv_DetalleFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_DetalleFactura.Size = new System.Drawing.Size(811, 295);
+            this.dgv_DetalleFactura.TabIndex = 16;
             // 
-            // colDocumento
+            // colNroItem
             // 
-            this.colDocumento.HeaderText = "Doc Cliente";
-            this.colDocumento.MinimumWidth = 6;
-            this.colDocumento.Name = "colDocumento";
-            this.colDocumento.ReadOnly = true;
+            this.colNroItem.HeaderText = "N° Item";
+            this.colNroItem.Name = "colNroItem";
+            this.colNroItem.ReadOnly = true;
             // 
-            // colFecha
+            // colTipoItem
             // 
-            this.colFecha.HeaderText = "Fecha";
-            this.colFecha.MinimumWidth = 6;
-            this.colFecha.Name = "colFecha";
-            this.colFecha.ReadOnly = true;
+            this.colTipoItem.HeaderText = "Tipo";
+            this.colTipoItem.Name = "colTipoItem";
+            this.colTipoItem.ReadOnly = true;
             // 
-            // colEmpleado
+            // colNombreItem
             // 
-            this.colEmpleado.HeaderText = "Empleado";
-            this.colEmpleado.MinimumWidth = 6;
-            this.colEmpleado.Name = "colEmpleado";
-            this.colEmpleado.ReadOnly = true;
+            this.colNombreItem.HeaderText = "Nombre Item";
+            this.colNombreItem.Name = "colNombreItem";
+            this.colNombreItem.ReadOnly = true;
             // 
-            // colMonto
+            // colCantidad
             // 
-            this.colMonto.HeaderText = "Monto";
-            this.colMonto.MinimumWidth = 6;
-            this.colMonto.Name = "colMonto";
-            this.colMonto.ReadOnly = true;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
             // 
-            // colPuntos
+            // colPrecio
             // 
-            this.colPuntos.HeaderText = "Puntos";
-            this.colPuntos.Name = "colPuntos";
-            this.colPuntos.ReadOnly = true;
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
             // 
             // C_Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1007, 637);
+            this.ClientSize = new System.Drawing.Size(1011, 887);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -613,6 +699,7 @@
             this.panelBotones.ResumeLayout(false);
             this.panelEliminar.ResumeLayout(false);
             this.panelAgregar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -647,7 +734,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel24;
         private BotonRedondeado btn_ConsultarVentas;
         private BotonRedondeado btn_EliminarVenta;
         private BotonRedondeado btn_AgregarVenta;
@@ -664,5 +750,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMonto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
+        private System.Windows.Forms.DataGridView dgv_DetalleFactura;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNroItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
     }
 }
