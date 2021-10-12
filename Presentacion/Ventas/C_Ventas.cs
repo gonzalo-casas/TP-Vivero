@@ -41,7 +41,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void btn_ConsultarVentas_Click(object sender, EventArgs e)
         {
-            var fecha = dtpFecha.Enabled.Equals(true) ? dtpFecha.Text : "";
+            var fecha = dtpFecha.Checked.Equals(true) ? dtpFecha.Text : "";
 
             var estado = "('0','1')";
             if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
@@ -92,9 +92,11 @@ namespace Vivero.Presentacion.Ventas
             }
         }
 
-        private void chk_fecha_CheckedChanged(object sender, EventArgs e)
+        private void C_Ventas_Load(object sender, EventArgs e)
         {
-            dtpFecha.Enabled = dtpFecha.Enabled.Equals(true) ? false : true;
+            dtpFecha.CustomFormat = "dd/MM/yyyy";
+            dtpFecha.MaxDate = DateTime.Today;
+            dtpFecha.Checked = false;
         }
     }
 }
