@@ -489,6 +489,7 @@
             this.btn_EliminarVenta.Text = "Eliminar";
             this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
             this.btn_EliminarVenta.UseVisualStyleBackColor = false;
+            this.btn_EliminarVenta.Click += new System.EventHandler(this.btn_EliminarVenta_Click);
             // 
             // panel20
             // 
@@ -596,85 +597,53 @@
             this.panel9.Size = new System.Drawing.Size(100, 649);
             this.panel9.TabIndex = 12;
             // 
-            // panel16
+            // colTipo
             // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(100, 214);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(811, 40);
-            this.panel16.TabIndex = 15;
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.MinimumWidth = 6;
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
             // 
-            // dgv_DetalleFactura
+            // colNumero
             // 
-            this.dgv_DetalleFactura.AllowUserToAddRows = false;
-            this.dgv_DetalleFactura.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_DetalleFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_DetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DetalleFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNroItem,
-            this.colTipoItem,
-            this.colNombreItem,
-            this.colCantidad,
-            this.colPrecio});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_DetalleFactura.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_DetalleFactura.Location = new System.Drawing.Point(100, 254);
-            this.dgv_DetalleFactura.Name = "dgv_DetalleFactura";
-            this.dgv_DetalleFactura.ReadOnly = true;
-            this.dgv_DetalleFactura.RowHeadersVisible = false;
-            this.dgv_DetalleFactura.RowHeadersWidth = 51;
-            this.dgv_DetalleFactura.RowTemplate.Height = 40;
-            this.dgv_DetalleFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DetalleFactura.Size = new System.Drawing.Size(811, 295);
-            this.dgv_DetalleFactura.TabIndex = 16;
+            this.colNumero.HeaderText = "Numero";
+            this.colNumero.MinimumWidth = 6;
+            this.colNumero.Name = "colNumero";
+            this.colNumero.ReadOnly = true;
             // 
-            // colNroItem
+            // colDocumento
             // 
-            this.colNroItem.HeaderText = "N° Item";
-            this.colNroItem.Name = "colNroItem";
-            this.colNroItem.ReadOnly = true;
+            this.colDocumento.HeaderText = "Doc Cliente";
+            this.colDocumento.MinimumWidth = 6;
+            this.colDocumento.Name = "colDocumento";
+            this.colDocumento.ReadOnly = true;
             // 
-            // colTipoItem
+            // colFecha
             // 
-            this.colTipoItem.HeaderText = "Tipo";
-            this.colTipoItem.Name = "colTipoItem";
-            this.colTipoItem.ReadOnly = true;
+            this.colFecha.HeaderText = "Fecha";
+            this.colFecha.MinimumWidth = 6;
+            this.colFecha.Name = "colFecha";
+            this.colFecha.ReadOnly = true;
             // 
-            // colNombreItem
+            // colEmpleado
             // 
-            this.colNombreItem.HeaderText = "Nombre Item";
-            this.colNombreItem.Name = "colNombreItem";
-            this.colNombreItem.ReadOnly = true;
+            this.colEmpleado.HeaderText = "Empleado";
+            this.colEmpleado.MinimumWidth = 6;
+            this.colEmpleado.Name = "colEmpleado";
+            this.colEmpleado.ReadOnly = true;
             // 
-            // colCantidad
+            // colMonto
             // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
+            this.colMonto.HeaderText = "Monto";
+            this.colMonto.MinimumWidth = 6;
+            this.colMonto.Name = "colMonto";
+            this.colMonto.ReadOnly = true;
             // 
-            // colPrecio
+            // colPuntos
             // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
             // 
             // C_Ventas
             // 
