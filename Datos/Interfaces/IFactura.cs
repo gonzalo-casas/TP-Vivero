@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vivero.Negocio.Entidades;
 
 namespace Vivero.Datos.Interfaces
 {
@@ -15,6 +16,7 @@ namespace Vivero.Datos.Interfaces
         DataTable RecuperarTipoDoc(string dni);
         DataTable RecuperarEmp(string ID);
         string NuevoId();
-
+        bool Create(Es_Factura factura);
+       
     }
 }

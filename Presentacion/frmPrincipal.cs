@@ -20,7 +20,7 @@ namespace Vivero
 {
     public partial class FrmPrincipal : Form
     {
-        public static string idUsuario = string.Empty;
+        public static int idUsuario = 0;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace Vivero
             {
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
                 this.LblNombreUsuario.Text = fl.MiUsuario.Nombre;
-                idUsuario = fl.MiUsuario.ID.ToString();
+                idUsuario = fl.MiUsuario.ID;
 
                 if (fl.MiUsuario.Perfil.IdPerfil.Equals(1))                 // si es administrador...
                 {

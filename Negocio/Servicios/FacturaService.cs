@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Vivero.Datos.Daos;
 using Vivero.Datos.Interfaces;
+using Vivero.Negocio.Entidades;
 
 namespace Vivero.Negocio.Servicios
 {
@@ -54,9 +55,20 @@ namespace Vivero.Negocio.Servicios
         }
 
 
+        internal bool ValidarDatos(Es_Factura factura)
+        {
+            if (factura.FacturaDetalle.Count == 0)
+            {
+                throw new Exception("Debe ingresar al menos un item de factura.");
+            }
 
+            return true;
+        }
 
-
+        internal bool Crear(Es_Factura factura)
+        {
+            return dao.Create(factura);
+        }
 
 
 

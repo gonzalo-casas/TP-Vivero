@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vivero.Datos.Interfaces;
+using Vivero.Negocio.Entidades;
 
 namespace Vivero.Datos.Daos
 {
     class FacturaDao : IFactura
     {
+
+
         public DataTable BuscarFactura(string nro_factura, string nro_doc, string id_empleado, string fecha, string estado)
         {
             string consulta = "SELECT tf.Nombre, Nro_Factura, f.NroDoc, f.Fecha, (e.Nombre + ' ' + e.Apellido) AS Empleado, Monto, Puntos FROM Factura f JOIN  TipoFactura tf ON (f.Tipo_Factura = tf.ID) " +
@@ -82,10 +85,119 @@ namespace Vivero.Datos.Daos
             return NuevaId.ToString();
         }
 
-       
+        public  bool Create(Es_Factura factura)
+        {
+            DataManager dm = new DataManager();
+            try
+            {
+                dm.Open();
+                dm.BeginTransaction();
+
+                string sql = string.Concat("INSERT INTO [dbo].[Factura] ",
+                                            "           ([fecha]         ",
+                                            "           ,[NroDoc]       ",
+                                            "           ,[TipoDoc]    ",
+                                            "           ,[Tipo_Factura]   ",
+                                            "           ,[Monto]    ",
+                                            "           ,[Id_Empleado]    ",
+                                            //"           ,[descuento]    ",
+                                            "           ,[Estado])      ",
+                                            "     VALUES                 ",
+                                            "           (@fecha          ",
+                                            "           ,@NroDoc        ",
+                                            "           ,@TipoDoc",
+                                            "           ,@Tipo_Factura    ",
+                                            "           ,@Monto     ",
+                                              "           ,@Id_Empleado     ",
+                                            //"           ,@descuento     ",
+                                            "           ,@Estado)       ");
+
+
+                var parametros = new Dictionary<string, object>();
+                parametros.Add("fecha", factura.Fecha);
+                parametros.Add("NroDoc", factura.Cliente.NroDoc);
+                parametros.Add("TipoDoc", factura.Cliente.TipoDoc.IdTipoDoc);
+                parametros.Add("Tipo_Factura", factura.Tipo_Factura.ID);
+                parametros.Add("Monto", factura.Monto);
+                parametros.Add("Id_Empleado", factura.Id_Empleado.ID);
+                //parametros.Add("descuento", factura.Descuento);
+                parametros.Add("Estado", 1); // ni idea pq pone false
+                dm.EjecutarSQLCONPARAMETROS(sql, parametros);
+
+                var newId = dm.ConsultaSQLScalar(" SELECT @@IDENTITY");
+                factura.Numero_Factura = Convert.ToInt32(newId);
+
+
+                foreach (var itemFactura in factura.FacturaDetalle)
+                {
+                    string sqlDetalle = string.Concat(" INSERT INTO [dbo].[DetalleFactura] ",
+                                                        "           ([Nro_Factura]           ",
+                                                       "           ,[Tipo_Factura]          ",
+                                                        "           ,[Id_Planta]          ",
+                                                        "           ,[Id_Producto]      ",
+                                                        "           ,[Precio]             ",
+                                                          "          ,[NroItem]             ",
+                                                        "           ,[Cantidad])             ",
+                                                        "     VALUES                        ",
+                                                        "           (@Nro_Factura            ",
+                                                        "           ,@Id_Planta           ",
+                                                          "           ,@Tipo_Factura           ",
+                                                        "           ,@Id_Producto       ",
+                                                        "           ,@Precio              ",
+                                                        "          ,@NroItem              ",
+                                                        "           ,@Cantidad)           ");
+
+                    
+
+                    var paramDetalle = new Dictionary<string, object>();
+                    paramDetalle.Add("Nro_Factura", factura.Numero_Factura);
+                    paramDetalle.Add("Tipo_Factura", factura.Tipo_Factura.ID);
+
+                    if (itemFactura.TipoItem) // si es planta
+                    {
+                       
+                        paramDetalle.Add("Id_Planta", itemFactura.Planta.Codigo);
+                        paramDetalle.Add("Id_Producto", DBNull.Value);
+                    }
+
+                       
+                    else  // entonces es producto
+                    {
+                        paramDetalle.Add("Id_Producto", itemFactura.Producto.Codigo);
+                        paramDetalle.Add("Id_Planta", DBNull.Value);
+                    }
+                      
+
+                    paramDetalle.Add("Precio", itemFactura.Precio);
+                    paramDetalle.Add("Cantidad", itemFactura.Cantidad);
+                    paramDetalle.Add("NroItem", itemFactura.NroItem);
+
+                    dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
+                }
 
 
 
+                dm.Commit();
 
+            }
+            catch (Exception ex)
+            {
+                dm.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                // Cierra la conexión 
+                dm.Close();
+            }
+            return true;
+        }
+
+        
     }
+
+
+
+
 }
+
