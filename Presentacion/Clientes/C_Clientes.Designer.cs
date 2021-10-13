@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_NombreCliente = new System.Windows.Forms.TextBox();
             this.txt_ApellidoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_SalirCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -57,31 +56,32 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.lblTituloClientes = new System.Windows.Forms.Label();
-            this.btn_ConsultarClientes = new Vivero.Presentacion.BotonRedondeado();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.panelEliminar = new System.Windows.Forms.Panel();
-            this.btn_EliminarCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panelEditar = new System.Windows.Forms.Panel();
-            this.btn_EditarCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelAgregar = new System.Windows.Forms.Panel();
-            this.btn_AgregarClientes = new Vivero.Presentacion.BotonRedondeado();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_EliminarCliente = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_EditarCliente = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_AgregarClientes = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_ConsultarClientes = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_SalirCliente = new Vivero.Presentacion.BotonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -144,18 +144,18 @@
             // 
             this.dgv_Clientes.AllowUserToAddRows = false;
             this.dgv_Clientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Clientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgv_Clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(206)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(206)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -164,14 +164,14 @@
             this.colTelefono,
             this.colCalle,
             this.colNumCalle});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle21;
             this.dgv_Clientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Clientes.Location = new System.Drawing.Point(100, 0);
             this.dgv_Clientes.Name = "dgv_Clientes";
@@ -271,26 +271,6 @@
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 4;
             // 
-            // btn_SalirCliente
-            // 
-            this.btn_SalirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirCliente.BorderRadius = 20;
-            this.btn_SalirCliente.BorderSize = 0;
-            this.btn_SalirCliente.FlatAppearance.BorderSize = 0;
-            this.btn_SalirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirCliente.Location = new System.Drawing.Point(48, 16);
-            this.btn_SalirCliente.Name = "btn_SalirCliente";
-            this.btn_SalirCliente.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirCliente.TabIndex = 16;
-            this.btn_SalirCliente.Text = "Cerrar";
-            this.btn_SalirCliente.TextColor = System.Drawing.Color.White;
-            this.btn_SalirCliente.UseVisualStyleBackColor = false;
-            this.btn_SalirCliente.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
-            // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -377,32 +357,12 @@
             // 
             this.lblTituloClientes.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloClientes.AutoSize = true;
-            this.lblTituloClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 44F);
-            this.lblTituloClientes.Location = new System.Drawing.Point(611, 86);
+            this.lblTituloClientes.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloClientes.Location = new System.Drawing.Point(712, 56);
             this.lblTituloClientes.Name = "lblTituloClientes";
-            this.lblTituloClientes.Size = new System.Drawing.Size(243, 67);
+            this.lblTituloClientes.Size = new System.Drawing.Size(212, 65);
             this.lblTituloClientes.TabIndex = 16;
             this.lblTituloClientes.Text = "Clientes";
-            // 
-            // btn_ConsultarClientes
-            // 
-            this.btn_ConsultarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarClientes.BorderRadius = 20;
-            this.btn_ConsultarClientes.BorderSize = 0;
-            this.btn_ConsultarClientes.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarClientes.Location = new System.Drawing.Point(366, 116);
-            this.btn_ConsultarClientes.Name = "btn_ConsultarClientes";
-            this.btn_ConsultarClientes.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarClientes.TabIndex = 15;
-            this.btn_ConsultarClientes.Text = "Consultar";
-            this.btn_ConsultarClientes.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarClientes.UseVisualStyleBackColor = false;
-            this.btn_ConsultarClientes.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
             // 
             // panel24
             // 
@@ -465,27 +425,6 @@
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
             // 
-            // btn_EliminarCliente
-            // 
-            this.btn_EliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarCliente.BorderRadius = 30;
-            this.btn_EliminarCliente.BorderSize = 0;
-            this.btn_EliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarCliente.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarCliente.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarCliente.Name = "btn_EliminarCliente";
-            this.btn_EliminarCliente.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarCliente.TabIndex = 7;
-            this.btn_EliminarCliente.Text = "Eliminar";
-            this.btn_EliminarCliente.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarCliente.UseVisualStyleBackColor = false;
-            this.btn_EliminarCliente.Click += new System.EventHandler(this.btn_EliminarCliente_Click);
-            // 
             // panel20
             // 
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
@@ -530,27 +469,6 @@
             this.panelEditar.Name = "panelEditar";
             this.panelEditar.Size = new System.Drawing.Size(200, 100);
             this.panelEditar.TabIndex = 15;
-            // 
-            // btn_EditarCliente
-            // 
-            this.btn_EditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EditarCliente.BorderRadius = 30;
-            this.btn_EditarCliente.BorderSize = 0;
-            this.btn_EditarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EditarCliente.FlatAppearance.BorderSize = 0;
-            this.btn_EditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditarCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_EditarCliente.Location = new System.Drawing.Point(40, 20);
-            this.btn_EditarCliente.Name = "btn_EditarCliente";
-            this.btn_EditarCliente.Size = new System.Drawing.Size(120, 60);
-            this.btn_EditarCliente.TabIndex = 6;
-            this.btn_EditarCliente.Text = "Editar";
-            this.btn_EditarCliente.TextColor = System.Drawing.Color.White;
-            this.btn_EditarCliente.UseVisualStyleBackColor = false;
-            this.btn_EditarCliente.Click += new System.EventHandler(this.btn_EditarCliente_Click);
             // 
             // panel16
             // 
@@ -597,27 +515,6 @@
             this.panelAgregar.Size = new System.Drawing.Size(200, 100);
             this.panelAgregar.TabIndex = 14;
             // 
-            // btn_AgregarClientes
-            // 
-            this.btn_AgregarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarClientes.BorderRadius = 30;
-            this.btn_AgregarClientes.BorderSize = 0;
-            this.btn_AgregarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarClientes.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarClientes.Name = "btn_AgregarClientes";
-            this.btn_AgregarClientes.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarClientes.TabIndex = 5;
-            this.btn_AgregarClientes.Text = "Agregar";
-            this.btn_AgregarClientes.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.UseVisualStyleBackColor = false;
-            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
-            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -657,6 +554,109 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
+            // 
+            // btn_EliminarCliente
+            // 
+            this.btn_EliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarCliente.BorderRadius = 30;
+            this.btn_EliminarCliente.BorderSize = 0;
+            this.btn_EliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarCliente.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarCliente.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarCliente.Name = "btn_EliminarCliente";
+            this.btn_EliminarCliente.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarCliente.TabIndex = 7;
+            this.btn_EliminarCliente.Text = "Eliminar";
+            this.btn_EliminarCliente.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarCliente.UseVisualStyleBackColor = false;
+            this.btn_EliminarCliente.Click += new System.EventHandler(this.btn_EliminarCliente_Click);
+            // 
+            // btn_EditarCliente
+            // 
+            this.btn_EditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EditarCliente.BorderRadius = 30;
+            this.btn_EditarCliente.BorderSize = 0;
+            this.btn_EditarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EditarCliente.FlatAppearance.BorderSize = 0;
+            this.btn_EditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditarCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarCliente.Location = new System.Drawing.Point(40, 20);
+            this.btn_EditarCliente.Name = "btn_EditarCliente";
+            this.btn_EditarCliente.Size = new System.Drawing.Size(120, 60);
+            this.btn_EditarCliente.TabIndex = 6;
+            this.btn_EditarCliente.Text = "Editar";
+            this.btn_EditarCliente.TextColor = System.Drawing.Color.White;
+            this.btn_EditarCliente.UseVisualStyleBackColor = false;
+            this.btn_EditarCliente.Click += new System.EventHandler(this.btn_EditarCliente_Click);
+            // 
+            // btn_AgregarClientes
+            // 
+            this.btn_AgregarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarClientes.BorderRadius = 30;
+            this.btn_AgregarClientes.BorderSize = 0;
+            this.btn_AgregarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarClientes.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarClientes.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarClientes.Name = "btn_AgregarClientes";
+            this.btn_AgregarClientes.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarClientes.TabIndex = 5;
+            this.btn_AgregarClientes.Text = "Agregar";
+            this.btn_AgregarClientes.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarClientes.UseVisualStyleBackColor = false;
+            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
+            // 
+            // btn_ConsultarClientes
+            // 
+            this.btn_ConsultarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarClientes.BorderRadius = 20;
+            this.btn_ConsultarClientes.BorderSize = 0;
+            this.btn_ConsultarClientes.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarClientes.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarClientes.Name = "btn_ConsultarClientes";
+            this.btn_ConsultarClientes.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarClientes.TabIndex = 15;
+            this.btn_ConsultarClientes.Text = "Consultar";
+            this.btn_ConsultarClientes.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarClientes.UseVisualStyleBackColor = false;
+            this.btn_ConsultarClientes.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
+            // 
+            // btn_SalirCliente
+            // 
+            this.btn_SalirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirCliente.BorderRadius = 20;
+            this.btn_SalirCliente.BorderSize = 0;
+            this.btn_SalirCliente.FlatAppearance.BorderSize = 0;
+            this.btn_SalirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirCliente.Location = new System.Drawing.Point(48, 16);
+            this.btn_SalirCliente.Name = "btn_SalirCliente";
+            this.btn_SalirCliente.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirCliente.TabIndex = 16;
+            this.btn_SalirCliente.Text = "Cerrar";
+            this.btn_SalirCliente.TextColor = System.Drawing.Color.White;
+            this.btn_SalirCliente.UseVisualStyleBackColor = false;
+            this.btn_SalirCliente.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
             // 
             // C_Clientes
             // 

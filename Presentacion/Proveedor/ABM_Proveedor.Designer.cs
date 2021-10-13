@@ -209,6 +209,7 @@ namespace Vivero.Presentacion.Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(181)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(479, 470);
             this.Controls.Add(this.cboLocalidad);
             this.Controls.Add(this.cboBarrio);

@@ -171,7 +171,7 @@ namespace Vivero.Presentacion.Plantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(181)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(506, 296);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_RegistrarPlanta);

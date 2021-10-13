@@ -230,6 +230,9 @@
     <EmbeddedResource Include="Presentacion\Catalogos\C_Catalogo.resx">
       <DependentUpon>C_Catalogo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Clientes\ABM_Cliente.resx">
+      <DependentUpon>ABM_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Clientes\C_Clientes.resx">
       <DependentUpon>C_Clientes.cs</DependentUpon>
     </EmbeddedResource>

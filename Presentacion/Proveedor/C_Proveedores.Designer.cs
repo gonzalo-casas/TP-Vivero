@@ -29,9 +29,9 @@ namespace Vivero.Presentacion.Empleados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_IdProveedor = new System.Windows.Forms.TextBox();
             this.txt_NombreProveedor = new System.Windows.Forms.TextBox();
             this.txt_Rs_Proveedor = new System.Windows.Forms.TextBox();
@@ -39,48 +39,48 @@ namespace Vivero.Presentacion.Empleados
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Proveedores = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chk_Activos = new System.Windows.Forms.CheckBox();
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_SalirProveedor = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTituloProveedores = new System.Windows.Forms.Label();
+            this.btn_ConsultarProveedor = new Vivero.Presentacion.BotonRedondeado();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.panelEliminar = new System.Windows.Forms.Panel();
+            this.btn_EliminarProveedor = new Vivero.Presentacion.BotonRedondeado();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panelEditar = new System.Windows.Forms.Panel();
+            this.btn_EditarProveedor = new Vivero.Presentacion.BotonRedondeado();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelAgregar = new System.Windows.Forms.Panel();
+            this.btn_AgregarProveedor = new Vivero.Presentacion.BotonRedondeado();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.colRS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_EliminarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_EditarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_AgregarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_ConsultarProveedor = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirProveedor = new Vivero.Presentacion.BotonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Proveedores)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -151,18 +151,18 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.dgv_Proveedores.AllowUserToAddRows = false;
             this.dgv_Proveedores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Proveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_Proveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Proveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_Proveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Proveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -171,14 +171,14 @@ namespace Vivero.Presentacion.Empleados
             this.colNumCalle,
             this.colTelefono,
             this.colRS});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Proveedores.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Proveedores.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_Proveedores.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Proveedores.Location = new System.Drawing.Point(100, 0);
             this.dgv_Proveedores.Name = "dgv_Proveedores";
@@ -189,6 +189,48 @@ namespace Vivero.Presentacion.Empleados
             this.dgv_Proveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Proveedores.Size = new System.Drawing.Size(807, 242);
             this.dgv_Proveedores.TabIndex = 11;
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colCalle
+            // 
+            this.colCalle.HeaderText = "Calle";
+            this.colCalle.MinimumWidth = 6;
+            this.colCalle.Name = "colCalle";
+            this.colCalle.ReadOnly = true;
+            // 
+            // colNumCalle
+            // 
+            this.colNumCalle.HeaderText = "NumeroCalle";
+            this.colNumCalle.MinimumWidth = 6;
+            this.colNumCalle.Name = "colNumCalle";
+            this.colNumCalle.ReadOnly = true;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.HeaderText = "Telefono";
+            this.colTelefono.MinimumWidth = 6;
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.ReadOnly = true;
+            // 
+            // colRS
+            // 
+            this.colRS.HeaderText = "Razon Social";
+            this.colRS.MinimumWidth = 6;
+            this.colRS.Name = "colRS";
+            this.colRS.ReadOnly = true;
             // 
             // chk_Activos
             // 
@@ -235,6 +277,27 @@ namespace Vivero.Presentacion.Empleados
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 4;
+            // 
+            // btn_SalirProveedor
+            // 
+            this.btn_SalirProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirProveedor.BorderRadius = 20;
+            this.btn_SalirProveedor.BorderSize = 0;
+            this.btn_SalirProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_SalirProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirProveedor.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirProveedor.Name = "btn_SalirProveedor";
+            this.btn_SalirProveedor.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirProveedor.TabIndex = 17;
+            this.btn_SalirProveedor.Text = "Cerrar";
+            this.btn_SalirProveedor.TextColor = System.Drawing.Color.White;
+            this.btn_SalirProveedor.UseVisualStyleBackColor = false;
+            this.btn_SalirProveedor.Click += new System.EventHandler(this.btn_SalirProveedor_Click);
             // 
             // panel7
             // 
@@ -292,11 +355,31 @@ namespace Vivero.Presentacion.Empleados
             this.lblTituloProveedores.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloProveedores.AutoSize = true;
             this.lblTituloProveedores.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloProveedores.Location = new System.Drawing.Point(578, 86);
+            this.lblTituloProveedores.Location = new System.Drawing.Point(672, 55);
             this.lblTituloProveedores.Name = "lblTituloProveedores";
             this.lblTituloProveedores.Size = new System.Drawing.Size(329, 65);
             this.lblTituloProveedores.TabIndex = 17;
             this.lblTituloProveedores.Text = "Proveedores";
+            // 
+            // btn_ConsultarProveedor
+            // 
+            this.btn_ConsultarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarProveedor.BorderRadius = 20;
+            this.btn_ConsultarProveedor.BorderSize = 0;
+            this.btn_ConsultarProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarProveedor.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarProveedor.Name = "btn_ConsultarProveedor";
+            this.btn_ConsultarProveedor.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarProveedor.TabIndex = 16;
+            this.btn_ConsultarProveedor.Text = "Consultar";
+            this.btn_ConsultarProveedor.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarProveedor.UseVisualStyleBackColor = false;
+            this.btn_ConsultarProveedor.Click += new System.EventHandler(this.btn_ConsultarProveedor_Click);
             // 
             // panel24
             // 
@@ -359,6 +442,27 @@ namespace Vivero.Presentacion.Empleados
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
             // 
+            // btn_EliminarProveedor
+            // 
+            this.btn_EliminarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarProveedor.BorderRadius = 30;
+            this.btn_EliminarProveedor.BorderSize = 0;
+            this.btn_EliminarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarProveedor.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarProveedor.Name = "btn_EliminarProveedor";
+            this.btn_EliminarProveedor.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarProveedor.TabIndex = 19;
+            this.btn_EliminarProveedor.Text = "Eliminar";
+            this.btn_EliminarProveedor.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarProveedor.UseVisualStyleBackColor = false;
+            this.btn_EliminarProveedor.Click += new System.EventHandler(this.btn_EliminarProveedor_Click);
+            // 
             // panel20
             // 
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
@@ -403,6 +507,27 @@ namespace Vivero.Presentacion.Empleados
             this.panelEditar.Name = "panelEditar";
             this.panelEditar.Size = new System.Drawing.Size(200, 100);
             this.panelEditar.TabIndex = 15;
+            // 
+            // btn_EditarProveedor
+            // 
+            this.btn_EditarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EditarProveedor.BorderRadius = 30;
+            this.btn_EditarProveedor.BorderSize = 0;
+            this.btn_EditarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EditarProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_EditarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditarProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarProveedor.Location = new System.Drawing.Point(40, 20);
+            this.btn_EditarProveedor.Name = "btn_EditarProveedor";
+            this.btn_EditarProveedor.Size = new System.Drawing.Size(120, 60);
+            this.btn_EditarProveedor.TabIndex = 18;
+            this.btn_EditarProveedor.Text = "Editar";
+            this.btn_EditarProveedor.TextColor = System.Drawing.Color.White;
+            this.btn_EditarProveedor.UseVisualStyleBackColor = false;
+            this.btn_EditarProveedor.Click += new System.EventHandler(this.btn_EditarProveedor_Click);
             // 
             // panel16
             // 
@@ -449,6 +574,27 @@ namespace Vivero.Presentacion.Empleados
             this.panelAgregar.Size = new System.Drawing.Size(200, 100);
             this.panelAgregar.TabIndex = 14;
             // 
+            // btn_AgregarProveedor
+            // 
+            this.btn_AgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarProveedor.BorderRadius = 30;
+            this.btn_AgregarProveedor.BorderSize = 0;
+            this.btn_AgregarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarProveedor.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarProveedor.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarProveedor.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarProveedor.Name = "btn_AgregarProveedor";
+            this.btn_AgregarProveedor.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarProveedor.TabIndex = 17;
+            this.btn_AgregarProveedor.Text = "Agregar";
+            this.btn_AgregarProveedor.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
+            this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
+            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -488,152 +634,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 342);
             this.panel9.TabIndex = 12;
-            // 
-            // colRS
-            // 
-            this.colRS.HeaderText = "Razon Social";
-            this.colRS.MinimumWidth = 6;
-            this.colRS.Name = "colRS";
-            this.colRS.ReadOnly = true;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Telefono";
-            this.colTelefono.MinimumWidth = 6;
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.ReadOnly = true;
-            // 
-            // colNumCalle
-            // 
-            this.colNumCalle.HeaderText = "NumeroCalle";
-            this.colNumCalle.MinimumWidth = 6;
-            this.colNumCalle.Name = "colNumCalle";
-            this.colNumCalle.ReadOnly = true;
-            // 
-            // colCalle
-            // 
-            this.colCalle.HeaderText = "Calle";
-            this.colCalle.MinimumWidth = 6;
-            this.colCalle.Name = "colCalle";
-            this.colCalle.ReadOnly = true;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colID
-            // 
-            this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 6;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            // 
-            // btn_EliminarProveedor
-            // 
-            this.btn_EliminarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarProveedor.BorderRadius = 30;
-            this.btn_EliminarProveedor.BorderSize = 0;
-            this.btn_EliminarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarProveedor.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarProveedor.Name = "btn_EliminarProveedor";
-            this.btn_EliminarProveedor.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarProveedor.TabIndex = 19;
-            this.btn_EliminarProveedor.Text = "Eliminar";
-            this.btn_EliminarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarProveedor.UseVisualStyleBackColor = false;
-            this.btn_EliminarProveedor.Click += new System.EventHandler(this.btn_EliminarProveedor_Click);
-            // 
-            // btn_EditarProveedor
-            // 
-            this.btn_EditarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EditarProveedor.BorderRadius = 30;
-            this.btn_EditarProveedor.BorderSize = 0;
-            this.btn_EditarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EditarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_EditarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_EditarProveedor.Location = new System.Drawing.Point(40, 20);
-            this.btn_EditarProveedor.Name = "btn_EditarProveedor";
-            this.btn_EditarProveedor.Size = new System.Drawing.Size(120, 60);
-            this.btn_EditarProveedor.TabIndex = 18;
-            this.btn_EditarProveedor.Text = "Editar";
-            this.btn_EditarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_EditarProveedor.UseVisualStyleBackColor = false;
-            this.btn_EditarProveedor.Click += new System.EventHandler(this.btn_EditarProveedor_Click);
-            // 
-            // btn_AgregarProveedor
-            // 
-            this.btn_AgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarProveedor.BorderRadius = 30;
-            this.btn_AgregarProveedor.BorderSize = 0;
-            this.btn_AgregarProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarProveedor.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarProveedor.Name = "btn_AgregarProveedor";
-            this.btn_AgregarProveedor.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarProveedor.TabIndex = 17;
-            this.btn_AgregarProveedor.Text = "Agregar";
-            this.btn_AgregarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarProveedor.UseVisualStyleBackColor = false;
-            this.btn_AgregarProveedor.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
-            // 
-            // btn_ConsultarProveedor
-            // 
-            this.btn_ConsultarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarProveedor.BorderRadius = 20;
-            this.btn_ConsultarProveedor.BorderSize = 0;
-            this.btn_ConsultarProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarProveedor.Location = new System.Drawing.Point(366, 116);
-            this.btn_ConsultarProveedor.Name = "btn_ConsultarProveedor";
-            this.btn_ConsultarProveedor.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarProveedor.TabIndex = 16;
-            this.btn_ConsultarProveedor.Text = "Consultar";
-            this.btn_ConsultarProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarProveedor.UseVisualStyleBackColor = false;
-            this.btn_ConsultarProveedor.Click += new System.EventHandler(this.btn_ConsultarProveedor_Click);
-            // 
-            // btn_SalirProveedor
-            // 
-            this.btn_SalirProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirProveedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirProveedor.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirProveedor.BorderRadius = 20;
-            this.btn_SalirProveedor.BorderSize = 0;
-            this.btn_SalirProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirProveedor.FlatAppearance.BorderSize = 0;
-            this.btn_SalirProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirProveedor.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirProveedor.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirProveedor.Name = "btn_SalirProveedor";
-            this.btn_SalirProveedor.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirProveedor.TabIndex = 17;
-            this.btn_SalirProveedor.Text = "Cerrar";
-            this.btn_SalirProveedor.TextColor = System.Drawing.Color.White;
-            this.btn_SalirProveedor.UseVisualStyleBackColor = false;
-            this.btn_SalirProveedor.Click += new System.EventHandler(this.btn_SalirProveedor_Click);
             // 
             // C_Proveedores
             // 

@@ -45,16 +45,16 @@ namespace Vivero.Presentacion.Plantas
             this.lblTituloPlantas = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_SalirPlanta = new Vivero.Presentacion.BotonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_AgregarPlanta = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_EditarPlanta = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_EliminarPlanta = new Vivero.Presentacion.BotonRedondeado();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btn_AgregarPlanta = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_EditarPlanta = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_EliminarPlanta = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirPlanta = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ConsultarPlanta = new Vivero.Presentacion.BotonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_Plantas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -84,7 +84,7 @@ namespace Vivero.Presentacion.Plantas
             this.dvg_Plantas.ReadOnly = true;
             this.dvg_Plantas.RowHeadersVisible = false;
             this.dvg_Plantas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvg_Plantas.Size = new System.Drawing.Size(974, 448);
+            this.dvg_Plantas.Size = new System.Drawing.Size(853, 448);
             this.dvg_Plantas.TabIndex = 21;
             // 
             // Column1
@@ -186,10 +186,10 @@ namespace Vivero.Presentacion.Plantas
             this.lblTituloPlantas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloPlantas.AutoSize = true;
             this.lblTituloPlantas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
-            this.lblTituloPlantas.Font = new System.Drawing.Font("Microsoft Sans Serif", 44F);
-            this.lblTituloPlantas.Location = new System.Drawing.Point(962, 90);
+            this.lblTituloPlantas.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloPlantas.Location = new System.Drawing.Point(989, 56);
             this.lblTituloPlantas.Name = "lblTituloPlantas";
-            this.lblTituloPlantas.Size = new System.Drawing.Size(226, 67);
+            this.lblTituloPlantas.Size = new System.Drawing.Size(212, 65);
             this.lblTituloPlantas.TabIndex = 16;
             this.lblTituloPlantas.Text = "Plantas";
             // 
@@ -199,17 +199,37 @@ namespace Vivero.Presentacion.Plantas
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 719);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1405, 121);
+            this.panel1.Size = new System.Drawing.Size(1284, 121);
             this.panel1.TabIndex = 28;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btn_SalirPlanta);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(1243, 0);
+            this.panel7.Location = new System.Drawing.Point(1122, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(162, 121);
             this.panel7.TabIndex = 21;
+            // 
+            // btn_SalirPlanta
+            // 
+            this.btn_SalirPlanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirPlanta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirPlanta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirPlanta.BorderRadius = 20;
+            this.btn_SalirPlanta.BorderSize = 0;
+            this.btn_SalirPlanta.FlatAppearance.BorderSize = 0;
+            this.btn_SalirPlanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirPlanta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_SalirPlanta.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirPlanta.Location = new System.Drawing.Point(21, 37);
+            this.btn_SalirPlanta.Name = "btn_SalirPlanta";
+            this.btn_SalirPlanta.Size = new System.Drawing.Size(129, 52);
+            this.btn_SalirPlanta.TabIndex = 20;
+            this.btn_SalirPlanta.Text = "Cerrar";
+            this.btn_SalirPlanta.TextColor = System.Drawing.Color.White;
+            this.btn_SalirPlanta.UseVisualStyleBackColor = false;
+            this.btn_SalirPlanta.Click += new System.EventHandler(this.btn_SalirPlanta_Click);
             // 
             // panel2
             // 
@@ -220,7 +240,7 @@ namespace Vivero.Presentacion.Plantas
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1405, 542);
+            this.panel2.Size = new System.Drawing.Size(1284, 542);
             this.panel2.TabIndex = 29;
             // 
             // panel6
@@ -231,48 +251,8 @@ namespace Vivero.Presentacion.Plantas
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(214, 448);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(974, 94);
+            this.panel6.Size = new System.Drawing.Size(853, 94);
             this.panel6.TabIndex = 24;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(214, 542);
-            this.panel5.TabIndex = 23;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1188, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(217, 542);
-            this.panel4.TabIndex = 22;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.lblTituloPlantas);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1405, 177);
-            this.panel3.TabIndex = 30;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.btn_ConsultarPlanta);
-            this.panel8.Controls.Add(this.lbl_IdPlanta);
-            this.panel8.Controls.Add(this.txt_IdPlanta);
-            this.panel8.Controls.Add(this.chk_Activos);
-            this.panel8.Controls.Add(this.chk_Inactivos);
-            this.panel8.Controls.Add(this.txt_NombrePlanta);
-            this.panel8.Controls.Add(this.lbl_NombrePlanta);
-            this.panel8.Location = new System.Drawing.Point(214, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(404, 174);
-            this.panel8.TabIndex = 28;
             // 
             // btn_AgregarPlanta
             // 
@@ -334,25 +314,45 @@ namespace Vivero.Presentacion.Plantas
             this.btn_EliminarPlanta.UseVisualStyleBackColor = false;
             this.btn_EliminarPlanta.Click += new System.EventHandler(this.btn_EliminarPlanta_Click);
             // 
-            // btn_SalirPlanta
+            // panel5
             // 
-            this.btn_SalirPlanta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirPlanta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirPlanta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirPlanta.BorderRadius = 20;
-            this.btn_SalirPlanta.BorderSize = 0;
-            this.btn_SalirPlanta.FlatAppearance.BorderSize = 0;
-            this.btn_SalirPlanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirPlanta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_SalirPlanta.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirPlanta.Location = new System.Drawing.Point(21, 37);
-            this.btn_SalirPlanta.Name = "btn_SalirPlanta";
-            this.btn_SalirPlanta.Size = new System.Drawing.Size(129, 52);
-            this.btn_SalirPlanta.TabIndex = 20;
-            this.btn_SalirPlanta.Text = "Cerrar";
-            this.btn_SalirPlanta.TextColor = System.Drawing.Color.White;
-            this.btn_SalirPlanta.UseVisualStyleBackColor = false;
-            this.btn_SalirPlanta.Click += new System.EventHandler(this.btn_SalirPlanta_Click);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(214, 542);
+            this.panel5.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1067, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(217, 542);
+            this.panel4.TabIndex = 22;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.lblTituloPlantas);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1284, 177);
+            this.panel3.TabIndex = 30;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btn_ConsultarPlanta);
+            this.panel8.Controls.Add(this.lbl_IdPlanta);
+            this.panel8.Controls.Add(this.txt_IdPlanta);
+            this.panel8.Controls.Add(this.chk_Activos);
+            this.panel8.Controls.Add(this.chk_Inactivos);
+            this.panel8.Controls.Add(this.txt_NombrePlanta);
+            this.panel8.Controls.Add(this.lbl_NombrePlanta);
+            this.panel8.Location = new System.Drawing.Point(214, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(404, 174);
+            this.panel8.TabIndex = 28;
             // 
             // btn_ConsultarPlanta
             // 
@@ -379,7 +379,7 @@ namespace Vivero.Presentacion.Plantas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1405, 840);
+            this.ClientSize = new System.Drawing.Size(1284, 840);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
