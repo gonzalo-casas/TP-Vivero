@@ -29,6 +29,7 @@ namespace Vivero
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelCatalogos = new System.Windows.Forms.Panel();
@@ -389,6 +390,7 @@ namespace Vivero
             this.ClientSize = new System.Drawing.Size(1184, 1061);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1200, 650);
             this.Name = "FrmPrincipal";
             this.Text = "Menu Principal";
