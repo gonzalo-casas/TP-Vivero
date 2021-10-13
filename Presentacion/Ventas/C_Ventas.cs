@@ -53,6 +53,7 @@ namespace Vivero.Presentacion.Ventas
         private void Cargar_Grilla(DataTable tabla)
         {
             dgv_Ventas.Rows.Clear();
+            dgv_DetalleFactura.Rows.Clear();
 
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
@@ -67,8 +68,12 @@ namespace Vivero.Presentacion.Ventas
             }
 
             dgv_Ventas.Enabled = true;
-            int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
-            Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
+            if (dgv_Ventas.RowCount > 0)
+            {
+                int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
+                Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
+            }
+            
         }
 
         private void Cargar_GrillaDetalle(DataTable tabla)
@@ -121,7 +126,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void dgv_Ventas_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_Ventas.Enabled)
+            if (dgv_Ventas.Enabled && dgv_Ventas.RowCount > 1)
             {
                 int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
                 Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
