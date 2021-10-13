@@ -44,14 +44,14 @@ namespace Vivero.Presentacion.Ventas
             var fecha = dtpFecha.Checked.Equals(true) ? dtpFecha.Text : "";
 
             var estado = "('0','1')";
-            if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
-            {
-                estado = "('1')";
-            }
-            if (chk_Activos.Checked == false && chk_Inactivos.Checked == true)
-            {
-                estado = "('0')";
-            }
+            //if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
+            //{
+            //    estado = "('1')";
+            //}
+            //if (chk_Activos.Checked == false && chk_Inactivos.Checked == true)
+            //{
+            //    estado = "('0')";
+            //}
 
             Cargar_Grilla(oFactura.BuscarFactura(txt_NroFactura.Text, txt_Documento.Text, txt_Empleado.Text, fecha, estado));
             return;
@@ -61,6 +61,7 @@ namespace Vivero.Presentacion.Ventas
         private void Cargar_Grilla(DataTable tabla)
         {
             dgv_Ventas.Rows.Clear();
+            dgv_DetalleFactura.Rows.Clear();
 
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
@@ -75,8 +76,12 @@ namespace Vivero.Presentacion.Ventas
             }
 
             dgv_Ventas.Enabled = true;
-            int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
-            Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
+            if (dgv_Ventas.RowCount > 0)
+            {
+                int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
+                Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
+            }
+            
         }
 
         private void Cargar_GrillaDetalle(DataTable tabla)
@@ -129,7 +134,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void dgv_Ventas_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_Ventas.Enabled)
+            if (dgv_Ventas.Enabled && dgv_Ventas.RowCount > 1)
             {
                 int filaSeleccionada = dgv_Ventas.CurrentCell.RowIndex;
                 Cargar_GrillaDetalle(oFactura.BuscarDetalle(dgv_Ventas.Rows[filaSeleccionada].Cells[0].Value.ToString(), dgv_Ventas.Rows[filaSeleccionada].Cells[1].Value.ToString()));
