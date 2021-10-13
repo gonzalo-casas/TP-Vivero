@@ -183,7 +183,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos()) {
+            if (ValidarCamposDetalleFactura()) {
                 var codigo = int.Parse(cboItem.SelectedValue.ToString());
                 var nombre = cboItem.Text.ToString();
                 var producto = new Es_Producto();
@@ -240,11 +240,17 @@ namespace Vivero.Presentacion.Ventas
 
 
 
-        public bool ValidarCampos()
+        public bool ValidarCamposDetalleFactura()
         {
+            if (cboItem.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un tipo de Item por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (string.IsNullOrEmpty(txtCantidad.Text) || int.Parse(txtCantidad.Text) <= 0)
             {
-                MessageBox.Show("Ingrese un precio del producto y que sea mayor a 0 por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese un precio del Item y que sea mayor a 0 por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCantidad.BackColor = Color.Red;
                 txtCantidad.Focus();
                 return false;
@@ -252,11 +258,7 @@ namespace Vivero.Presentacion.Ventas
             else
                 txtCantidad.BackColor = Color.White;
 
-            if (cboItem.SelectedIndex.Equals(-1))
-            {
-                MessageBox.Show("Seleccione un tipo de producto por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            
             return true;
         }
 
@@ -267,7 +269,7 @@ namespace Vivero.Presentacion.Ventas
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            if(validarCamposFactura())
 
             try
             {
@@ -300,6 +302,22 @@ namespace Vivero.Presentacion.Ventas
             {
                 MessageBox.Show("Error al registrar la factura! " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private bool validarCamposFactura()
+        {
+            if (cboTipoFactura.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un Tipo de Factura por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (cboCliente.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione un Cliente por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)

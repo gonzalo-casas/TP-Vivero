@@ -44,14 +44,6 @@ namespace Vivero.Presentacion.Ventas
             var fecha = dtpFecha.Checked.Equals(true) ? dtpFecha.Text : "";
 
             var estado = "('0','1')";
-            //if (chk_Activos.Checked == true && chk_Inactivos.Checked == false)
-            //{
-            //    estado = "('1')";
-            //}
-            //if (chk_Activos.Checked == false && chk_Inactivos.Checked == true)
-            //{
-            //    estado = "('0')";
-            //}
 
             Cargar_Grilla(oFactura.BuscarFactura(txt_NroFactura.Text, txt_Documento.Text, txt_Empleado.Text, fecha, estado));
             return;

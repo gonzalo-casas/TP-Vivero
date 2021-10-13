@@ -56,24 +56,21 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.chk_Inactivos = new System.Windows.Forms.CheckBox();
-            this.chk_Activos = new System.Windows.Forms.CheckBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloVentas = new System.Windows.Forms.Label();
             this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.dgv_DetalleFactura = new System.Windows.Forms.DataGridView();
             this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel16 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.panelEliminar = new System.Windows.Forms.Panel();
-            this.btn_EliminarVenta = new Vivero.Presentacion.BotonRedondeado();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -323,8 +320,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.chk_Inactivos);
-            this.panel3.Controls.Add(this.chk_Activos);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloVentas);
@@ -340,30 +335,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1011, 165);
             this.panel3.TabIndex = 16;
-            // 
-            // chk_Inactivos
-            // 
-            this.chk_Inactivos.AutoSize = true;
-            this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(454, 24);
-            this.chk_Inactivos.Name = "chk_Inactivos";
-            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
-            this.chk_Inactivos.TabIndex = 23;
-            this.chk_Inactivos.Text = "Inactivos";
-            this.chk_Inactivos.UseVisualStyleBackColor = true;
-            // 
-            // chk_Activos
-            // 
-            this.chk_Activos.AutoSize = true;
-            this.chk_Activos.Checked = true;
-            this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(361, 24);
-            this.chk_Activos.Name = "chk_Activos";
-            this.chk_Activos.Size = new System.Drawing.Size(79, 24);
-            this.chk_Activos.TabIndex = 22;
-            this.chk_Activos.Text = "Activos";
-            this.chk_Activos.UseVisualStyleBackColor = true;
             // 
             // dtpFecha
             // 
@@ -429,6 +400,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1011, 649);
             this.panel2.TabIndex = 17;
+            // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(100, 214);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(811, 40);
+            this.panel16.TabIndex = 15;
             // 
             // dgv_DetalleFactura
             // 
@@ -502,14 +481,6 @@
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
             // 
-            // panel16
-            // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(100, 214);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(811, 40);
-            this.panel16.TabIndex = 15;
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
@@ -531,7 +502,6 @@
             // 
             // panelEliminar
             // 
-            this.panelEliminar.Controls.Add(this.btn_EliminarVenta);
             this.panelEliminar.Controls.Add(this.panel20);
             this.panelEliminar.Controls.Add(this.panel21);
             this.panelEliminar.Controls.Add(this.panel22);
@@ -541,26 +511,6 @@
             this.panelEliminar.Name = "panelEliminar";
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
-            // 
-            // btn_EliminarVenta
-            // 
-            this.btn_EliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarVenta.BorderRadius = 30;
-            this.btn_EliminarVenta.BorderSize = 0;
-            this.btn_EliminarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarVenta.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarVenta.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarVenta.Name = "btn_EliminarVenta";
-            this.btn_EliminarVenta.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarVenta.TabIndex = 19;
-            this.btn_EliminarVenta.Text = "Eliminar";
-            this.btn_EliminarVenta.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarVenta.UseVisualStyleBackColor = false;
             // 
             // panel20
             // 
@@ -734,14 +684,11 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private BotonRedondeado btn_ConsultarVentas;
-        private BotonRedondeado btn_EliminarVenta;
         private BotonRedondeado btn_AgregarVenta;
         private BotonRedondeado btn_SalirVenta;
         private System.Windows.Forms.Label lblTituloVentas;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chk_Inactivos;
-        private System.Windows.Forms.CheckBox chk_Activos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDocumento;
