@@ -201,7 +201,6 @@ namespace Vivero.Presentacion.Ventas
                 }
 
 
-
                 listaFacturaDetalle.Add(new Es_DetalleFactura(flag)
                 {
                     NroItem = listaFacturaDetalle.Count + 1,
@@ -213,7 +212,6 @@ namespace Vivero.Presentacion.Ventas
 
                 CalcularTotales();
 
-                InicializarDetalle();
             }
 
 
@@ -228,17 +226,6 @@ namespace Vivero.Presentacion.Ventas
             int puntos = (Convert.ToInt32(txtTotal.Text) / 20);
             txtPuntos.Text = puntos.ToString();
         }
-
-        private void InicializarDetalle()
-        {
-            /*cboItem.SelectedIndex = -1*/
-            ;
-            txtCantidad.Text = "";
-            txtPrecio.Text = "";
-            txtImporte.Text = "";
-        }
-
-
 
         public bool ValidarCamposDetalleFactura()
         {

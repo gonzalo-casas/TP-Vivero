@@ -25,18 +25,18 @@ namespace Vivero.Datos.Daos
 
             if (!String.IsNullOrEmpty(nro_factura))
             {
-                consulta += " AND f.Nro_Factura LIKE " + nro_factura;
+                consulta += " AND f.Nro_Factura LIKE '" + nro_factura + "%'";
 
             }
 
             if (!String.IsNullOrEmpty(nro_doc))
             {
-                consulta += " AND f.NroDoc LIKE "  + nro_doc ;
+                consulta += " AND f.NroDoc LIKE '"  + nro_doc + "%'";
             }
 
             if (!String.IsNullOrEmpty(id_empleado))
             {
-                consulta += " AND f.Id_Empleado LIKE " + id_empleado;
+                consulta += " AND f.Id_Empleado LIKE '" + id_empleado + "%'";
             }
             if (!String.IsNullOrEmpty(fecha.ToString()))
             {
