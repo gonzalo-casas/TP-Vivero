@@ -47,6 +47,7 @@
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_SalirCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,32 +57,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNroDoc = new System.Windows.Forms.TextBox();
             this.lblTituloClientes = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.btn_ConsultarClientes = new Vivero.Presentacion.BotonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.panelEliminar = new System.Windows.Forms.Panel();
+            this.btn_EliminarCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panelEditar = new System.Windows.Forms.Panel();
+            this.btn_EditarCliente = new Vivero.Presentacion.BotonRedondeado();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panelAgregar = new System.Windows.Forms.Panel();
+            this.btn_AgregarClientes = new Vivero.Presentacion.BotonRedondeado();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btn_EliminarCliente = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_EditarCliente = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_AgregarClientes = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_ConsultarClientes = new Vivero.Presentacion.BotonRedondeado();
-            this.btn_SalirCliente = new Vivero.Presentacion.BotonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -97,24 +96,24 @@
             // txt_NombreCliente
             // 
             this.txt_NombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreCliente.Location = new System.Drawing.Point(201, 124);
+            this.txt_NombreCliente.Location = new System.Drawing.Point(192, 87);
             this.txt_NombreCliente.Name = "txt_NombreCliente";
-            this.txt_NombreCliente.Size = new System.Drawing.Size(100, 26);
+            this.txt_NombreCliente.Size = new System.Drawing.Size(127, 26);
             this.txt_NombreCliente.TabIndex = 5;
             // 
             // txt_ApellidoCliente
             // 
             this.txt_ApellidoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ApellidoCliente.Location = new System.Drawing.Point(201, 158);
+            this.txt_ApellidoCliente.Location = new System.Drawing.Point(192, 119);
             this.txt_ApellidoCliente.Name = "txt_ApellidoCliente";
-            this.txt_ApellidoCliente.Size = new System.Drawing.Size(100, 26);
+            this.txt_ApellidoCliente.Size = new System.Drawing.Size(127, 26);
             this.txt_ApellidoCliente.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 55);
+            this.label1.Location = new System.Drawing.Point(57, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 20);
             this.label1.TabIndex = 8;
@@ -124,7 +123,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 124);
+            this.label2.Location = new System.Drawing.Point(117, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 9;
@@ -134,7 +133,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 158);
+            this.label3.Location = new System.Drawing.Point(117, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 10;
@@ -180,7 +179,7 @@
             this.dgv_Clientes.RowHeadersWidth = 51;
             this.dgv_Clientes.RowTemplate.Height = 40;
             this.dgv_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Clientes.Size = new System.Drawing.Size(807, 242);
+            this.dgv_Clientes.Size = new System.Drawing.Size(807, 299);
             this.dgv_Clientes.TabIndex = 11;
             // 
             // colID
@@ -231,7 +230,7 @@
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(350, 53);
+            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 12;
@@ -242,7 +241,7 @@
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(443, 53);
+            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 13;
@@ -270,6 +269,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 4;
+            // 
+            // btn_SalirCliente
+            // 
+            this.btn_SalirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirCliente.BorderRadius = 20;
+            this.btn_SalirCliente.BorderSize = 0;
+            this.btn_SalirCliente.FlatAppearance.BorderSize = 0;
+            this.btn_SalirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirCliente.Location = new System.Drawing.Point(48, 16);
+            this.btn_SalirCliente.Name = "btn_SalirCliente";
+            this.btn_SalirCliente.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirCliente.TabIndex = 16;
+            this.btn_SalirCliente.Text = "Cerrar";
+            this.btn_SalirCliente.TextColor = System.Drawing.Color.White;
+            this.btn_SalirCliente.UseVisualStyleBackColor = false;
+            this.btn_SalirCliente.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
             // 
             // panel7
             // 
@@ -310,7 +329,6 @@
             this.panel3.Controls.Add(this.txtNroDoc);
             this.panel3.Controls.Add(this.lblTituloClientes);
             this.panel3.Controls.Add(this.btn_ConsultarClientes);
-            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_NombreCliente);
             this.panel3.Controls.Add(this.chk_Inactivos);
@@ -321,16 +339,17 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 222);
+            this.panel3.Size = new System.Drawing.Size(1007, 165);
             this.panel3.TabIndex = 16;
             // 
             // cboTipoDoc
             // 
+            this.cboTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDoc.FormattingEnabled = true;
-            this.cboTipoDoc.Location = new System.Drawing.Point(201, 55);
+            this.cboTipoDoc.Location = new System.Drawing.Point(192, 22);
             this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoDoc.Name = "cboTipoDoc";
-            this.cboTipoDoc.Size = new System.Drawing.Size(100, 21);
+            this.cboTipoDoc.Size = new System.Drawing.Size(127, 28);
             this.cboTipoDoc.TabIndex = 19;
             this.cboTipoDoc.Click += new System.EventHandler(this.cboTipoDoc_Click);
             // 
@@ -338,7 +357,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 90);
+            this.label4.Location = new System.Drawing.Point(61, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 20);
             this.label4.TabIndex = 18;
@@ -347,9 +366,9 @@
             // txtNroDoc
             // 
             this.txtNroDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNroDoc.Location = new System.Drawing.Point(201, 90);
+            this.txtNroDoc.Location = new System.Drawing.Point(192, 55);
             this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.Size = new System.Drawing.Size(100, 26);
+            this.txtNroDoc.Size = new System.Drawing.Size(127, 26);
             this.txtNroDoc.TabIndex = 17;
             this.txtNroDoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNroDoc_KeyPress);
             // 
@@ -358,19 +377,31 @@
             this.lblTituloClientes.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloClientes.AutoSize = true;
             this.lblTituloClientes.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
-            this.lblTituloClientes.Location = new System.Drawing.Point(712, 56);
+            this.lblTituloClientes.Location = new System.Drawing.Point(749, 28);
             this.lblTituloClientes.Name = "lblTituloClientes";
             this.lblTituloClientes.Size = new System.Drawing.Size(212, 65);
             this.lblTituloClientes.TabIndex = 16;
             this.lblTituloClientes.Text = "Clientes";
             // 
-            // panel24
+            // btn_ConsultarClientes
             // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
+            this.btn_ConsultarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ConsultarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ConsultarClientes.BorderRadius = 20;
+            this.btn_ConsultarClientes.BorderSize = 0;
+            this.btn_ConsultarClientes.FlatAppearance.BorderSize = 0;
+            this.btn_ConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ConsultarClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_ConsultarClientes.Location = new System.Drawing.Point(373, 74);
+            this.btn_ConsultarClientes.Name = "btn_ConsultarClientes";
+            this.btn_ConsultarClientes.Size = new System.Drawing.Size(150, 40);
+            this.btn_ConsultarClientes.TabIndex = 15;
+            this.btn_ConsultarClientes.Text = "Consultar";
+            this.btn_ConsultarClientes.TextColor = System.Drawing.Color.White;
+            this.btn_ConsultarClientes.UseVisualStyleBackColor = false;
+            this.btn_ConsultarClientes.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
             // 
             // panel2
             // 
@@ -379,9 +410,9 @@
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 222);
+            this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 342);
+            this.panel2.Size = new System.Drawing.Size(1007, 399);
             this.panel2.TabIndex = 17;
             // 
             // panel10
@@ -389,14 +420,14 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(907, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 242);
+            this.panel10.Size = new System.Drawing.Size(100, 299);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 242);
+            this.panel11.Location = new System.Drawing.Point(100, 299);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(907, 100);
             this.panel11.TabIndex = 14;
@@ -424,6 +455,27 @@
             this.panelEliminar.Name = "panelEliminar";
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
+            // 
+            // btn_EliminarCliente
+            // 
+            this.btn_EliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EliminarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EliminarCliente.BorderRadius = 30;
+            this.btn_EliminarCliente.BorderSize = 0;
+            this.btn_EliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EliminarCliente.FlatAppearance.BorderSize = 0;
+            this.btn_EliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminarCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarCliente.Location = new System.Drawing.Point(40, 20);
+            this.btn_EliminarCliente.Name = "btn_EliminarCliente";
+            this.btn_EliminarCliente.Size = new System.Drawing.Size(120, 60);
+            this.btn_EliminarCliente.TabIndex = 7;
+            this.btn_EliminarCliente.Text = "Eliminar";
+            this.btn_EliminarCliente.TextColor = System.Drawing.Color.White;
+            this.btn_EliminarCliente.UseVisualStyleBackColor = false;
+            this.btn_EliminarCliente.Click += new System.EventHandler(this.btn_EliminarCliente_Click);
             // 
             // panel20
             // 
@@ -470,6 +522,27 @@
             this.panelEditar.Size = new System.Drawing.Size(200, 100);
             this.panelEditar.TabIndex = 15;
             // 
+            // btn_EditarCliente
+            // 
+            this.btn_EditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_EditarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_EditarCliente.BorderRadius = 30;
+            this.btn_EditarCliente.BorderSize = 0;
+            this.btn_EditarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_EditarCliente.FlatAppearance.BorderSize = 0;
+            this.btn_EditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EditarCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_EditarCliente.Location = new System.Drawing.Point(40, 20);
+            this.btn_EditarCliente.Name = "btn_EditarCliente";
+            this.btn_EditarCliente.Size = new System.Drawing.Size(120, 60);
+            this.btn_EditarCliente.TabIndex = 6;
+            this.btn_EditarCliente.Text = "Editar";
+            this.btn_EditarCliente.TextColor = System.Drawing.Color.White;
+            this.btn_EditarCliente.UseVisualStyleBackColor = false;
+            this.btn_EditarCliente.Click += new System.EventHandler(this.btn_EditarCliente_Click);
+            // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
@@ -515,6 +588,27 @@
             this.panelAgregar.Size = new System.Drawing.Size(200, 100);
             this.panelAgregar.TabIndex = 14;
             // 
+            // btn_AgregarClientes
+            // 
+            this.btn_AgregarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarClientes.BorderRadius = 30;
+            this.btn_AgregarClientes.BorderSize = 0;
+            this.btn_AgregarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarClientes.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarClientes.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarClientes.Name = "btn_AgregarClientes";
+            this.btn_AgregarClientes.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarClientes.TabIndex = 5;
+            this.btn_AgregarClientes.Text = "Agregar";
+            this.btn_AgregarClientes.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarClientes.UseVisualStyleBackColor = false;
+            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
+            // 
             // panel15
             // 
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -552,111 +646,8 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 342);
+            this.panel9.Size = new System.Drawing.Size(100, 399);
             this.panel9.TabIndex = 12;
-            // 
-            // btn_EliminarCliente
-            // 
-            this.btn_EliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EliminarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EliminarCliente.BorderRadius = 30;
-            this.btn_EliminarCliente.BorderSize = 0;
-            this.btn_EliminarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EliminarCliente.FlatAppearance.BorderSize = 0;
-            this.btn_EliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EliminarCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarCliente.Location = new System.Drawing.Point(40, 20);
-            this.btn_EliminarCliente.Name = "btn_EliminarCliente";
-            this.btn_EliminarCliente.Size = new System.Drawing.Size(120, 60);
-            this.btn_EliminarCliente.TabIndex = 7;
-            this.btn_EliminarCliente.Text = "Eliminar";
-            this.btn_EliminarCliente.TextColor = System.Drawing.Color.White;
-            this.btn_EliminarCliente.UseVisualStyleBackColor = false;
-            this.btn_EliminarCliente.Click += new System.EventHandler(this.btn_EliminarCliente_Click);
-            // 
-            // btn_EditarCliente
-            // 
-            this.btn_EditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_EditarCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_EditarCliente.BorderRadius = 30;
-            this.btn_EditarCliente.BorderSize = 0;
-            this.btn_EditarCliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_EditarCliente.FlatAppearance.BorderSize = 0;
-            this.btn_EditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditarCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_EditarCliente.Location = new System.Drawing.Point(40, 20);
-            this.btn_EditarCliente.Name = "btn_EditarCliente";
-            this.btn_EditarCliente.Size = new System.Drawing.Size(120, 60);
-            this.btn_EditarCliente.TabIndex = 6;
-            this.btn_EditarCliente.Text = "Editar";
-            this.btn_EditarCliente.TextColor = System.Drawing.Color.White;
-            this.btn_EditarCliente.UseVisualStyleBackColor = false;
-            this.btn_EditarCliente.Click += new System.EventHandler(this.btn_EditarCliente_Click);
-            // 
-            // btn_AgregarClientes
-            // 
-            this.btn_AgregarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarClientes.BorderRadius = 30;
-            this.btn_AgregarClientes.BorderSize = 0;
-            this.btn_AgregarClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarClientes.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarClientes.Name = "btn_AgregarClientes";
-            this.btn_AgregarClientes.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarClientes.TabIndex = 5;
-            this.btn_AgregarClientes.Text = "Agregar";
-            this.btn_AgregarClientes.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarClientes.UseVisualStyleBackColor = false;
-            this.btn_AgregarClientes.Click += new System.EventHandler(this.btn_AgregarCliente_Click);
-            // 
-            // btn_ConsultarClientes
-            // 
-            this.btn_ConsultarClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ConsultarClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ConsultarClientes.BorderRadius = 20;
-            this.btn_ConsultarClientes.BorderSize = 0;
-            this.btn_ConsultarClientes.FlatAppearance.BorderSize = 0;
-            this.btn_ConsultarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ConsultarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ConsultarClientes.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarClientes.Location = new System.Drawing.Point(366, 116);
-            this.btn_ConsultarClientes.Name = "btn_ConsultarClientes";
-            this.btn_ConsultarClientes.Size = new System.Drawing.Size(150, 40);
-            this.btn_ConsultarClientes.TabIndex = 15;
-            this.btn_ConsultarClientes.Text = "Consultar";
-            this.btn_ConsultarClientes.TextColor = System.Drawing.Color.White;
-            this.btn_ConsultarClientes.UseVisualStyleBackColor = false;
-            this.btn_ConsultarClientes.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
-            // 
-            // btn_SalirCliente
-            // 
-            this.btn_SalirCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirCliente.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirCliente.BorderRadius = 20;
-            this.btn_SalirCliente.BorderSize = 0;
-            this.btn_SalirCliente.FlatAppearance.BorderSize = 0;
-            this.btn_SalirCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirCliente.Location = new System.Drawing.Point(48, 16);
-            this.btn_SalirCliente.Name = "btn_SalirCliente";
-            this.btn_SalirCliente.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirCliente.TabIndex = 16;
-            this.btn_SalirCliente.Text = "Cerrar";
-            this.btn_SalirCliente.TextColor = System.Drawing.Color.White;
-            this.btn_SalirCliente.UseVisualStyleBackColor = false;
-            this.btn_SalirCliente.Click += new System.EventHandler(this.btn_SalirEmpleado_Click);
             // 
             // C_Clientes
             // 
@@ -720,7 +711,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel24;
         private BotonRedondeado btn_ConsultarClientes;
         private BotonRedondeado btn_AgregarClientes;
         private BotonRedondeado btn_SalirCliente;

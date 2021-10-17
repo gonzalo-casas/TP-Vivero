@@ -29,9 +29,9 @@ namespace Vivero.Presentacion.Productos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_CodProducto = new System.Windows.Forms.TextBox();
             this.txt_NombreProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +58,6 @@ namespace Vivero.Presentacion.Productos
             this.numericUpDownPrecioMin = new System.Windows.Forms.NumericUpDown();
             this.lblTituloProductos = new System.Windows.Forms.Label();
             this.btn_ConsultarProducto = new Vivero.Presentacion.BotonRedondeado();
-            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -99,24 +98,24 @@ namespace Vivero.Presentacion.Productos
             // txt_CodProducto
             // 
             this.txt_CodProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CodProducto.Location = new System.Drawing.Point(192, 50);
+            this.txt_CodProducto.Location = new System.Drawing.Point(192, 22);
             this.txt_CodProducto.Name = "txt_CodProducto";
-            this.txt_CodProducto.Size = new System.Drawing.Size(100, 26);
+            this.txt_CodProducto.Size = new System.Drawing.Size(127, 26);
             this.txt_CodProducto.TabIndex = 4;
             // 
             // txt_NombreProducto
             // 
             this.txt_NombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreProducto.Location = new System.Drawing.Point(192, 83);
+            this.txt_NombreProducto.Location = new System.Drawing.Point(192, 54);
             this.txt_NombreProducto.Name = "txt_NombreProducto";
-            this.txt_NombreProducto.Size = new System.Drawing.Size(100, 26);
+            this.txt_NombreProducto.Size = new System.Drawing.Size(127, 26);
             this.txt_NombreProducto.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 53);
+            this.label1.Location = new System.Drawing.Point(123, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 8;
@@ -126,7 +125,7 @@ namespace Vivero.Presentacion.Productos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 86);
+            this.label2.Location = new System.Drawing.Point(117, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 9;
@@ -136,7 +135,7 @@ namespace Vivero.Presentacion.Productos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 116);
+            this.label3.Location = new System.Drawing.Point(81, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 10;
@@ -146,18 +145,18 @@ namespace Vivero.Presentacion.Productos
             // 
             this.dgv_Productos.AllowUserToAddRows = false;
             this.dgv_Productos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Productos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Productos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCod,
@@ -165,14 +164,14 @@ namespace Vivero.Presentacion.Productos
             this.colStock,
             this.colCosto,
             this.colPrecio});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Productos.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Productos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Productos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Productos.Location = new System.Drawing.Point(100, 0);
             this.dgv_Productos.Name = "dgv_Productos";
@@ -181,7 +180,7 @@ namespace Vivero.Presentacion.Productos
             this.dgv_Productos.RowHeadersWidth = 51;
             this.dgv_Productos.RowTemplate.Height = 40;
             this.dgv_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Productos.Size = new System.Drawing.Size(807, 242);
+            this.dgv_Productos.Size = new System.Drawing.Size(807, 299);
             this.dgv_Productos.TabIndex = 11;
             // 
             // colCod
@@ -225,7 +224,7 @@ namespace Vivero.Presentacion.Productos
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(350, 53);
+            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 12;
@@ -236,7 +235,7 @@ namespace Vivero.Presentacion.Productos
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(443, 53);
+            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 13;
@@ -325,7 +324,6 @@ namespace Vivero.Presentacion.Productos
             this.panel3.Controls.Add(this.numericUpDownPrecioMin);
             this.panel3.Controls.Add(this.lblTituloProductos);
             this.panel3.Controls.Add(this.btn_ConsultarProducto);
-            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_CodProducto);
             this.panel3.Controls.Add(this.txt_NombreProducto);
@@ -336,14 +334,14 @@ namespace Vivero.Presentacion.Productos
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 222);
+            this.panel3.Size = new System.Drawing.Size(1007, 165);
             this.panel3.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(85, 149);
+            this.label4.Location = new System.Drawing.Point(85, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 20;
@@ -352,9 +350,9 @@ namespace Vivero.Presentacion.Productos
             // numericUpDownPrecioMax
             // 
             this.numericUpDownPrecioMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownPrecioMax.Location = new System.Drawing.Point(190, 147);
+            this.numericUpDownPrecioMax.Location = new System.Drawing.Point(190, 118);
             this.numericUpDownPrecioMax.Name = "numericUpDownPrecioMax";
-            this.numericUpDownPrecioMax.Size = new System.Drawing.Size(102, 26);
+            this.numericUpDownPrecioMax.Size = new System.Drawing.Size(129, 26);
             this.numericUpDownPrecioMax.TabIndex = 19;
             // 
             // numericUpDownPrecioMin
@@ -365,14 +363,14 @@ namespace Vivero.Presentacion.Productos
             0,
             0,
             0});
-            this.numericUpDownPrecioMin.Location = new System.Drawing.Point(190, 114);
+            this.numericUpDownPrecioMin.Location = new System.Drawing.Point(190, 85);
             this.numericUpDownPrecioMin.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numericUpDownPrecioMin.Name = "numericUpDownPrecioMin";
-            this.numericUpDownPrecioMin.Size = new System.Drawing.Size(102, 26);
+            this.numericUpDownPrecioMin.Size = new System.Drawing.Size(129, 26);
             this.numericUpDownPrecioMin.TabIndex = 18;
             // 
             // lblTituloProductos
@@ -380,7 +378,7 @@ namespace Vivero.Presentacion.Productos
             this.lblTituloProductos.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloProductos.AutoSize = true;
             this.lblTituloProductos.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloProductos.Location = new System.Drawing.Point(690, 55);
+            this.lblTituloProductos.Location = new System.Drawing.Point(690, 26);
             this.lblTituloProductos.Name = "lblTituloProductos";
             this.lblTituloProductos.Size = new System.Drawing.Size(273, 65);
             this.lblTituloProductos.TabIndex = 17;
@@ -397,7 +395,7 @@ namespace Vivero.Presentacion.Productos
             this.btn_ConsultarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarProducto.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarProducto.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarProducto.Location = new System.Drawing.Point(373, 74);
             this.btn_ConsultarProducto.Name = "btn_ConsultarProducto";
             this.btn_ConsultarProducto.Size = new System.Drawing.Size(150, 40);
             this.btn_ConsultarProducto.TabIndex = 16;
@@ -406,14 +404,6 @@ namespace Vivero.Presentacion.Productos
             this.btn_ConsultarProducto.UseVisualStyleBackColor = false;
             this.btn_ConsultarProducto.Click += new System.EventHandler(this.btn_ConsultarProducto_Click);
             // 
-            // panel24
-            // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Productos);
@@ -421,9 +411,9 @@ namespace Vivero.Presentacion.Productos
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 222);
+            this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 342);
+            this.panel2.Size = new System.Drawing.Size(1007, 399);
             this.panel2.TabIndex = 17;
             // 
             // panel10
@@ -431,14 +421,14 @@ namespace Vivero.Presentacion.Productos
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(907, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 242);
+            this.panel10.Size = new System.Drawing.Size(100, 299);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 242);
+            this.panel11.Location = new System.Drawing.Point(100, 299);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(907, 100);
             this.panel11.TabIndex = 14;
@@ -657,7 +647,7 @@ namespace Vivero.Presentacion.Productos
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 342);
+            this.panel9.Size = new System.Drawing.Size(100, 399);
             this.panel9.TabIndex = 12;
             // 
             // C_Productos
@@ -724,7 +714,6 @@ namespace Vivero.Presentacion.Productos
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel24;
         private BotonRedondeado btn_ConsultarProducto;
         private BotonRedondeado btn_EliminarProducto;
         private BotonRedondeado btn_EditarProducto;

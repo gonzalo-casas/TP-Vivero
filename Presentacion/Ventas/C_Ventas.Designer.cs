@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_NroFactura = new System.Windows.Forms.TextBox();
             this.txt_Documento = new System.Windows.Forms.TextBox();
             this.txt_Empleado = new System.Windows.Forms.TextBox();
@@ -56,6 +56,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chk_Inactivos = new System.Windows.Forms.CheckBox();
+            this.chk_Activos = new System.Windows.Forms.CheckBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloVentas = new System.Windows.Forms.Label();
@@ -71,23 +73,21 @@
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.panelEliminar = new System.Windows.Forms.Panel();
+            this.AnularBoton = new Vivero.Presentacion.BotonRedondeado();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panelAgregar = new System.Windows.Forms.Panel();
+            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panelAgregar = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
-            this.panelEliminar = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panelBotones = new System.Windows.Forms.Panel();
-            this.AnularBoton = new Vivero.Presentacion.BotonRedondeado();
-            this.chk_Inactivos = new System.Windows.Forms.CheckBox();
-            this.chk_Activos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -97,9 +97,9 @@
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panelAgregar.SuspendLayout();
-            this.panelEliminar.SuspendLayout();
             this.panelBotones.SuspendLayout();
+            this.panelEliminar.SuspendLayout();
+            this.panelAgregar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_NroFactura
@@ -160,18 +160,18 @@
             // 
             this.dgv_Ventas.AllowUserToAddRows = false;
             this.dgv_Ventas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTipo,
@@ -181,14 +181,14 @@
             this.colEmpleado,
             this.colMonto,
             this.colPuntos});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Ventas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Ventas.Enabled = false;
             this.dgv_Ventas.Location = new System.Drawing.Point(100, 0);
@@ -345,6 +345,30 @@
             this.panel3.Size = new System.Drawing.Size(1011, 165);
             this.panel3.TabIndex = 16;
             // 
+            // chk_Inactivos
+            // 
+            this.chk_Inactivos.AutoSize = true;
+            this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
+            this.chk_Inactivos.Name = "chk_Inactivos";
+            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
+            this.chk_Inactivos.TabIndex = 22;
+            this.chk_Inactivos.Text = "Inactivos";
+            this.chk_Inactivos.UseVisualStyleBackColor = true;
+            // 
+            // chk_Activos
+            // 
+            this.chk_Activos.AutoSize = true;
+            this.chk_Activos.Checked = true;
+            this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
+            this.chk_Activos.Name = "chk_Activos";
+            this.chk_Activos.Size = new System.Drawing.Size(79, 24);
+            this.chk_Activos.TabIndex = 21;
+            this.chk_Activos.Text = "Activos";
+            this.chk_Activos.UseVisualStyleBackColor = true;
+            // 
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -369,10 +393,10 @@
             // 
             this.lblTituloVentas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloVentas.AutoSize = true;
-            this.lblTituloVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 44.25F);
-            this.lblTituloVentas.Location = new System.Drawing.Point(716, 54);
+            this.lblTituloVentas.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloVentas.Location = new System.Drawing.Point(726, 25);
             this.lblTituloVentas.Name = "lblTituloVentas";
-            this.lblTituloVentas.Size = new System.Drawing.Size(260, 67);
+            this.lblTituloVentas.Size = new System.Drawing.Size(240, 65);
             this.lblTituloVentas.TabIndex = 17;
             this.lblTituloVentas.Text = "Facturas";
             // 
@@ -443,18 +467,18 @@
             // 
             this.dgv_DetalleFactura.AllowUserToAddRows = false;
             this.dgv_DetalleFactura.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_DetalleFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_DetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DetalleFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNroItem,
@@ -462,14 +486,14 @@
             this.colNombreItem,
             this.colCantidad,
             this.colPrecio});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_DetalleFactura.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_DetalleFactura.Location = new System.Drawing.Point(100, 254);
             this.dgv_DetalleFactura.Name = "dgv_DetalleFactura";
@@ -520,87 +544,15 @@
             this.panel11.Size = new System.Drawing.Size(811, 100);
             this.panel11.TabIndex = 14;
             // 
-            // panel10
+            // panelBotones
             // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(911, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 649);
-            this.panel10.TabIndex = 13;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 649);
-            this.panel9.TabIndex = 12;
-            // 
-            // panelAgregar
-            // 
-            this.panelAgregar.Controls.Add(this.btn_AgregarVenta);
-            this.panelAgregar.Controls.Add(this.panel15);
-            this.panelAgregar.Controls.Add(this.panel14);
-            this.panelAgregar.Controls.Add(this.panel13);
-            this.panelAgregar.Controls.Add(this.panel12);
-            this.panelAgregar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelAgregar.Location = new System.Drawing.Point(0, 0);
-            this.panelAgregar.Name = "panelAgregar";
-            this.panelAgregar.Size = new System.Drawing.Size(200, 100);
-            this.panelAgregar.TabIndex = 14;
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(40, 100);
-            this.panel12.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(160, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(40, 100);
-            this.panel13.TabIndex = 2;
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(40, 80);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(120, 20);
-            this.panel14.TabIndex = 3;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(40, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(120, 20);
-            this.panel15.TabIndex = 4;
-            // 
-            // btn_AgregarVenta
-            // 
-            this.btn_AgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_AgregarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_AgregarVenta.BorderRadius = 30;
-            this.btn_AgregarVenta.BorderSize = 0;
-            this.btn_AgregarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_AgregarVenta.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarVenta.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarVenta.Location = new System.Drawing.Point(40, 20);
-            this.btn_AgregarVenta.Name = "btn_AgregarVenta";
-            this.btn_AgregarVenta.Size = new System.Drawing.Size(120, 60);
-            this.btn_AgregarVenta.TabIndex = 17;
-            this.btn_AgregarVenta.Text = "Agregar";
-            this.btn_AgregarVenta.TextColor = System.Drawing.Color.White;
-            this.btn_AgregarVenta.UseVisualStyleBackColor = false;
-            this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
+            this.panelBotones.Controls.Add(this.panelEliminar);
+            this.panelBotones.Controls.Add(this.panelAgregar);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(811, 100);
+            this.panelBotones.TabIndex = 15;
             // 
             // panelEliminar
             // 
@@ -614,48 +566,6 @@
             this.panelEliminar.Name = "panelEliminar";
             this.panelEliminar.Size = new System.Drawing.Size(200, 100);
             this.panelEliminar.TabIndex = 16;
-            // 
-            // panel23
-            // 
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(40, 100);
-            this.panel23.TabIndex = 1;
-            // 
-            // panel22
-            // 
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel22.Location = new System.Drawing.Point(160, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(40, 100);
-            this.panel22.TabIndex = 2;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel21.Location = new System.Drawing.Point(40, 80);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(120, 20);
-            this.panel21.TabIndex = 3;
-            // 
-            // panel20
-            // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(40, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(120, 20);
-            this.panel20.TabIndex = 4;
-            // 
-            // panelBotones
-            // 
-            this.panelBotones.Controls.Add(this.panelEliminar);
-            this.panelBotones.Controls.Add(this.panelAgregar);
-            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotones.Location = new System.Drawing.Point(0, 0);
-            this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(811, 100);
-            this.panelBotones.TabIndex = 15;
             // 
             // AnularBoton
             // 
@@ -678,29 +588,119 @@
             this.AnularBoton.UseVisualStyleBackColor = false;
             this.AnularBoton.Click += new System.EventHandler(this.AnularBoton_Click);
             // 
-            // chk_Inactivos
+            // panel20
             // 
-            this.chk_Inactivos.AutoSize = true;
-            this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
-            this.chk_Inactivos.Name = "chk_Inactivos";
-            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
-            this.chk_Inactivos.TabIndex = 22;
-            this.chk_Inactivos.Text = "Inactivos";
-            this.chk_Inactivos.UseVisualStyleBackColor = true;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(40, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(120, 20);
+            this.panel20.TabIndex = 4;
             // 
-            // chk_Activos
+            // panel21
             // 
-            this.chk_Activos.AutoSize = true;
-            this.chk_Activos.Checked = true;
-            this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
-            this.chk_Activos.Name = "chk_Activos";
-            this.chk_Activos.Size = new System.Drawing.Size(79, 24);
-            this.chk_Activos.TabIndex = 21;
-            this.chk_Activos.Text = "Activos";
-            this.chk_Activos.UseVisualStyleBackColor = true;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel21.Location = new System.Drawing.Point(40, 80);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(120, 20);
+            this.panel21.TabIndex = 3;
+            // 
+            // panel22
+            // 
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel22.Location = new System.Drawing.Point(160, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(40, 100);
+            this.panel22.TabIndex = 2;
+            // 
+            // panel23
+            // 
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(40, 100);
+            this.panel23.TabIndex = 1;
+            // 
+            // panelAgregar
+            // 
+            this.panelAgregar.Controls.Add(this.btn_AgregarVenta);
+            this.panelAgregar.Controls.Add(this.panel15);
+            this.panelAgregar.Controls.Add(this.panel14);
+            this.panelAgregar.Controls.Add(this.panel13);
+            this.panelAgregar.Controls.Add(this.panel12);
+            this.panelAgregar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelAgregar.Location = new System.Drawing.Point(0, 0);
+            this.panelAgregar.Name = "panelAgregar";
+            this.panelAgregar.Size = new System.Drawing.Size(200, 100);
+            this.panelAgregar.TabIndex = 14;
+            // 
+            // btn_AgregarVenta
+            // 
+            this.btn_AgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_AgregarVenta.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AgregarVenta.BorderRadius = 30;
+            this.btn_AgregarVenta.BorderSize = 0;
+            this.btn_AgregarVenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AgregarVenta.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarVenta.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.Location = new System.Drawing.Point(40, 20);
+            this.btn_AgregarVenta.Name = "btn_AgregarVenta";
+            this.btn_AgregarVenta.Size = new System.Drawing.Size(120, 60);
+            this.btn_AgregarVenta.TabIndex = 17;
+            this.btn_AgregarVenta.Text = "Agregar";
+            this.btn_AgregarVenta.TextColor = System.Drawing.Color.White;
+            this.btn_AgregarVenta.UseVisualStyleBackColor = false;
+            this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(40, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(120, 20);
+            this.panel15.TabIndex = 4;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(40, 80);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(120, 20);
+            this.panel14.TabIndex = 3;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(160, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(40, 100);
+            this.panel13.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(40, 100);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(911, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(100, 649);
+            this.panel10.TabIndex = 13;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(100, 649);
+            this.panel9.TabIndex = 12;
             // 
             // C_Ventas
             // 
@@ -725,9 +725,9 @@
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panelAgregar.ResumeLayout(false);
-            this.panelEliminar.ResumeLayout(false);
             this.panelBotones.ResumeLayout(false);
+            this.panelEliminar.ResumeLayout(false);
+            this.panelAgregar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

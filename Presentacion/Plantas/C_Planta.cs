@@ -132,5 +132,30 @@ namespace Vivero.Presentacion.Plantas
         {
             this.Close();
         }
+
+        private void txt_IdPlanta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_Activos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_NombrePlanta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk_Inactivos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_NombrePlanta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

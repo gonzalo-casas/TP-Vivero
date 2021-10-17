@@ -771,9 +771,9 @@ namespace Vivero.Presentacion.Empleados
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_IdEmpleado = new System.Windows.Forms.TextBox();
             this.txt_NombreEmpleado = new System.Windows.Forms.TextBox();
             this.txt_ApellidoEmpleado = new System.Windows.Forms.TextBox();
@@ -801,7 +801,6 @@ namespace Vivero.Presentacion.Empleados
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloEmpleados = new System.Windows.Forms.Label();
             this.btn_ConsultarEmpleado = new Vivero.Presentacion.BotonRedondeado();
-            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -840,32 +839,32 @@ namespace Vivero.Presentacion.Empleados
             // txt_IdEmpleado
             // 
             this.txt_IdEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IdEmpleado.Location = new System.Drawing.Point(201, 57);
+            this.txt_IdEmpleado.Location = new System.Drawing.Point(192, 22);
             this.txt_IdEmpleado.Name = "txt_IdEmpleado";
-            this.txt_IdEmpleado.Size = new System.Drawing.Size(100, 26);
+            this.txt_IdEmpleado.Size = new System.Drawing.Size(127, 26);
             this.txt_IdEmpleado.TabIndex = 4;
             // 
             // txt_NombreEmpleado
             // 
             this.txt_NombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NombreEmpleado.Location = new System.Drawing.Point(201, 91);
+            this.txt_NombreEmpleado.Location = new System.Drawing.Point(192, 54);
             this.txt_NombreEmpleado.Name = "txt_NombreEmpleado";
-            this.txt_NombreEmpleado.Size = new System.Drawing.Size(100, 26);
+            this.txt_NombreEmpleado.Size = new System.Drawing.Size(127, 26);
             this.txt_NombreEmpleado.TabIndex = 5;
             // 
             // txt_ApellidoEmpleado
             // 
             this.txt_ApellidoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ApellidoEmpleado.Location = new System.Drawing.Point(201, 125);
+            this.txt_ApellidoEmpleado.Location = new System.Drawing.Point(192, 86);
             this.txt_ApellidoEmpleado.Name = "txt_ApellidoEmpleado";
-            this.txt_ApellidoEmpleado.Size = new System.Drawing.Size(100, 26);
+            this.txt_ApellidoEmpleado.Size = new System.Drawing.Size(127, 26);
             this.txt_ApellidoEmpleado.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 57);
+            this.label1.Location = new System.Drawing.Point(96, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 8;
@@ -875,7 +874,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 91);
+            this.label2.Location = new System.Drawing.Point(117, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 9;
@@ -885,7 +884,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 125);
+            this.label3.Location = new System.Drawing.Point(117, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 10;
@@ -895,18 +894,18 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.dgv_Empleados.AllowUserToAddRows = false;
             this.dgv_Empleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Empleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgv_Empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(206)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(206)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgv_Empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Empleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -915,14 +914,14 @@ namespace Vivero.Presentacion.Empleados
             this.colTelefono,
             this.colCalle,
             this.colNumCalle});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Empleados.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Empleados.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgv_Empleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Empleados.Location = new System.Drawing.Point(100, 0);
             this.dgv_Empleados.Name = "dgv_Empleados";
@@ -931,7 +930,7 @@ namespace Vivero.Presentacion.Empleados
             this.dgv_Empleados.RowHeadersWidth = 51;
             this.dgv_Empleados.RowTemplate.Height = 40;
             this.dgv_Empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Empleados.Size = new System.Drawing.Size(807, 242);
+            this.dgv_Empleados.Size = new System.Drawing.Size(807, 299);
             this.dgv_Empleados.TabIndex = 11;
             // 
             // colID
@@ -982,7 +981,7 @@ namespace Vivero.Presentacion.Empleados
             this.chk_Activos.Checked = true;
             this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Activos.Location = new System.Drawing.Point(350, 53);
+            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
             this.chk_Activos.Name = "chk_Activos";
             this.chk_Activos.Size = new System.Drawing.Size(79, 24);
             this.chk_Activos.TabIndex = 12;
@@ -993,7 +992,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.chk_Inactivos.AutoSize = true;
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_Inactivos.Location = new System.Drawing.Point(443, 53);
+            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
             this.chk_Inactivos.Name = "chk_Inactivos";
             this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
             this.chk_Inactivos.TabIndex = 13;
@@ -1080,7 +1079,6 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloEmpleados);
             this.panel3.Controls.Add(this.btn_ConsultarEmpleado);
-            this.panel3.Controls.Add(this.panel24);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txt_IdEmpleado);
             this.panel3.Controls.Add(this.txt_NombreEmpleado);
@@ -1092,17 +1090,17 @@ namespace Vivero.Presentacion.Empleados
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 222);
+            this.panel3.Size = new System.Drawing.Size(1007, 165);
             this.panel3.TabIndex = 16;
             // 
             // cboPerfil
             // 
             this.cboPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPerfil.FormattingEnabled = true;
-            this.cboPerfil.Location = new System.Drawing.Point(201, 159);
+            this.cboPerfil.Location = new System.Drawing.Point(192, 117);
             this.cboPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.cboPerfil.Name = "cboPerfil";
-            this.cboPerfil.Size = new System.Drawing.Size(100, 24);
+            this.cboPerfil.Size = new System.Drawing.Size(127, 24);
             this.cboPerfil.TabIndex = 18;
             this.cboPerfil.Click += new System.EventHandler(this.cboPerfil_Click);
             // 
@@ -1110,7 +1108,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(136, 159);
+            this.label4.Location = new System.Drawing.Point(139, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 17;
@@ -1121,7 +1119,7 @@ namespace Vivero.Presentacion.Empleados
             this.lblTituloEmpleados.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloEmpleados.AutoSize = true;
             this.lblTituloEmpleados.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
-            this.lblTituloEmpleados.Location = new System.Drawing.Point(672, 55);
+            this.lblTituloEmpleados.Location = new System.Drawing.Point(672, 26);
             this.lblTituloEmpleados.Name = "lblTituloEmpleados";
             this.lblTituloEmpleados.Size = new System.Drawing.Size(296, 65);
             this.lblTituloEmpleados.TabIndex = 16;
@@ -1138,7 +1136,7 @@ namespace Vivero.Presentacion.Empleados
             this.btn_ConsultarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ConsultarEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ConsultarEmpleado.ForeColor = System.Drawing.Color.White;
-            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(366, 116);
+            this.btn_ConsultarEmpleado.Location = new System.Drawing.Point(373, 74);
             this.btn_ConsultarEmpleado.Name = "btn_ConsultarEmpleado";
             this.btn_ConsultarEmpleado.Size = new System.Drawing.Size(150, 40);
             this.btn_ConsultarEmpleado.TabIndex = 15;
@@ -1147,14 +1145,6 @@ namespace Vivero.Presentacion.Empleados
             this.btn_ConsultarEmpleado.UseVisualStyleBackColor = false;
             this.btn_ConsultarEmpleado.Click += new System.EventHandler(this.btn_ConsultarEmpleado_Click);
             // 
-            // panel24
-            // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1007, 50);
-            this.panel24.TabIndex = 14;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgv_Empleados);
@@ -1162,9 +1152,9 @@ namespace Vivero.Presentacion.Empleados
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 222);
+            this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 342);
+            this.panel2.Size = new System.Drawing.Size(1007, 399);
             this.panel2.TabIndex = 17;
             // 
             // panel10
@@ -1172,14 +1162,14 @@ namespace Vivero.Presentacion.Empleados
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(907, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 242);
+            this.panel10.Size = new System.Drawing.Size(100, 299);
             this.panel10.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panelBotones);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(100, 242);
+            this.panel11.Location = new System.Drawing.Point(100, 299);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(907, 100);
             this.panel11.TabIndex = 14;
@@ -1398,7 +1388,7 @@ namespace Vivero.Presentacion.Empleados
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 342);
+            this.panel9.Size = new System.Drawing.Size(100, 399);
             this.panel9.TabIndex = 12;
             // 
             // C_Empleados
@@ -1470,7 +1460,6 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel24;
         private BotonRedondeado btn_ConsultarEmpleado;
         private BotonRedondeado btn_AgregarEmpleado;
         private BotonRedondeado btn_SalirEmpleado;
