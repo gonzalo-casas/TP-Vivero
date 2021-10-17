@@ -39,9 +39,6 @@ namespace Vivero.Datos.Daos
                 consulta += " AND Apellido LIKE " + "'" + Apellido + "%'";
             }
 
-
-
-
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
@@ -114,7 +111,7 @@ namespace Vivero.Datos.Daos
 
         public DataTable traerTodo()
         {
-            string consulta = "SELECT NroDoc, (Apellido + ' ' + Nombre) as FullName FROM CLIENTE WHERE Estado = 1";
+            string consulta = "SELECT NroDoc, (Apellido + ' ' + Nombre) as FullName FROM CLIENTE WHERE Estado = 1 ORDER BY NroDoc ASC";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }

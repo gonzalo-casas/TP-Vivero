@@ -159,11 +159,17 @@ namespace Vivero.Datos.Daos
                     paramDetalle.Add("Nro_Factura", factura.Numero_Factura);
                     paramDetalle.Add("Tipo_Factura", factura.Tipo_Factura.ID);
 
+                    string SQLStock = "UPDATE ";
+                    string CodigoStock = string.Empty;
+
                     if (itemFactura.TipoItem) // si es planta
                     {
                        
                         paramDetalle.Add("Id_Planta", itemFactura.Planta.Codigo);
                         paramDetalle.Add("Id_Producto", DBNull.Value);
+                        SQLStock += "Planta ";
+                        CodigoStock = itemFactura.Planta.Codigo;
+
                     }
 
                        
@@ -171,16 +177,19 @@ namespace Vivero.Datos.Daos
                     {
                         paramDetalle.Add("Id_Producto", itemFactura.Producto.Codigo);
                         paramDetalle.Add("Id_Planta", DBNull.Value);
+                        SQLStock += "Producto ";
+                        CodigoStock = itemFactura.Producto.Codigo.ToString();
                     }
                       
 
                     paramDetalle.Add("Precio", itemFactura.Precio);
                     paramDetalle.Add("Cantidad", itemFactura.Cantidad);
                     paramDetalle.Add("NroItem", itemFactura.NroItem);
-
+                    SQLStock += "SET Stock = Stock - " + itemFactura.Cantidad.ToString() + " WHERE Codigo = " + CodigoStock;
+                    dm.EjecutarSQL(SQLStock);
                     dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
-                }
 
+                }
 
 
                 dm.Commit();

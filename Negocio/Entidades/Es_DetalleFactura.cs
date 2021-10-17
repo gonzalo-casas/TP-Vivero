@@ -15,7 +15,6 @@ namespace Vivero.Negocio.Entidades
         public Es_DetalleFactura(bool flag)
         {
             EsPlanta = flag;
-
         }
 
         public int Tipo_Factura { get; set; }
@@ -23,6 +22,7 @@ namespace Vivero.Negocio.Entidades
         public Es_Planta Planta { get; set; }
         public Es_Producto Producto { get; set; }
         public int NroItem { get; set; }
+        //public int Stock { get; set; }
         public int Cantidad { get; set; }
         public double Precio { get; set; }
         
@@ -110,6 +110,21 @@ namespace Vivero.Negocio.Entidades
                  else
                 {
                    return  false;
+                }
+            }
+        }
+
+        public string Stock
+        {
+            get
+            {
+                if (EsPlanta)
+                {
+                    return Planta.Stock;
+                }
+                else
+                {
+                    return Producto.Stock;
                 }
             }
         }

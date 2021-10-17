@@ -41,6 +41,14 @@ namespace Vivero.Presentacion.Ventas
             this.gbDetalleFactura = new System.Windows.Forms.GroupBox();
             this.btnNueva = new System.Windows.Forms.Button();
             this.dgv_Items = new System.Windows.Forms.DataGridView();
+            this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtImporte = new System.Windows.Forms.TextBox();
@@ -63,15 +71,10 @@ namespace Vivero.Presentacion.Ventas
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblNroDoc = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
             this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
-            this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDetalleFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Items)).BeginInit();
             this.SuspendLayout();
@@ -128,6 +131,8 @@ namespace Vivero.Presentacion.Ventas
             // 
             // gbDetalleFactura
             // 
+            this.gbDetalleFactura.Controls.Add(this.txtStock);
+            this.gbDetalleFactura.Controls.Add(this.label6);
             this.gbDetalleFactura.Controls.Add(this.btnNueva);
             this.gbDetalleFactura.Controls.Add(this.dgv_Items);
             this.gbDetalleFactura.Controls.Add(this.btnEliminar);
@@ -152,7 +157,7 @@ namespace Vivero.Presentacion.Ventas
             this.btnNueva.FlatAppearance.BorderSize = 0;
             this.btnNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNueva.Image = global::Vivero.Properties.Resources.icons8_add_641;
-            this.btnNueva.Location = new System.Drawing.Point(951, 27);
+            this.btnNueva.Location = new System.Drawing.Point(994, 21);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(45, 45);
             this.btnNueva.TabIndex = 20;
@@ -181,6 +186,7 @@ namespace Vivero.Presentacion.Ventas
             this.colCodigo,
             this.colNombre,
             this.colTipo,
+            this.colStock,
             this.colCantidad,
             this.colPrecio,
             this.colImporte});
@@ -202,12 +208,82 @@ namespace Vivero.Presentacion.Ventas
             this.dgv_Items.Size = new System.Drawing.Size(1090, 357);
             this.dgv_Items.TabIndex = 19;
             // 
+            // colNroItem
+            // 
+            this.colNroItem.DataPropertyName = "NroItem";
+            this.colNroItem.FillWeight = 406.0913F;
+            this.colNroItem.HeaderText = "N° Item";
+            this.colNroItem.Name = "colNroItem";
+            this.colNroItem.ReadOnly = true;
+            this.colNroItem.Width = 50;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.DataPropertyName = "Codigo";
+            this.colCodigo.FillWeight = 56.27267F;
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "Nombre";
+            this.colNombre.FillWeight = 56.27267F;
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 300;
+            // 
+            // colTipo
+            // 
+            this.colTipo.DataPropertyName = "Tipo";
+            this.colTipo.FillWeight = 56.27267F;
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.Name = "colTipo";
+            this.colTipo.ReadOnly = true;
+            this.colTipo.Width = 120;
+            // 
+            // colStock
+            // 
+            this.colStock.DataPropertyName = "Stock";
+            this.colStock.HeaderText = "Stock";
+            this.colStock.Name = "colStock";
+            this.colStock.ReadOnly = true;
+            this.colStock.Width = 110;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.DataPropertyName = "Cantidad";
+            this.colCantidad.FillWeight = 56.27267F;
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            this.colCantidad.Width = 107;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.DataPropertyName = "Precio";
+            this.colPrecio.FillWeight = 56.27267F;
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            this.colPrecio.Width = 150;
+            // 
+            // colImporte
+            // 
+            this.colImporte.DataPropertyName = "Importe";
+            this.colImporte.FillWeight = 56.27267F;
+            this.colImporte.HeaderText = "Importe";
+            this.colImporte.Name = "colImporte";
+            this.colImporte.ReadOnly = true;
+            this.colImporte.Width = 150;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::Vivero.Properties.Resources.icons8_cancel_641;
-            this.btnEliminar.Location = new System.Drawing.Point(1060, 27);
+            this.btnEliminar.Location = new System.Drawing.Point(1061, 21);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(45, 45);
             this.btnEliminar.TabIndex = 18;
@@ -219,7 +295,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(523, 31);
+            this.txtPrecio.Location = new System.Drawing.Point(662, 29);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(123, 26);
             this.txtPrecio.TabIndex = 15;
@@ -228,15 +304,15 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.txtImporte.Enabled = false;
             this.txtImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImporte.Location = new System.Drawing.Point(740, 31);
+            this.txtImporte.Location = new System.Drawing.Point(861, 32);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(123, 26);
+            this.txtImporte.Size = new System.Drawing.Size(108, 26);
             this.txtImporte.TabIndex = 14;
             // 
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(381, 32);
+            this.txtCantidad.Location = new System.Drawing.Point(391, 29);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(61, 26);
             this.txtCantidad.TabIndex = 12;
@@ -281,7 +357,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(661, 32);
+            this.label9.Location = new System.Drawing.Point(791, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
             this.label9.TabIndex = 7;
@@ -291,7 +367,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(459, 32);
+            this.label8.Location = new System.Drawing.Point(603, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 20);
             this.label8.TabIndex = 6;
@@ -301,7 +377,7 @@ namespace Vivero.Presentacion.Ventas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(302, 32);
+            this.label7.Location = new System.Drawing.Point(312, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 5;
@@ -417,6 +493,25 @@ namespace Vivero.Presentacion.Ventas
             this.lblNroDoc.TabIndex = 30;
             this.lblNroDoc.Text = "Doc";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(468, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 20);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Stock";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Enabled = false;
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStock.Location = new System.Drawing.Point(524, 29);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(61, 26);
+            this.txtStock.TabIndex = 22;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
@@ -456,67 +551,6 @@ namespace Vivero.Presentacion.Ventas
             this.btnAceptar.TextColor = System.Drawing.Color.White;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // colNroItem
-            // 
-            this.colNroItem.DataPropertyName = "NroItem";
-            this.colNroItem.FillWeight = 406.0913F;
-            this.colNroItem.HeaderText = "N° Item";
-            this.colNroItem.Name = "colNroItem";
-            this.colNroItem.ReadOnly = true;
-            this.colNroItem.Width = 50;
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.DataPropertyName = "Codigo";
-            this.colCodigo.FillWeight = 56.27267F;
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.ReadOnly = true;
-            // 
-            // colNombre
-            // 
-            this.colNombre.DataPropertyName = "Nombre";
-            this.colNombre.FillWeight = 56.27267F;
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            this.colNombre.Width = 367;
-            // 
-            // colTipo
-            // 
-            this.colTipo.DataPropertyName = "Tipo";
-            this.colTipo.FillWeight = 56.27267F;
-            this.colTipo.HeaderText = "Tipo";
-            this.colTipo.Name = "colTipo";
-            this.colTipo.ReadOnly = true;
-            this.colTipo.Width = 170;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.DataPropertyName = "Cantidad";
-            this.colCantidad.FillWeight = 56.27267F;
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.DataPropertyName = "Precio";
-            this.colPrecio.FillWeight = 56.27267F;
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            this.colPrecio.Width = 150;
-            // 
-            // colImporte
-            // 
-            this.colImporte.DataPropertyName = "Importe";
-            this.colImporte.FillWeight = 56.27267F;
-            this.colImporte.HeaderText = "Importe";
-            this.colImporte.Name = "colImporte";
-            this.colImporte.ReadOnly = true;
-            this.colImporte.Width = 150;
             // 
             // ABM_Ventas
             // 
@@ -596,8 +630,11 @@ namespace Vivero.Presentacion.Ventas
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtStock;
     }
 }

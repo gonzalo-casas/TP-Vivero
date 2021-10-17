@@ -15,8 +15,8 @@ namespace Vivero.Negocio.EstructuraNegocio
         public string NombreComun { get; set; }
         public Es_TipoPlanta Tipo { get; set; }
         //public string Tipo { get; set; }
-        public String Precio { get; set; }
-        public String Stock { get; set; }
+        public string Precio { get; set; }
+        public string Stock { get; set; }
         public int Estado { get; set; }
     }
 }
