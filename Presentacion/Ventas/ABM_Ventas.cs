@@ -65,6 +65,7 @@ namespace Vivero.Presentacion.Ventas
             cboCliente.Enabled = true;
             dtpFecha.MaxDate = DateTime.Today;
             dgv_Items.DataSource = listaFacturaDetalle;
+            rbProducto.Checked = true;
 
 
 
@@ -166,9 +167,23 @@ namespace Vivero.Presentacion.Ventas
         {
             if (cboItem.Enabled.Equals(true))
             {
-
-                var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"];
+                object precio;
+                object stock;
+                if (rbProducto.Checked)
+                {
+                    DataTable producto = oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString()));
+                    precio = producto.Rows[0]["Precio"];
+                    stock = producto.Rows[0]["Stock"];
+                }
+                else
+                {
+                    DataTable planta = oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString());
+                    precio = planta.Rows[0]["Precio"];
+                    stock = planta.Rows[0]["Stock"];
+                }
+                //var precio = rbProducto.Checked ? oProductoService.RecuperarPorCod(int.Parse(cboItem.SelectedValue.ToString())).Rows[0]["Precio"] : oPlataService.Recuperar_Planta(cboItem.SelectedValue.ToString()).Rows[0]["Precio"];
                 txtPrecio.Text = precio.ToString();
+                txtStock.Text = stock.ToString();
                 txtCantidad.Enabled = true;
                 txtCantidad.Text = "1";
                 int cantidad = 0;
@@ -194,10 +209,12 @@ namespace Vivero.Presentacion.Ventas
                 {
                     producto.Codigo = codigo;
                     producto.Nombre = nombre;
+                    producto.Stock = txtStock.Text;
                 } else
                 {
                     planta.Codigo = codigo.ToString();
                     planta.NombreComun = nombre;
+                    planta.Stock = txtStock.Text;
                 }
 
 
@@ -280,8 +297,7 @@ namespace Vivero.Presentacion.Ventas
                     oFacturaService.Crear(factura);
 
                     MessageBox.Show(string.Concat("La factura nro: ", factura.Numero_Factura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //InicializarFormulario();
+                    this.Close();
                 }
 
             }
@@ -303,6 +319,19 @@ namespace Vivero.Presentacion.Ventas
             {
                 MessageBox.Show("Seleccione un Cliente por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
+            }
+
+            var listaAgrupada = from i in listaFacturaDetalle
+                                group i by i.Nombre into j
+                                select new { Nombre = j.Key, Cantidad = j.Sum(k => k.Cantidad), Stock = j.First().Stock };
+
+            foreach (var item in listaAgrupada)
+            {
+                if (item.Cantidad > int.Parse(item.Stock))
+                {
+                    MessageBox.Show("La cantidad requerida no esta en stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
             }
             return true;
         }
