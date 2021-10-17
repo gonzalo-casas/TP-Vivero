@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_NroFactura = new System.Windows.Forms.TextBox();
             this.txt_Documento = new System.Windows.Forms.TextBox();
             this.txt_Empleado = new System.Windows.Forms.TextBox();
@@ -62,6 +62,8 @@
             this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.dgv_DetalleFactura = new System.Windows.Forms.DataGridView();
             this.colNroItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,34 +71,35 @@
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panelBotones = new System.Windows.Forms.Panel();
-            this.panelEliminar = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panelAgregar = new System.Windows.Forms.Panel();
-            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.panelAgregar = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.btn_AgregarVenta = new Vivero.Presentacion.BotonRedondeado();
+            this.panelEliminar = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.AnularBoton = new Vivero.Presentacion.BotonRedondeado();
+            this.chk_Inactivos = new System.Windows.Forms.CheckBox();
+            this.chk_Activos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Ventas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panelBotones.SuspendLayout();
-            this.panelEliminar.SuspendLayout();
             this.panelAgregar.SuspendLayout();
-            this.panel17.SuspendLayout();
+            this.panelEliminar.SuspendLayout();
+            this.panelBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_NroFactura
@@ -157,18 +160,18 @@
             // 
             this.dgv_Ventas.AllowUserToAddRows = false;
             this.dgv_Ventas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_Ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_Ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTipo,
@@ -178,14 +181,14 @@
             this.colEmpleado,
             this.colMonto,
             this.colPuntos});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Ventas.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_Ventas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Ventas.Enabled = false;
             this.dgv_Ventas.Location = new System.Drawing.Point(100, 0);
@@ -324,6 +327,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.chk_Inactivos);
+            this.panel3.Controls.Add(this.chk_Activos);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloVentas);
@@ -364,10 +369,10 @@
             // 
             this.lblTituloVentas.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTituloVentas.AutoSize = true;
-            this.lblTituloVentas.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 44.25F);
             this.lblTituloVentas.Location = new System.Drawing.Point(716, 54);
             this.lblTituloVentas.Name = "lblTituloVentas";
-            this.lblTituloVentas.Size = new System.Drawing.Size(240, 65);
+            this.lblTituloVentas.Size = new System.Drawing.Size(260, 67);
             this.lblTituloVentas.TabIndex = 17;
             this.lblTituloVentas.Text = "Facturas";
             // 
@@ -414,22 +419,42 @@
             this.panel16.Size = new System.Drawing.Size(811, 40);
             this.panel16.TabIndex = 15;
             // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.label5);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(378, 40);
+            this.panel17.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(-2, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(227, 31);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Detalle de factura";
+            // 
             // dgv_DetalleFactura
             // 
             this.dgv_DetalleFactura.AllowUserToAddRows = false;
             this.dgv_DetalleFactura.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(239)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            this.dgv_DetalleFactura.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_DetalleFactura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DetalleFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_DetalleFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DetalleFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNroItem,
@@ -437,14 +462,14 @@
             this.colNombreItem,
             this.colCantidad,
             this.colPrecio});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(122)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DetalleFactura.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_DetalleFactura.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_DetalleFactura.Location = new System.Drawing.Point(100, 254);
             this.dgv_DetalleFactura.Name = "dgv_DetalleFactura";
@@ -495,59 +520,21 @@
             this.panel11.Size = new System.Drawing.Size(811, 100);
             this.panel11.TabIndex = 14;
             // 
-            // panelBotones
+            // panel10
             // 
-            this.panelBotones.Controls.Add(this.panelEliminar);
-            this.panelBotones.Controls.Add(this.panelAgregar);
-            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotones.Location = new System.Drawing.Point(0, 0);
-            this.panelBotones.Name = "panelBotones";
-            this.panelBotones.Size = new System.Drawing.Size(811, 100);
-            this.panelBotones.TabIndex = 15;
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(911, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(100, 649);
+            this.panel10.TabIndex = 13;
             // 
-            // panelEliminar
+            // panel9
             // 
-            this.panelEliminar.Controls.Add(this.panel20);
-            this.panelEliminar.Controls.Add(this.panel21);
-            this.panelEliminar.Controls.Add(this.panel22);
-            this.panelEliminar.Controls.Add(this.panel23);
-            this.panelEliminar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelEliminar.Location = new System.Drawing.Point(200, 0);
-            this.panelEliminar.Name = "panelEliminar";
-            this.panelEliminar.Size = new System.Drawing.Size(200, 100);
-            this.panelEliminar.TabIndex = 16;
-            // 
-            // panel20
-            // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(40, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(120, 20);
-            this.panel20.TabIndex = 4;
-            // 
-            // panel21
-            // 
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel21.Location = new System.Drawing.Point(40, 80);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(120, 20);
-            this.panel21.TabIndex = 3;
-            // 
-            // panel22
-            // 
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel22.Location = new System.Drawing.Point(160, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(40, 100);
-            this.panel22.TabIndex = 2;
-            // 
-            // panel23
-            // 
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(40, 100);
-            this.panel23.TabIndex = 1;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(100, 649);
+            this.panel9.TabIndex = 12;
             // 
             // panelAgregar
             // 
@@ -561,6 +548,38 @@
             this.panelAgregar.Name = "panelAgregar";
             this.panelAgregar.Size = new System.Drawing.Size(200, 100);
             this.panelAgregar.TabIndex = 14;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(40, 100);
+            this.panel12.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel13.Location = new System.Drawing.Point(160, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(40, 100);
+            this.panel13.TabIndex = 2;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(40, 80);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(120, 20);
+            this.panel14.TabIndex = 3;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(40, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(120, 20);
+            this.panel15.TabIndex = 4;
             // 
             // btn_AgregarVenta
             // 
@@ -583,73 +602,105 @@
             this.btn_AgregarVenta.UseVisualStyleBackColor = false;
             this.btn_AgregarVenta.Click += new System.EventHandler(this.btn_AgregarProveedor_Click);
             // 
-            // panel15
+            // panelEliminar
             // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(40, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(120, 20);
-            this.panel15.TabIndex = 4;
+            this.panelEliminar.Controls.Add(this.AnularBoton);
+            this.panelEliminar.Controls.Add(this.panel20);
+            this.panelEliminar.Controls.Add(this.panel21);
+            this.panelEliminar.Controls.Add(this.panel22);
+            this.panelEliminar.Controls.Add(this.panel23);
+            this.panelEliminar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelEliminar.Location = new System.Drawing.Point(200, 0);
+            this.panelEliminar.Name = "panelEliminar";
+            this.panelEliminar.Size = new System.Drawing.Size(200, 100);
+            this.panelEliminar.TabIndex = 16;
             // 
-            // panel14
+            // panel23
             // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(40, 80);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(120, 20);
-            this.panel14.TabIndex = 3;
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(40, 100);
+            this.panel23.TabIndex = 1;
             // 
-            // panel13
+            // panel22
             // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel13.Location = new System.Drawing.Point(160, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(40, 100);
-            this.panel13.TabIndex = 2;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel22.Location = new System.Drawing.Point(160, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(40, 100);
+            this.panel22.TabIndex = 2;
             // 
-            // panel12
+            // panel21
             // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(40, 100);
-            this.panel12.TabIndex = 1;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel21.Location = new System.Drawing.Point(40, 80);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(120, 20);
+            this.panel21.TabIndex = 3;
             // 
-            // panel10
+            // panel20
             // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(911, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(100, 649);
-            this.panel10.TabIndex = 13;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(40, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(120, 20);
+            this.panel20.TabIndex = 4;
             // 
-            // panel9
+            // panelBotones
             // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(100, 649);
-            this.panel9.TabIndex = 12;
+            this.panelBotones.Controls.Add(this.panelEliminar);
+            this.panelBotones.Controls.Add(this.panelAgregar);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(811, 100);
+            this.panelBotones.TabIndex = 15;
             // 
-            // label5
+            // AnularBoton
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Berlin Sans FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-2, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 30);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Detalle de factura";
+            this.AnularBoton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.AnularBoton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.AnularBoton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.AnularBoton.BorderRadius = 30;
+            this.AnularBoton.BorderSize = 0;
+            this.AnularBoton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AnularBoton.FlatAppearance.BorderSize = 0;
+            this.AnularBoton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AnularBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnularBoton.ForeColor = System.Drawing.Color.White;
+            this.AnularBoton.Location = new System.Drawing.Point(40, 20);
+            this.AnularBoton.Name = "AnularBoton";
+            this.AnularBoton.Size = new System.Drawing.Size(120, 60);
+            this.AnularBoton.TabIndex = 18;
+            this.AnularBoton.Text = "Anular";
+            this.AnularBoton.TextColor = System.Drawing.Color.White;
+            this.AnularBoton.UseVisualStyleBackColor = false;
+            this.AnularBoton.Click += new System.EventHandler(this.AnularBoton_Click);
             // 
-            // panel17
+            // chk_Inactivos
             // 
-            this.panel17.Controls.Add(this.label5);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(378, 40);
-            this.panel17.TabIndex = 19;
+            this.chk_Inactivos.AutoSize = true;
+            this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
+            this.chk_Inactivos.Name = "chk_Inactivos";
+            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
+            this.chk_Inactivos.TabIndex = 22;
+            this.chk_Inactivos.Text = "Inactivos";
+            this.chk_Inactivos.UseVisualStyleBackColor = true;
+            // 
+            // chk_Activos
+            // 
+            this.chk_Activos.AutoSize = true;
+            this.chk_Activos.Checked = true;
+            this.chk_Activos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Activos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk_Activos.Location = new System.Drawing.Point(373, 21);
+            this.chk_Activos.Name = "chk_Activos";
+            this.chk_Activos.Size = new System.Drawing.Size(79, 24);
+            this.chk_Activos.TabIndex = 21;
+            this.chk_Activos.Text = "Activos";
+            this.chk_Activos.UseVisualStyleBackColor = true;
             // 
             // C_Ventas
             // 
@@ -670,13 +721,13 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panelBotones.ResumeLayout(false);
-            this.panelEliminar.ResumeLayout(false);
-            this.panelAgregar.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DetalleFactura)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panelAgregar.ResumeLayout(false);
+            this.panelEliminar.ResumeLayout(false);
+            this.panelBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -697,22 +748,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panelBotones;
-        private System.Windows.Forms.Panel panelEliminar;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panelAgregar;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private BotonRedondeado btn_ConsultarVentas;
-        private BotonRedondeado btn_AgregarVenta;
         private BotonRedondeado btn_SalirVenta;
         private System.Windows.Forms.Label lblTituloVentas;
         private System.Windows.Forms.DateTimePicker dtpFecha;
@@ -733,5 +772,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Panel panelEliminar;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panelAgregar;
+        private BotonRedondeado btn_AgregarVenta;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private BotonRedondeado AnularBoton;
+        private System.Windows.Forms.CheckBox chk_Inactivos;
+        private System.Windows.Forms.CheckBox chk_Activos;
     }
 }

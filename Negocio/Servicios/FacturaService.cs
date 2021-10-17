@@ -75,10 +75,15 @@ namespace Vivero.Negocio.Servicios
             return dao.Create(factura);
         }
 
+        internal bool Anular(Es_Factura facturaSeleccionada)
+        {
+            return dao.Delete(facturaSeleccionada);
+        }
 
-
-
-
+        internal DataTable RecuperarTipoFactura(string tipoFactura)
+        {
+            return dao.RecuperarTipoFactura(tipoFactura);
+        }
     }
    
 }

@@ -24,7 +24,13 @@ namespace Vivero
         }
         private void pbCerrarSesion_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿Esta seguro de que desea cerrar sesion?", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                Application.ExitThread();
                 Application.Restart();
+            }
+
+               
         }
 
         private void pbSalir_Click(object sender, EventArgs e)

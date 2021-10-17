@@ -17,5 +17,7 @@ namespace Vivero.Negocio.Entidades
         public IList<Es_DetalleFactura> FacturaDetalle { get; set; }
         public double Monto { get; set; }
         public int Puntos { get; set; }
+
+        
     }
 }

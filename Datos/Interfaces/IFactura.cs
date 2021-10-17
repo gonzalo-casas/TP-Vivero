@@ -18,6 +18,7 @@ namespace Vivero.Datos.Interfaces
         DataTable RecuperarEmp(string ID);
         string NuevoId();
         bool Create(Es_Factura factura);
-       
+        bool Delete(Es_Factura facturaSeleccionada);
+        DataTable RecuperarTipoFactura(string tipoFactura);
     }
 }

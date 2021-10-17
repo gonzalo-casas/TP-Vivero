@@ -199,7 +199,27 @@ namespace Vivero.Datos.Daos
             return true;
         }
 
-        
+        public bool Delete(Es_Factura facturaSeleccionada)
+        {
+
+
+            string consulta = "UPDATE Factura " +
+                            "SET Estado= '0'" +
+                            " WHERE Tipo_Factura=" + facturaSeleccionada.Tipo_Factura.ID +
+                            " AND  Nro_Factura=" + facturaSeleccionada.Numero_Factura;
+
+
+            return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
+        }
+
+        public DataTable RecuperarTipoFactura (string tipoFactura)
+        {
+            string sql = "SELECT * FROM Factura f JOIN TipoFactura tp ON (f.Tipo_Factura = tp.ID) WHERE tp.nombre LIKE " + "'" + tipoFactura + "'";
+            return BDHelper.obtenerInstancia().consultar(sql);
+            //ojo capaz aca a la izquierda del ID le falte + "'"
+        }
+
+
     }
 
 
