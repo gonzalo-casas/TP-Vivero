@@ -86,6 +86,7 @@
     <Compile Include="Datos\Interfaces\IProveedor.cs" />
     <Compile Include="Datos\Interfaces\ITipoDoc.cs" />
     <Compile Include="Negocio\Entidades\Es_Barrio.cs" />
+    <Compile Include="Negocio\Entidades\Es_Canje.cs" />
     <Compile Include="Negocio\Entidades\Es_DetalleCatalogo.cs" />
     <Compile Include="Negocio\Entidades\Es_Factura.cs" />
     <Compile Include="Negocio\Entidades\Es_DetalleFactura.cs" />
@@ -106,7 +107,6 @@
     <Compile Include="Negocio\Entidades\Es_Producto.cs" />
     <Compile Include="Negocio\Entidades\Es_Composicion.cs" />
     <Compile Include="Negocio\Entidades\Es_Proveedor.cs" />
-    <Compile Include="Negocio\Entidades\Es_Puntos.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoPlanta.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoProducto.cs" />
     <Compile Include="Negocio\Servicios\EstadoPlantaService.cs" />
@@ -122,6 +122,18 @@
     <Compile Include="Negocio\Servicios\TipoProductoService.cs" />
     <Compile Include="Presentacion\BotonRedondeado.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Canjes\ABM_Canje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Canjes\ABM_Canje.Designer.cs">
+      <DependentUpon>ABM_Canje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Canjes\C_Canjes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Canjes\C_Canjes.Designer.cs">
+      <DependentUpon>C_Canjes.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Catalogos\ABM_Catalogo.cs">
       <SubType>Form</SubType>
@@ -227,6 +239,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Canjes\ABM_Canje.resx">
+      <DependentUpon>ABM_Canje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Canjes\C_Canjes.resx">
+      <DependentUpon>C_Canjes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Catalogos\ABM_Catalogo.resx">
       <DependentUpon>ABM_Catalogo.cs</DependentUpon>
     </EmbeddedResource>
