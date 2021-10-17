@@ -49,12 +49,12 @@ namespace Vivero.Presentacion.Empleados
             this.cboTipoDoc = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtRepetirContrasena = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.cboBarrio = new System.Windows.Forms.ComboBox();
             this.cboLocalidad = new System.Windows.Forms.ComboBox();
             this.cboPerfil = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
+            this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
             this.SuspendLayout();
             // 
             // label3
@@ -223,7 +223,7 @@ namespace Vivero.Presentacion.Empleados
             this.cboTipoDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoDoc.FormattingEnabled = true;
             this.cboTipoDoc.Location = new System.Drawing.Point(205, 171);
-            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoDoc.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoDoc.Name = "cboTipoDoc";
             this.cboTipoDoc.Size = new System.Drawing.Size(100, 28);
             this.cboTipoDoc.TabIndex = 5;
@@ -232,7 +232,7 @@ namespace Vivero.Presentacion.Empleados
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(334, 109);
+            this.label10.Location = new System.Drawing.Point(334, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(152, 20);
             this.label10.TabIndex = 32;
@@ -241,35 +241,11 @@ namespace Vivero.Presentacion.Empleados
             // txtRepetirContrasena
             // 
             this.txtRepetirContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRepetirContrasena.Location = new System.Drawing.Point(502, 106);
+            this.txtRepetirContrasena.Location = new System.Drawing.Point(502, 101);
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
             this.txtRepetirContrasena.PasswordChar = '●';
             this.txtRepetirContrasena.Size = new System.Drawing.Size(100, 26);
             this.txtRepetirContrasena.TabIndex = 4;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(205, 428);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(100, 40);
-            this.btnAceptar.TabIndex = 12;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(403, 428);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 40);
-            this.btnCancelar.TabIndex = 13;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cboBarrio
             // 
@@ -277,7 +253,7 @@ namespace Vivero.Presentacion.Empleados
             this.cboBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBarrio.FormattingEnabled = true;
             this.cboBarrio.Location = new System.Drawing.Point(205, 307);
-            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBarrio.Margin = new System.Windows.Forms.Padding(2);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(100, 28);
             this.cboBarrio.TabIndex = 9;
@@ -288,7 +264,7 @@ namespace Vivero.Presentacion.Empleados
             this.cboLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLocalidad.FormattingEnabled = true;
             this.cboLocalidad.Location = new System.Drawing.Point(205, 343);
-            this.cboLocalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLocalidad.Margin = new System.Windows.Forms.Padding(2);
             this.cboLocalidad.Name = "cboLocalidad";
             this.cboLocalidad.Size = new System.Drawing.Size(100, 28);
             this.cboLocalidad.TabIndex = 10;
@@ -299,7 +275,7 @@ namespace Vivero.Presentacion.Empleados
             this.cboPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPerfil.FormattingEnabled = true;
             this.cboPerfil.Location = new System.Drawing.Point(205, 136);
-            this.cboPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.cboPerfil.Name = "cboPerfil";
             this.cboPerfil.Size = new System.Drawing.Size(100, 28);
             this.cboPerfil.TabIndex = 33;
@@ -314,18 +290,56 @@ namespace Vivero.Presentacion.Empleados
             this.label11.TabIndex = 34;
             this.label11.Text = "Perfil:";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelar.BorderRadius = 25;
+            this.btnCancelar.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(365, 423);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 51);
+            this.btnCancelar.TabIndex = 36;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextColor = System.Drawing.Color.White;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnAceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAceptar.BorderRadius = 25;
+            this.btnAceptar.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(167, 423);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(99, 51);
+            this.btnAceptar.TabIndex = 35;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextColor = System.Drawing.Color.White;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // ABM_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(181)))), ((int)(((byte)(168)))));
-            this.ClientSize = new System.Drawing.Size(706, 507);
+            this.ClientSize = new System.Drawing.Size(644, 507);
             this.Controls.Add(this.cboPerfil);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cboLocalidad);
             this.Controls.Add(this.cboBarrio);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtRepetirContrasena);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cboTipoDoc);
@@ -346,6 +360,8 @@ namespace Vivero.Presentacion.Empleados
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_ApellidoEmpleado);
             this.Controls.Add(this.txt_NombreEmpleado);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnCancelar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -380,11 +396,11 @@ namespace Vivero.Presentacion.Empleados
         private System.Windows.Forms.ComboBox cboTipoDoc;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtRepetirContrasena;
-        private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cboBarrio;
         private System.Windows.Forms.ComboBox cboLocalidad;
         private System.Windows.Forms.ComboBox cboPerfil;
         private System.Windows.Forms.Label label11;
+        private BotonRedondeado btnCancelar;
+        private BotonRedondeado btnAceptar;
     }
 }

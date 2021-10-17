@@ -299,6 +299,7 @@ namespace Vivero.Presentacion.Proveedor
                 //LblIngresoCaracteres.Text = "Solo puedes ingresar numeros";
             }
         }
+
     }
 
 }

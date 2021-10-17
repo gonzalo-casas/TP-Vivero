@@ -60,7 +60,7 @@ namespace Vivero.Presentacion.Plantas
         private void ABM_Planta_Load(object sender, EventArgs e)
         {
             LlenarCombo(cmb_TipoPlanta, oTipoPlantaService.traerTode(), "Nombre", "ID");
-            LlenarCombo(cmb_EstadoPlanta, oEstadoPlantaService.traerTode(), "Descripcion", "ID");    // lleno los combos
+            //LlenarCombo(cmb_EstadoPlanta, oEstadoPlantaService.traerTode(), "Descripcion", "ID");    // lleno los combos
 
             
 
@@ -82,7 +82,7 @@ namespace Vivero.Presentacion.Plantas
                         
                         txt_NCientPlanta.Enabled = true;
                         txt_NomComPlanta.Enabled = true;
-                        cmb_EstadoPlanta.Enabled = true;
+                        //cmb_EstadoPlanta.Enabled = true;
                         cmb_TipoPlanta.Enabled = true;
                         txt_PrecioPlanta.Enabled = true;
                         txt_StockPlanta.Enabled = true;
@@ -98,7 +98,7 @@ namespace Vivero.Presentacion.Plantas
                         
                         txt_NCientPlanta.Enabled = false;
                         txt_NomComPlanta.Enabled = false;
-                        cmb_EstadoPlanta.Enabled = false;
+                        //cmb_EstadoPlanta.Enabled = false;
                         cmb_TipoPlanta.Enabled = false;
                         txt_PrecioPlanta.Enabled = false;
                         txt_StockPlanta.Enabled = false;
@@ -218,7 +218,7 @@ namespace Vivero.Presentacion.Plantas
             tabla = _ep.Recuperar_Planta(idPlanta.ToString());
             txt_NCientPlanta.Text = tabla.Rows[0]["NombreCientifico"].ToString();
             txt_NomComPlanta.Text = tabla.Rows[0]["NombreComun"].ToString();
-            cmb_EstadoPlanta.Text = tabla.Rows[0]["Estado"].ToString();
+            //cmb_EstadoPlanta.Text = tabla.Rows[0]["Estado"].ToString();
             cmb_TipoPlanta.Text = tabla.Rows[0]["Tipo"].ToString();
             txt_PrecioPlanta.Text = tabla.Rows[0]["Precio"].ToString();
             txt_StockPlanta.Text = tabla.Rows[0]["Precio"].ToString();
