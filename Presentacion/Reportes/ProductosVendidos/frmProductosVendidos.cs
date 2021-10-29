@@ -14,11 +14,11 @@ using Vivero.Datos.Daos;
 
 namespace Vivero.Presentacion.Reportes
 {
-    public partial class ReportViewer : Form
+    public partial class frmProductosVendidos : Form
     {
         private readonly IReporte dao;
 
-        public ReportViewer()
+        public frmProductosVendidos()
         {
             InitializeComponent();
              dao = new ReporteDao();
@@ -27,11 +27,9 @@ namespace Vivero.Presentacion.Reportes
 
         
 
-        private void ReportViewer_Load(object sender, EventArgs e)
+        private void frmProductosVendidos_Load(object sender, EventArgs e)
         {
-            //this.productoTableAdapter.Fill(this.dSVentas.Producto);
-        
-            //this.rpvProductos.RefreshReport();
+            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
         }
 
         
@@ -39,13 +37,6 @@ namespace Vivero.Presentacion.Reportes
         {
             if (dtpDesde.Text != "" && dtpHasta.Text != "")
             {
-
-                
-                //rpvProductos.LocalReport.SetParameters(new ReportParameter[]{ new
-                //ReportParameter("FechaDesde", dtpDesde.Text), new ReportParameter("FechaHasta",
-                //dtpHasta.Text) });
-                //DATASOURCE
-
                 rpvProductos.LocalReport.DataSources.Clear();
                 rpvProductos.LocalReport.DataSources.Add(new ReportDataSource("ProductosVendidos", dao.GenerarReporteProductosVendidos(dtpDesde.Text, dtpHasta.Text)));
                 rpvProductos.RefreshReport();

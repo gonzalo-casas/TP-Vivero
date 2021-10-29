@@ -177,7 +177,7 @@ namespace Vivero
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<ReportViewer>();
+            AbrirFormulario<frmReportes>();
             btnReportes.BackColor = Color.FromArgb(205, 241, 231);
         }
     }

@@ -247,11 +247,23 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.cs">
+    <Compile Include="Presentacion\Reportes\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.Designer.cs">
-      <DependentUpon>ReportViewer.cs</DependentUpon>
+    <Compile Include="Presentacion\Reportes\frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.Designer.cs">
+      <DependentUpon>frmProductosVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.Designer.cs">
+      <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ventas\ABM_Ventas.cs">
       <SubType>Form</SubType>
@@ -271,6 +283,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentaEmpleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentaEmpleados.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Presentacion\Canjes\ABM_Canje.resx">
@@ -324,10 +341,17 @@
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.resx">
-      <DependentUpon>ReportViewer.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.resx">
+      <DependentUpon>frmProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\R_Ventas.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.resx">
+      <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\VentaEmpleados\VentaEmpleados.rdlc" />
     <EmbeddedResource Include="Presentacion\Ventas\ABM_Ventas.resx">
       <DependentUpon>ABM_Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +388,17 @@
     </None>
     <None Include="Reportes\ProductosVendidos.xss">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\VentaEmpleados.xsc">
+      <DependentUpon>VentaEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\VentaEmpleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentaEmpleados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\VentaEmpleados.xss">
+      <DependentUpon>VentaEmpleados.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

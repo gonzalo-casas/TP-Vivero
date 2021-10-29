@@ -10,5 +10,7 @@ namespace Vivero.Datos.Interfaces
     interface IReporte
     {
         DataTable GenerarReporteProductosVendidos(string Desde, string Hasta);
+
+        DataTable GenerarReporteVentaEmpleados(string Desde, string Hasta);
     }
 }

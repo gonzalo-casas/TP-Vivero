@@ -1,7 +1,7 @@
 ﻿
 namespace Vivero.Presentacion.Reportes
 {
-    partial class ReportViewer
+    partial class frmVentaEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace Vivero.Presentacion.Reportes
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dSVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVentas = new Vivero.Reportes.DSVentas();
-            this.rpvProductos = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rpvVentaEmpleados = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Generar = new Vivero.Presentacion.BotonRedondeado();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,15 +49,13 @@ namespace Vivero.Presentacion.Reportes
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // productoBindingSource
-            // 
             // 
             // dSVentasBindingSource
             // 
@@ -69,20 +67,22 @@ namespace Vivero.Presentacion.Reportes
             this.dSVentas.DataSetName = "DSVentas";
             this.dSVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // rpvProductos
+            // rpvVentaEmpleados
             // 
-            this.rpvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvVentaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ProductosVendidos";
-            this.rpvProductos.LocalReport.DataSources.Add(reportDataSource1);
-            this.rpvProductos.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.ProductosVendidos.R_Ventas.rdlc";
-            this.rpvProductos.Location = new System.Drawing.Point(100, 126);
-            this.rpvProductos.Name = "rpvProductos";
-            this.rpvProductos.ServerReport.BearerToken = null;
-            this.rpvProductos.Size = new System.Drawing.Size(958, 413);
-            this.rpvProductos.TabIndex = 0;
+            reportDataSource1.Value = null;
+            this.rpvVentaEmpleados.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpvVentaEmpleados.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.VentaEmpleados.VentaEmpleados.rdlc";
+            this.rpvVentaEmpleados.Location = new System.Drawing.Point(100, 126);
+            this.rpvVentaEmpleados.Name = "rpvVentaEmpleados";
+            this.rpvVentaEmpleados.ServerReport.BearerToken = null;
+            this.rpvVentaEmpleados.Size = new System.Drawing.Size(958, 413);
+            this.rpvVentaEmpleados.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_Generar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dtpHasta);
@@ -105,7 +105,7 @@ namespace Vivero.Presentacion.Reportes
             this.btn_Generar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Generar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Generar.ForeColor = System.Drawing.Color.White;
-            this.btn_Generar.Location = new System.Drawing.Point(922, 41);
+            this.btn_Generar.Location = new System.Drawing.Point(924, 75);
             this.btn_Generar.Name = "btn_Generar";
             this.btn_Generar.Size = new System.Drawing.Size(150, 40);
             this.btn_Generar.TabIndex = 17;
@@ -118,7 +118,7 @@ namespace Vivero.Presentacion.Reportes
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(451, 46);
+            this.label1.Location = new System.Drawing.Point(453, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 3;
@@ -126,10 +126,10 @@ namespace Vivero.Presentacion.Reportes
             // 
             // dtpHasta
             // 
-            this.dtpHasta.CustomFormat = "yyyy/MM/dd";
+            this.dtpHasta.CustomFormat = "dd/MM/yyyy";
             this.dtpHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHasta.Location = new System.Drawing.Point(582, 41);
+            this.dtpHasta.Location = new System.Drawing.Point(584, 75);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(199, 26);
             this.dtpHasta.TabIndex = 2;
@@ -138,7 +138,7 @@ namespace Vivero.Presentacion.Reportes
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.Location = new System.Drawing.Point(81, 47);
+            this.lbl.Location = new System.Drawing.Point(83, 81);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(106, 20);
             this.lbl.TabIndex = 1;
@@ -146,10 +146,10 @@ namespace Vivero.Presentacion.Reportes
             // 
             // dtpDesde
             // 
-            this.dtpDesde.CustomFormat = "yyyy/MM/dd";
+            this.dtpDesde.CustomFormat = "dd/MM/yyyy";
             this.dtpDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDesde.Location = new System.Drawing.Point(212, 42);
+            this.dtpDesde.Location = new System.Drawing.Point(214, 76);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(199, 26);
             this.dtpDesde.TabIndex = 0;
@@ -229,9 +229,6 @@ namespace Vivero.Presentacion.Reportes
             this.panel8.Size = new System.Drawing.Size(49, 73);
             this.panel8.TabIndex = 8;
             // 
-            // productoTableAdapter
-            // 
-            // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -248,20 +245,30 @@ namespace Vivero.Presentacion.Reportes
             this.panel9.Size = new System.Drawing.Size(100, 413);
             this.panel9.TabIndex = 4;
             // 
-            // ReportViewer
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(466, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 23);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Venta de los Empleados";
+            // 
+            // frmVentaEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1158, 612);
-            this.Controls.Add(this.rpvProductos);
+            this.Controls.Add(this.rpvVentaEmpleados);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "ReportViewer";
-            this.Text = "ReportViewer";
-            this.Load += new System.EventHandler(this.ReportViewer_Load);
+            this.Name = "frmVentaEmpleados";
+            this.Text = "frmVentaEmpleados";
+            this.Load += new System.EventHandler(this.frmVentaEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -274,7 +281,7 @@ namespace Vivero.Presentacion.Reportes
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer rpvProductos;
+        private Microsoft.Reporting.WinForms.ReportViewer rpvVentaEmpleados;
         private System.Windows.Forms.BindingSource dSVentasBindingSource;
         private Vivero.Reportes.DSVentas dSVentas;
         private System.Windows.Forms.Panel panel1;
@@ -292,5 +299,6 @@ namespace Vivero.Presentacion.Reportes
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label2;
     }
 }
