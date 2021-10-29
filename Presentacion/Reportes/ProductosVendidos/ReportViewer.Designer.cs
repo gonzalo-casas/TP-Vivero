@@ -30,6 +30,7 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVentas = new Vivero.Reportes.DSVentas();
@@ -41,13 +42,15 @@ namespace Vivero.Presentacion.Reportes
             this.lbl = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.productoTableAdapter = new Vivero.Reportes.DSVentasTableAdapters.ProductoTableAdapter();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.productoTableAdapter = new Vivero.Reportes.DSVentasTableAdapters.ProductoTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).BeginInit();
@@ -74,11 +77,14 @@ namespace Vivero.Presentacion.Reportes
             // rpvProductos
             // 
             this.rpvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpvProductos.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.R_Ventas.rdlc";
-            this.rpvProductos.Location = new System.Drawing.Point(0, 126);
+            reportDataSource1.Name = "ProductosVendidos";
+            reportDataSource1.Value = this.productoBindingSource;
+            this.rpvProductos.LocalReport.DataSources.Add(reportDataSource1);
+            this.rpvProductos.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.ProductosVendidos.R_Ventas.rdlc";
+            this.rpvProductos.Location = new System.Drawing.Point(100, 126);
             this.rpvProductos.Name = "rpvProductos";
             this.rpvProductos.ServerReport.BearerToken = null;
-            this.rpvProductos.Size = new System.Drawing.Size(1158, 413);
+            this.rpvProductos.Size = new System.Drawing.Size(958, 413);
             this.rpvProductos.TabIndex = 0;
             // 
             // panel1
@@ -163,10 +169,6 @@ namespace Vivero.Presentacion.Reportes
             this.panel2.Size = new System.Drawing.Size(1158, 73);
             this.panel2.TabIndex = 2;
             // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btn_SalirReporte);
@@ -233,6 +235,26 @@ namespace Vivero.Presentacion.Reportes
             this.panel8.Size = new System.Drawing.Size(49, 73);
             this.panel8.TabIndex = 8;
             // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 126);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 413);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(1058, 126);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(100, 413);
+            this.panel9.TabIndex = 4;
+            // 
             // ReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +262,8 @@ namespace Vivero.Presentacion.Reportes
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1158, 612);
             this.Controls.Add(this.rpvProductos);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ReportViewer";
@@ -276,5 +300,7 @@ namespace Vivero.Presentacion.Reportes
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel9;
     }
 }

@@ -21,8 +21,9 @@ namespace Vivero.Presentacion.Reportes
 
         private void ReportViewer_Load(object sender, EventArgs e)
         {
-
-            this.rpvProductos.RefreshReport();
+            //this.productoTableAdapter.Fill(this.dSVentas.Producto);
+        
+            //this.rpvProductos.RefreshReport();
         }
 
         public DataTable GenerarReporte(string Desde, string Hasta)
@@ -54,8 +55,9 @@ namespace Vivero.Presentacion.Reportes
                 //ReportParameter("FechaDesde", dtpDesde.Text), new ReportParameter("FechaHasta",
                 //dtpHasta.Text) });
                 //DATASOURCE
+
                 rpvProductos.LocalReport.DataSources.Clear();
-                rpvProductos.LocalReport.DataSources.Add(new ReportDataSource("DSProductos",GenerarReporte(dtpDesde.Text, dtpHasta.Text)));
+                rpvProductos.LocalReport.DataSources.Add(new ReportDataSource("ProductosVendidos",GenerarReporte(dtpDesde.Text, dtpHasta.Text)));
                 rpvProductos.RefreshReport();
             }
 

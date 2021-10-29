@@ -245,10 +245,10 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Reportes\ReportViewer.cs">
+    <Compile Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Reportes\ReportViewer.Designer.cs">
+    <Compile Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.Designer.cs">
       <DependentUpon>ReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ventas\ABM_Ventas.cs">
@@ -265,10 +265,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\DSVentas.Designer.cs">
+    <Compile Include="Reportes\ProductosVendidos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DSVentas.xsd</DependentUpon>
+      <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Presentacion\Canjes\ABM_Canje.resx">
@@ -322,10 +322,10 @@
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Reportes\ReportViewer.resx">
+    <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\ReportViewer.resx">
       <DependentUpon>ReportViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Reportes\R_Ventas.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\R_Ventas.rdlc" />
     <EmbeddedResource Include="Presentacion\Ventas\ABM_Ventas.resx">
       <DependentUpon>ABM_Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,16 +352,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reportes\DSVentas.xsc">
-      <DependentUpon>DSVentas.xsd</DependentUpon>
+    <None Include="Reportes\ProductosVendidos.xsc">
+      <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DSVentas.xsd">
+    <None Include="Reportes\ProductosVendidos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSVentas.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProductosVendidos.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\DSVentas.xss">
-      <DependentUpon>DSVentas.xsd</DependentUpon>
+    <None Include="Reportes\ProductosVendidos.xss">
+      <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
