@@ -9,15 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Datos;
+using Vivero.Datos.Interfaces;
+using Vivero.Datos.Daos;
 
 namespace Vivero.Presentacion.Reportes
 {
     public partial class ReportViewer : Form
     {
+        private readonly IReporte dao;
+
         public ReportViewer()
         {
             InitializeComponent();
+             dao = new ReporteDao();
         }
+
+
+        
 
         private void ReportViewer_Load(object sender, EventArgs e)
         {
@@ -26,25 +34,7 @@ namespace Vivero.Presentacion.Reportes
             //this.rpvProductos.RefreshReport();
         }
 
-        public DataTable GenerarReporte(string Desde, string Hasta)
-        {
-            DataManager dm = new DataManager();
-            dm.Open();
-            var parametros = new Dictionary<string, object>();
-            parametros.Add("FechaDesde", Desde);
-            parametros.Add("FechaHasta", Hasta);
-            string sql = @"SELECT p.Codigo, p.Nombre, SUM(df.Cantidad) AS Cantidad
-                        FROM DetalleFactura df
-                        JOIN Factura f ON (df.Nro_Factura = f.Nro_Factura AND df.Tipo_Factura = f.Tipo_Factura)
-                        JOIN Producto p ON (p.Codigo = df.Id_Producto)
-                        WHERE f.Fecha BETWEEN @FechaDesde AND @FechaHasta
-                        GROUP BY p.Codigo, p.Nombre
-                        ORDER BY 3 DESC";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
-            return tabla;
-        }
-
+        
         private void btn_Generar_Click(object sender, EventArgs e)
         {
             if (dtpDesde.Text != "" && dtpHasta.Text != "")
@@ -57,7 +47,7 @@ namespace Vivero.Presentacion.Reportes
                 //DATASOURCE
 
                 rpvProductos.LocalReport.DataSources.Clear();
-                rpvProductos.LocalReport.DataSources.Add(new ReportDataSource("ProductosVendidos",GenerarReporte(dtpDesde.Text, dtpHasta.Text)));
+                rpvProductos.LocalReport.DataSources.Add(new ReportDataSource("ProductosVendidos", dao.GenerarReporteProductosVendidos(dtpDesde.Text, dtpHasta.Text)));
                 rpvProductos.RefreshReport();
             }
 

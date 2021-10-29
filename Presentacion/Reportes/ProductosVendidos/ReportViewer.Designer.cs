@@ -31,7 +31,6 @@ namespace Vivero.Presentacion.Reportes
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVentas = new Vivero.Reportes.DSVentas();
             this.rpvProductos = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -48,10 +47,8 @@ namespace Vivero.Presentacion.Reportes
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.productoTableAdapter = new Vivero.Reportes.DSVentasTableAdapters.ProductoTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,8 +58,6 @@ namespace Vivero.Presentacion.Reportes
             // 
             // productoBindingSource
             // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.dSVentasBindingSource;
             // 
             // dSVentasBindingSource
             // 
@@ -78,7 +73,6 @@ namespace Vivero.Presentacion.Reportes
             // 
             this.rpvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "ProductosVendidos";
-            reportDataSource1.Value = this.productoBindingSource;
             this.rpvProductos.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvProductos.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.ProductosVendidos.R_Ventas.rdlc";
             this.rpvProductos.Location = new System.Drawing.Point(100, 126);
@@ -237,7 +231,6 @@ namespace Vivero.Presentacion.Reportes
             // 
             // productoTableAdapter
             // 
-            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // panel3
             // 
@@ -269,7 +262,6 @@ namespace Vivero.Presentacion.Reportes
             this.Name = "ReportViewer";
             this.Text = "ReportViewer";
             this.Load += new System.EventHandler(this.ReportViewer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -292,8 +284,6 @@ namespace Vivero.Presentacion.Reportes
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.Panel panel2;
         private BotonRedondeado btn_Generar;
-        private System.Windows.Forms.BindingSource productoBindingSource;
-        private Vivero.Reportes.DSVentasTableAdapters.ProductoTableAdapter productoTableAdapter;
         private System.Windows.Forms.Panel panel4;
         private BotonRedondeado btn_SalirReporte;
         private System.Windows.Forms.Panel panel7;

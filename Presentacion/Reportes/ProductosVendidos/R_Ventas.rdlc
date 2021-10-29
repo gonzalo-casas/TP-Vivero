@@ -386,7 +386,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>49778e08-e17f-4330-8cd8-a5f39d1c0dcf</rd:DataSourceID>
+      <rd:DataSourceID>42fb9c07-5d58-45cf-a508-955bcfaced26</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -398,7 +398,7 @@
       <Fields>
         <Field Name="Codigo">
           <DataField>Codigo</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Nombre">
           <DataField>Nombre</DataField>
@@ -406,16 +406,16 @@
         </Field>
         <Field Name="Cantidad">
           <DataField>Cantidad</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DSVentas</rd:DataSetName>
         <rd:SchemaPath>D:\Users\Gonza.DESKTOP-FDOE08G\Documents\2021\PAV1\TP\SOLUCION\Vivero\TP-Vivero\Reportes\ProductosVendidos.xsd</rd:SchemaPath>
-        <rd:TableName>Producto</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ProductoTableAdapter</rd:TableAdapterName>
+        <rd:TableName>ProductosVendidos</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
