@@ -74,5 +74,39 @@ namespace Vivero.Datos.Daos
             return tabla;
         }
 
+        public DataTable GenerarReporteClientesPuntos(string Desde, string Hasta, string localidad)
+        {
+            DataManager dm = new DataManager();
+            dm.Open();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("FechaDesde", Desde);
+            parametros.Add("FechaHasta", Hasta);
+            string sql = @"SELECT td.Descripcion as TipoDoc, f.NroDoc, (cl.Apellido + ' ' + cl.Nombre) as NombreCliente,  (SUM(f.Puntos ) - ISNULL(SUM(dc.Puntos_Necesarios), 0) ) AS PuntosDisponibles
+                            FROM Factura f
+                            FULL OUTER JOIN Canje c ON (f.TipoDoc = c.TipoDoc AND f.NroDoc = c.NroDoc)
+                            LEFT JOIN DetalleCatalogo dc ON (dc.Id_Planta = c.Id_Planta AND dc.ID_Catalogo = c.Id_Catalogo)
+                            LEFT JOIN Cliente  cl ON (f.TipoDoc = cl.TipoDoc AND f.NroDoc = cl.NroDoc)
+                            JOIN TipoDoc td ON (f.TipoDoc = td.ID)
+                            WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)";
+
+            if (localidad != "0")
+            {
+                parametros.Add("Loc", localidad);
+                sql += "AND cl.localidad = @Loc ";
+
+            }
+
+
+
+            sql += @"AND f.NroDoc != 0000000
+                            GROUP BY td.Descripcion, f.NroDoc, cl.Apellido, cl.Nombre
+                            ORDER BY 4 DESC";
+
+
+            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
+            dm.Close();
+            return tabla;
+        }
+
     }
 }

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ClientesPuntos" targetNamespace="http://tempuri.org/ClientesPuntos.xsd" xmlns:mstns="http://tempuri.org/ClientesPuntos.xsd" xmlns="http://tempuri.org/ClientesPuntos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ClientesPuntos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ClientesPuntos" msprop:Generator_UserDSName="ClientesPuntos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClientesPuntos" msprop:Generator_TableClassName="ClientesPuntosDataTable" msprop:Generator_TableVarName="tableClientesPuntos" msprop:Generator_TablePropName="_ClientesPuntos" msprop:Generator_RowDeletingName="ClientesPuntosRowDeleting" msprop:Generator_RowChangingName="ClientesPuntosRowChanging" msprop:Generator_RowEvHandlerName="ClientesPuntosRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesPuntosRowDeleted" msprop:Generator_UserTableName="ClientesPuntos" msprop:Generator_RowChangedName="ClientesPuntosRowChanged" msprop:Generator_RowEvArgName="ClientesPuntosRowChangeEvent" msprop:Generator_RowClassName="ClientesPuntosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="NroDoc" msprop:Generator_ColumnVarNameInTable="columnNroDoc" msprop:Generator_ColumnPropNameInRow="NroDoc" msprop:Generator_ColumnPropNameInTable="NroDocColumn" msprop:Generator_UserColumnName="NroDoc" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCliente" msprop:Generator_ColumnVarNameInTable="columnNombreCliente" msprop:Generator_ColumnPropNameInRow="NombreCliente" msprop:Generator_ColumnPropNameInTable="NombreClienteColumn" msprop:Generator_UserColumnName="NombreCliente" type="xs:string" minOccurs="0" />
+              <xs:element name="PuntosDisponibles" msprop:Generator_ColumnVarNameInTable="columnPuntosDisponibles" msprop:Generator_ColumnPropNameInRow="PuntosDisponibles" msprop:Generator_ColumnPropNameInTable="PuntosDisponiblesColumn" msprop:Generator_UserColumnName="PuntosDisponibles" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
