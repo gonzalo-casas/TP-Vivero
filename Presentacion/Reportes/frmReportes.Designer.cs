@@ -30,20 +30,32 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_VentaEmpleados = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ProductosVendidos = new Vivero.Presentacion.BotonRedondeado();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
             this.panelReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.btn_ComprasClientes);
             this.panelReportes.Controls.Add(this.label1);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReportes.Location = new System.Drawing.Point(0, 0);
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(1151, 646);
             this.panelReportes.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(400, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(351, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione el reporte que desea generar";
             // 
             // btn_VentaEmpleados
             // 
@@ -85,15 +97,25 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ProductosVendidos.UseVisualStyleBackColor = false;
             this.btn_ProductosVendidos.Click += new System.EventHandler(this.btn_ProductosVendidos_Click);
             // 
-            // label1
+            // btn_ComprasClientes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(400, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Seleccione el reporte que desea generar";
+            this.btn_ComprasClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ComprasClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ComprasClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ComprasClientes.BorderRadius = 10;
+            this.btn_ComprasClientes.BorderSize = 0;
+            this.btn_ComprasClientes.FlatAppearance.BorderSize = 0;
+            this.btn_ComprasClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ComprasClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ComprasClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_ComprasClientes.Location = new System.Drawing.Point(900, 508);
+            this.btn_ComprasClientes.Name = "btn_ComprasClientes";
+            this.btn_ComprasClientes.Size = new System.Drawing.Size(200, 100);
+            this.btn_ComprasClientes.TabIndex = 18;
+            this.btn_ComprasClientes.Text = "Compras Clientes";
+            this.btn_ComprasClientes.TextColor = System.Drawing.Color.White;
+            this.btn_ComprasClientes.UseVisualStyleBackColor = false;
+            this.btn_ComprasClientes.Click += new System.EventHandler(this.btn_ComprasClientes_Click);
             // 
             // frmReportes
             // 
@@ -117,5 +139,6 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_VentaEmpleados;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Label label1;
+        private BotonRedondeado btn_ComprasClientes;
     }
 }

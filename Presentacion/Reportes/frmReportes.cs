@@ -57,5 +57,10 @@ namespace Vivero.Presentacion.Reportes
         {
             AbrirFormulario<frmVentaEmpleados>();
         }
+
+        private void btn_ComprasClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmComprasClientes>();
+        }
     }
 }

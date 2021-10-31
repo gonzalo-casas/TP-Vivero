@@ -247,6 +247,12 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.Designer.cs">
+      <DependentUpon>frmComprasClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ComprasClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ProductosVendidos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -341,6 +352,10 @@
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.resx">
+      <DependentUpon>frmComprasClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ComprasClientes\ComprasClientes.rdlc" />
     <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +393,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\ComprasClientes.xsc">
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\ComprasClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComprasClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\ComprasClientes.xss">
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\ProductosVendidos.xsc">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </None>

@@ -47,5 +47,32 @@ namespace Vivero.Datos.Daos
             return tabla;
         }
 
+        public DataTable GenerarReporteComprasClientes(string Desde, string Hasta, string valueCbo)
+        {
+            DataManager dm = new DataManager();
+            dm.Open();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("FechaDesde", Desde);
+            parametros.Add("FechaHasta", Hasta);
+            string sql = @"SELECT (c.Apellido + ' ' + c.Nombre) AS Nombre, c.NroDoc AS Documento, l.Nombre AS Localidad, COUNT(*) AS Compras
+                           FROM Cliente c
+                           JOIN Localidad l ON (l.ID = c.Localidad)
+                           JOIN Factura f ON (f.TipoDoc = c.TipoDoc AND f.NroDoc = c.NroDoc) 
+                           WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103) ";
+            if (valueCbo != "0")
+            {
+                parametros.Add("Loc", valueCbo);
+                sql += "AND l.ID = @Loc ";
+
+            }
+            sql += @"AND c.NroDoc <> '0000000'
+                     GROUP BY c.Nombre, c.Apellido, c.NroDoc, l.Nombre
+                     ORDER BY Compras DESC";
+                           
+            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
+            dm.Close();
+            return tabla;
+        }
+
     }
 }

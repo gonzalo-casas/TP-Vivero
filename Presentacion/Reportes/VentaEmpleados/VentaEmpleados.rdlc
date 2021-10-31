@@ -387,7 +387,8 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Nombre.Value</Value>
+                      <Value>=Fields!Ventas.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <ChartMembers>
