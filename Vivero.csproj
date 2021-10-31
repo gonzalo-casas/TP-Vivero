@@ -279,6 +279,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CatalogosSeleccionados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatalogosSeleccionados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ProductosVendidos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -378,6 +383,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\CatalogosSeleccionados.xsc">
+      <DependentUpon>CatalogosSeleccionados.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\CatalogosSeleccionados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatalogosSeleccionados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\CatalogosSeleccionados.xss">
+      <DependentUpon>CatalogosSeleccionados.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\ProductosVendidos.xsc">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </None>
@@ -408,6 +424,7 @@
     <None Include="Presentacion\Recursos\Iconos\icons8-purchase-64.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Presentacion\Reportes\CatalogosSeleccionados\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
