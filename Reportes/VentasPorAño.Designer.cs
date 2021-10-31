@@ -20,17 +20,17 @@ namespace Vivero.Reportes {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CatalogosSeleccionados")]
+    [global::System.Xml.Serialization.XmlRootAttribute("VentasPorAño")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CatalogosSeleccionados : global::System.Data.DataSet {
+    public partial class VentasPorAño : global::System.Data.DataSet {
         
-        private CatalogosSeleccionadoDataTable tableCatalogosSeleccionado;
+        private VentasPorAñoDataTable tableVentasPorAño;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CatalogosSeleccionados() {
+        public VentasPorAño() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Vivero.Reportes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CatalogosSeleccionados(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected VentasPorAño(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Vivero.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CatalogosSeleccionado"] != null)) {
-                    base.Tables.Add(new CatalogosSeleccionadoDataTable(ds.Tables["CatalogosSeleccionado"]));
+                if ((ds.Tables["VentasPorAño"] != null)) {
+                    base.Tables.Add(new VentasPorAñoDataTable(ds.Tables["VentasPorAño"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Vivero.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CatalogosSeleccionadoDataTable CatalogosSeleccionado {
+        public VentasPorAñoDataTable _VentasPorAño {
             get {
-                return this.tableCatalogosSeleccionado;
+                return this.tableVentasPorAño;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Vivero.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CatalogosSeleccionados cln = ((CatalogosSeleccionados)(base.Clone()));
+            VentasPorAño cln = ((VentasPorAño)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Vivero.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CatalogosSeleccionado"] != null)) {
-                    base.Tables.Add(new CatalogosSeleccionadoDataTable(ds.Tables["CatalogosSeleccionado"]));
+                if ((ds.Tables["VentasPorAño"] != null)) {
+                    base.Tables.Add(new VentasPorAñoDataTable(ds.Tables["VentasPorAño"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Vivero.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCatalogosSeleccionado = ((CatalogosSeleccionadoDataTable)(base.Tables["CatalogosSeleccionado"]));
+            this.tableVentasPorAño = ((VentasPorAñoDataTable)(base.Tables["VentasPorAño"]));
             if ((initTable == true)) {
-                if ((this.tableCatalogosSeleccionado != null)) {
-                    this.tableCatalogosSeleccionado.InitVars();
+                if ((this.tableVentasPorAño != null)) {
+                    this.tableVentasPorAño.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Vivero.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CatalogosSeleccionados";
+            this.DataSetName = "VentasPorAño";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CatalogosSeleccionados.xsd";
+            this.Namespace = "http://tempuri.org/VentasPorAño.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCatalogosSeleccionado = new CatalogosSeleccionadoDataTable();
-            base.Tables.Add(this.tableCatalogosSeleccionado);
+            this.tableVentasPorAño = new VentasPorAñoDataTable();
+            base.Tables.Add(this.tableVentasPorAño);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeCatalogosSeleccionado() {
+        private bool ShouldSerialize_VentasPorAño() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Vivero.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CatalogosSeleccionados ds = new CatalogosSeleccionados();
+            VentasPorAño ds = new VentasPorAño();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,25 @@ namespace Vivero.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void CatalogosSeleccionadoRowChangeEventHandler(object sender, CatalogosSeleccionadoRowChangeEvent e);
+        public delegate void VentasPorAñoRowChangeEventHandler(object sender, VentasPorAñoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CatalogosSeleccionadoDataTable : global::System.Data.TypedTableBase<CatalogosSeleccionadoRow> {
+        public partial class VentasPorAñoDataTable : global::System.Data.TypedTableBase<VentasPorAñoRow> {
             
-            private global::System.Data.DataColumn columnNombre;
-            
-            private global::System.Data.DataColumn columnNombreComun;
-            
-            private global::System.Data.DataColumn columnPrecio;
+            private global::System.Data.DataColumn columnMes;
             
             private global::System.Data.DataColumn columnCantidad;
             
+            private global::System.Data.DataColumn columnMontoDelMes;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoDataTable() {
-                this.TableName = "CatalogosSeleccionado";
+            public VentasPorAñoDataTable() {
+                this.TableName = "VentasPorAño";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +296,7 @@ namespace Vivero.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CatalogosSeleccionadoDataTable(global::System.Data.DataTable table) {
+            internal VentasPorAñoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,32 +313,16 @@ namespace Vivero.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected CatalogosSeleccionadoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected VentasPorAñoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
+            public global::System.Data.DataColumn MesColumn {
                 get {
-                    return this.columnNombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NombreComunColumn {
-                get {
-                    return this.columnNombreComun;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PrecioColumn {
-                get {
-                    return this.columnPrecio;
+                    return this.columnMes;
                 }
             }
             
@@ -349,6 +331,14 @@ namespace Vivero.Reportes {
             public global::System.Data.DataColumn CantidadColumn {
                 get {
                     return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MontoDelMesColumn {
+                get {
+                    return this.columnMontoDelMes;
                 }
             }
             
@@ -363,48 +353,47 @@ namespace Vivero.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoRow this[int index] {
+            public VentasPorAñoRow this[int index] {
                 get {
-                    return ((CatalogosSeleccionadoRow)(this.Rows[index]));
+                    return ((VentasPorAñoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CatalogosSeleccionadoRowChangeEventHandler CatalogosSeleccionadoRowChanging;
+            public event VentasPorAñoRowChangeEventHandler VentasPorAñoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CatalogosSeleccionadoRowChangeEventHandler CatalogosSeleccionadoRowChanged;
+            public event VentasPorAñoRowChangeEventHandler VentasPorAñoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CatalogosSeleccionadoRowChangeEventHandler CatalogosSeleccionadoRowDeleting;
+            public event VentasPorAñoRowChangeEventHandler VentasPorAñoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CatalogosSeleccionadoRowChangeEventHandler CatalogosSeleccionadoRowDeleted;
+            public event VentasPorAñoRowChangeEventHandler VentasPorAñoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddCatalogosSeleccionadoRow(CatalogosSeleccionadoRow row) {
+            public void AddVentasPorAñoRow(VentasPorAñoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoRow AddCatalogosSeleccionadoRow(string Nombre, string NombreComun, string Precio, string Cantidad) {
-                CatalogosSeleccionadoRow rowCatalogosSeleccionadoRow = ((CatalogosSeleccionadoRow)(this.NewRow()));
+            public VentasPorAñoRow AddVentasPorAñoRow(string Mes, string Cantidad, string MontoDelMes) {
+                VentasPorAñoRow rowVentasPorAñoRow = ((VentasPorAñoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Nombre,
-                        NombreComun,
-                        Precio,
-                        Cantidad};
-                rowCatalogosSeleccionadoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCatalogosSeleccionadoRow);
-                return rowCatalogosSeleccionadoRow;
+                        Mes,
+                        Cantidad,
+                        MontoDelMes};
+                rowVentasPorAñoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVentasPorAñoRow);
+                return rowVentasPorAñoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CatalogosSeleccionadoDataTable cln = ((CatalogosSeleccionadoDataTable)(base.Clone()));
+                VentasPorAñoDataTable cln = ((VentasPorAñoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,55 +401,54 @@ namespace Vivero.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CatalogosSeleccionadoDataTable();
+                return new VentasPorAñoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnNombre = base.Columns["Nombre"];
-                this.columnNombreComun = base.Columns["NombreComun"];
-                this.columnPrecio = base.Columns["Precio"];
+                this.columnMes = base.Columns["Mes"];
                 this.columnCantidad = base.Columns["Cantidad"];
+                this.columnMontoDelMes = base.Columns["MontoDelMes"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
-                this.columnNombreComun = new global::System.Data.DataColumn("NombreComun", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombreComun);
-                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrecio);
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
+                this.columnMontoDelMes = new global::System.Data.DataColumn("MontoDelMes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMontoDelMes);
+                this.ExtendedProperties.Add("Generator_TablePropName", "_VentasPorAño");
+                this.ExtendedProperties.Add("Generator_UserTableName", "VentasPorAño");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoRow NewCatalogosSeleccionadoRow() {
-                return ((CatalogosSeleccionadoRow)(this.NewRow()));
+            public VentasPorAñoRow NewVentasPorAñoRow() {
+                return ((VentasPorAñoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CatalogosSeleccionadoRow(builder);
+                return new VentasPorAñoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CatalogosSeleccionadoRow);
+                return typeof(VentasPorAñoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CatalogosSeleccionadoRowChanged != null)) {
-                    this.CatalogosSeleccionadoRowChanged(this, new CatalogosSeleccionadoRowChangeEvent(((CatalogosSeleccionadoRow)(e.Row)), e.Action));
+                if ((this.VentasPorAñoRowChanged != null)) {
+                    this.VentasPorAñoRowChanged(this, new VentasPorAñoRowChangeEvent(((VentasPorAñoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +456,8 @@ namespace Vivero.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CatalogosSeleccionadoRowChanging != null)) {
-                    this.CatalogosSeleccionadoRowChanging(this, new CatalogosSeleccionadoRowChangeEvent(((CatalogosSeleccionadoRow)(e.Row)), e.Action));
+                if ((this.VentasPorAñoRowChanging != null)) {
+                    this.VentasPorAñoRowChanging(this, new VentasPorAñoRowChangeEvent(((VentasPorAñoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +465,8 @@ namespace Vivero.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CatalogosSeleccionadoRowDeleted != null)) {
-                    this.CatalogosSeleccionadoRowDeleted(this, new CatalogosSeleccionadoRowChangeEvent(((CatalogosSeleccionadoRow)(e.Row)), e.Action));
+                if ((this.VentasPorAñoRowDeleted != null)) {
+                    this.VentasPorAñoRowDeleted(this, new VentasPorAñoRowChangeEvent(((VentasPorAñoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +474,14 @@ namespace Vivero.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CatalogosSeleccionadoRowDeleting != null)) {
-                    this.CatalogosSeleccionadoRowDeleting(this, new CatalogosSeleccionadoRowChangeEvent(((CatalogosSeleccionadoRow)(e.Row)), e.Action));
+                if ((this.VentasPorAñoRowDeleting != null)) {
+                    this.VentasPorAñoRowDeleting(this, new VentasPorAñoRowChangeEvent(((VentasPorAñoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveCatalogosSeleccionadoRow(CatalogosSeleccionadoRow row) {
+            public void RemoveVentasPorAñoRow(VentasPorAñoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +490,7 @@ namespace Vivero.Reportes {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CatalogosSeleccionados ds = new CatalogosSeleccionados();
+                VentasPorAño ds = new VentasPorAño();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +508,7 @@ namespace Vivero.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CatalogosSeleccionadoDataTable";
+                attribute2.FixedValue = "VentasPorAñoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,63 +552,30 @@ namespace Vivero.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CatalogosSeleccionadoRow : global::System.Data.DataRow {
+        public partial class VentasPorAñoRow : global::System.Data.DataRow {
             
-            private CatalogosSeleccionadoDataTable tableCatalogosSeleccionado;
+            private VentasPorAñoDataTable tableVentasPorAño;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CatalogosSeleccionadoRow(global::System.Data.DataRowBuilder rb) : 
+            internal VentasPorAñoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCatalogosSeleccionado = ((CatalogosSeleccionadoDataTable)(this.Table));
+                this.tableVentasPorAño = ((VentasPorAñoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nombre {
+            public string Mes {
                 get {
                     try {
-                        return ((string)(this[this.tableCatalogosSeleccionado.NombreColumn]));
+                        return ((string)(this[this.tableVentasPorAño.MesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CatalogosSeleccionado\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'VentasPorAño\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCatalogosSeleccionado.NombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string NombreComun {
-                get {
-                    try {
-                        return ((string)(this[this.tableCatalogosSeleccionado.NombreComunColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NombreComun\' de la tabla \'CatalogosSeleccionado\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableCatalogosSeleccionado.NombreComunColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Precio {
-                get {
-                    try {
-                        return ((string)(this[this.tableCatalogosSeleccionado.PrecioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Precio\' de la tabla \'CatalogosSeleccionado\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCatalogosSeleccionado.PrecioColumn] = value;
+                    this[this.tableVentasPorAño.MesColumn] = value;
                 }
             }
             
@@ -629,63 +584,67 @@ namespace Vivero.Reportes {
             public string Cantidad {
                 get {
                     try {
-                        return ((string)(this[this.tableCatalogosSeleccionado.CantidadColumn]));
+                        return ((string)(this[this.tableVentasPorAño.CantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'CatalogosSeleccionado\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cantidad\' de la tabla \'VentasPorAño\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCatalogosSeleccionado.CantidadColumn] = value;
+                    this[this.tableVentasPorAño.CantidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNombreNull() {
-                return this.IsNull(this.tableCatalogosSeleccionado.NombreColumn);
+            public string MontoDelMes {
+                get {
+                    try {
+                        return ((string)(this[this.tableVentasPorAño.MontoDelMesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MontoDelMes\' de la tabla \'VentasPorAño\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVentasPorAño.MontoDelMesColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNombreNull() {
-                this[this.tableCatalogosSeleccionado.NombreColumn] = global::System.Convert.DBNull;
+            public bool IsMesNull() {
+                return this.IsNull(this.tableVentasPorAño.MesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNombreComunNull() {
-                return this.IsNull(this.tableCatalogosSeleccionado.NombreComunColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNombreComunNull() {
-                this[this.tableCatalogosSeleccionado.NombreComunColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPrecioNull() {
-                return this.IsNull(this.tableCatalogosSeleccionado.PrecioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPrecioNull() {
-                this[this.tableCatalogosSeleccionado.PrecioColumn] = global::System.Convert.DBNull;
+            public void SetMesNull() {
+                this[this.tableVentasPorAño.MesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCantidadNull() {
-                return this.IsNull(this.tableCatalogosSeleccionado.CantidadColumn);
+                return this.IsNull(this.tableVentasPorAño.CantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCantidadNull() {
-                this[this.tableCatalogosSeleccionado.CantidadColumn] = global::System.Convert.DBNull;
+                this[this.tableVentasPorAño.CantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMontoDelMesNull() {
+                return this.IsNull(this.tableVentasPorAño.MontoDelMesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMontoDelMesNull() {
+                this[this.tableVentasPorAño.MontoDelMesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -693,22 +652,22 @@ namespace Vivero.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class CatalogosSeleccionadoRowChangeEvent : global::System.EventArgs {
+        public class VentasPorAñoRowChangeEvent : global::System.EventArgs {
             
-            private CatalogosSeleccionadoRow eventRow;
+            private VentasPorAñoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoRowChangeEvent(CatalogosSeleccionadoRow row, global::System.Data.DataRowAction action) {
+            public VentasPorAñoRowChangeEvent(VentasPorAñoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CatalogosSeleccionadoRow Row {
+            public VentasPorAñoRow Row {
                 get {
                     return this.eventRow;
                 }

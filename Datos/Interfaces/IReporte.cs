@@ -12,5 +12,9 @@ namespace Vivero.Datos.Interfaces
         DataTable GenerarReporteProductosVendidos(string Desde, string Hasta);
 
         DataTable GenerarReporteVentaEmpleados(string Desde, string Hasta);
+
+        DataTable GenerarReporteCatalogosSeleccionados(string Desde, string Hasta);
+
+        DataTable GenerarReporteVentasPorAño(string Año);
     }
 }

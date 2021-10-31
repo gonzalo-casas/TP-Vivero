@@ -247,6 +247,12 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\CatalogosSeleccionados\frmCatalogosSeleccionados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\CatalogosSeleccionados\frmCatalogosSeleccionados.Designer.cs">
+      <DependentUpon>frmCatalogosSeleccionados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\frmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,12 @@
     </Compile>
     <Compile Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.Designer.cs">
       <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\VentasPorAño\frmVentasPorAño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\VentasPorAño\frmVentasPorAño.Designer.cs">
+      <DependentUpon>frmVentasPorAño.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ventas\ABM_Ventas.cs">
       <SubType>Form</SubType>
@@ -293,6 +305,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VentaEmpleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasPorAño.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasPorAño.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Presentacion\Canjes\ABM_Canje.resx">
@@ -346,6 +363,10 @@
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\CatalogosSeleccionados\frmCatalogosSeleccionados.resx">
+      <DependentUpon>frmCatalogosSeleccionados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\CatalogosSeleccionados\CatalogosSeleccionados.rdlc" />
     <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +378,10 @@
       <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\VentaEmpleados\VentaEmpleados.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\VentasPorAño\VentasPorAño.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\VentasPorAño\frmVentasPorAño.resx">
+      <DependentUpon>frmVentasPorAño.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventas\ABM_Ventas.resx">
       <DependentUpon>ABM_Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +441,17 @@
     <None Include="Reportes\VentaEmpleados.xss">
       <DependentUpon>VentaEmpleados.xsd</DependentUpon>
     </None>
+    <None Include="Reportes\VentasPorAño.xsc">
+      <DependentUpon>VentasPorAño.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\VentasPorAño.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentasPorAño.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\VentasPorAño.xss">
+      <DependentUpon>VentasPorAño.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -424,7 +460,6 @@
     <None Include="Presentacion\Recursos\Iconos\icons8-purchase-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentacion\Reportes\CatalogosSeleccionados\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
