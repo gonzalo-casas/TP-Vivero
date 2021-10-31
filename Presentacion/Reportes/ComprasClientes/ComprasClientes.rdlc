@@ -2,42 +2,42 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="VentaEmpleados">
+    <DataSource Name="ComprasClientes">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>00090c6d-3b45-43a1-a706-a019ab4ca6dc</rd:DataSourceID>
+      <rd:DataSourceID>49c639b1-6291-415b-aa46-d94bf47b5fda</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="VentaEmpleados">
+    <DataSet Name="ComprasClientes">
       <Query>
-        <DataSourceName>VentaEmpleados</DataSourceName>
+        <DataSourceName>ComprasClientes</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ID">
-          <DataField>ID</DataField>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Documento">
           <DataField>Documento</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
+        <Field Name="Localidad">
+          <DataField>Localidad</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ventas">
-          <DataField>Ventas</DataField>
+        <Field Name="Compras">
+          <DataField>Compras</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>VentaEmpleados</rd:DataSetName>
-        <rd:SchemaPath>D:\Users\Gonza.DESKTOP-FDOE08G\Documents\2021\PAV1\TP\SOLUCION\Vivero\TP-Vivero\Reportes\VentaEmpleados.xsd</rd:SchemaPath>
-        <rd:TableName>VentaEmpleados</rd:TableName>
+        <rd:DataSetName>ComprasClientes</rd:DataSetName>
+        <rd:SchemaPath>D:\Users\Gonza.DESKTOP-FDOE08G\Documents\2021\PAV1\TP\SOLUCION\Vivero\TP-Vivero\Reportes\ComprasClientes.xsd</rd:SchemaPath>
+        <rd:TableName>ComprasClientes</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -52,13 +52,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.71167cm</Width>
+                  <Width>5.8073cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.57729cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>7.0291cm</Width>
+                  <Width>3.93347cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
@@ -77,7 +77,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID</Value>
+                                  <Value>Nombre Cliente</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -147,7 +147,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Nombre</Value>
+                                  <Value>Localidad</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -182,7 +182,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Ventas</Value>
+                                  <Value>Compras</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -215,14 +215,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ID">
+                        <Textbox Name="Nombre1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ID.Value</Value>
+                                  <Value>=Fields!Nombre.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -231,7 +231,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ID</rd:DefaultName>
+                          <rd:DefaultName>Nombre1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -279,14 +279,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Nombre">
+                        <Textbox Name="Localidad">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Nombre.Value</Value>
+                                  <Value>=Fields!Localidad.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -295,7 +295,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Nombre</rd:DefaultName>
+                          <rd:DefaultName>Localidad</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -311,14 +311,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Ventas">
+                        <Textbox Name="Compras">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Ventas.Value</Value>
+                                  <Value>=Fields!Compras.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -327,7 +327,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Ventas</rd:DefaultName>
+                          <rd:DefaultName>Compras</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -363,7 +363,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>VentaEmpleados</DataSetName>
+            <DataSetName>ComprasClientes</DataSetName>
             <Top>0.5027cm</Top>
             <Left>2.22412cm</Left>
             <Height>2.80459cm</Height>
@@ -387,7 +387,7 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Ventas.Value</Value>
+                      <Value>=Fields!Compras.Value</Value>
                       <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
@@ -413,7 +413,7 @@
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Ventas</Label>
+                  <Label>Compras</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
@@ -423,7 +423,7 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Fields!Ventas.Value</Y>
+                        <Y>=Fields!Compras.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -741,7 +741,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>VentaEmpleados</DataSetName>
+            <DataSetName>ComprasClientes</DataSetName>
             <Top>4.11459cm</Top>
             <Left>2.22412cm</Left>
             <Height>18.75833cm</Height>
@@ -834,7 +834,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de ventas realizadas por empleado</Value>
+                      <Value>Cantidad de compras realizadas por cliente</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>

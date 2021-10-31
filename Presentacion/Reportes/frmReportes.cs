@@ -58,6 +58,33 @@ namespace Vivero.Presentacion.Reportes
             AbrirFormulario<frmVentaEmpleados>();
         }
 
+        private void btn_ComprasClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmComprasClientes>();
+        }
+
+        private void btn_ClientesPuntos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmClientesPuntos>();
+        }
+
+        private void btn_TipoFactura_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmTipoFacturaCantidad>();
+        }
+
+     
+
+        private void btn_PlantasVendidas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPlantasVendidas>();
+        }
+
+        private void btn_SalirReporte_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btn_CatalogosSeleccionados_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmCatalogosSeleccionados>();

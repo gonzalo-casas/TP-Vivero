@@ -247,6 +247,18 @@
     <Compile Include="Presentacion\Proveedor\ABM_Proveedor.Designer.cs">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\ClientesPuntos\frmClientesPuntos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ClientesPuntos\frmClientesPuntos.Designer.cs">
+      <DependentUpon>frmClientesPuntos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.Designer.cs">
+      <DependentUpon>frmComprasClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\CatalogosSeleccionados\frmCatalogosSeleccionados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,11 +271,23 @@
     <Compile Include="Presentacion\Reportes\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.Designer.cs">
+      <DependentUpon>frmPlantasVendidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.Designer.cs">
       <DependentUpon>frmProductosVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.Designer.cs">
+      <DependentUpon>frmTipoFacturaCantidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.cs">
       <SubType>Form</SubType>
@@ -291,6 +315,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\ClientesPuntos.cs">
+      <DependentUpon>ClientesPuntos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ClientesPuntos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientesPuntos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ComprasClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlantasVendidas.cs">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlantasVendidas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProductosVendidos.cs">
+      <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\CatalogosSeleccionados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -300,6 +348,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TipoFacturaCantidad.cs">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TipoFacturaCantidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\VentaEmpleados.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -363,6 +419,14 @@
     <EmbeddedResource Include="Presentacion\Proveedor\ABM_Proveedor.resx">
       <DependentUpon>ABM_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ClientesPuntos\ClientesPuntos.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\ClientesPuntos\frmClientesPuntos.resx">
+      <DependentUpon>frmClientesPuntos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ComprasClientes\frmComprasClientes.resx">
+      <DependentUpon>frmComprasClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ComprasClientes\ComprasClientes.rdlc" />
     <EmbeddedResource Include="Presentacion\Reportes\CatalogosSeleccionados\frmCatalogosSeleccionados.resx">
       <DependentUpon>frmCatalogosSeleccionados.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,10 +434,18 @@
     <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.resx">
+      <DependentUpon>frmPlantasVendidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\PlantasVendidas\R_Plantas.rdlc" />
     <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.resx">
       <DependentUpon>frmProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\R_Ventas.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\TipoFacturaCantidad\TipoFacturaCantidad.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.resx">
+      <DependentUpon>frmTipoFacturaCantidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.resx">
       <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +480,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\ClientesPuntos.xsc">
+      <DependentUpon>ClientesPuntos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\ClientesPuntos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientesPuntos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\ClientesPuntos.xss">
+      <DependentUpon>ClientesPuntos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\ComprasClientes.xsc">
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\ComprasClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComprasClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\ComprasClientes.xss">
+      <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xsc">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlantasVendidas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xss">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\CatalogosSeleccionados.xsc">
       <DependentUpon>CatalogosSeleccionados.xsd</DependentUpon>
     </None>
@@ -429,6 +534,17 @@
     </None>
     <None Include="Reportes\ProductosVendidos.xss">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xsc">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoFacturaCantidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xss">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
     </None>
     <None Include="Reportes\VentaEmpleados.xsc">
       <DependentUpon>VentaEmpleados.xsd</DependentUpon>

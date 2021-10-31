@@ -2,42 +2,42 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="VentaEmpleados">
+    <DataSource Name="ClientesPuntos">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>00090c6d-3b45-43a1-a706-a019ab4ca6dc</rd:DataSourceID>
+      <rd:DataSourceID>c63b2528-edce-4084-90b8-c7505b37e336</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="VentaEmpleados">
+    <DataSet Name="ClientesPuntos">
       <Query>
-        <DataSourceName>VentaEmpleados</DataSourceName>
+        <DataSourceName>ClientesPuntos</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ID">
-          <DataField>ID</DataField>
+        <Field Name="TipoDoc">
+          <DataField>TipoDoc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Documento">
-          <DataField>Documento</DataField>
+        <Field Name="NroDoc">
+          <DataField>NroDoc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
+        <Field Name="NombreCliente">
+          <DataField>NombreCliente</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ventas">
-          <DataField>Ventas</DataField>
+        <Field Name="PuntosDisponibles">
+          <DataField>PuntosDisponibles</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>VentaEmpleados</rd:DataSetName>
-        <rd:SchemaPath>D:\Users\Gonza.DESKTOP-FDOE08G\Documents\2021\PAV1\TP\SOLUCION\Vivero\TP-Vivero\Reportes\VentaEmpleados.xsd</rd:SchemaPath>
-        <rd:TableName>VentaEmpleados</rd:TableName>
+        <rd:DataSetName>ClientesPuntos</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Hidalgo\Documents\Nico\Facultad\PAV1\ViveroUwuREAL\Reportes\ClientesPuntos.xsd</rd:SchemaPath>
+        <rd:TableName>ClientesPuntos</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -48,20 +48,20 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Tablix Name="Tablix4">
+          <Tablix Name="ClientesPuntosTablix">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.71167cm</Width>
+                  <Width>3.15485cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.57729cm</Width>
+                  <Width>5.02047cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>7.0291cm</Width>
+                  <Width>7.47228cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
+                  <Width>2.94318cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -77,7 +77,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID</Value>
+                                  <Value>Tipo Documento</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -112,7 +112,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Documento</Value>
+                                  <Value>Numero Documento</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -147,7 +147,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Nombre</Value>
+                                  <Value>Nombre </Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -182,7 +182,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Ventas</Value>
+                                  <Value>Puntos</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -215,14 +215,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ID">
+                        <Textbox Name="TipoDoc">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ID.Value</Value>
+                                  <Value>=Fields!TipoDoc.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -231,7 +231,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ID</rd:DefaultName>
+                          <rd:DefaultName>TipoDoc</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -247,14 +247,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Documento">
+                        <Textbox Name="NroDoc">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Documento.Value</Value>
+                                  <Value>=Fields!NroDoc.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -263,7 +263,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Documento</rd:DefaultName>
+                          <rd:DefaultName>NroDoc</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -279,14 +279,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Nombre">
+                        <Textbox Name="NombreCliente">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Nombre.Value</Value>
+                                  <Value>=Fields!NombreCliente.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -295,7 +295,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Nombre</rd:DefaultName>
+                          <rd:DefaultName>NombreCliente</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -311,14 +311,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Ventas">
+                        <Textbox Name="PuntosDisponibles">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Ventas.Value</Value>
+                                  <Value>=Fields!PuntosDisponibles.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -327,7 +327,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Ventas</rd:DefaultName>
+                          <rd:DefaultName>PuntosDisponibles</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -363,11 +363,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>VentaEmpleados</DataSetName>
+            <DataSetName>ClientesPuntos</DataSetName>
             <Top>0.5027cm</Top>
-            <Left>2.22412cm</Left>
+            <Left>1.11287cm</Left>
             <Height>2.80459cm</Height>
-            <Width>16.81806cm</Width>
+            <Width>18.59078cm</Width>
             <Style>
               <Border>
                 <Style>Double</Style>
@@ -382,48 +382,47 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                      <GroupExpression>=Fields!NombreCliente.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Ventas.Value</Value>
-                      <Direction>Descending</Direction>
+                      <Value>=Fields!NombreCliente.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <ChartMembers>
                     <ChartMember>
                       <Group Name="Chart1_CategoryGroup1">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                          <GroupExpression>=Fields!NombreCliente.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Nombre.Value</Value>
+                          <Value>=Fields!NombreCliente.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Nombre.Value</Label>
+                      <Label>=Fields!NombreCliente.Value</Label>
                     </ChartMember>
                   </ChartMembers>
-                  <Label>#PERCENT</Label>
+                  <Label>=Fields!NombreCliente.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Ventas</Label>
+                  <Label>Puntos Disponibles</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Ventas">
+                <ChartSeries Name="PuntosDisponibles">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Fields!Ventas.Value</Y>
+                        <Y>=Fields!PuntosDisponibles.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -436,7 +435,6 @@
                     </ChartDataPoint>
                   </ChartDataPoints>
                   <Type>Shape</Type>
-                  <Subtype>ExplodedPie</Subtype>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -741,7 +739,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>VentaEmpleados</DataSetName>
+            <DataSetName>ClientesPuntos</DataSetName>
             <Top>4.11459cm</Top>
             <Left>2.22412cm</Left>
             <Height>18.75833cm</Height>
@@ -834,7 +832,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de ventas realizadas por empleado</Value>
+                      <Value>Cantidad de puntos disponibles por cliente</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>

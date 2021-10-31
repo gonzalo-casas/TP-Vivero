@@ -30,24 +30,127 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.btn_PlantasVendidas = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_TipoFactura = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_ClientesPuntos = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_CatalogosSeleccionados = new Vivero.Presentacion.BotonRedondeado();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_VentaEmpleados = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ProductosVendidos = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentasPorAño = new Vivero.Presentacion.BotonRedondeado();
             this.panelReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.btn_SalirReporte);
+            this.panelReportes.Controls.Add(this.btn_PlantasVendidas);
+            this.panelReportes.Controls.Add(this.btn_TipoFactura);
+            this.panelReportes.Controls.Add(this.btn_ClientesPuntos);
+            this.panelReportes.Controls.Add(this.btn_ComprasClientes);
             this.panelReportes.Controls.Add(this.btn_VentasPorAño);
             this.panelReportes.Controls.Add(this.btn_CatalogosSeleccionados);
             this.panelReportes.Controls.Add(this.label1);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReportes.Location = new System.Drawing.Point(0, 0);
             this.panelReportes.Name = "panelReportes";
-            this.panelReportes.Size = new System.Drawing.Size(1151, 646);
+            this.panelReportes.Size = new System.Drawing.Size(977, 660);
             this.panelReportes.TabIndex = 19;
+            // 
+            // btn_PlantasVendidas
+            // 
+            this.btn_PlantasVendidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_PlantasVendidas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_PlantasVendidas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_PlantasVendidas.BorderRadius = 10;
+            this.btn_PlantasVendidas.BorderSize = 0;
+            this.btn_PlantasVendidas.FlatAppearance.BorderSize = 0;
+            this.btn_PlantasVendidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PlantasVendidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PlantasVendidas.ForeColor = System.Drawing.Color.White;
+            this.btn_PlantasVendidas.Location = new System.Drawing.Point(130, 382);
+            this.btn_PlantasVendidas.Name = "btn_PlantasVendidas";
+            this.btn_PlantasVendidas.Size = new System.Drawing.Size(200, 100);
+            this.btn_PlantasVendidas.TabIndex = 22;
+            this.btn_PlantasVendidas.Text = "Plantas Vendidas";
+            this.btn_PlantasVendidas.TextColor = System.Drawing.Color.White;
+            this.btn_PlantasVendidas.UseVisualStyleBackColor = false;
+            this.btn_PlantasVendidas.Click += new System.EventHandler(this.btn_PlantasVendidas_Click);
+            // 
+            // btn_TipoFactura
+            // 
+            this.btn_TipoFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_TipoFactura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_TipoFactura.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_TipoFactura.BorderRadius = 10;
+            this.btn_TipoFactura.BorderSize = 0;
+            this.btn_TipoFactura.FlatAppearance.BorderSize = 0;
+            this.btn_TipoFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TipoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TipoFactura.ForeColor = System.Drawing.Color.White;
+            this.btn_TipoFactura.Location = new System.Drawing.Point(610, 108);
+            this.btn_TipoFactura.Name = "btn_TipoFactura";
+            this.btn_TipoFactura.Size = new System.Drawing.Size(200, 100);
+            this.btn_TipoFactura.TabIndex = 21;
+            this.btn_TipoFactura.Text = "Ventas Tipo Factura";
+            this.btn_TipoFactura.TextColor = System.Drawing.Color.White;
+            this.btn_TipoFactura.UseVisualStyleBackColor = false;
+            this.btn_TipoFactura.Click += new System.EventHandler(this.btn_TipoFactura_Click);
+            // 
+            // btn_ClientesPuntos
+            // 
+            this.btn_ClientesPuntos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ClientesPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ClientesPuntos.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ClientesPuntos.BorderRadius = 10;
+            this.btn_ClientesPuntos.BorderSize = 0;
+            this.btn_ClientesPuntos.FlatAppearance.BorderSize = 0;
+            this.btn_ClientesPuntos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ClientesPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ClientesPuntos.ForeColor = System.Drawing.Color.White;
+            this.btn_ClientesPuntos.Location = new System.Drawing.Point(372, 108);
+            this.btn_ClientesPuntos.Name = "btn_ClientesPuntos";
+            this.btn_ClientesPuntos.Size = new System.Drawing.Size(200, 100);
+            this.btn_ClientesPuntos.TabIndex = 20;
+            this.btn_ClientesPuntos.Text = "Clientes Puntos Disponibles";
+            this.btn_ClientesPuntos.TextColor = System.Drawing.Color.White;
+            this.btn_ClientesPuntos.UseVisualStyleBackColor = false;
+            this.btn_ClientesPuntos.Click += new System.EventHandler(this.btn_ClientesPuntos_Click);
+            // 
+            // btn_ComprasClientes
+            // 
+            this.btn_ComprasClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ComprasClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_ComprasClientes.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ComprasClientes.BorderRadius = 10;
+            this.btn_ComprasClientes.BorderSize = 0;
+            this.btn_ComprasClientes.FlatAppearance.BorderSize = 0;
+            this.btn_ComprasClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ComprasClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ComprasClientes.ForeColor = System.Drawing.Color.White;
+            this.btn_ComprasClientes.Location = new System.Drawing.Point(372, 248);
+            this.btn_ComprasClientes.Name = "btn_ComprasClientes";
+            this.btn_ComprasClientes.Size = new System.Drawing.Size(200, 100);
+            this.btn_ComprasClientes.TabIndex = 18;
+            this.btn_ComprasClientes.Text = "Compras Clientes";
+            this.btn_ComprasClientes.TextColor = System.Drawing.Color.White;
+            this.btn_ComprasClientes.UseVisualStyleBackColor = false;
+            this.btn_ComprasClientes.Click += new System.EventHandler(this.btn_ComprasClientes_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(305, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(402, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione el reporte que desea generar";
             // 
             // btn_CatalogosSeleccionados
             // 
@@ -94,7 +197,7 @@ namespace Vivero.Presentacion.Reportes
             this.btn_VentaEmpleados.Name = "btn_VentaEmpleados";
             this.btn_VentaEmpleados.Size = new System.Drawing.Size(200, 100);
             this.btn_VentaEmpleados.TabIndex = 18;
-            this.btn_VentaEmpleados.Text = "Venta Empleados";
+            this.btn_VentaEmpleados.Text = "Ventas Empleados";
             this.btn_VentaEmpleados.TextColor = System.Drawing.Color.White;
             this.btn_VentaEmpleados.UseVisualStyleBackColor = false;
             this.btn_VentaEmpleados.Click += new System.EventHandler(this.btn_VentaEmpleados_Click);
@@ -119,8 +222,27 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ProductosVendidos.UseVisualStyleBackColor = false;
             this.btn_ProductosVendidos.Click += new System.EventHandler(this.btn_ProductosVendidos_Click);
             // 
+            // btn_SalirReporte
             // btn_VentasPorAño
             // 
+            this.btn_SalirReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SalirReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirReporte.BorderRadius = 20;
+            this.btn_SalirReporte.BorderSize = 0;
+            this.btn_SalirReporte.FlatAppearance.BorderSize = 0;
+            this.btn_SalirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirReporte.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.Location = new System.Drawing.Point(812, 608);
+            this.btn_SalirReporte.Name = "btn_SalirReporte";
+            this.btn_SalirReporte.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirReporte.TabIndex = 23;
+            this.btn_SalirReporte.Text = "Cerrar";
+            this.btn_SalirReporte.TextColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.UseVisualStyleBackColor = false;
+            this.btn_SalirReporte.Click += new System.EventHandler(this.btn_SalirReporte_Click);
             this.btn_VentasPorAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
             this.btn_VentasPorAño.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
             this.btn_VentasPorAño.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -144,7 +266,7 @@ namespace Vivero.Presentacion.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(241)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1151, 646);
+            this.ClientSize = new System.Drawing.Size(977, 660);
             this.Controls.Add(this.btn_VentaEmpleados);
             this.Controls.Add(this.btn_ProductosVendidos);
             this.Controls.Add(this.panelReportes);
@@ -161,6 +283,11 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_VentaEmpleados;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Label label1;
+        private BotonRedondeado btn_ComprasClientes;
+        private BotonRedondeado btn_ClientesPuntos;
+        private BotonRedondeado btn_TipoFactura;
+        private BotonRedondeado btn_PlantasVendidas;
+        private BotonRedondeado btn_SalirReporte;
         private BotonRedondeado btn_CatalogosSeleccionados;
         private BotonRedondeado btn_VentasPorAño;
     }
