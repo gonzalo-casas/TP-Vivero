@@ -18,5 +18,7 @@ namespace Vivero.Datos.Interfaces
         DataTable GenerarReporteClientesPuntos(string Desde, string Hasta, string localidad);
 
         DataTable GenerarReporteTipoFacturaCantidad(string Desde, string Hasta);
+
+        DataTable GenerarReportePlantasVendidas(string Desde, string Hasta);
     }
 }

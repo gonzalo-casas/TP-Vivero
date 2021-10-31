@@ -265,6 +265,12 @@
     <Compile Include="Presentacion\Reportes\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.Designer.cs">
+      <DependentUpon>frmPlantasVendidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlantasVendidas.cs">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\PlantasVendidas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ProductosVendidos.cs">
+      <DependentUpon>ProductosVendidos.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ProductosVendidos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -391,6 +408,10 @@
     <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.resx">
+      <DependentUpon>frmPlantasVendidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\PlantasVendidas\R_Plantas.rdlc" />
     <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.resx">
       <DependentUpon>frmProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -450,6 +471,17 @@
     </None>
     <None Include="Reportes\ComprasClientes.xss">
       <DependentUpon>ComprasClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xsc">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PlantasVendidas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\PlantasVendidas.xss">
+      <DependentUpon>PlantasVendidas.xsd</DependentUpon>
     </None>
     <None Include="Reportes\ProductosVendidos.xsc">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>

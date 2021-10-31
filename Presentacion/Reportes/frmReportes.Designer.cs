@@ -30,6 +30,7 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.btn_PlantasVendidas = new Vivero.Presentacion.BotonRedondeado();
             this.btn_TipoFactura = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ClientesPuntos = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
@@ -41,6 +42,7 @@ namespace Vivero.Presentacion.Reportes
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.btn_PlantasVendidas);
             this.panelReportes.Controls.Add(this.btn_TipoFactura);
             this.panelReportes.Controls.Add(this.btn_ClientesPuntos);
             this.panelReportes.Controls.Add(this.btn_ComprasClientes);
@@ -51,25 +53,25 @@ namespace Vivero.Presentacion.Reportes
             this.panelReportes.Size = new System.Drawing.Size(977, 660);
             this.panelReportes.TabIndex = 19;
             // 
-            // btn_ClientesPuntos
+            // btn_PlantasVendidas
             // 
-            this.btn_ClientesPuntos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ClientesPuntos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_ClientesPuntos.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ClientesPuntos.BorderRadius = 10;
-            this.btn_ClientesPuntos.BorderSize = 0;
-            this.btn_ClientesPuntos.FlatAppearance.BorderSize = 0;
-            this.btn_ClientesPuntos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ClientesPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ClientesPuntos.ForeColor = System.Drawing.Color.White;
-            this.btn_ClientesPuntos.Location = new System.Drawing.Point(372, 108);
-            this.btn_ClientesPuntos.Name = "btn_ClientesPuntos";
-            this.btn_ClientesPuntos.Size = new System.Drawing.Size(200, 100);
-            this.btn_ClientesPuntos.TabIndex = 20;
-            this.btn_ClientesPuntos.Text = "Clientes Puntos Disponibles";
-            this.btn_ClientesPuntos.TextColor = System.Drawing.Color.White;
-            this.btn_ClientesPuntos.UseVisualStyleBackColor = false;
-            this.btn_ClientesPuntos.Click += new System.EventHandler(this.btn_ClientesPuntos_Click);
+            this.btn_PlantasVendidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_PlantasVendidas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_PlantasVendidas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_PlantasVendidas.BorderRadius = 10;
+            this.btn_PlantasVendidas.BorderSize = 0;
+            this.btn_PlantasVendidas.FlatAppearance.BorderSize = 0;
+            this.btn_PlantasVendidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PlantasVendidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PlantasVendidas.ForeColor = System.Drawing.Color.White;
+            this.btn_PlantasVendidas.Location = new System.Drawing.Point(130, 382);
+            this.btn_PlantasVendidas.Name = "btn_PlantasVendidas";
+            this.btn_PlantasVendidas.Size = new System.Drawing.Size(200, 100);
+            this.btn_PlantasVendidas.TabIndex = 22;
+            this.btn_PlantasVendidas.Text = "Plantas Vendidas";
+            this.btn_PlantasVendidas.TextColor = System.Drawing.Color.White;
+            this.btn_PlantasVendidas.UseVisualStyleBackColor = false;
+            this.btn_PlantasVendidas.Click += new System.EventHandler(this.btn_PlantasVendidas_Click);
             // 
             // btn_TipoFactura
             // 
@@ -208,5 +210,6 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_ComprasClientes;
         private BotonRedondeado btn_ClientesPuntos;
         private BotonRedondeado btn_TipoFactura;
+        private BotonRedondeado btn_PlantasVendidas;
     }
 }

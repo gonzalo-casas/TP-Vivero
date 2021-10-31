@@ -72,5 +72,12 @@ namespace Vivero.Presentacion.Reportes
         {
             AbrirFormulario<frmTipoFacturaCantidad>();
         }
+
+     
+
+        private void btn_PlantasVendidas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmPlantasVendidas>();
+        }
     }
 }

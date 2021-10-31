@@ -123,6 +123,31 @@ namespace Vivero.Datos.Daos
             dm.Close();
             return tabla;
         }
+        ////stiv pa aca abajo
+        ///DataTable GenerarReportePlantasVendidas(string Desde, string Hasta);
+        public DataTable GenerarReportePlantasVendidas(string Desde, string Hasta)
+        {
+            DataManager dm = new DataManager();
+            dm.Open();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("FechaDesde", Desde);
+            parametros.Add("FechaHasta", Hasta);
+            string sql = @"SELECT p.Codigo, p.NombreCientifico, SUM(df.Cantidad) AS Cantidad
+                        FROM DetalleFactura df
+                        JOIN Factura f ON (df.Nro_Factura = f.Nro_Factura AND df.Tipo_Factura = f.Tipo_Factura)
+                        JOIN Planta p ON (p.Codigo = df.Id_Planta)
+                        WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        GROUP BY p.Codigo, p.NombreCientifico
+                        ORDER BY 3 DESC";
+            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
+            dm.Close();
+            return tabla;
+        }
+
+
+
+
+
 
     }
 }

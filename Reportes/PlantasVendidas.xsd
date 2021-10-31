@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PlantasVendidas" targetNamespace="http://tempuri.org/PlantasVendidas.xsd" xmlns:mstns="http://tempuri.org/PlantasVendidas.xsd" xmlns="http://tempuri.org/PlantasVendidas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PlantasVendidas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PlantasVendidas" msprop:Generator_UserDSName="PlantasVendidas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PlantasVendidas" msprop:Generator_TableClassName="PlantasVendidasDataTable" msprop:Generator_TableVarName="tablePlantasVendidas" msprop:Generator_RowChangedName="PlantasVendidasRowChanged" msprop:Generator_TablePropName="_PlantasVendidas" msprop:Generator_RowDeletingName="PlantasVendidasRowDeleting" msprop:Generator_RowChangingName="PlantasVendidasRowChanging" msprop:Generator_RowEvHandlerName="PlantasVendidasRowChangeEventHandler" msprop:Generator_RowDeletedName="PlantasVendidasRowDeleted" msprop:Generator_RowClassName="PlantasVendidasRow" msprop:Generator_UserTableName="PlantasVendidas" msprop:Generator_RowEvArgName="PlantasVendidasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCientifico" msprop:Generator_ColumnVarNameInTable="columnNombreCientifico" msprop:Generator_ColumnPropNameInRow="NombreCientifico" msprop:Generator_ColumnPropNameInTable="NombreCientificoColumn" msprop:Generator_UserColumnName="NombreCientifico" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

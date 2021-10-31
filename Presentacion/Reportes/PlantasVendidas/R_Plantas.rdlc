@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DSVentas">
+    <DataSource Name="PlantasVendidas">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>d2f8b208-f890-4afc-adb2-2a004de6df42</rd:DataSourceID>
+      <rd:DataSourceID>9d13ef1e-2ce6-44c6-8dec-7e93a38182da</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ProductosVendidos">
+    <DataSet Name="PlantasVendidas">
       <Query>
-        <DataSourceName>DSVentas</DataSourceName>
+        <DataSourceName>PlantasVendidas</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -21,8 +21,8 @@
           <DataField>Codigo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
+        <Field Name="NombreCientifico">
+          <DataField>NombreCientifico</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Cantidad">
@@ -31,9 +31,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DSVentas</rd:DataSetName>
-        <rd:SchemaPath>D:\Users\Gonza.DESKTOP-FDOE08G\Documents\2021\PAV1\TP\SOLUCION\Vivero\TP-Vivero\Reportes\ProductosVendidos.xsd</rd:SchemaPath>
-        <rd:TableName>ProductosVendidos</rd:TableName>
+        <rd:DataSetName>PlantasVendidas</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\andre\Source\Repos\gonzalo-casas\TP-Vivero\Reportes\PlantasVendidas.xsd</rd:SchemaPath>
+        <rd:TableName>PlantasVendidas</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -105,7 +105,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Nombre Producto</Value>
+                                  <Value>Planta</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -205,14 +205,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Nombre">
+                        <Textbox Name="NombreCientifico">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Nombre.Value</Value>
+                                  <Value>=Fields!NombreCientifico.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -221,7 +221,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Nombre</rd:DefaultName>
+                          <rd:DefaultName>NombreCientifico</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -288,9 +288,9 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>ProductosVendidos</DataSetName>
-            <Top>0.5027cm</Top>
-            <Left>2.22412cm</Left>
+            <DataSetName>PlantasVendidas</DataSetName>
+            <Top>1.67979cm</Top>
+            <Left>1.01865cm</Left>
             <Height>2.80459cm</Height>
             <Width>16.81806cm</Width>
             <Style>
@@ -307,31 +307,30 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                      <GroupExpression>=Fields!NombreCientifico.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Cantidad.Value</Value>
-                      <Direction>Descending</Direction>
+                      <Value>=Fields!NombreCientifico.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <ChartMembers>
                     <ChartMember>
                       <Group Name="Chart1_CategoryGroup1">
                         <GroupExpressions>
-                          <GroupExpression>=Fields!Nombre.Value</GroupExpression>
+                          <GroupExpression>=Fields!NombreCientifico.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Nombre.Value</Value>
+                          <Value>=Fields!NombreCientifico.Value</Value>
                         </SortExpression>
                       </SortExpressions>
-                      <Label>=Fields!Nombre.Value</Label>
+                      <Label>=Fields!NombreCientifico.Value</Label>
                     </ChartMember>
                   </ChartMembers>
-                  <Label>#PERCENT</Label>
+                  <Label>=Fields!NombreCientifico.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -666,11 +665,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>ProductosVendidos</DataSetName>
-            <Top>4.11459cm</Top>
-            <Left>2.22412cm</Left>
-            <Height>18.75833cm</Height>
-            <Width>16.81806cm</Width>
+            <DataSetName>PlantasVendidas</DataSetName>
+            <Top>5.58162cm</Top>
+            <Left>1.01865cm</Left>
+            <Height>13.17671cm</Height>
+            <Width>16.52811cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -682,31 +681,16 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>237mm</Height>
+        <Height>7.38517in</Height>
         <Style />
       </Body>
-      <Width>210mm</Width>
+      <Width>7.41295in</Width>
       <Page>
         <PageHeader>
-          <Height>40mm</Height>
+          <Height>3.06062cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Image Name="LogoVivero">
-              <Source>Embedded</Source>
-              <Value>logopng</Value>
-              <Sizing>FitProportional</Sizing>
-              <Top>0.42016cm</Top>
-              <Left>0.81232cm</Left>
-              <Height>1.97625cm</Height>
-              <Width>1.94979cm</Width>
-              <ToolTip>Vivero La Cone</ToolTip>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-              </Style>
-            </Image>
             <Textbox Name="Textbox7">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -737,11 +721,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.42016cm</Top>
-              <Left>4.62301cm</Left>
+              <Left>3.1774cm</Left>
               <Height>1.97625cm</Height>
               <Width>12.21021cm</Width>
-              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -752,6 +734,22 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
+            <Image Name="LogoVivero">
+              <Source>Embedded</Source>
+              <Value>logopng</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.39688cm</Top>
+              <Left>0.39858cm</Left>
+              <Height>1.97625cm</Height>
+              <Width>1.94979cm</Width>
+              <ZIndex>1</ZIndex>
+              <ToolTip>Vivero La Cone</ToolTip>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
             <Textbox Name="Textbox26">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -759,7 +757,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de productos Vendidos</Value>
+                      <Value>Cantidad de plantas vendidas</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>
@@ -771,8 +769,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox26</rd:DefaultName>
-              <Top>2.72203cm</Top>
-              <Left>4.59655cm</Left>
+              <Top>2.30187cm</Top>
+              <Left>3.48044cm</Left>
               <Height>0.75875cm</Height>
               <Width>12.21021cm</Width>
               <ZIndex>2</ZIndex>
@@ -794,40 +792,9 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2cm</Height>
+          <Height>2.54cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Pagina " &amp; Globals.PageNumber &amp; " de " &amp; Globals.TotalPages</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.90912cm</Top>
-              <Left>14.25036cm</Left>
-              <Height>0.6cm</Height>
-              <Width>5.06584cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
           <Style>
             <Border>
               <Style>None</Style>
@@ -836,10 +803,10 @@
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>0cm</LeftMargin>
-        <RightMargin>0cm</RightMargin>
-        <TopMargin>0cm</TopMargin>
-        <BottomMargin>0cm</BottomMargin>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
@@ -868,7 +835,6 @@ C73/oF5hhISFsDTjN6RbHB+SfQZ+ZtwKVxZd8uzmZOHOFLxZMjfK5OvsZgV/3dOEYE/LC4Kw9kzvOi0b
 EUh5jwS6ZTNOeZ224Fg2zL4bzxsBZIWgVxMxetw28Fy9rlu+Xp+CAQD/H6goytBQC9yCAAAAAElFTkSuQmCC</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>688c4f6c-f83a-4743-800a-fefd48f13add</rd:ReportID>
+  <rd:ReportID>f4555f5e-42de-4a62-b7b4-b4d4d6a42d4f</rd:ReportID>
 </Report>
