@@ -79,5 +79,10 @@ namespace Vivero.Presentacion.Reportes
         {
             AbrirFormulario<frmPlantasVendidas>();
         }
+
+        private void btn_SalirReporte_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

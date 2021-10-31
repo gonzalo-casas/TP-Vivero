@@ -37,11 +37,13 @@ namespace Vivero.Presentacion.Reportes
             this.label1 = new System.Windows.Forms.Label();
             this.btn_VentaEmpleados = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ProductosVendidos = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
             this.panelReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.btn_SalirReporte);
             this.panelReportes.Controls.Add(this.btn_PlantasVendidas);
             this.panelReportes.Controls.Add(this.btn_TipoFactura);
             this.panelReportes.Controls.Add(this.btn_ClientesPuntos);
@@ -84,7 +86,7 @@ namespace Vivero.Presentacion.Reportes
             this.btn_TipoFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TipoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TipoFactura.ForeColor = System.Drawing.Color.White;
-            this.btn_TipoFactura.Location = new System.Drawing.Point(867, 108);
+            this.btn_TipoFactura.Location = new System.Drawing.Point(610, 108);
             this.btn_TipoFactura.Name = "btn_TipoFactura";
             this.btn_TipoFactura.Size = new System.Drawing.Size(200, 100);
             this.btn_TipoFactura.TabIndex = 21;
@@ -185,6 +187,27 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ProductosVendidos.UseVisualStyleBackColor = false;
             this.btn_ProductosVendidos.Click += new System.EventHandler(this.btn_ProductosVendidos_Click);
             // 
+            // btn_SalirReporte
+            // 
+            this.btn_SalirReporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SalirReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirReporte.BorderRadius = 20;
+            this.btn_SalirReporte.BorderSize = 0;
+            this.btn_SalirReporte.FlatAppearance.BorderSize = 0;
+            this.btn_SalirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirReporte.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.Location = new System.Drawing.Point(812, 608);
+            this.btn_SalirReporte.Name = "btn_SalirReporte";
+            this.btn_SalirReporte.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirReporte.TabIndex = 23;
+            this.btn_SalirReporte.Text = "Cerrar";
+            this.btn_SalirReporte.TextColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.UseVisualStyleBackColor = false;
+            this.btn_SalirReporte.Click += new System.EventHandler(this.btn_SalirReporte_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,5 +234,6 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_ClientesPuntos;
         private BotonRedondeado btn_TipoFactura;
         private BotonRedondeado btn_PlantasVendidas;
+        private BotonRedondeado btn_SalirReporte;
     }
 }
