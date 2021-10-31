@@ -271,6 +271,12 @@
     <Compile Include="Presentacion\Reportes\ProductosVendidos\frmProductosVendidos.Designer.cs">
       <DependentUpon>frmProductosVendidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.Designer.cs">
+      <DependentUpon>frmTipoFacturaCantidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TipoFacturaCantidad.cs">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TipoFacturaCantidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\VentaEmpleados.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -381,6 +395,10 @@
       <DependentUpon>frmProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\ProductosVendidos\R_Ventas.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\TipoFacturaCantidad\TipoFacturaCantidad.rdlc" />
+    <EmbeddedResource Include="Presentacion\Reportes\TipoFacturaCantidad\frmTipoFacturaCantidad.resx">
+      <DependentUpon>frmTipoFacturaCantidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\VentaEmpleados\frmVentaEmpleados.resx">
       <DependentUpon>frmVentaEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -443,6 +461,17 @@
     </None>
     <None Include="Reportes\ProductosVendidos.xss">
       <DependentUpon>ProductosVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xsc">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoFacturaCantidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\TipoFacturaCantidad.xss">
+      <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
     </None>
     <None Include="Reportes\VentaEmpleados.xsc">
       <DependentUpon>VentaEmpleados.xsd</DependentUpon>

@@ -108,5 +108,21 @@ namespace Vivero.Datos.Daos
             return tabla;
         }
 
+        public DataTable GenerarReporteTipoFacturaCantidad(string Desde, string Hasta)
+        {
+            DataManager dm = new DataManager();
+            dm.Open();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("FechaDesde", Desde);
+            parametros.Add("FechaHasta", Hasta);
+            string sql = @"SELECT tf.Nombre , COUNT(f.Tipo_Factura) as Cantidad
+                           FROM Factura f
+                           JOIN TipoFactura tf ON (f.Tipo_Factura = tf.ID)
+                           GROUP BY tf.Nombre";
+            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
+            dm.Close();
+            return tabla;
+        }
+
     }
 }

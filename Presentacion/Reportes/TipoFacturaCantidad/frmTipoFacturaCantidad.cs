@@ -15,40 +15,22 @@ using Vivero.Negocio.Servicios;
 
 namespace Vivero.Presentacion.Reportes
 {
-    public partial class frmClientesPuntos : Form
+    public partial class frmTipoFacturaCantidad : Form
     {
         private readonly IReporte dao;
-        private LocalidadService oLocalidadService;
 
-        public frmClientesPuntos()
+
+        public frmTipoFacturaCantidad()
         {
             InitializeComponent();
             dao = new ReporteDao();
-            oLocalidadService = new LocalidadService();
         }
 
 
-        DataTable tabla = new DataTable();
-        bool flag = true;
-
-        private void frmClientesPuntos_Load(object sender, EventArgs e)
+        private void frmTipoFacturaCantidad_Load(object sender, EventArgs e)
         {
             dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
           
-            tabla.Clear();
-            tabla.Columns.Add("ID", typeof(int));
-            tabla.Columns.Add("Nombre", typeof(string));
-
-            //ds.Tables[0].Columns.Add("Dosage", typeof(int));
-            //ds.Tables[0]..Columns.Add("Drug", typeof(string));
-
-            DataRow filaTodas = tabla.NewRow();
-            filaTodas["Nombre"] = "Todas";
-            filaTodas["ID"] = "0";
-            tabla.Rows.Add(filaTodas);
-
-            LlenarCombo(cboLocalidad, tabla, "Nombre", "ID");
-
         }
 
 
@@ -58,7 +40,7 @@ namespace Vivero.Presentacion.Reportes
             {
                 
                 rpvClientesPuntos.LocalReport.DataSources.Clear();
-                rpvClientesPuntos.LocalReport.DataSources.Add(new ReportDataSource("ClientesPuntos", dao.GenerarReporteClientesPuntos(dtpDesde.Text, dtpHasta.Text, cboLocalidad.SelectedValue.ToString())));
+                rpvClientesPuntos.LocalReport.DataSources.Add(new ReportDataSource("TipoFacturaCantidad", dao.GenerarReporteTipoFacturaCantidad(dtpDesde.Text, dtpHasta.Text)));
                 rpvClientesPuntos.RefreshReport();
             }
 
@@ -80,11 +62,6 @@ namespace Vivero.Presentacion.Reportes
 
         }
 
-       
 
-        private void cboLocalidad_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
