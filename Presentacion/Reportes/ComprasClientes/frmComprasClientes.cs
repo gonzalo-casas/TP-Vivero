@@ -18,29 +18,33 @@ namespace Vivero.Presentacion.Reportes
     public partial class frmComprasClientes : Form
     {
         private readonly IReporte dao;
-
+        private LocalidadService oLocalidadService;
+        DataTable tabla = new DataTable();
+        bool flag = true;
         public frmComprasClientes()
         {
             InitializeComponent();
             dao = new ReporteDao();
-            olocalidadService = new LocalidadService();
+            oLocalidadService = new LocalidadService();
         }
-        private readonly LocalidadService olocalidadService;
 
 
         private void frmVentaEmpleados_Load(object sender, EventArgs e)
         {
             dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
 
-            LlenarCombo(cboLocalidad, olocalidadService.traerTodo(), "Nombre", "ID");
+            tabla.Clear();
+            tabla.Columns.Add("ID", typeof(int));
+            tabla.Columns.Add("Nombre", typeof(string));
+            DataRow filaTodas = tabla.NewRow();
+            filaTodas["Nombre"] = "Todas";
+            filaTodas["ID"] = "0";
+            tabla.Rows.Add(filaTodas);
+            LlenarCombo(cboLocalidad, tabla, "Nombre", "ID");
         }
 
         private void LlenarCombo(ComboBox cbo, DataTable source, string display, String value)
         {
-            DataRow filaTodas = source.NewRow();
-            filaTodas["Nombre"] = "Todas";
-            filaTodas["ID"] = "0";
-            source.Rows.InsertAt(filaTodas, 0);
             cbo.DataSource = source;
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
@@ -51,7 +55,6 @@ namespace Vivero.Presentacion.Reportes
         {
             if (dtpDesde.Text != "" && dtpHasta.Text != "")
             {
-
                 rpvVentaEmpleados.LocalReport.DataSources.Clear();
                 rpvVentaEmpleados.LocalReport.DataSources.Add(new ReportDataSource("ComprasClientes", dao.GenerarReporteComprasClientes(dtpDesde.Text, dtpHasta.Text, cboLocalidad.SelectedValue.ToString())));
                 rpvVentaEmpleados.RefreshReport();
@@ -62,6 +65,17 @@ namespace Vivero.Presentacion.Reportes
         private void btn_SalirReporte_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboLocalidad_Click(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                DataTable tablaconsulta = oLocalidadService.traerTodo();
+                tabla.Merge(tablaconsulta);
+                LlenarCombo(cboLocalidad, tabla, "Nombre", "ID");
+                flag = false;
+            }
         }
     }
 }

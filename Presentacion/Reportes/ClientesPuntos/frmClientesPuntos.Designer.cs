@@ -96,6 +96,7 @@ namespace Vivero.Presentacion.Reportes
             // 
             // cboLocalidad
             // 
+            this.cboLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLocalidad.FormattingEnabled = true;
             this.cboLocalidad.Location = new System.Drawing.Point(214, 118);
             this.cboLocalidad.Name = "cboLocalidad";

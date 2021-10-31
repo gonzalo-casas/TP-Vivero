@@ -38,10 +38,6 @@ namespace Vivero.Presentacion.Reportes
             tabla.Clear();
             tabla.Columns.Add("ID", typeof(int));
             tabla.Columns.Add("Nombre", typeof(string));
-
-            //ds.Tables[0].Columns.Add("Dosage", typeof(int));
-            //ds.Tables[0]..Columns.Add("Drug", typeof(string));
-
             DataRow filaTodas = tabla.NewRow();
             filaTodas["Nombre"] = "Todas";
             filaTodas["ID"] = "0";
@@ -70,14 +66,11 @@ namespace Vivero.Presentacion.Reportes
         }
 
         private void LlenarCombo(ComboBox cbo, DataTable source, string display, String value)
-        {
-           
+        { 
             cbo.DataSource = source;
             cbo.DisplayMember = display;
             cbo.ValueMember = value;
             cbo.SelectedIndex = 0;
-
-
         }
 
        
