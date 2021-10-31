@@ -370,7 +370,8 @@
             <Width>16.81806cm</Width>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Double</Style>
+                <Width>3pt</Width>
               </Border>
               <TextAlign>Center</TextAlign>
             </Style>
@@ -384,7 +385,6 @@
                       <GroupExpression>=Fields!Nombre.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-                  <Label>#PERCENT</Label>
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!Nombre.Value</Value>
@@ -397,14 +397,15 @@
                           <GroupExpression>=Fields!Nombre.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
-                      <Label>=Fields!Nombre.Value</Label>
                       <SortExpressions>
                         <SortExpression>
                           <Value>=Fields!Nombre.Value</Value>
                         </SortExpression>
                       </SortExpressions>
+                      <Label>=Fields!Nombre.Value</Label>
                     </ChartMember>
                   </ChartMembers>
+                  <Label>#PERCENT</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -421,11 +422,10 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!Ventas.Value)</Y>
+                        <Y>=Fields!Ventas.Value</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <Label>#PERCENT{P0}</Label>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -716,13 +716,11 @@
                 <Caption>Grafico de Torta</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>SemiBold</FontWeight>
                   <TextAlign>Left</TextAlign>
                   <VerticalAlign>Top</VerticalAlign>
-                  <Color>#a6a6a6</Color>
                 </Style>
-                <Position>TopLeft</Position>
               </ChartTitle>
             </ChartTitles>
             <Palette>Pacific</Palette>
@@ -750,7 +748,7 @@
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
-                <Color>LightGrey</Color>
+                <Color>Gray</Color>
                 <Style>None</Style>
               </Border>
               <BackgroundColor>White</BackgroundColor>
@@ -912,10 +910,10 @@
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
+        <LeftMargin>0cm</LeftMargin>
+        <RightMargin>0cm</RightMargin>
+        <TopMargin>0cm</TopMargin>
+        <BottomMargin>0cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
