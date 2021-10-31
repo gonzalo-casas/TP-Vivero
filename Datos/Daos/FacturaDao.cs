@@ -179,6 +179,84 @@ namespace Vivero.Datos.Daos
             return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
         }
 
+        //public bool Delete(Es_Factura facturaSeleccionada)
+        //{
+        //    DataManager dm = new DataManager();
+        //    try
+        //    {
+        //        dm.Open();
+        //        dm.BeginTransaction();
+
+        //        string consulta = "UPDATE Factura " +
+        //                           "SET Estado= '0'" +
+        //                           " WHERE Tipo_Factura=" + facturaSeleccionada.Tipo_Factura.ID +
+        //                           " AND  Nro_Factura=" + facturaSeleccionada.Numero_Factura;
+
+
+        //        BDHelper.obtenerInstancia().EjecutarSQL(consulta);
+
+        //        string recuperarDetalle = @"SELECT df.Id_Planta, df.Id_Producto, df.Cantidad
+        //                                    FROM DetalleFactura df 
+        //                                    where df.Tipo_Factura = " + facturaSeleccionada.Tipo_Factura.ID + " AND df.Nro_Factura = " + facturaSeleccionada.Numero_Factura;
+
+        //        for (var i in facturaSeleccionada.FacturaDetalle)
+        //        {
+        //            string sqlDetalle = 
+
+
+        //            var paramDetalle = new Dictionary<string, object>();
+        //            paramDetalle.Add("Nro_Factura", factura.Numero_Factura);
+        //            paramDetalle.Add("Tipo_Factura", factura.Tipo_Factura.ID);
+
+        //            string SQLStock = "UPDATE ";
+        //            string CodigoStock = string.Empty;
+
+        //            if (itemFactura.TipoItem) // si es planta
+        //            {
+
+        //                paramDetalle.Add("Id_Planta", itemFactura.Planta.Codigo);
+        //                paramDetalle.Add("Id_Producto", DBNull.Value);
+        //                SQLStock += "Planta ";
+        //                CodigoStock = itemFactura.Planta.Codigo;
+
+        //            }
+
+
+        //            else  // entonces es producto
+        //            {
+        //                paramDetalle.Add("Id_Producto", itemFactura.Producto.Codigo);
+        //                paramDetalle.Add("Id_Planta", DBNull.Value);
+        //                SQLStock += "Producto ";
+        //                CodigoStock = itemFactura.Producto.Codigo.ToString();
+        //            }
+
+
+        //            paramDetalle.Add("Precio", itemFactura.Precio);
+        //            paramDetalle.Add("Cantidad", itemFactura.Cantidad);
+        //            paramDetalle.Add("NroItem", itemFactura.NroItem);
+        //            SQLStock += "SET Stock = Stock - " + itemFactura.Cantidad.ToString() + " WHERE Codigo = " + CodigoStock;
+        //            dm.EjecutarSQL(SQLStock);
+        //            dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
+
+        //        }
+
+
+        //        dm.Commit();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        dm.Rollback();
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        // Cierra la conexión 
+        //        dm.Close();
+        //    }
+        //    return true;
+        //}
+
         public DataTable RecuperarTipoFactura (string tipoFactura)
         {
             string sql = "SELECT * FROM Factura f JOIN TipoFactura tp ON (f.Tipo_Factura = tp.ID) WHERE tp.nombre LIKE " + "'" + tipoFactura + "'";
