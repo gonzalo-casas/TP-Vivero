@@ -123,8 +123,7 @@ namespace Vivero.Datos.Daos
             dm.Close();
             return tabla;
         }
-        ////stiv pa aca abajo
-        ///DataTable GenerarReportePlantasVendidas(string Desde, string Hasta);
+       
         public DataTable GenerarReportePlantasVendidas(string Desde, string Hasta)
         {
             DataManager dm = new DataManager();
