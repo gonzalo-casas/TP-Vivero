@@ -142,9 +142,25 @@ namespace Vivero.Datos.Daos
             dm.Close();
             return tabla;
         }
-
-
-
+        
+        public DataTable GenerarReporteTipoPlantasVendidas(string Desde, string Hasta)
+        {
+            DataManager dm = new DataManager();
+            dm.Open();
+            var parametros = new Dictionary<string, object>();
+            parametros.Add("FechaDesde", Desde);
+            parametros.Add("FechaHasta", Hasta);
+            string sql = @"select Nombre, sum(cantidad) as Cantidad From Planta p 
+                        join DetalleFactura d on p.Codigo = d.Id_Planta
+                        join TipoPlanta Tp on Tp.ID = P.Tipo
+                        join Factura f on d.Nro_Factura = f.Nro_Factura
+                        WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        GROUP BY Tp.Nombre, p.NombreCientifico";
+                        
+            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
+            dm.Close();
+            return tabla;
+        }
 
 
 

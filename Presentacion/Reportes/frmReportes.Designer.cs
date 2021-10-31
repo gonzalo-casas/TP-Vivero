@@ -30,7 +30,6 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.panelReportes = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_ProductosVendidos = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentaEmpleados = new Vivero.Presentacion.BotonRedondeado();
             this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
@@ -40,11 +39,14 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentasPorAño = new Vivero.Presentacion.BotonRedondeado();
             this.btn_CatalogosSeleccionados = new Vivero.Presentacion.BotonRedondeado();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_TipoPlantasVendidas = new Vivero.Presentacion.BotonRedondeado();
             this.panelReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.btn_TipoPlantasVendidas);
             this.panelReportes.Controls.Add(this.btn_ProductosVendidos);
             this.panelReportes.Controls.Add(this.btn_VentaEmpleados);
             this.panelReportes.Controls.Add(this.btn_SalirReporte);
@@ -60,18 +62,6 @@ namespace Vivero.Presentacion.Reportes
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(977, 660);
             this.panelReportes.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Seleccione el reporte que desea generar";
             // 
             // btn_ProductosVendidos
             // 
@@ -254,6 +244,38 @@ namespace Vivero.Presentacion.Reportes
             this.btn_CatalogosSeleccionados.UseVisualStyleBackColor = false;
             this.btn_CatalogosSeleccionados.Click += new System.EventHandler(this.btn_CatalogosSeleccionados_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(342, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(351, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seleccione el reporte que desea generar";
+            // 
+            // btn_TipoPlantasVendidas
+            // 
+            this.btn_TipoPlantasVendidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_TipoPlantasVendidas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_TipoPlantasVendidas.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_TipoPlantasVendidas.BorderRadius = 10;
+            this.btn_TipoPlantasVendidas.BorderSize = 0;
+            this.btn_TipoPlantasVendidas.FlatAppearance.BorderSize = 0;
+            this.btn_TipoPlantasVendidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TipoPlantasVendidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TipoPlantasVendidas.ForeColor = System.Drawing.Color.White;
+            this.btn_TipoPlantasVendidas.Location = new System.Drawing.Point(424, 329);
+            this.btn_TipoPlantasVendidas.Name = "btn_TipoPlantasVendidas";
+            this.btn_TipoPlantasVendidas.Size = new System.Drawing.Size(200, 100);
+            this.btn_TipoPlantasVendidas.TabIndex = 24;
+            this.btn_TipoPlantasVendidas.Text = "Tipos de Plantas Vendidas";
+            this.btn_TipoPlantasVendidas.TextColor = System.Drawing.Color.White;
+            this.btn_TipoPlantasVendidas.UseVisualStyleBackColor = false;
+            this.btn_TipoPlantasVendidas.Click += new System.EventHandler(this.botonRedondeado1_Click);
+            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,5 +303,6 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_SalirReporte;
         private BotonRedondeado btn_CatalogosSeleccionados;
         private BotonRedondeado btn_VentasPorAño;
+        private BotonRedondeado btn_TipoPlantasVendidas;
     }
 }

@@ -24,5 +24,9 @@ namespace Vivero.Datos.Interfaces
         DataTable GenerarReporteCatalogosSeleccionados(string Desde, string Hasta);
 
         DataTable GenerarReporteVentasPorAño(string Año);
+
+        DataTable GenerarReporteTipoPlantasVendidas(string Desde, string Hasta);
+
+        
     }
 }

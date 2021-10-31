@@ -271,6 +271,12 @@
     <Compile Include="Presentacion\Reportes\frmReportes.Designer.cs">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Reportes\VentasPorTipoPlanta\frmTipoPlantasVendidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\VentasPorTipoPlanta\frmTipoPlantasVendidas.Designer.cs">
+      <DependentUpon>frmTipoPlantasVendidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\TipoPlantasVendidas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TipoPlantasVendidas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\VentaEmpleados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -434,6 +445,9 @@
     <EmbeddedResource Include="Presentacion\Reportes\frmReportes.resx">
       <DependentUpon>frmReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\VentasPorTipoPlanta\frmTipoPlantasVendidas.resx">
+      <DependentUpon>frmTipoPlantasVendidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Reportes\PlantasVendidas\frmPlantasVendidas.resx">
       <DependentUpon>frmPlantasVendidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +468,7 @@
     <EmbeddedResource Include="Presentacion\Reportes\VentasPorAño\frmVentasPorAño.resx">
       <DependentUpon>frmVentasPorAño.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\VentasPorTipoPlanta\R_TipoPlanta.rdlc" />
     <EmbeddedResource Include="Presentacion\Ventas\ABM_Ventas.resx">
       <DependentUpon>ABM_Ventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +560,17 @@
     </None>
     <None Include="Reportes\TipoFacturaCantidad.xss">
       <DependentUpon>TipoFacturaCantidad.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoPlantasVendidas.xsc">
+      <DependentUpon>TipoPlantasVendidas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\TipoPlantasVendidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TipoPlantasVendidas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\TipoPlantasVendidas.xss">
+      <DependentUpon>TipoPlantasVendidas.xsd</DependentUpon>
     </None>
     <None Include="Reportes\VentaEmpleados.xsc">
       <DependentUpon>VentaEmpleados.xsd</DependentUpon>

@@ -94,5 +94,10 @@ namespace Vivero.Presentacion.Reportes
         {
             AbrirFormulario<frmVentasPorAño>();
         }
+
+        private void botonRedondeado1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmTipoPlantasVendidas>();
+        }
     }
 }
