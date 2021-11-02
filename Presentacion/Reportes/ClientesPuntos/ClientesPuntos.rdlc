@@ -387,7 +387,8 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!NombreCliente.Value</Value>
+                      <Value>=Fields!PuntosDisponibles.Value</Value>
+                      <Direction>Descending</Direction>
                     </SortExpression>
                   </SortExpressions>
                   <ChartMembers>
@@ -405,7 +406,7 @@
                       <Label>=Fields!NombreCliente.Value</Label>
                     </ChartMember>
                   </ChartMembers>
-                  <Label>=Fields!NombreCliente.Value</Label>
+                  <Label>#PERCENT</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
