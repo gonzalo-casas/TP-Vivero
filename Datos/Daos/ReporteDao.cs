@@ -188,7 +188,7 @@ namespace Vivero.Datos.Daos
             var parametros = new Dictionary<string, object>();
             parametros.Add("Año", año);
             
-            string sql = @"SELECT DateName(month,DateAdd(month,DATEPART(MONTH,Fecha),0)- 1) as Mes ,COUNT(*) AS Cantidad, SUM(Monto) as 'MontoDelMes'
+            string sql = @"SELECT FORMAT(DateAdd(month,DATEPART(MONTH,Fecha),0), 'MMMM', 'es-es') as Mes ,COUNT(*) AS Cantidad, SUM(Monto) as 'MontoDelMes'
                            FROM Factura
                            WHERE YEAR (Fecha) = @Año
                            GROUP BY DATEPART(MONTH,Fecha)";

@@ -30,6 +30,7 @@ namespace Vivero.Presentacion.Reportes
         private void InitializeComponent()
         {
             this.panelReportes = new System.Windows.Forms.Panel();
+            this.lblTituloRepo = new System.Windows.Forms.Label();
             this.btn_TipoPlantasVendidas = new Vivero.Presentacion.BotonRedondeado();
             this.btn_ProductosVendidos = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentaEmpleados = new Vivero.Presentacion.BotonRedondeado();
@@ -40,15 +41,12 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentasPorAño = new Vivero.Presentacion.BotonRedondeado();
             this.btn_CatalogosSeleccionados = new Vivero.Presentacion.BotonRedondeado();
-            this.lblTituloRepo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panelReportes.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
-            this.panelReportes.Controls.Add(this.panel3);
+            this.panelReportes.Controls.Add(this.lblTituloRepo);
             this.panelReportes.Controls.Add(this.btn_TipoPlantasVendidas);
             this.panelReportes.Controls.Add(this.btn_ProductosVendidos);
             this.panelReportes.Controls.Add(this.btn_VentaEmpleados);
@@ -64,6 +62,17 @@ namespace Vivero.Presentacion.Reportes
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(977, 660);
             this.panelReportes.TabIndex = 19;
+            // 
+            // lblTituloRepo
+            // 
+            this.lblTituloRepo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTituloRepo.AutoSize = true;
+            this.lblTituloRepo.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloRepo.Location = new System.Drawing.Point(699, 31);
+            this.lblTituloRepo.Name = "lblTituloRepo";
+            this.lblTituloRepo.Size = new System.Drawing.Size(240, 65);
+            this.lblTituloRepo.TabIndex = 25;
+            this.lblTituloRepo.Text = "Reportes";
             // 
             // btn_TipoPlantasVendidas
             // 
@@ -266,26 +275,6 @@ namespace Vivero.Presentacion.Reportes
             this.btn_CatalogosSeleccionados.UseVisualStyleBackColor = false;
             this.btn_CatalogosSeleccionados.Click += new System.EventHandler(this.btn_CatalogosSeleccionados_Click);
             // 
-            // lblTituloRepo
-            // 
-            this.lblTituloRepo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTituloRepo.AutoSize = true;
-            this.lblTituloRepo.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
-            this.lblTituloRepo.Location = new System.Drawing.Point(699, 23);
-            this.lblTituloRepo.Name = "lblTituloRepo";
-            this.lblTituloRepo.Size = new System.Drawing.Size(240, 65);
-            this.lblTituloRepo.TabIndex = 25;
-            this.lblTituloRepo.Text = "Reportes";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblTituloRepo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(977, 145);
-            this.panel3.TabIndex = 26;
-            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,8 +285,7 @@ namespace Vivero.Presentacion.Reportes
             this.Name = "frmReportes";
             this.Text = "frmReportes";
             this.panelReportes.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelReportes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -315,6 +303,5 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_VentasPorAño;
         private BotonRedondeado btn_TipoPlantasVendidas;
         private System.Windows.Forms.Label lblTituloRepo;
-        private System.Windows.Forms.Panel panel3;
     }
 }

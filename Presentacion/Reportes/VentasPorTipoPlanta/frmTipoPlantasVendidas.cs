@@ -29,7 +29,7 @@ namespace Vivero.Presentacion.Reportes
 
         private void frmTipoPlantasVendidas_Load(object sender, EventArgs e)
         {
-            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
         }
 
         

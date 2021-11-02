@@ -31,7 +31,7 @@ namespace Vivero.Presentacion.Reportes
 
         private void frmVentaEmpleados_Load(object sender, EventArgs e)
         {
-            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
 
             tabla.Clear();
             tabla.Columns.Add("ID", typeof(int));

@@ -33,7 +33,7 @@ namespace Vivero.Presentacion.Reportes
 
         private void frmClientesPuntos_Load(object sender, EventArgs e)
         {
-            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
+            dtpDesde.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
           
             tabla.Clear();
             tabla.Columns.Add("ID", typeof(int));
@@ -77,7 +77,13 @@ namespace Vivero.Presentacion.Reportes
 
         private void cboLocalidad_Click(object sender, EventArgs e)
         {
-
+            if (flag)
+            {
+                DataTable tablaconsulta = oLocalidadService.traerTodo();
+                tabla.Merge(tablaconsulta);
+                LlenarCombo(cboLocalidad, tabla, "Nombre", "ID");
+                flag = false;
+            }
         }
     }
 }
