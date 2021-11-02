@@ -40,12 +40,15 @@ namespace Vivero.Presentacion.Reportes
             this.btn_ComprasClientes = new Vivero.Presentacion.BotonRedondeado();
             this.btn_VentasPorAño = new Vivero.Presentacion.BotonRedondeado();
             this.btn_CatalogosSeleccionados = new Vivero.Presentacion.BotonRedondeado();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTituloRepo = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelReportes.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelReportes
             // 
+            this.panelReportes.Controls.Add(this.panel3);
             this.panelReportes.Controls.Add(this.btn_TipoPlantasVendidas);
             this.panelReportes.Controls.Add(this.btn_ProductosVendidos);
             this.panelReportes.Controls.Add(this.btn_VentaEmpleados);
@@ -56,7 +59,6 @@ namespace Vivero.Presentacion.Reportes
             this.panelReportes.Controls.Add(this.btn_ComprasClientes);
             this.panelReportes.Controls.Add(this.btn_VentasPorAño);
             this.panelReportes.Controls.Add(this.btn_CatalogosSeleccionados);
-            this.panelReportes.Controls.Add(this.label1);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelReportes.Location = new System.Drawing.Point(0, 0);
             this.panelReportes.Name = "panelReportes";
@@ -264,17 +266,25 @@ namespace Vivero.Presentacion.Reportes
             this.btn_CatalogosSeleccionados.UseVisualStyleBackColor = false;
             this.btn_CatalogosSeleccionados.Click += new System.EventHandler(this.btn_CatalogosSeleccionados_Click);
             // 
-            // label1
+            // lblTituloRepo
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Seleccione el reporte que desea generar";
+            this.lblTituloRepo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTituloRepo.AutoSize = true;
+            this.lblTituloRepo.Font = new System.Drawing.Font("Berlin Sans FB", 44.25F);
+            this.lblTituloRepo.Location = new System.Drawing.Point(699, 23);
+            this.lblTituloRepo.Name = "lblTituloRepo";
+            this.lblTituloRepo.Size = new System.Drawing.Size(240, 65);
+            this.lblTituloRepo.TabIndex = 25;
+            this.lblTituloRepo.Text = "Reportes";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblTituloRepo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(977, 145);
+            this.panel3.TabIndex = 26;
             // 
             // frmReportes
             // 
@@ -286,7 +296,8 @@ namespace Vivero.Presentacion.Reportes
             this.Name = "frmReportes";
             this.Text = "frmReportes";
             this.panelReportes.ResumeLayout(false);
-            this.panelReportes.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,7 +306,6 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_ProductosVendidos;
         private BotonRedondeado btn_VentaEmpleados;
         private System.Windows.Forms.Panel panelReportes;
-        private System.Windows.Forms.Label label1;
         private BotonRedondeado btn_ComprasClientes;
         private BotonRedondeado btn_ClientesPuntos;
         private BotonRedondeado btn_TipoFactura;
@@ -304,5 +314,7 @@ namespace Vivero.Presentacion.Reportes
         private BotonRedondeado btn_CatalogosSeleccionados;
         private BotonRedondeado btn_VentasPorAño;
         private BotonRedondeado btn_TipoPlantasVendidas;
+        private System.Windows.Forms.Label lblTituloRepo;
+        private System.Windows.Forms.Panel panel3;
     }
 }
