@@ -32,6 +32,7 @@ namespace Vivero
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panelReportes = new System.Windows.Forms.Panel();
             this.panelCatalogos = new System.Windows.Forms.Panel();
             this.panelPlantas = new System.Windows.Forms.Panel();
             this.panelProductos = new System.Windows.Forms.Panel();
@@ -45,8 +46,9 @@ namespace Vivero
             this.LblNombreUsuario = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.panelReportes = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCanjes = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnCatalogos = new System.Windows.Forms.Button();
             this.btnPlantas = new System.Windows.Forms.Button();
@@ -59,6 +61,7 @@ namespace Vivero
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panelReportes.SuspendLayout();
             this.panelCatalogos.SuspendLayout();
             this.panelPlantas.SuspendLayout();
             this.panelProductos.SuspendLayout();
@@ -70,7 +73,7 @@ namespace Vivero
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelForms.SuspendLayout();
-            this.panelReportes.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +99,7 @@ namespace Vivero
             this.panel5.Controls.Add(this.panelEmpleados);
             this.panel5.Controls.Add(this.panelProveedores);
             this.panel5.Controls.Add(this.PanelClientes);
+            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.panelVentas);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 72);
@@ -103,11 +107,20 @@ namespace Vivero
             this.panel5.Size = new System.Drawing.Size(200, 702);
             this.panel5.TabIndex = 2;
             // 
+            // panelReportes
+            // 
+            this.panelReportes.Controls.Add(this.btnReportes);
+            this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReportes.Location = new System.Drawing.Point(0, 560);
+            this.panelReportes.Name = "panelReportes";
+            this.panelReportes.Size = new System.Drawing.Size(200, 70);
+            this.panelReportes.TabIndex = 7;
+            // 
             // panelCatalogos
             // 
             this.panelCatalogos.Controls.Add(this.btnCatalogos);
             this.panelCatalogos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCatalogos.Location = new System.Drawing.Point(0, 420);
+            this.panelCatalogos.Location = new System.Drawing.Point(0, 490);
             this.panelCatalogos.Name = "panelCatalogos";
             this.panelCatalogos.Size = new System.Drawing.Size(200, 70);
             this.panelCatalogos.TabIndex = 5;
@@ -116,7 +129,7 @@ namespace Vivero
             // 
             this.panelPlantas.Controls.Add(this.btnPlantas);
             this.panelPlantas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPlantas.Location = new System.Drawing.Point(0, 350);
+            this.panelPlantas.Location = new System.Drawing.Point(0, 420);
             this.panelPlantas.Name = "panelPlantas";
             this.panelPlantas.Size = new System.Drawing.Size(200, 70);
             this.panelPlantas.TabIndex = 4;
@@ -125,7 +138,7 @@ namespace Vivero
             // 
             this.panelProductos.Controls.Add(this.btnProductos);
             this.panelProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProductos.Location = new System.Drawing.Point(0, 280);
+            this.panelProductos.Location = new System.Drawing.Point(0, 350);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.Size = new System.Drawing.Size(200, 70);
             this.panelProductos.TabIndex = 3;
@@ -134,7 +147,7 @@ namespace Vivero
             // 
             this.panelEmpleados.Controls.Add(this.btnEmpleados);
             this.panelEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEmpleados.Location = new System.Drawing.Point(0, 210);
+            this.panelEmpleados.Location = new System.Drawing.Point(0, 280);
             this.panelEmpleados.Name = "panelEmpleados";
             this.panelEmpleados.Size = new System.Drawing.Size(200, 70);
             this.panelEmpleados.TabIndex = 2;
@@ -143,7 +156,7 @@ namespace Vivero
             // 
             this.panelProveedores.Controls.Add(this.BtnProveedor);
             this.panelProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProveedores.Location = new System.Drawing.Point(0, 140);
+            this.panelProveedores.Location = new System.Drawing.Point(0, 210);
             this.panelProveedores.Name = "panelProveedores";
             this.panelProveedores.Size = new System.Drawing.Size(200, 70);
             this.panelProveedores.TabIndex = 1;
@@ -152,7 +165,7 @@ namespace Vivero
             // 
             this.PanelClientes.Controls.Add(this.btnClientes);
             this.PanelClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelClientes.Location = new System.Drawing.Point(0, 70);
+            this.PanelClientes.Location = new System.Drawing.Point(0, 140);
             this.PanelClientes.Name = "PanelClientes";
             this.PanelClientes.Size = new System.Drawing.Size(200, 70);
             this.PanelClientes.TabIndex = 0;
@@ -228,14 +241,14 @@ namespace Vivero
             this.panelForms.Size = new System.Drawing.Size(984, 1061);
             this.panelForms.TabIndex = 9;
             // 
-            // panelReportes
+            // panel6
             // 
-            this.panelReportes.Controls.Add(this.btnReportes);
-            this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportes.Location = new System.Drawing.Point(0, 490);
-            this.panelReportes.Name = "panelReportes";
-            this.panelReportes.Size = new System.Drawing.Size(200, 70);
-            this.panelReportes.TabIndex = 7;
+            this.panel6.Controls.Add(this.btnCanjes);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 70);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 70);
+            this.panel6.TabIndex = 8;
             // 
             // pictureBox2
             // 
@@ -247,6 +260,24 @@ namespace Vivero
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // btnCanjes
+            // 
+            this.btnCanjes.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCanjes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCanjes.FlatAppearance.BorderSize = 0;
+            this.btnCanjes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCanjes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCanjes.Image = global::Vivero.Properties.Resources.icons8_gift_64;
+            this.btnCanjes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCanjes.Location = new System.Drawing.Point(12, 0);
+            this.btnCanjes.Name = "btnCanjes";
+            this.btnCanjes.Size = new System.Drawing.Size(188, 70);
+            this.btnCanjes.TabIndex = 3;
+            this.btnCanjes.Text = "Canjes";
+            this.btnCanjes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCanjes.UseVisualStyleBackColor = true;
+            this.btnCanjes.Click += new System.EventHandler(this.btnCanjes_Click);
             // 
             // btnReportes
             // 
@@ -430,6 +461,7 @@ namespace Vivero
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panelReportes.ResumeLayout(false);
             this.panelCatalogos.ResumeLayout(false);
             this.panelPlantas.ResumeLayout(false);
             this.panelProductos.ResumeLayout(false);
@@ -441,7 +473,7 @@ namespace Vivero
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
-            this.panelReportes.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -477,6 +509,8 @@ namespace Vivero
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnCanjes;
     }
 }
 

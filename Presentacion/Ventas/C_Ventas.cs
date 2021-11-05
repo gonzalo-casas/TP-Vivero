@@ -165,7 +165,8 @@ namespace Vivero.Presentacion.Ventas
                 if (oFactura.Anular(FacturaSeleccionada))
                 {
                     MessageBox.Show("Factura anulada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    dgv_Ventas.Rows.Clear();
+                    dgv_DetalleFactura.Rows.Clear();
                 }
                 else
                     MessageBox.Show("Error al anular la factura!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

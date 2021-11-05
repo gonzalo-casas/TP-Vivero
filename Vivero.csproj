@@ -676,6 +676,7 @@
   <ItemGroup>
     <Content Include="icono.ico" />
     <None Include="Presentacion\Recursos\Iconos\icons8-report-64.png" />
+    <None Include="Presentacion\Recursos\Iconos\icons8-gift-64.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

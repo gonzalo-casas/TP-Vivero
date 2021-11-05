@@ -133,20 +133,17 @@
   <data name="icons8-catalog-49" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-catalog-49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImagenInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Imagenes\ImagenInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-plant-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-plant-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-add-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-add-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-truck-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\icons8-truck-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-check-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-check-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-report-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\icons8-report-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-cancel-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-cancel-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +157,8 @@
   <data name="icons8-employee-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-employee-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-truck-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-truck-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImagenInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Imagenes\ImagenInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-check-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-check-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,17 +172,23 @@
   <data name="icons8-exit-60" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-exit-60.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ojo-pintado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\ojo-pintado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-cancel-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-cancel-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-cleaning-products-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\icons8-cleaning-products-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-user-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-user-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-cleaning-products-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-cleaning-products-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-check-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\icons8-check-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-customer-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\icons8-customer-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,7 @@
   <data name="cerrar-sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Presentacion\Recursos\Iconos\cerrar-sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-report-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Presentacion\Recursos\Iconos\icons8-report-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-gift-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Presentacion\Recursos\Iconos\icons8-gift-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

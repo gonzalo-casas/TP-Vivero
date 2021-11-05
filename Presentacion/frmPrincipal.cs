@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vivero.Presentacion;
+using Vivero.Presentacion.Canjes;
 using Vivero.Presentacion.Catalogos;
 using Vivero.Presentacion.Clientes;
 using Vivero.Presentacion.Empleados;
@@ -154,6 +155,8 @@ namespace Vivero
                 btnVentas.BackColor = Color.FromArgb(135, 181, 168);
             if (Application.OpenForms["ReportViewer"] == null)
                 btnReportes.BackColor = Color.FromArgb(135, 181, 168);
+            if (Application.OpenForms["C_Canjes"] == null)
+                btnCanjes.BackColor = Color.FromArgb(135, 181, 168);
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -179,6 +182,12 @@ namespace Vivero
         {
             AbrirFormulario<frmReportes>();
             btnReportes.BackColor = Color.FromArgb(205, 241, 231);
+        }
+
+        private void btnCanjes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<C_Canjes>();
+            btnCanjes.BackColor = Color.FromArgb(205, 241, 231);
         }
     }
 }

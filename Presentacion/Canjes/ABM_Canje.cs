@@ -57,7 +57,7 @@ namespace Vivero.Presentacion.Canjes
         {
             //this.Location = new Point(300, 50);
             
-            LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
+            //LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
             lblDireccion.Visible = false;
             lblTelefono.Visible = false;
@@ -79,7 +79,7 @@ namespace Vivero.Presentacion.Canjes
                 case FormMode.delete:
                     this.Text = "Eliminar Factura";
                     //actualizarCampos();
-                    this.cboTipoFactura.Enabled = false;
+                    //this.cboTipoFactura.Enabled = false;
                     this.cboCliente.Enabled = false;
                     this.dtpFecha.Enabled = false;
                     this.rbPlanta.Enabled = false;
@@ -282,7 +282,7 @@ namespace Vivero.Presentacion.Canjes
                     factura.Fecha = dtpFecha.Value;
                     factura.Cliente = oCliente;
                 factura.Tipo_Factura = new Es_TipoFactura();
-                factura.Tipo_Factura.ID = int.Parse(cboTipoFactura.SelectedValue.ToString());
+                //factura.Tipo_Factura.ID = int.Parse(cboTipoFactura.SelectedValue.ToString());
                 factura.FacturaDetalle = listaFacturaDetalle;
                 factura.Monto = double.Parse(txtTotal.Text);
                 //Descuento = double.Parse(txtDescuento.Text)
@@ -309,11 +309,11 @@ namespace Vivero.Presentacion.Canjes
 
         private bool validarCamposFactura()
         {
-            if (cboTipoFactura.SelectedIndex.Equals(-1))
-            {
-                MessageBox.Show("Seleccione un Tipo de Factura por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            //if (cboTipoFactura.SelectedIndex.Equals(-1))
+            //{
+            //    MessageBox.Show("Seleccione un Tipo de Factura por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return false;
+            //}
 
             if (cboCliente.SelectedIndex.Equals(-1))
             {
