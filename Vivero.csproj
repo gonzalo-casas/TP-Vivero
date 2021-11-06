@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Daos\BarrioDao.cs" />
+    <Compile Include="Datos\Daos\CanjeDao.cs" />
     <Compile Include="Datos\Daos\ComposicionDao.cs" />
     <Compile Include="Datos\Daos\CatalogoDao.cs" />
     <Compile Include="Datos\Daos\ClienteDao.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Datos\DataManager.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
+    <Compile Include="Datos\Interfaces\ICanje.cs" />
     <Compile Include="Datos\Interfaces\IComposicion.cs" />
     <Compile Include="Datos\Interfaces\ICatalogo.cs" />
     <Compile Include="Datos\Interfaces\ICliente.cs" />
@@ -117,6 +119,7 @@
     <Compile Include="Negocio\Entidades\Es_Localidad.cs" />
     <Compile Include="Negocio\Entidades\Es_TipoFactura.cs" />
     <Compile Include="Negocio\Servicios\BarrioService.cs" />
+    <Compile Include="Negocio\Servicios\CanjeService.cs" />
     <Compile Include="Negocio\Servicios\CatalogoService.cs" />
     <Compile Include="Negocio\Servicios\ClienteService.cs" />
     <Compile Include="Negocio\Servicios\ComposicionService.cs" />
