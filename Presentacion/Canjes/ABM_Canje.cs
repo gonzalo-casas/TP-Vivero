@@ -18,13 +18,10 @@ namespace Vivero.Presentacion.Canjes
     public partial class ABM_Canje : Form
     {
         //declaro objetos
-        private readonly BindingList<Es_DetalleFactura> listaFacturaDetalle;
-        TipoFacturaService oTipoFacturaService;
         ClienteService oClienteService;
-        ProductoService oProductoService;
         PlantasService oPlataService;
-        FacturaService oFacturaService;
         Es_Cliente oCliente = new Es_Cliente();
+        CatalogoService oCatalogoService;
         string tipoDoc { get; set; }
         bool flag;
 
@@ -35,64 +32,17 @@ namespace Vivero.Presentacion.Canjes
         public ABM_Canje()
         {
             InitializeComponent();
-            oTipoFacturaService = new TipoFacturaService();
-            oClienteService = new ClienteService();
-            oProductoService = new ProductoService();
             oPlataService = new PlantasService();
-            cboItem.Enabled = false;
-            //dgv_Items.AutoGenerateColumns = false;
-            listaFacturaDetalle = new BindingList<Es_DetalleFactura>();
-            oFacturaService = new FacturaService();
-        }
-
-        private FormMode formMode = FormMode.insert;
-
-        public enum FormMode
-        {
-            insert,
-            delete
+            cboCatalogo.Enabled = false;
         }
 
         private void ABM_Ventas_Load(object sender, EventArgs e)
         {
-            //this.Location = new Point(300, 50);
-            
-            //LlenarCombo(cboTipoFactura, oTipoFacturaService.traerTodo(), "Nombre", "ID");
             LlenarCombo(cboCliente, oClienteService.traerTodo(), "FullName", "NroDoc");
             lblDireccion.Visible = false;
             lblTelefono.Visible = false;
             lblNroDoc.Visible = false;
-            cboCliente.Enabled = true;
             dtpFecha.MaxDate = DateTime.Today;
-            //dgv_Items.DataSource = listaFacturaDetalle;
-            //rbProducto.Checked = true;
-
-
-
-
-
-            //    switch (formMode)
-            //    {
-            //        case FormMode.insert:
-            //            this.Text = "Nueva Factura";
-            //            break;
-            //        case FormMode.delete:
-            //            this.Text = "Eliminar Factura";
-            //            //actualizarCampos();
-            //            //this.cboTipoFactura.Enabled = false;
-            //            this.cboCliente.Enabled = false;
-            //            this.dtpFecha.Enabled = false;
-            //            this.rbPlanta.Enabled = false;
-            //            this.rbProducto.Enabled = false;
-            //            this.cboItem.Enabled = false;
-            //            this.txtCantidad.Enabled = false;
-            //            this.btnNueva.Enabled = false;
-            //            this.btnEliminar.Enabled = false;
-            //            this.dgv_Items.Enabled = false;
-            //            break;
-            //        default:
-            //            break;
-            //    }
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -115,7 +65,7 @@ namespace Vivero.Presentacion.Canjes
 
         private void cboItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboItem.Enabled.Equals(true))
+            if (cboCatalogo.Enabled.Equals(true))
             {
                 
             }
@@ -124,29 +74,16 @@ namespace Vivero.Presentacion.Canjes
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if(validarCamposFactura())
+            if(ValidarCamposCanje())
 
             try
             {
-                var factura = new Es_Factura();
-
-                    factura.Fecha = dtpFecha.Value;
-                    factura.Cliente = oCliente;
-                factura.Tipo_Factura = new Es_TipoFactura();
-                factura.FacturaDetalle = listaFacturaDetalle;
-                factura.Monto = double.Parse(txtTotal.Text);
-                factura.Id_Empleado = new Es_Empleado();
-                factura.Id_Empleado.ID = FrmPrincipal.idUsuario;
-                
-               
-
-                if (oFacturaService.ValidarDatos(factura))
-                {
-                    oFacturaService.Crear(factura);
-
-                    MessageBox.Show(string.Concat("La factura nro: ", factura.Numero_Factura, " se generó correctamente."), "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                    Es_Canje oCanje = new Es_Canje();
+                    oCanje.TipoDoc = oCliente.TipoDoc.IdTipoDoc.ToString();
+                    oCanje.NroDoc = oCliente.NroDoc;
+                    oCanje.Id_Catalogo = cboCatalogo.SelectedValue.ToString();
+                    oCanje.Id_Planta = cboPlanta.SelectedValue.ToString();
+                    oCanje.Fecha = dtpFecha.Text + dtpHora.Text;
 
             }
             catch (Exception ex)
@@ -155,7 +92,7 @@ namespace Vivero.Presentacion.Canjes
             }
         }
 
-        private bool validarCamposFactura()
+        private bool ValidarCamposCanje()
         {
 
             if (cboCliente.SelectedIndex.Equals(-1))
@@ -164,17 +101,21 @@ namespace Vivero.Presentacion.Canjes
                 return false;
             }
 
-            var listaAgrupada = from i in listaFacturaDetalle
-                                group i by i.Nombre into j
-                                select new { Nombre = j.Key, Cantidad = j.Sum(k => k.Cantidad), Stock = j.First().Stock };
-
-            foreach (var item in listaAgrupada)
+            if (cboCatalogo.SelectedIndex.Equals(-1))
             {
-                if (item.Cantidad > int.Parse(item.Stock))
-                {
-                    MessageBox.Show("La cantidad requerida no esta en stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+                MessageBox.Show("Seleccione un catalogo por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (cboPlanta.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Seleccione una planta por favor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (Int32.Parse(lblPuntos.Text) < Int32.Parse(txtPuntos.Text))
+            {
+                MessageBox.Show("El cliente no cuenta con los puntos suficientes para canjear esa planta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             return true;
         }
@@ -195,10 +136,24 @@ namespace Vivero.Presentacion.Canjes
                 lblDireccion.Text = oCliente.Calle + " " + oCliente.NroCalle;
                 lblTelefono.Text = oCliente.Telefono;
                 lblNroDoc.Text = oCliente.NroDoc;
+                //lblPuntos.Text = oCanjeService.ObtenerPuntosCliente(oCliente.TipoDoc.IdTipoDoc, oCliente.NroDoc);
                 
                 if (!lblDireccion.Visible) lblDireccion.Visible = true;
                 if (!lblTelefono.Visible) lblTelefono.Visible = true;
                 if (!lblNroDoc.Visible) lblNroDoc.Visible = true;
+
+                if (!cboCatalogo.Enabled)
+                {
+                LlenarCombo(cboCatalogo, oCatalogoService.Buscar_Catalogo("", "", "('1')"), "Nombre", "ID");
+                cboCatalogo.Enabled = true;
+
+                }
+
+                if (!cboPlanta.Enabled)
+                {
+                    LlenarCombo(cboPlanta, oPlataService.Plantas_Activas(), "NombreComun", "Codigo");
+                    cboPlanta.Enabled = true;
+                }
             }
 
         }

@@ -37,13 +37,13 @@ namespace Vivero.Presentacion.Canjes
             this.gbDetalleFactura = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboPlanta = new System.Windows.Forms.ComboBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboItem = new System.Windows.Forms.ComboBox();
+            this.cboCatalogo = new System.Windows.Forms.ComboBox();
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtPuntos = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.toolTipABMFactura = new System.Windows.Forms.ToolTip(this.components);
             this.label13 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Vivero.Presentacion.Canjes
             this.btnCancelar = new Vivero.Presentacion.BotonRedondeado();
             this.btnAceptar = new Vivero.Presentacion.BotonRedondeado();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.gbDetalleFactura.SuspendLayout();
@@ -103,10 +103,12 @@ namespace Vivero.Presentacion.Canjes
             // 
             this.gbDetalleFactura.Controls.Add(this.label9);
             this.gbDetalleFactura.Controls.Add(this.label8);
-            this.gbDetalleFactura.Controls.Add(this.comboBox1);
+            this.gbDetalleFactura.Controls.Add(this.cboPlanta);
             this.gbDetalleFactura.Controls.Add(this.txtStock);
             this.gbDetalleFactura.Controls.Add(this.label6);
-            this.gbDetalleFactura.Controls.Add(this.cboItem);
+            this.gbDetalleFactura.Controls.Add(this.cboCatalogo);
+            this.gbDetalleFactura.Controls.Add(this.label11);
+            this.gbDetalleFactura.Controls.Add(this.txtPuntos);
             this.gbDetalleFactura.Location = new System.Drawing.Point(20, 99);
             this.gbDetalleFactura.Name = "gbDetalleFactura";
             this.gbDetalleFactura.Size = new System.Drawing.Size(785, 111);
@@ -118,7 +120,7 @@ namespace Vivero.Presentacion.Canjes
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(354, 25);
+            this.label9.Location = new System.Drawing.Point(240, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 20);
             this.label9.TabIndex = 28;
@@ -128,51 +130,53 @@ namespace Vivero.Presentacion.Canjes
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(82, 25);
+            this.label8.Location = new System.Drawing.Point(29, 30);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 27;
             this.label8.Text = "Catalogo";
             // 
-            // comboBox1
+            // cboPlanta
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(343, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 28);
-            this.comboBox1.TabIndex = 23;
+            this.cboPlanta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPlanta.Enabled = false;
+            this.cboPlanta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPlanta.FormattingEnabled = true;
+            this.cboPlanta.Location = new System.Drawing.Point(229, 53);
+            this.cboPlanta.Name = "cboPlanta";
+            this.cboPlanta.Size = new System.Drawing.Size(176, 28);
+            this.cboPlanta.TabIndex = 23;
             // 
             // txtStock
             // 
             this.txtStock.Enabled = false;
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(696, 48);
+            this.txtStock.Location = new System.Drawing.Point(697, 53);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(61, 26);
+            this.txtStock.Size = new System.Drawing.Size(67, 26);
             this.txtStock.TabIndex = 22;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(640, 51);
+            this.label6.Location = new System.Drawing.Point(641, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "Stock";
             // 
-            // cboItem
+            // cboCatalogo
             // 
-            this.cboItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboItem.FormattingEnabled = true;
-            this.cboItem.Location = new System.Drawing.Point(74, 48);
-            this.cboItem.Name = "cboItem";
-            this.cboItem.Size = new System.Drawing.Size(176, 28);
-            this.cboItem.TabIndex = 8;
-            this.cboItem.SelectedIndexChanged += new System.EventHandler(this.cboItem_SelectedIndexChanged);
+            this.cboCatalogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCatalogo.Enabled = false;
+            this.cboCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCatalogo.FormattingEnabled = true;
+            this.cboCatalogo.Location = new System.Drawing.Point(21, 53);
+            this.cboCatalogo.Name = "cboCatalogo";
+            this.cboCatalogo.Size = new System.Drawing.Size(176, 28);
+            this.cboCatalogo.TabIndex = 8;
+            this.cboCatalogo.SelectedIndexChanged += new System.EventHandler(this.cboItem_SelectedIndexChanged);
             // 
             // cboCliente
             // 
@@ -196,24 +200,24 @@ namespace Vivero.Presentacion.Canjes
             this.dtpFecha.Size = new System.Drawing.Size(123, 26);
             this.dtpFecha.TabIndex = 9;
             // 
-            // txtTotal
+            // txtPuntos
             // 
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(658, 221);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(123, 26);
-            this.txtTotal.TabIndex = 21;
+            this.txtPuntos.Enabled = false;
+            this.txtPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntos.Location = new System.Drawing.Point(557, 53);
+            this.txtPuntos.Name = "txtPuntos";
+            this.txtPuntos.Size = new System.Drawing.Size(67, 26);
+            this.txtPuntos.TabIndex = 21;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(541, 224);
+            this.label11.Location = new System.Drawing.Point(440, 56);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 20);
+            this.label11.Size = new System.Drawing.Size(104, 20);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Total puntos";
+            this.label11.Text = "Costo puntos";
             // 
             // label13
             // 
@@ -305,16 +309,16 @@ namespace Vivero.Presentacion.Canjes
             this.label1.TabIndex = 31;
             this.label1.Text = "Hora";
             // 
-            // dateTimePicker1
+            // dtpHora
             // 
-            this.dateTimePicker1.CustomFormat = "HH:mm";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(716, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(68, 26);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dtpHora.CustomFormat = "HH:mm";
+            this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora.Location = new System.Drawing.Point(716, 17);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.ShowUpDown = true;
+            this.dtpHora.Size = new System.Drawing.Size(68, 26);
+            this.dtpHora.TabIndex = 32;
             // 
             // label10
             // 
@@ -344,7 +348,7 @@ namespace Vivero.Presentacion.Canjes
             this.ClientSize = new System.Drawing.Size(824, 363);
             this.Controls.Add(this.lblPuntos);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpHora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNroDoc);
             this.Controls.Add(this.lblTelefono);
@@ -352,8 +356,6 @@ namespace Vivero.Presentacion.Canjes
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.gbDetalleFactura);
@@ -383,8 +385,8 @@ namespace Vivero.Presentacion.Canjes
         private System.Windows.Forms.GroupBox gbDetalleFactura;
         private System.Windows.Forms.ComboBox cboCliente;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.ComboBox cboItem;
-        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.ComboBox cboCatalogo;
+        private System.Windows.Forms.TextBox txtPuntos;
         private System.Windows.Forms.Label label11;
         private BotonRedondeado btnAceptar;
         private BotonRedondeado btnCancelar;
@@ -396,10 +398,10 @@ namespace Vivero.Presentacion.Canjes
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpHora;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboPlanta;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblPuntos;
     }
