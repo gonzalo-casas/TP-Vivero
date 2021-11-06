@@ -31,19 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txt_NroCanje = new System.Windows.Forms.TextBox();
-            this.txt_Documento = new System.Windows.Forms.TextBox();
             this.txt_Planta = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Canjes = new System.Windows.Forms.DataGridView();
-            this.colNroCanje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCatalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
@@ -75,6 +65,15 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_Documento = new System.Windows.Forms.TextBox();
+            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreCatalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Canjes)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -86,22 +85,6 @@
             this.panelAgregar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txt_NroCanje
-            // 
-            this.txt_NroCanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NroCanje.Location = new System.Drawing.Point(192, 22);
-            this.txt_NroCanje.Name = "txt_NroCanje";
-            this.txt_NroCanje.Size = new System.Drawing.Size(127, 26);
-            this.txt_NroCanje.TabIndex = 4;
-            // 
-            // txt_Documento
-            // 
-            this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Documento.Location = new System.Drawing.Point(192, 55);
-            this.txt_Documento.Name = "txt_Documento";
-            this.txt_Documento.Size = new System.Drawing.Size(127, 26);
-            this.txt_Documento.TabIndex = 5;
-            // 
             // txt_Planta
             // 
             this.txt_Planta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,26 +92,6 @@
             this.txt_Planta.Name = "txt_Planta";
             this.txt_Planta.Size = new System.Drawing.Size(127, 26);
             this.txt_Planta.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "N° Canje:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Documento:";
             // 
             // label3
             // 
@@ -158,12 +121,11 @@
             this.dgv_Canjes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Canjes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Canjes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNroCanje,
-            this.colDocumento,
-            this.colCatalogo,
+            this.colCliente,
+            this.colNombreCatalogo,
             this.colPlanta,
-            this.colFecha,
-            this.colHora});
+            this.colPuntos,
+            this.colFechaHora});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,42 +145,6 @@
             this.dgv_Canjes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Canjes.Size = new System.Drawing.Size(811, 549);
             this.dgv_Canjes.TabIndex = 11;
-            // 
-            // colNroCanje
-            // 
-            this.colNroCanje.HeaderText = "N° Canje";
-            this.colNroCanje.Name = "colNroCanje";
-            this.colNroCanje.ReadOnly = true;
-            // 
-            // colDocumento
-            // 
-            this.colDocumento.HeaderText = "Doc Cliente";
-            this.colDocumento.Name = "colDocumento";
-            this.colDocumento.ReadOnly = true;
-            // 
-            // colCatalogo
-            // 
-            this.colCatalogo.HeaderText = "Catalogo";
-            this.colCatalogo.Name = "colCatalogo";
-            this.colCatalogo.ReadOnly = true;
-            // 
-            // colPlanta
-            // 
-            this.colPlanta.HeaderText = "Planta";
-            this.colPlanta.Name = "colPlanta";
-            this.colPlanta.ReadOnly = true;
-            // 
-            // colFecha
-            // 
-            this.colFecha.HeaderText = "Fecha";
-            this.colFecha.Name = "colFecha";
-            this.colFecha.ReadOnly = true;
-            // 
-            // colHora
-            // 
-            this.colHora.HeaderText = "Hora";
-            this.colHora.Name = "colHora";
-            this.colHora.ReadOnly = true;
             // 
             // panel1
             // 
@@ -297,14 +223,14 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.chk_Inactivos);
             this.panel3.Controls.Add(this.chk_Activos);
             this.panel3.Controls.Add(this.dtpFecha);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.lblTituloCanjes);
             this.panel3.Controls.Add(this.btn_ConsultarVentas);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.txt_NroCanje);
             this.panel3.Controls.Add(this.txt_Documento);
             this.panel3.Controls.Add(this.txt_Planta);
             this.panel3.Controls.Add(this.label2);
@@ -569,6 +495,72 @@
             this.panel9.Size = new System.Drawing.Size(100, 649);
             this.panel9.TabIndex = 12;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(192, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 26);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(115, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(88, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Documento:";
+            // 
+            // txt_Documento
+            // 
+            this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Documento.Location = new System.Drawing.Point(192, 55);
+            this.txt_Documento.Name = "txt_Documento";
+            this.txt_Documento.Size = new System.Drawing.Size(127, 26);
+            this.txt_Documento.TabIndex = 5;
+            // 
+            // colCliente
+            // 
+            this.colCliente.HeaderText = "Cliente";
+            this.colCliente.Name = "colCliente";
+            this.colCliente.ReadOnly = true;
+            // 
+            // colNombreCatalogo
+            // 
+            this.colNombreCatalogo.HeaderText = "NombreCatalogo";
+            this.colNombreCatalogo.Name = "colNombreCatalogo";
+            this.colNombreCatalogo.ReadOnly = true;
+            // 
+            // colPlanta
+            // 
+            this.colPlanta.HeaderText = "Planta";
+            this.colPlanta.Name = "colPlanta";
+            this.colPlanta.ReadOnly = true;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
+            // 
+            // colFechaHora
+            // 
+            this.colFechaHora.HeaderText = "Fecha y hora";
+            this.colFechaHora.Name = "colFechaHora";
+            this.colFechaHora.ReadOnly = true;
+            // 
             // C_Canjes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,11 +588,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_NroCanje;
-        private System.Windows.Forms.TextBox txt_Documento;
         private System.Windows.Forms.TextBox txt_Planta;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_Canjes;
         private System.Windows.Forms.Panel panel1;
@@ -634,11 +622,14 @@
         private BotonRedondeado AnularBoton;
         private System.Windows.Forms.CheckBox chk_Inactivos;
         private System.Windows.Forms.CheckBox chk_Activos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNroCanje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCatalogo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreCatalogo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaHora;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_Documento;
+        private System.Windows.Forms.Label label2;
     }
 }
