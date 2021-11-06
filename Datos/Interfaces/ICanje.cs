@@ -13,6 +13,7 @@ namespace Vivero.Datos.Interfaces
 
         DataTable BuscarCanje(string nombre, string nro_doc, string nombreComun, string fecha, string estado);
         bool Create(Es_Canje canje);
+        bool Delete(string idCanje);
         bool Delete(Es_Canje canjeSeleccionada);
 
 

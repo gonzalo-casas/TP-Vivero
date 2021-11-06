@@ -41,10 +41,10 @@ namespace Vivero.Presentacion.Canjes
             this.txtStock = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cboCatalogo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtPuntos = new System.Windows.Forms.TextBox();
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtPuntos = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.toolTipABMFactura = new System.Windows.Forms.ToolTip(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -178,6 +178,25 @@ namespace Vivero.Presentacion.Canjes
             this.cboCatalogo.TabIndex = 8;
             this.cboCatalogo.SelectedIndexChanged += new System.EventHandler(this.cboItem_SelectedIndexChanged);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(440, 56);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 20);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Costo puntos";
+            // 
+            // txtPuntos
+            // 
+            this.txtPuntos.Enabled = false;
+            this.txtPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntos.Location = new System.Drawing.Point(557, 53);
+            this.txtPuntos.Name = "txtPuntos";
+            this.txtPuntos.Size = new System.Drawing.Size(67, 26);
+            this.txtPuntos.TabIndex = 21;
+            // 
             // cboCliente
             // 
             this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -199,25 +218,6 @@ namespace Vivero.Presentacion.Canjes
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(123, 26);
             this.dtpFecha.TabIndex = 9;
-            // 
-            // txtPuntos
-            // 
-            this.txtPuntos.Enabled = false;
-            this.txtPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuntos.Location = new System.Drawing.Point(557, 53);
-            this.txtPuntos.Name = "txtPuntos";
-            this.txtPuntos.Size = new System.Drawing.Size(67, 26);
-            this.txtPuntos.TabIndex = 21;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(440, 56);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 20);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Costo puntos";
             // 
             // label13
             // 
@@ -303,7 +303,7 @@ namespace Vivero.Presentacion.Canjes
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(656, 18);
+            this.label1.Location = new System.Drawing.Point(646, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 31;
@@ -314,10 +314,10 @@ namespace Vivero.Presentacion.Canjes
             this.dtpHora.CustomFormat = "HH:mm";
             this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHora.Location = new System.Drawing.Point(716, 17);
+            this.dtpHora.Location = new System.Drawing.Point(706, 15);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.ShowUpDown = true;
-            this.dtpHora.Size = new System.Drawing.Size(68, 26);
+            this.dtpHora.Size = new System.Drawing.Size(63, 26);
             this.dtpHora.TabIndex = 32;
             // 
             // label10
