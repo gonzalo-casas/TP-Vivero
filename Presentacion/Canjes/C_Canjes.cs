@@ -19,7 +19,7 @@ namespace Vivero.Presentacion.Canjes
 
     public partial class C_Canjes : Form
     {
-        FacturaService oFactura = new FacturaService();
+        CanjeService oCanje = new CanjeService();
 
         public C_Canjes()
         {
@@ -54,8 +54,7 @@ namespace Vivero.Presentacion.Canjes
                 estado = "('0')";
             }
 
-
-            //Cargar_Grilla(oFactura.BuscarFactura(string nombre, string documento, string planta, fecha, estado));
+            Cargar_Grilla(oCanje.BuscarCanje(textBox1.Text, txt_Documento.Text, txt_Planta.Text, fecha, estado));
             return;
 
         }
@@ -70,8 +69,9 @@ namespace Vivero.Presentacion.Canjes
                 dgv_Canjes.Rows[i].Cells[0].Value = tabla.Rows[i]["Cliente"].ToString(); // es el nombre del tipo factura
                 dgv_Canjes.Rows[i].Cells[1].Value = tabla.Rows[i]["NombreCatalogo"].ToString();
                 dgv_Canjes.Rows[i].Cells[2].Value = tabla.Rows[i]["Planta"].ToString(); // nro doc del cliente
-                dgv_Canjes.Rows[i].Cells[3].Value = tabla.Rows[i]["Puntos_Necesarios"].ToString();
+                dgv_Canjes.Rows[i].Cells[3].Value = tabla.Rows[i]["Puntos"].ToString();
                 dgv_Canjes.Rows[i].Cells[4].Value = tabla.Rows[i]["Fecha"].ToString();
+              
             }
 
             dgv_Canjes.Enabled = true;  
@@ -83,30 +83,32 @@ namespace Vivero.Presentacion.Canjes
             dtpFecha.MaxDate = DateTime.Today;
             dtpFecha.Checked = false;
         }
-     
+
         private void AnularBoton_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Seguro que desea anular el canje seleccionado?", "Aviso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
-                var tipoFactura = oFactura.RecuperarTipoFactura(dgv_Canjes.CurrentRow.Cells[0].Value.ToString()).Rows[0][0].ToString();
+
+
+                // var tipoFactura = oFactura.RecuperarTipoFactura(dgv_Canjes.CurrentRow.Cells[0].Value.ToString()).Rows[0][0].ToString();
 
 
 
                 Es_Factura FacturaSeleccionada = new Es_Factura();
                 FacturaSeleccionada.Tipo_Factura = new Es_TipoFactura();
                 FacturaSeleccionada.Numero_Factura = int.Parse(dgv_Canjes.CurrentRow.Cells[1].Value.ToString());
-                FacturaSeleccionada.Tipo_Factura.ID = int.Parse(tipoFactura);
+               // FacturaSeleccionada.Tipo_Factura.ID = int.Parse(tipoFactura);
 
 
 
-                if (oFactura.Anular(FacturaSeleccionada))
-                {
-                    MessageBox.Show("Canje anulado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                    MessageBox.Show("Error al anular el canje!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //if (oCanje.Anular(FacturaSeleccionada))
+                //{
+                //    MessageBox.Show("Factura anulada!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    this.Close();
+                //}
+                //else
+                //    MessageBox.Show("Error al anular la factura!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
