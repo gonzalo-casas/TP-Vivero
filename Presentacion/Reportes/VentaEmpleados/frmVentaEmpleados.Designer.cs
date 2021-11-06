@@ -35,6 +35,7 @@ namespace Vivero.Presentacion.Reportes
             this.dSVentas = new Vivero.Reportes.DSVentas();
             this.rpvVentaEmpleados = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_Generar = new Vivero.Presentacion.BotonRedondeado();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +50,6 @@ namespace Vivero.Presentacion.Reportes
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,7 +69,7 @@ namespace Vivero.Presentacion.Reportes
             // 
             // rpvVentaEmpleados
             // 
-            this.rpvVentaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvVentaEmpleados.Dock = System.Windows.Forms.DockStyle.Left;
             reportDataSource1.Name = "ProductosVendidos";
             reportDataSource1.Value = null;
             this.rpvVentaEmpleados.LocalReport.DataSources.Add(reportDataSource1);
@@ -77,7 +77,7 @@ namespace Vivero.Presentacion.Reportes
             this.rpvVentaEmpleados.Location = new System.Drawing.Point(100, 126);
             this.rpvVentaEmpleados.Name = "rpvVentaEmpleados";
             this.rpvVentaEmpleados.ServerReport.BearerToken = null;
-            this.rpvVentaEmpleados.Size = new System.Drawing.Size(958, 413);
+            this.rpvVentaEmpleados.Size = new System.Drawing.Size(814, 413);
             this.rpvVentaEmpleados.TabIndex = 0;
             // 
             // panel1
@@ -93,6 +93,16 @@ namespace Vivero.Presentacion.Reportes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1158, 126);
             this.panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(466, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 23);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Venta de los Empleados";
             // 
             // btn_Generar
             // 
@@ -244,16 +254,6 @@ namespace Vivero.Presentacion.Reportes
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 413);
             this.panel9.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(466, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 23);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Venta de los Empleados";
             // 
             // frmVentaEmpleados
             // 

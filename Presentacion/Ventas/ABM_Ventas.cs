@@ -138,7 +138,7 @@ namespace Vivero.Presentacion.Ventas
         {
 
             cboItem.Enabled = false;
-            LlenarCombo(cboItem, oPlataService.Todas_las_Plantas(), "NombreComun", "Codigo");
+            LlenarCombo(cboItem, oPlataService.Plantas_Activas(), "NombreComun", "Codigo");
             txtPrecio.Clear();
             txtImporte.Clear();
             cboItem.Enabled = true;

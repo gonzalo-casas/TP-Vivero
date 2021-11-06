@@ -52,11 +52,10 @@ namespace Vivero.Datos.Daos
 
         public  bool Create(Es_Factura factura)
         {
-            DataManager dm = new DataManager();
             try
             {
-                dm.Open();
-                dm.BeginTransaction();
+                BDHelper.obtenerInstancia().Open();
+                BDHelper.obtenerInstancia().BeginTransaction();
 
                 string sql = string.Concat("INSERT INTO [dbo].[Factura] ",
                                             "           ([fecha]         ",
@@ -87,9 +86,9 @@ namespace Vivero.Datos.Daos
                 parametros.Add("Id_Empleado", factura.Id_Empleado.ID);
                 //parametros.Add("descuento", factura.Descuento);
                 parametros.Add("Estado", 1); // ni idea pq pone false
-                dm.EjecutarSQLCONPARAMETROS(sql, parametros);
+                BDHelper.obtenerInstancia().EjecutarSQLConParametros(sql, parametros);
 
-                var newId = dm.ConsultaSQLScalar(" SELECT @@IDENTITY");
+                var newId = BDHelper.obtenerInstancia().ConsultaSQLScalar(" SELECT @@IDENTITY");
                 factura.Numero_Factura = Convert.ToInt32(newId);
 
 
@@ -145,41 +144,40 @@ namespace Vivero.Datos.Daos
                     paramDetalle.Add("Cantidad", itemFactura.Cantidad);
                     paramDetalle.Add("NroItem", itemFactura.NroItem);
                     SQLStock += "SET Stock = Stock - " + itemFactura.Cantidad.ToString() + " WHERE Codigo = " + CodigoStock;
-                    dm.EjecutarSQL(SQLStock);
-                    dm.EjecutarSQLCONPARAMETROS(sqlDetalle, paramDetalle);
+                    BDHelper.obtenerInstancia().EjecutarSQL(SQLStock);
+                    BDHelper.obtenerInstancia().EjecutarSQLConParametros(sqlDetalle, paramDetalle);
 
                 }
 
 
-                dm.Commit();
+                BDHelper.obtenerInstancia().Commit();
 
             }
             catch (Exception ex)
             {
-                dm.Rollback();
+                BDHelper.obtenerInstancia().Rollback();
                 throw ex;
             }
             finally
             {
                 // Cierra la conexión 
-                dm.Close();
+                BDHelper.obtenerInstancia().Close();
             }
             return true;
         }
 
         public bool Delete(Es_Factura facturaSeleccionada)
         {
-            DataManager dm = new DataManager();
             try
             {
-                dm.Open();
+                BDHelper.obtenerInstancia().Open();
 
                 string recuperarDetalle = @"SELECT df.Id_Planta, df.Id_Producto, df.Cantidad
                                             FROM DetalleFactura df 
                                             where df.Tipo_Factura = " + facturaSeleccionada.Tipo_Factura.ID + " AND df.Nro_Factura = " + facturaSeleccionada.Numero_Factura;
-                DataTable tablaDetalle = dm.ConsultaSQL(recuperarDetalle); 
-                
-                dm.BeginTransaction();
+                DataTable tablaDetalle = BDHelper.obtenerInstancia().consultar(recuperarDetalle);
+
+                BDHelper.obtenerInstancia().BeginTransaction();
 
                 string consulta = "UPDATE Factura " +
                                    "SET Estado= '0'" +
@@ -187,7 +185,7 @@ namespace Vivero.Datos.Daos
                                    " AND  Nro_Factura=" + facturaSeleccionada.Numero_Factura;
 
 
-                dm.EjecutarSQL(consulta);
+                BDHelper.obtenerInstancia().EjecutarSQL(consulta);
 
                 for (int i = 0; i < tablaDetalle.Rows.Count; i++)
                 {
@@ -206,19 +204,19 @@ namespace Vivero.Datos.Daos
                         idStock = "WHERE Codigo = " + tablaDetalle.Rows[i]["Id_Producto"].ToString();
                     }
                     restablecerStock += "SET Stock = Stock + " + tablaDetalle.Rows[i]["Cantidad"].ToString() + idStock;
-                    dm.EjecutarSQL(restablecerStock);
+                    BDHelper.obtenerInstancia().EjecutarSQL(restablecerStock);
                 }
-                dm.Commit();
+                BDHelper.obtenerInstancia().Commit();
             }
             catch (Exception ex)
             {
-                dm.Rollback();
+                BDHelper.obtenerInstancia().Rollback();
                 throw ex;
             }
             finally
             {
                 // Cierra la conexión 
-                dm.Close();
+                BDHelper.obtenerInstancia().Close();
             }
             return true;
         }

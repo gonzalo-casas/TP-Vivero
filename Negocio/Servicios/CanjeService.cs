@@ -38,5 +38,15 @@ namespace Vivero.Negocio.Servicios
         {
             return dao.ObtenerPuntosCliente(idTipoDoc, nroDoc);
         }
+
+        public List<string> TraerPuntosStock(string catalogo, string planta)
+        {
+            return dao.TraerPuntosStock(catalogo, planta);
+        }
+
+        public DataTable TraerPlantasCatalogo(string catalogo)
+        {
+            return dao.TraerPlantasCatalogo(catalogo);
+        }
     }
 }

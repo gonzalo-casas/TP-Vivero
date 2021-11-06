@@ -19,6 +19,8 @@ namespace Vivero.Datos.Interfaces
 
         string ObtenerPuntosCliente(int idTipoDoc, string nroDoc);
 
+        List<string> TraerPuntosStock(string catalogo, string planta);
+        DataTable TraerPlantasCatalogo(string catalogo);
         //DataTable RecuperarTipoFactura(string tipoFactura);
     }
 }

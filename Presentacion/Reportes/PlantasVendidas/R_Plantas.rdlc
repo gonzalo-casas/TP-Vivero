@@ -668,8 +668,8 @@
             <DataSetName>PlantasVendidas</DataSetName>
             <Top>5.58162cm</Top>
             <Left>1.01865cm</Left>
-            <Height>13.17671cm</Height>
-            <Width>16.52811cm</Width>
+            <Height>16.61629cm</Height>
+            <Width>18.03623cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -681,13 +681,13 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>7.38517in</Height>
+        <Height>237mm</Height>
         <Style />
       </Body>
-      <Width>7.41295in</Width>
+      <Width>210mm</Width>
       <Page>
         <PageHeader>
-          <Height>3.06062cm</Height>
+          <Height>4cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -708,20 +708,10 @@
                     <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value />
-                      <Style>
-                        <FontSize>40pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Left>3.1774cm</Left>
+              <Top>0.39688cm</Top>
+              <Left>5.00302cm</Left>
               <Height>1.97625cm</Height>
               <Width>12.21021cm</Width>
               <Style>
@@ -739,7 +729,7 @@
               <Value>logopng</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.39688cm</Top>
-              <Left>0.39858cm</Left>
+              <Left>1.01865cm</Left>
               <Height>1.97625cm</Height>
               <Width>1.94979cm</Width>
               <ZIndex>1</ZIndex>
@@ -769,11 +759,45 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox26</rd:DefaultName>
-              <Top>2.30187cm</Top>
-              <Left>3.48044cm</Left>
+              <Top>2.54952cm</Top>
+              <Left>5.00302cm</Left>
               <Height>0.75875cm</Height>
               <Width>12.21021cm</Width>
               <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Generado el: " + Format(Now(),"dd/MM/yyyy HH:mm tt")</Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>1.96459cm</Top>
+              <Left>17.38962cm</Left>
+              <Height>0.86458cm</Height>
+              <Width>2.60583cm</Width>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -789,10 +813,11 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>#cdf1e7</BackgroundColor>
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.54cm</Height>
+          <Height>2cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -830,6 +855,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>#cdf1e7</BackgroundColor>
           </Style>
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>

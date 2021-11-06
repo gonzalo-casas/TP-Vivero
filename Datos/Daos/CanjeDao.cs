@@ -49,71 +49,69 @@ namespace Vivero.Datos.Daos
 
         public bool Create(Es_Canje canje)
         {
-            DataManager dm = new DataManager();
             try
             {
-                dm.Open();
-                dm.BeginTransaction();
+                BDHelper.obtenerInstancia().Open();
+                BDHelper.obtenerInstancia().BeginTransaction();
 
                 string consulta = @"INSERT INTO Canje(TipoDoc,NroDoc,Id_Catalogo,Id_Planta,Fecha,Estado)
                                     VALUES (" + canje.TipoDoc + "," + canje.NroDoc +"," + canje.Id_Catalogo +"," + canje.Id_Planta + ",TRY_PARSE('" + canje.Fecha +"' AS DATETIME USING 'en-gb'),1)";
 
-                dm.EjecutarSQL(consulta);
+                BDHelper.obtenerInstancia().EjecutarSQL(consulta);
 
                 string sacarStock = @"UPDATE Planta
                                       SET Stock = Stock - 1
                                       WHERE Codigo = " + canje.Id_Planta;
 
-                dm.EjecutarSQL(sacarStock);
-                dm.Commit();
+                BDHelper.obtenerInstancia().EjecutarSQL(sacarStock);
+                BDHelper.obtenerInstancia().Commit();
             }
             catch (Exception ex)
             {
-                dm.Rollback();
+                BDHelper.obtenerInstancia().Rollback();
                 throw ex;
             }
             finally
             {
                 // Cierra la conexión 
-                dm.Close();
+                BDHelper.obtenerInstancia().Close();
             }
             return true;
         }
 
         public bool Delete(string idCanje)
         {
-            DataManager dm = new DataManager();
             try
             {
-                dm.Open();
+                BDHelper.obtenerInstancia().Open();
 
                 string recuperarCanje = @"SELECT * FROM Canje WHERE ID = " + idCanje;
-                DataTable canje = dm.ConsultaSQL(recuperarCanje);
-                dm.BeginTransaction();
+                DataTable canje = BDHelper.obtenerInstancia().consultar(recuperarCanje);
+                BDHelper.obtenerInstancia().BeginTransaction();
 
                 string anular = @"UPDATE Canje
                                     SET Estado = 0 
                                     WHERE ID = " + idCanje;
 
-                dm.EjecutarSQL(anular);
+                BDHelper.obtenerInstancia().EjecutarSQL(anular);
 
                 string idPlanta = canje.Rows[0]["Id_Planta"].ToString();
 
                 string devolverStock = @"UPDATE Planta
                                          SET Stock = Stock + 1
                                          WHERE Codigo = " + idPlanta;
-                dm.EjecutarSQL(devolverStock);
-                dm.Commit();
+                BDHelper.obtenerInstancia().EjecutarSQL(devolverStock);
+                BDHelper.obtenerInstancia().Commit();
             }
             catch (Exception ex)
             {
-                dm.Rollback();
+                BDHelper.obtenerInstancia().Rollback();
                 throw ex;
             }
             finally
             {
                 // Cierra la conexión 
-                dm.Close();
+                BDHelper.obtenerInstancia().Close();
             }
             return true;
         }
@@ -121,13 +119,52 @@ namespace Vivero.Datos.Daos
         public string ObtenerPuntosCliente(int idTipoDoc, string nroDoc)
         {
             
-            string consulta = "SELECT(SUM(f.Puntos) - ISNULL(SUM(dc.Puntos_Necesarios), 0)) AS PuntosDisponibles FROM Factura f FULL OUTER JOIN Canje c ON(f.TipoDoc = c.TipoDoc AND f.NroDoc = c.NroDoc)  LEFT JOIN DetalleCatalogo dc ON(dc.Id_Planta = c.Id_Planta AND dc.ID_Catalogo = c.Id_Catalogo) LEFT JOIN Cliente cl ON(f.TipoDoc = cl.TipoDoc AND f.NroDoc = cl.NroDoc)  JOIN TipoDoc td ON(f.TipoDoc = td.ID)" +
-                " WHERE c.Estado = 1 AND cl.TipoDoc = " + idTipoDoc + " AND cl.NroDoc like '%" + nroDoc + "%'";
+            string puntosGastados = @"SELECT SUM(dc.Puntos_Necesarios) AS PuntosGastados
+                                    FROM Cliente cl
+                                    LEFT JOIN Canje c ON(cl.TipoDoc = c.TipoDoc AND cl.NroDoc = c.NroDoc)
+                                    JOIN DetalleCatalogo dc ON(dc.Id_Planta = c.Id_Planta AND dc.ID_Catalogo = c.Id_Catalogo)
+                                    WHERE c.Estado = 1 AND cl.TipoDoc = " + idTipoDoc + " AND cl.NroDoc like '%" + nroDoc + "%'";
+
+            DataTable tablaGastados = BDHelper.obtenerInstancia().consultar(puntosGastados);
+
+            string puntosObtenidos = @"SELECT SUM(f.Puntos) AS PuntosObtenidos
+                                     FROM Factura f
+                                     WHERE f.Estado = 1
+                                     AND f.TipoDoc = " + idTipoDoc +
+                                     " AND f.NroDoc like '%" + nroDoc + "%'";
+
+            DataTable tablaObtenidos = BDHelper.obtenerInstancia().consultar(puntosObtenidos);
+
+
+            string res = (Int32.Parse(tablaObtenidos.Rows[0][0].ToString()) - Int32.Parse(tablaGastados.Rows[0][0].ToString())).ToString();
+            return res;
+        }
+
+        public List<string> TraerPuntosStock(string catalogo, string planta)
+        {
+            string consulta = @"SELECT dc.Puntos_Necesarios, p.Stock
+                                FROM Catalogo c
+                                JOIN DetalleCatalogo dc ON (dc.ID_Catalogo = c.ID)
+                                JOIN Planta p ON (p.Codigo = dc.Id_Planta)
+                                WHERE c.ID = " + catalogo +
+                                " AND p.Codigo = " + planta;
 
             DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
-           
-            string res = tabla.Rows[0][0].ToString();
-            return res;
+
+            List<string> lista = new List<string>();
+            lista.Add(tabla.Rows[0]["Puntos_Necesarios"].ToString());
+            lista.Add(tabla.Rows[0]["Stock"].ToString());
+            return lista;
+        }
+
+        public DataTable TraerPlantasCatalogo(string catalogo)
+        {
+            string consulta = @"SELECT *
+                                FROM Planta p
+                                JOIN DetalleCatalogo dc ON (dc.Id_Planta = p.Codigo)
+                                WHERE dc.ID_Catalogo = " + catalogo;
+
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

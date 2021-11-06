@@ -68,12 +68,12 @@ namespace Vivero.Presentacion.Reportes
             // 
             // rpvClientesPuntos
             // 
-            this.rpvClientesPuntos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvClientesPuntos.Dock = System.Windows.Forms.DockStyle.Left;
             this.rpvClientesPuntos.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.TipoFacturaCantidad.TipoFacturaCantidad.rdlc";
             this.rpvClientesPuntos.Location = new System.Drawing.Point(100, 167);
             this.rpvClientesPuntos.Name = "rpvClientesPuntos";
             this.rpvClientesPuntos.ServerReport.BearerToken = null;
-            this.rpvClientesPuntos.Size = new System.Drawing.Size(958, 372);
+            this.rpvClientesPuntos.Size = new System.Drawing.Size(814, 372);
             this.rpvClientesPuntos.TabIndex = 0;
             // 
             // panel1

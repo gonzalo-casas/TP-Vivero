@@ -68,12 +68,12 @@ namespace Vivero.Presentacion.Reportes
             // 
             // rpvPlantas
             // 
-            this.rpvPlantas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvPlantas.Dock = System.Windows.Forms.DockStyle.Left;
             this.rpvPlantas.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.PlantasVendidas.R_Plantas.rdlc";
             this.rpvPlantas.Location = new System.Drawing.Point(100, 126);
             this.rpvPlantas.Name = "rpvPlantas";
             this.rpvPlantas.ServerReport.BearerToken = null;
-            this.rpvPlantas.Size = new System.Drawing.Size(958, 413);
+            this.rpvPlantas.Size = new System.Drawing.Size(814, 413);
             this.rpvPlantas.TabIndex = 0;
             // 
             // panel1

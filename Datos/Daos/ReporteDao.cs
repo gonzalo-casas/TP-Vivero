@@ -22,6 +22,7 @@ namespace Vivero.Datos.Daos
                         JOIN Factura f ON (df.Nro_Factura = f.Nro_Factura AND df.Tipo_Factura = f.Tipo_Factura)
                         JOIN Producto p ON (p.Codigo = df.Id_Producto)
                         WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        AND f.Estado = 1
                         GROUP BY p.Codigo, p.Nombre
                         ORDER BY 3 DESC";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
@@ -40,6 +41,7 @@ namespace Vivero.Datos.Daos
                         FROM Factura f
                         JOIN Empleado e ON (f.Id_Empleado = e.ID)
                         WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        AND f.Estado = 1
                         GROUP BY e.ID, e.NroDoc, e.Nombre, e.Apellido
                         ORDER BY 4 DESC";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
@@ -58,6 +60,8 @@ namespace Vivero.Datos.Daos
                            FROM Cliente c
                            JOIN Localidad l ON (l.ID = c.Localidad)
                            JOIN Factura f ON (f.TipoDoc = c.TipoDoc AND f.NroDoc = c.NroDoc) 
+                           AND f.Estado = 1
+                           AND c.Estado = 1
                            WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103) ";
             if (valueCbo != "0")
             {
@@ -87,7 +91,10 @@ namespace Vivero.Datos.Daos
                             LEFT JOIN DetalleCatalogo dc ON (dc.Id_Planta = c.Id_Planta AND dc.ID_Catalogo = c.Id_Catalogo)
                             LEFT JOIN Cliente  cl ON (f.TipoDoc = cl.TipoDoc AND f.NroDoc = cl.NroDoc)
                             JOIN TipoDoc td ON (f.TipoDoc = td.ID)
-                            WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)";
+                            WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                            AND cl.Estado = 1
+                            AND c.Estado = 1
+                            AND f.Estado = 1";
 
             if (localidad != "0")
             {
@@ -118,6 +125,7 @@ namespace Vivero.Datos.Daos
             string sql = @"SELECT tf.Nombre , COUNT(f.Tipo_Factura) as Cantidad
                            FROM Factura f
                            JOIN TipoFactura tf ON (f.Tipo_Factura = tf.ID)
+                           WHERE f.Estado = 1
                            GROUP BY tf.Nombre";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
             dm.Close();
@@ -136,6 +144,7 @@ namespace Vivero.Datos.Daos
                         JOIN Factura f ON (df.Nro_Factura = f.Nro_Factura AND df.Tipo_Factura = f.Tipo_Factura)
                         JOIN Planta p ON (p.Codigo = df.Id_Planta)
                         WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        AND f.Estado = 1
                         GROUP BY p.Codigo, p.NombreCientifico
                         ORDER BY 3 DESC";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
@@ -155,6 +164,7 @@ namespace Vivero.Datos.Daos
                         join TipoPlanta Tp on Tp.ID = P.Tipo
                         join Factura f on d.Nro_Factura = f.Nro_Factura
                         WHERE f.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                        AND f.Estado = 1 
                         GROUP BY Tp.Nombre, p.NombreCientifico";
                         
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
@@ -175,6 +185,8 @@ namespace Vivero.Datos.Daos
                            FROM Canje c join Catalogo ca on (c.Id_Catalogo = ca.ID)
                            JOIN Planta P on (c.Id_Planta = p.Codigo )
                            WHERE c.Fecha BETWEEN CONVERT(DATE,@FechaDesde, 103) AND  CONVERT(DATE,@FechaHasta, 103)
+                           AND c.Estado = 1
+                           AND ca.Estado = 1 
                            GROUP BY ca.Nombre,P.NombreComun,P.Precio
                            ORDER by 4 DESC";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
@@ -191,6 +203,7 @@ namespace Vivero.Datos.Daos
             string sql = @"SELECT FORMAT(DateAdd(month,DATEPART(MONTH,Fecha),0), 'MMMM', 'es-es') as Mes ,COUNT(*) AS Cantidad, SUM(Monto) as 'MontoDelMes'
                            FROM Factura
                            WHERE YEAR (Fecha) = @Año
+                           AND Estado = 1
                            GROUP BY DATEPART(MONTH,Fecha)";
             DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
             dm.Close();

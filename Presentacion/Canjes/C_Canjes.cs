@@ -95,7 +95,7 @@ namespace Vivero.Presentacion.Canjes
                 if (oCanje.Anular(idCanje))
                 {
                     MessageBox.Show("Canje anulado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    dgv_Canjes.Rows.Clear();
                 }
                 else
                     MessageBox.Show("Error al anular el canje!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

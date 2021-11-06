@@ -23,13 +23,6 @@ namespace Vivero.Presentacion.Canjes
         Es_Cliente oCliente = new Es_Cliente();
         CatalogoService oCatalogoService = new CatalogoService();
         CanjeService oCanjeService = new CanjeService();
-        string tipoDoc { get; set; }
-        bool flag;
-
-
-
-
-
         public ABM_Canje()
         {
             InitializeComponent();
@@ -70,10 +63,29 @@ namespace Vivero.Presentacion.Canjes
         {
             if (cboCatalogo.Enabled.Equals(true))
             {
-                
+                cboPlanta.Enabled = false;
+                cboPlanta.DataSource =  new DataTable();
+                txtPuntos.Text = "";
+                txtStock.Text = "";
+                LlenarCombo(cboPlanta, oCanjeService.TraerPlantasCatalogo(cboCatalogo.SelectedValue.ToString()), "NombreComun", "Codigo");
+                cboPlanta.Enabled = true;
+                if ( cboCatalogo.SelectedIndex != -1 && cboPlanta.SelectedIndex != -1)
+                {
+
+                    LlenarPuntosStock(cboCatalogo.SelectedValue.ToString(), cboPlanta.SelectedValue.ToString());
+                }
+
             }
+
         }
 
+        public void LlenarPuntosStock(string catalogo, string planta)
+        {
+            List<string> lista = oCanjeService.TraerPuntosStock(catalogo, planta);
+
+            txtPuntos.Text = lista[0];
+            txtStock.Text = lista[1];
+        }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -90,6 +102,7 @@ namespace Vivero.Presentacion.Canjes
 
                     oCanjeService.Create(oCanje);
                     MessageBox.Show("Canje registrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
 
                 }
                 catch (Exception ex)
@@ -155,14 +168,16 @@ namespace Vivero.Presentacion.Canjes
 
                 }
 
-                if (!cboPlanta.Enabled)
-                {
-                    LlenarCombo(cboPlanta, oPlataService.Plantas_Activas(), "NombreComun", "Codigo");
-                    cboPlanta.Enabled = true;
-                }
             }
 
         }
 
+        private void cboPlanta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboPlanta.Enabled.Equals(true) && cboCatalogo.SelectedIndex != -1 && cboPlanta.SelectedIndex != -1)
+            {
+                LlenarPuntosStock(cboCatalogo.SelectedValue.ToString(), cboPlanta.SelectedValue.ToString());
+            }
+        }
     } 
 }

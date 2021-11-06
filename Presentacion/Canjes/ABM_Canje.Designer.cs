@@ -146,6 +146,7 @@ namespace Vivero.Presentacion.Canjes
             this.cboPlanta.Name = "cboPlanta";
             this.cboPlanta.Size = new System.Drawing.Size(176, 28);
             this.cboPlanta.TabIndex = 23;
+            this.cboPlanta.SelectedIndexChanged += new System.EventHandler(this.cboPlanta_SelectedIndexChanged);
             // 
             // txtStock
             // 

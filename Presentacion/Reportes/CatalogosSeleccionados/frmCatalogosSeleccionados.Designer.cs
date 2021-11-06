@@ -35,20 +35,20 @@ namespace Vivero.Presentacion.Reportes
             this.rpvVentaEmpleados = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Generar = new Vivero.Presentacion.BotonRedondeado();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.lbl = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_SalirReporte = new Vivero.Presentacion.BotonRedondeado();
+            this.btn_Generar = new Vivero.Presentacion.BotonRedondeado();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVentas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,13 +68,14 @@ namespace Vivero.Presentacion.Reportes
             // 
             // rpvVentaEmpleados
             // 
-            this.rpvVentaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpvVentaEmpleados.Dock = System.Windows.Forms.DockStyle.Left;
             this.rpvVentaEmpleados.LocalReport.ReportEmbeddedResource = "Vivero.Presentacion.Reportes.CatalogosSeleccionados.CatalogosSeleccionados.rdlc";
             this.rpvVentaEmpleados.Location = new System.Drawing.Point(100, 126);
             this.rpvVentaEmpleados.Name = "rpvVentaEmpleados";
             this.rpvVentaEmpleados.ServerReport.BearerToken = null;
-            this.rpvVentaEmpleados.Size = new System.Drawing.Size(958, 413);
+            this.rpvVentaEmpleados.Size = new System.Drawing.Size(814, 413);
             this.rpvVentaEmpleados.TabIndex = 0;
+            this.rpvVentaEmpleados.WaitControlDisplayAfter = 500;
             // 
             // panel1
             // 
@@ -99,26 +100,6 @@ namespace Vivero.Presentacion.Reportes
             this.label2.Size = new System.Drawing.Size(156, 23);
             this.label2.TabIndex = 19;
             this.label2.Text = "Canje de Plantas";
-            // 
-            // btn_Generar
-            // 
-            this.btn_Generar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_Generar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_Generar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_Generar.BorderRadius = 20;
-            this.btn_Generar.BorderSize = 0;
-            this.btn_Generar.FlatAppearance.BorderSize = 0;
-            this.btn_Generar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Generar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Generar.ForeColor = System.Drawing.Color.White;
-            this.btn_Generar.Location = new System.Drawing.Point(924, 75);
-            this.btn_Generar.Name = "btn_Generar";
-            this.btn_Generar.Size = new System.Drawing.Size(150, 40);
-            this.btn_Generar.TabIndex = 17;
-            this.btn_Generar.Text = "Generar";
-            this.btn_Generar.TextColor = System.Drawing.Color.White;
-            this.btn_Generar.UseVisualStyleBackColor = false;
-            this.btn_Generar.Click += new System.EventHandler(this.btn_Generar_Click);
             // 
             // label1
             // 
@@ -182,27 +163,6 @@ namespace Vivero.Presentacion.Reportes
             this.panel4.Size = new System.Drawing.Size(247, 73);
             this.panel4.TabIndex = 5;
             // 
-            // btn_SalirReporte
-            // 
-            this.btn_SalirReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
-            this.btn_SalirReporte.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SalirReporte.BorderRadius = 20;
-            this.btn_SalirReporte.BorderSize = 0;
-            this.btn_SalirReporte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SalirReporte.FlatAppearance.BorderSize = 0;
-            this.btn_SalirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SalirReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SalirReporte.ForeColor = System.Drawing.Color.White;
-            this.btn_SalirReporte.Location = new System.Drawing.Point(49, 16);
-            this.btn_SalirReporte.Name = "btn_SalirReporte";
-            this.btn_SalirReporte.Size = new System.Drawing.Size(153, 40);
-            this.btn_SalirReporte.TabIndex = 17;
-            this.btn_SalirReporte.Text = "Cerrar";
-            this.btn_SalirReporte.TextColor = System.Drawing.Color.White;
-            this.btn_SalirReporte.UseVisualStyleBackColor = false;
-            this.btn_SalirReporte.Click += new System.EventHandler(this.btn_SalirReporte_Click);
-            // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -250,6 +210,47 @@ namespace Vivero.Presentacion.Reportes
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 413);
             this.panel9.TabIndex = 4;
+            // 
+            // btn_SalirReporte
+            // 
+            this.btn_SalirReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_SalirReporte.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SalirReporte.BorderRadius = 20;
+            this.btn_SalirReporte.BorderSize = 0;
+            this.btn_SalirReporte.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SalirReporte.FlatAppearance.BorderSize = 0;
+            this.btn_SalirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SalirReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SalirReporte.ForeColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.Location = new System.Drawing.Point(49, 16);
+            this.btn_SalirReporte.Name = "btn_SalirReporte";
+            this.btn_SalirReporte.Size = new System.Drawing.Size(153, 40);
+            this.btn_SalirReporte.TabIndex = 17;
+            this.btn_SalirReporte.Text = "Cerrar";
+            this.btn_SalirReporte.TextColor = System.Drawing.Color.White;
+            this.btn_SalirReporte.UseVisualStyleBackColor = false;
+            this.btn_SalirReporte.Click += new System.EventHandler(this.btn_SalirReporte_Click);
+            // 
+            // btn_Generar
+            // 
+            this.btn_Generar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_Generar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(94)))), ((int)(((byte)(75)))));
+            this.btn_Generar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Generar.BorderRadius = 20;
+            this.btn_Generar.BorderSize = 0;
+            this.btn_Generar.FlatAppearance.BorderSize = 0;
+            this.btn_Generar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Generar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Generar.ForeColor = System.Drawing.Color.White;
+            this.btn_Generar.Location = new System.Drawing.Point(924, 75);
+            this.btn_Generar.Name = "btn_Generar";
+            this.btn_Generar.Size = new System.Drawing.Size(150, 40);
+            this.btn_Generar.TabIndex = 17;
+            this.btn_Generar.Text = "Generar";
+            this.btn_Generar.TextColor = System.Drawing.Color.White;
+            this.btn_Generar.UseVisualStyleBackColor = false;
+            this.btn_Generar.Click += new System.EventHandler(this.btn_Generar_Click);
             // 
             // frmCatalogosSeleccionados
             // 

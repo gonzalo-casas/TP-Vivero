@@ -111,7 +111,7 @@ namespace Vivero.Datos.Daos
 
         public DataTable traerTodo()
         {
-            string consulta = "SELECT * FROM Producto ";
+            string consulta = "SELECT * FROM Producto WHERE Estado = 1";
 
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
