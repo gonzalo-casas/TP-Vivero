@@ -42,12 +42,16 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.chk_Inactivos = new System.Windows.Forms.CheckBox();
             this.chk_Activos = new System.Windows.Forms.CheckBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTituloCanjes = new System.Windows.Forms.Label();
             this.btn_ConsultarVentas = new Vivero.Presentacion.BotonRedondeado();
+            this.txt_Documento = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
@@ -65,10 +69,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_Documento = new System.Windows.Forms.TextBox();
+            this.colIDCanje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombreCatalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +122,7 @@
             this.dgv_Canjes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Canjes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Canjes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIDCanje,
             this.colCliente,
             this.colNombreCatalogo,
             this.colPlanta,
@@ -241,6 +243,24 @@
             this.panel3.Size = new System.Drawing.Size(1011, 165);
             this.panel3.TabIndex = 16;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(192, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 26);
+            this.textBox1.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(115, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Nombre:";
+            // 
             // chk_Inactivos
             // 
             this.chk_Inactivos.AutoSize = true;
@@ -315,6 +335,24 @@
             this.btn_ConsultarVentas.TextColor = System.Drawing.Color.White;
             this.btn_ConsultarVentas.UseVisualStyleBackColor = false;
             this.btn_ConsultarVentas.Click += new System.EventHandler(this.btn_ConsultarVentas_Click);
+            // 
+            // txt_Documento
+            // 
+            this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Documento.Location = new System.Drawing.Point(192, 55);
+            this.txt_Documento.Name = "txt_Documento";
+            this.txt_Documento.Size = new System.Drawing.Size(127, 26);
+            this.txt_Documento.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(88, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Documento:";
             // 
             // panel2
             // 
@@ -495,41 +533,11 @@
             this.panel9.Size = new System.Drawing.Size(100, 649);
             this.panel9.TabIndex = 12;
             // 
-            // textBox1
+            // colIDCanje
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(192, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 26);
-            this.textBox1.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Nombre:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Documento:";
-            // 
-            // txt_Documento
-            // 
-            this.txt_Documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Documento.Location = new System.Drawing.Point(192, 55);
-            this.txt_Documento.Name = "txt_Documento";
-            this.txt_Documento.Size = new System.Drawing.Size(127, 26);
-            this.txt_Documento.TabIndex = 5;
+            this.colIDCanje.HeaderText = "ID";
+            this.colIDCanje.Name = "colIDCanje";
+            this.colIDCanje.ReadOnly = true;
             // 
             // colCliente
             // 
@@ -622,14 +630,15 @@
         private BotonRedondeado AnularBoton;
         private System.Windows.Forms.CheckBox chk_Inactivos;
         private System.Windows.Forms.CheckBox chk_Activos;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_Documento;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDCanje;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreCatalogo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlanta;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaHora;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_Documento;
-        private System.Windows.Forms.Label label2;
     }
 }

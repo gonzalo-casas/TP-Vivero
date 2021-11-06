@@ -22,6 +22,7 @@ namespace Vivero.Presentacion.Canjes
         PlantasService oPlataService;
         Es_Cliente oCliente = new Es_Cliente();
         CatalogoService oCatalogoService;
+        CanjeService oCanjeService;
         string tipoDoc { get; set; }
         bool flag;
 
@@ -33,7 +34,8 @@ namespace Vivero.Presentacion.Canjes
         {
             InitializeComponent();
             oPlataService = new PlantasService();
-            cboCatalogo.Enabled = false;
+            oCanjeService = new CanjeService();
+
         }
 
         private void ABM_Ventas_Load(object sender, EventArgs e)
@@ -83,12 +85,15 @@ namespace Vivero.Presentacion.Canjes
                     oCanje.NroDoc = oCliente.NroDoc;
                     oCanje.Id_Catalogo = cboCatalogo.SelectedValue.ToString();
                     oCanje.Id_Planta = cboPlanta.SelectedValue.ToString();
-                    oCanje.Fecha = dtpFecha.Text + dtpHora.Text;
+                    oCanje.Fecha = dtpFecha.Text + " " +dtpHora.Text;
 
-            }
-            catch (Exception ex)
+                    oCanjeService.Create(oCanje);
+                    MessageBox.Show("Canje registrado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar la factura! " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error al registrar el canje " + ex.Message + ex.StackTrace, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

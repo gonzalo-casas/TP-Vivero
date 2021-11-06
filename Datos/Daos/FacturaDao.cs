@@ -167,20 +167,6 @@ namespace Vivero.Datos.Daos
             return true;
         }
 
-        //public bool Delete(Es_Factura facturaSeleccionada)
-        //{
-
-
-        //    string consulta = "UPDATE Factura " +
-        //                    "SET Estado= '0'" +
-        //                    " WHERE Tipo_Factura=" + facturaSeleccionada.Tipo_Factura.ID +
-        //                    " AND  Nro_Factura=" + facturaSeleccionada.Numero_Factura;
-
-
-        //    return BDHelper.obtenerInstancia().EjecutarSQL(consulta) == 1;
-        //}
-
-        //public List<Es_DetalleFactura> DetallesFactura = new List<Es_DetalleFactura>();
         public bool Delete(Es_Factura facturaSeleccionada)
         {
             DataManager dm = new DataManager();
