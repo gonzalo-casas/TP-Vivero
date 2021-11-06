@@ -56,5 +56,17 @@ namespace Vivero.Datos.Daos
         {
             throw new NotImplementedException();
         }
+
+        public string ObtenerPuntosCliente(int idTipoDoc, string nroDoc)
+        {
+            
+            string consulta = "SELECT(SUM(f.Puntos) - ISNULL(SUM(dc.Puntos_Necesarios), 0)) AS PuntosDisponibles FROM Factura f FULL OUTER JOIN Canje c ON(f.TipoDoc = c.TipoDoc AND f.NroDoc = c.NroDoc)  LEFT JOIN DetalleCatalogo dc ON(dc.Id_Planta = c.Id_Planta AND dc.ID_Catalogo = c.Id_Catalogo) LEFT JOIN Cliente cl ON(f.TipoDoc = cl.TipoDoc AND f.NroDoc = cl.NroDoc)  JOIN TipoDoc td ON(f.TipoDoc = td.ID)" +
+                " WHERE c.Estado = 1 AND cl.TipoDoc = " + idTipoDoc + " AND cl.NroDoc like '%" + nroDoc + "%'";
+
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
+           
+            string res = tabla.Rows[0][0].ToString();
+            return res;
+        }
     }
 }

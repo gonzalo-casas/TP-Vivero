@@ -18,10 +18,11 @@ namespace Vivero.Presentacion.Canjes
     public partial class ABM_Canje : Form
     {
         //declaro objetos
-        ClienteService oClienteService;
+        ClienteService oClienteService = new ClienteService();
         PlantasService oPlataService;
         Es_Cliente oCliente = new Es_Cliente();
-        CatalogoService oCatalogoService;
+        CatalogoService oCatalogoService = new CatalogoService();
+        CanjeService oCanjeService = new CanjeService();
         string tipoDoc { get; set; }
         bool flag;
 
@@ -43,6 +44,7 @@ namespace Vivero.Presentacion.Canjes
             lblTelefono.Visible = false;
             lblNroDoc.Visible = false;
             dtpFecha.MaxDate = DateTime.Today;
+            cboCliente.Enabled = true;
         }
 
         private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -136,7 +138,7 @@ namespace Vivero.Presentacion.Canjes
                 lblDireccion.Text = oCliente.Calle + " " + oCliente.NroCalle;
                 lblTelefono.Text = oCliente.Telefono;
                 lblNroDoc.Text = oCliente.NroDoc;
-                //lblPuntos.Text = oCanjeService.ObtenerPuntosCliente(oCliente.TipoDoc.IdTipoDoc, oCliente.NroDoc);
+                lblPuntos.Text = oCanjeService.ObtenerPuntosCliente(oCliente.TipoDoc.IdTipoDoc, oCliente.NroDoc);
                 
                 if (!lblDireccion.Visible) lblDireccion.Visible = true;
                 if (!lblTelefono.Visible) lblTelefono.Visible = true;

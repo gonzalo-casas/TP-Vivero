@@ -22,5 +22,10 @@ namespace Vivero.Negocio.Servicios
         {
             return dao.BuscarCanje(nombre,  nro_doc, nombreComun, fecha, estado);
         }
+
+        public string ObtenerPuntosCliente(int idTipoDoc, string nroDoc)
+        {
+            return dao.ObtenerPuntosCliente(idTipoDoc, nroDoc);
+        }
     }
 }
