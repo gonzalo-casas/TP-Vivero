@@ -54,7 +54,7 @@ namespace Vivero.Presentacion.Canjes
                 estado = "('0')";
             }
 
-            Cargar_Grilla(oFactura.BuscarFactura(txt_NroCanje.Text, txt_Documento.Text, txt_Planta.Text, fecha, estado));
+            //Cargar_Grilla(oFactura.BuscarFactura(txt_NroCanje.Text, txt_Documento.Text, txt_Planta.Text, fecha, estado));
             return;
 
         }
