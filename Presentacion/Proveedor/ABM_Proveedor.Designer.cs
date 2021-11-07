@@ -55,7 +55,7 @@ namespace Vivero.Presentacion.Proveedor
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 20);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Razon Social:";
+            this.label3.Text = "Razón Social:";
             // 
             // label2
             // 
@@ -131,7 +131,7 @@ namespace Vivero.Presentacion.Proveedor
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Telefono:";
+            this.label7.Text = "Teléfono:";
             // 
             // txtCalle
             // 

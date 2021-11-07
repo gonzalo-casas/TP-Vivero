@@ -77,7 +77,7 @@ namespace Vivero.Presentacion.Canjes
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Telefono";
+            this.label3.Text = "Teléfono";
             // 
             // label4
             // 
@@ -134,7 +134,7 @@ namespace Vivero.Presentacion.Canjes
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Catalogo";
+            this.label8.Text = "Catálogo";
             // 
             // cboPlanta
             // 
@@ -248,7 +248,7 @@ namespace Vivero.Presentacion.Canjes
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(71, 20);
             this.lblTelefono.TabIndex = 29;
-            this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Text = "Teléfono";
             // 
             // lblNroDoc
             // 

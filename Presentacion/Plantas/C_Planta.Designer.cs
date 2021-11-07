@@ -193,7 +193,7 @@ namespace Vivero.Presentacion.Plantas
             this.lbl_IdPlanta.Name = "lbl_IdPlanta";
             this.lbl_IdPlanta.Size = new System.Drawing.Size(90, 20);
             this.lbl_IdPlanta.TabIndex = 24;
-            this.lbl_IdPlanta.Text = "Numero ID:";
+            this.lbl_IdPlanta.Text = "Número ID:";
             // 
             // lbl_NombrePlanta
             // 
