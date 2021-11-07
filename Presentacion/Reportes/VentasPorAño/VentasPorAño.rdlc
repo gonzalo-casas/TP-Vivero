@@ -639,7 +639,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Distribucion De Ventas</Caption>
+                <Caption>Distribución De Ventas</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>16pt</FontSize>
@@ -1019,7 +1019,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Distribucion De Ventas</Caption>
+                <Caption>Distribución De Ventas</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>16pt</FontSize>

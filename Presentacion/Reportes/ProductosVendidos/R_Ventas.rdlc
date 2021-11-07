@@ -70,7 +70,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Codigo</Value>
+                                  <Value>Código</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -639,7 +639,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Grafico de Torta</Caption>
+                <Caption>Gráfico de Torta</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>16pt</FontSize>

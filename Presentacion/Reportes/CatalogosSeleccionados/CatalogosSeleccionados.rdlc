@@ -77,7 +77,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Catalogo</Value>
+                                  <Value>Catálogo</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -732,7 +732,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Grafico de Torta</Caption>
+                <Caption>Gráfico de Torta</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>16pt</FontSize>
@@ -875,7 +875,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de catalogos seleccionados para canjear</Value>
+                      <Value>Cantidad de catálogos seleccionados para canjear</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>

@@ -63,7 +63,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Tipo Factura</Value>
+                                  <Value>Tipo Factúra</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -553,7 +553,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Grafico de Barras</Caption>
+                <Caption>Gráfico de Barras</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>16pt</FontSize>
@@ -662,7 +662,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de ventas por tipo de factura</Value>
+                      <Value>Cantidad de ventas por tipo de factúra</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>
