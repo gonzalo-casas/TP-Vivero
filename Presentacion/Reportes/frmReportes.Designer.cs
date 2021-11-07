@@ -190,7 +190,7 @@ namespace Vivero.Presentacion.Reportes
             this.btn_TipoFactura.Name = "btn_TipoFactura";
             this.btn_TipoFactura.Size = new System.Drawing.Size(200, 100);
             this.btn_TipoFactura.TabIndex = 21;
-            this.btn_TipoFactura.Text = "Ventas Tipo Factura";
+            this.btn_TipoFactura.Text = "Ventas Tipo Factúra";
             this.btn_TipoFactura.TextColor = System.Drawing.Color.White;
             this.btn_TipoFactura.UseVisualStyleBackColor = false;
             this.btn_TipoFactura.Click += new System.EventHandler(this.btn_TipoFactura_Click);
