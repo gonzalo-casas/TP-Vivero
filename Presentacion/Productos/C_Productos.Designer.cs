@@ -102,6 +102,7 @@ namespace Vivero.Presentacion.Productos
             this.txt_CodProducto.Name = "txt_CodProducto";
             this.txt_CodProducto.Size = new System.Drawing.Size(127, 26);
             this.txt_CodProducto.TabIndex = 4;
+            this.txt_CodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CodProducto_KeyPress);
             // 
             // txt_NombreProducto
             // 

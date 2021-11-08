@@ -174,7 +174,7 @@ namespace Vivero.Presentacion.Plantas
             this.txt_IdPlanta.Name = "txt_IdPlanta";
             this.txt_IdPlanta.Size = new System.Drawing.Size(127, 26);
             this.txt_IdPlanta.TabIndex = 22;
-            this.txt_IdPlanta.TextChanged += new System.EventHandler(this.txt_IdPlanta_TextChanged);
+            this.txt_IdPlanta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdPlanta_KeyPress);
             // 
             // txt_NombrePlanta
             // 
@@ -183,7 +183,6 @@ namespace Vivero.Presentacion.Plantas
             this.txt_NombrePlanta.Name = "txt_NombrePlanta";
             this.txt_NombrePlanta.Size = new System.Drawing.Size(127, 26);
             this.txt_NombrePlanta.TabIndex = 23;
-            this.txt_NombrePlanta.TextChanged += new System.EventHandler(this.txt_NombrePlanta_TextChanged);
             // 
             // lbl_IdPlanta
             // 
@@ -204,7 +203,6 @@ namespace Vivero.Presentacion.Plantas
             this.lbl_NombrePlanta.Size = new System.Drawing.Size(69, 20);
             this.lbl_NombrePlanta.TabIndex = 25;
             this.lbl_NombrePlanta.Text = "Nombre:";
-            this.lbl_NombrePlanta.Click += new System.EventHandler(this.lbl_NombrePlanta_Click);
             // 
             // chk_Activos
             // 
@@ -218,7 +216,6 @@ namespace Vivero.Presentacion.Plantas
             this.chk_Activos.TabIndex = 26;
             this.chk_Activos.Text = "Activos";
             this.chk_Activos.UseVisualStyleBackColor = true;
-            this.chk_Activos.CheckedChanged += new System.EventHandler(this.chk_Activos_CheckedChanged);
             // 
             // chk_Inactivos
             // 
@@ -230,7 +227,6 @@ namespace Vivero.Presentacion.Plantas
             this.chk_Inactivos.TabIndex = 27;
             this.chk_Inactivos.Text = "Inactivos";
             this.chk_Inactivos.UseVisualStyleBackColor = true;
-            this.chk_Inactivos.CheckedChanged += new System.EventHandler(this.chk_Inactivos_CheckedChanged);
             // 
             // lblTituloPlantas
             // 

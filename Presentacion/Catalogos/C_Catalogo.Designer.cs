@@ -121,6 +121,7 @@ namespace Vivero.Presentacion.Catalogos
             this.txt_puntos.Name = "txt_puntos";
             this.txt_puntos.Size = new System.Drawing.Size(127, 26);
             this.txt_puntos.TabIndex = 5;
+            this.txt_puntos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_puntos_KeyPress);
             // 
             // lblTituloCatalogo
             // 

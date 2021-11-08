@@ -66,6 +66,7 @@ namespace Vivero.Presentacion.Plantas
             this.txt_StockPlanta.Name = "txt_StockPlanta";
             this.txt_StockPlanta.Size = new System.Drawing.Size(125, 26);
             this.txt_StockPlanta.TabIndex = 5;
+            this.txt_StockPlanta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_StockPlanta_KeyPress);
             // 
             // txt_PrecioPlanta
             // 
@@ -74,9 +75,11 @@ namespace Vivero.Presentacion.Plantas
             this.txt_PrecioPlanta.Name = "txt_PrecioPlanta";
             this.txt_PrecioPlanta.Size = new System.Drawing.Size(125, 26);
             this.txt_PrecioPlanta.TabIndex = 6;
+            this.txt_PrecioPlanta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PrecioPlanta_KeyPress);
             // 
             // cmb_TipoPlanta
             // 
+            this.cmb_TipoPlanta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_TipoPlanta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TipoPlanta.FormattingEnabled = true;
             this.cmb_TipoPlanta.Location = new System.Drawing.Point(221, 135);

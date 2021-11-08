@@ -34,6 +34,12 @@
             this.txt_Planta = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Canjes = new System.Windows.Forms.DataGridView();
+            this.colIDCanje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombreCatalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SalirVenta = new Vivero.Presentacion.BotonRedondeado();
@@ -69,12 +75,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.colIDCanje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombreCatalogo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Canjes)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -147,6 +147,42 @@
             this.dgv_Canjes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Canjes.Size = new System.Drawing.Size(811, 549);
             this.dgv_Canjes.TabIndex = 11;
+            // 
+            // colIDCanje
+            // 
+            this.colIDCanje.HeaderText = "ID";
+            this.colIDCanje.Name = "colIDCanje";
+            this.colIDCanje.ReadOnly = true;
+            // 
+            // colCliente
+            // 
+            this.colCliente.HeaderText = "Cliente";
+            this.colCliente.Name = "colCliente";
+            this.colCliente.ReadOnly = true;
+            // 
+            // colNombreCatalogo
+            // 
+            this.colNombreCatalogo.HeaderText = "NombreCatalogo";
+            this.colNombreCatalogo.Name = "colNombreCatalogo";
+            this.colNombreCatalogo.ReadOnly = true;
+            // 
+            // colPlanta
+            // 
+            this.colPlanta.HeaderText = "Planta";
+            this.colPlanta.Name = "colPlanta";
+            this.colPlanta.ReadOnly = true;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
+            // 
+            // colFechaHora
+            // 
+            this.colFechaHora.HeaderText = "Fecha y hora";
+            this.colFechaHora.Name = "colFechaHora";
+            this.colFechaHora.ReadOnly = true;
             // 
             // panel1
             // 
@@ -343,6 +379,7 @@
             this.txt_Documento.Name = "txt_Documento";
             this.txt_Documento.Size = new System.Drawing.Size(127, 26);
             this.txt_Documento.TabIndex = 5;
+            this.txt_Documento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Documento_KeyPress);
             // 
             // label2
             // 
@@ -532,42 +569,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(100, 649);
             this.panel9.TabIndex = 12;
-            // 
-            // colIDCanje
-            // 
-            this.colIDCanje.HeaderText = "ID";
-            this.colIDCanje.Name = "colIDCanje";
-            this.colIDCanje.ReadOnly = true;
-            // 
-            // colCliente
-            // 
-            this.colCliente.HeaderText = "Cliente";
-            this.colCliente.Name = "colCliente";
-            this.colCliente.ReadOnly = true;
-            // 
-            // colNombreCatalogo
-            // 
-            this.colNombreCatalogo.HeaderText = "NombreCatalogo";
-            this.colNombreCatalogo.Name = "colNombreCatalogo";
-            this.colNombreCatalogo.ReadOnly = true;
-            // 
-            // colPlanta
-            // 
-            this.colPlanta.HeaderText = "Planta";
-            this.colPlanta.Name = "colPlanta";
-            this.colPlanta.ReadOnly = true;
-            // 
-            // colPuntos
-            // 
-            this.colPuntos.HeaderText = "Puntos";
-            this.colPuntos.Name = "colPuntos";
-            this.colPuntos.ReadOnly = true;
-            // 
-            // colFechaHora
-            // 
-            this.colFechaHora.HeaderText = "Fecha y hora";
-            this.colFechaHora.Name = "colFechaHora";
-            this.colFechaHora.ReadOnly = true;
             // 
             // C_Canjes
             // 

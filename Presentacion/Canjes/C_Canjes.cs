@@ -102,5 +102,13 @@ namespace Vivero.Presentacion.Canjes
             }
 
         }
+
+        private void txt_Documento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

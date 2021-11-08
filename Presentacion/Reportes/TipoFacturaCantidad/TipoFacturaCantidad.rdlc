@@ -63,7 +63,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Tipo Factúra</Value>
+                                  <Value>Tipo Factura</Value>
                                   <Style>
                                     <FontFamily>Arial Black</FontFamily>
                                     <FontSize>12pt</FontSize>
@@ -662,7 +662,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cantidad de ventas por tipo de factúra</Value>
+                      <Value>Cantidad de ventas por tipo de factura</Value>
                       <Style>
                         <FontSize>14pt</FontSize>
                       </Style>

@@ -99,6 +99,7 @@ namespace Vivero.Presentacion.Empleados
             this.txt_IdProveedor.Name = "txt_IdProveedor";
             this.txt_IdProveedor.Size = new System.Drawing.Size(127, 26);
             this.txt_IdProveedor.TabIndex = 4;
+            this.txt_IdProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_IdProveedor_KeyPress);
             // 
             // txt_NombreProveedor
             // 
