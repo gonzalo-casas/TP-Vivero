@@ -76,12 +76,12 @@ III\. CONCLUSIÓN
 
 I.  Introducción
 
-1\. [Objetivo]{.underline}
+1\. [Objetivo]
 
 Brindar información para la gestión y comercialización de plantas y
 productos afines a la empresa.
 
-2\. [Alcances]{.underline}
+2\. [Alcances]
 
 -   Registrar clientes
 
@@ -118,7 +118,7 @@ c\. Reportes
 
 d\. Salir
 
-1.  [Inicio de Sesión]{.underline}
+1.  [Inicio de Sesión]
 
 En esta ventana, el usuario debe colocar su Nombre de Usuario,
 Contraseña y presionar el botón Ingresar, tal como se muestra a
@@ -128,7 +128,7 @@ continuación (Se recomienda ingresar con el Usuario: "1" Contraseña:
 ![Interfaz de usuario gráfica Descripción generada
 automáticamente](./EntregaFinal/media/image2.PNG)
 
-2.  [Menú Principal]{.underline}
+2.  [Menú Principal]
 
 Una vez ingresada la sesión con éxito, la pantalla de inicio de la
 aplicación se muestra al usuario ingresado y los siguientes datos:
