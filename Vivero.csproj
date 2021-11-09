@@ -604,7 +604,6 @@
     <None Include="Presentacion\Recursos\Iconos\icons8-purchase-64.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EntregaFinal\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -677,6 +676,7 @@
     <None Include="Presentacion\Recursos\Iconos\icons8-cancel-64.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EntregaFinal\prueba.txt" />
     <Content Include="icono.ico" />
     <None Include="Presentacion\Recursos\Iconos\icons8-report-64.png" />
     <None Include="Presentacion\Recursos\Iconos\icons8-gift-64.png" />
