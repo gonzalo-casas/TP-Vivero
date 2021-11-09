@@ -604,6 +604,7 @@
     <None Include="Presentacion\Recursos\Iconos\icons8-purchase-64.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="EntregaFinal\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
