@@ -154,8 +154,8 @@ Con el botón *consultar* obtenemos las facturas que el sistema ingreso
 pudiendo filtrarlas de acuerdo a: N.º de Factura, documento del cliente,
 empleado que registro la factura y fecha de ingreso.
 
-![](./EntregaFinal/media/image5.png)Se podrá consultar aquellas facturas que
-tuvieron que ser anuladas en .
+Se podrá consultar aquellas facturas que
+tuvieron que ser anuladas en ![](./EntregaFinal/media/image5.png).
 
 En la sección Detalle de factura se mostrarán los ítems de cada factura
 seleccionada.
@@ -176,10 +176,10 @@ Aquí podremos agregar la venta realizada especificando el tipo de
 factura, el cliente asociado (al elegir el cliente se mostrará los datos
 del mismo) y la fecha de registro.
 
-![](./EntregaFinal/media/image7.png)![](./EntregaFinal/media/image8.png)Podremos seleccionar aquellos productos o
+Podremos seleccionar aquellos productos o
 plantas que tendrá la factura con su respectiva cantidad, precio e
-importe, una vez finalizado seleccionar el botón para agregar el ítem
-caso contrario seleccionar para quitar.
+importe, una vez finalizado seleccionar el botón ![](./EntregaFinal/media/image8.png) para agregar el ítem
+caso contrario seleccionar ![](./EntregaFinal/media/image7.png) para quitar.
 
 Luego Aceptar (caso contrario se puede cancelar en cualquier momento
 previo).
@@ -192,12 +192,12 @@ b.  Productos.
 ![](./EntregaFinal/media/image10.png)Al seleccionar el botón *Productos* se
 desplegará un submenú con el siguiente contenido:
 
-![](./EntregaFinal/media/image5.png)Con el botón *consultar* obtenemos los
+Con el botón *consultar* obtenemos los
 productos que el sistema ingreso pudiendo filtrarlas de acuerdo a:
 Código del producto, Nombre y precio (desde - hasta).
 
 Se podrá consultar aquellos productos que están inactivos con la opción
-.
+![](./EntregaFinal/media/image5.png).
 
 Vale mencionar que todas las opciones contarán con el botón *Cerrar* que
 permitirá volver hacia atrás en todas las opciones.
@@ -285,8 +285,8 @@ automáticamente](./EntregaFinal/media/image23.png)
 
 d.  Salir.
 
-![](./EntregaFinal/media/image24.png)Para poder salir del sistema La Cone, es
-necesario presionando el botón , y luego confirmar si se desea salir del
+Para poder salir del sistema La Cone, es
+necesario presionando el botón ![](./EntregaFinal/media/image24.png), y luego confirmar si se desea salir del
 sistema o cerrar sesión.
 
 ![Imagen de la pantalla de un celular de un mensaje en letras blancas
