@@ -1,5 +1,4 @@
-![](./EntregaFinal/media/image1.jpeg){width="1.5729166666666667in"
-height="1.5729166666666667in"}
+![](./EntregaFinal/media/image1.jpeg)
 
 ***"La Cone"***
 
@@ -127,16 +126,14 @@ continuación (Se recomienda ingresar con el Usuario: "1" Contraseña:
 "12").
 
 ![Interfaz de usuario gráfica Descripción generada
-automáticamente](./EntregaFinal/media/image2.PNG){width="3.6663385826771653in"
-height="1.968503937007874in"}
+automáticamente](./EntregaFinal/media/image2.PNG)
 
 2.  [Menú Principal]{.underline}
 
 Una vez ingresada la sesión con éxito, la pantalla de inicio de la
 aplicación se muestra al usuario ingresado y los siguientes datos:
 
-![](./EntregaFinal/media/image3.png){width="6.14582895888014in"
-height="4.724409448818897in"}
+![](./EntregaFinal/media/image3.png)
 
 El menú principal está conformado por un menú lateral izquierdo, el cual
 da la accesibilidad a las diferentes funcionalidades del sistema, a
@@ -151,15 +148,13 @@ Al seleccionar el botón *Ventas* se desplegará un submenú con el
 siguiente contenido:
 
 ![Interfaz de usuario gráfica, Aplicación Descripción generada
-automáticamente](./EntregaFinal/media/image4.png){width="6.1455544619422575in"
-height="4.724409448818897in"}
+automáticamente](./EntregaFinal/media/image4.png)
 
 Con el botón *consultar* obtenemos las facturas que el sistema ingreso
 pudiendo filtrarlas de acuerdo a: N.º de Factura, documento del cliente,
 empleado que registro la factura y fecha de ingreso.
 
-![](./EntregaFinal/media/image5.png){width="1.0416666666666667in"
-height="0.20833333333333334in"}Se podrá consultar aquellas facturas que
+![](./EntregaFinal/media/image5.png)Se podrá consultar aquellas facturas que
 tuvieron que ser anuladas en .
 
 En la sección Detalle de factura se mostrarán los ítems de cada factura
@@ -175,16 +170,13 @@ Con el botón *agregar* se desplegará una ventana como la siguiente:
 
 ![Interfaz de usuario gráfica Descripción generada automáticamente con
 confianza
-media](./EntregaFinal/media/image6.PNG){width="6.1491305774278215in"
-height="3.543307086614173in"}
+media](./EntregaFinal/media/image6.PNG)
 
 Aquí podremos agregar la venta realizada especificando el tipo de
 factura, el cliente asociado (al elegir el cliente se mostrará los datos
 del mismo) y la fecha de registro.
 
-![](./EntregaFinal/media/image7.png){width="0.2in"
-height="0.20833333333333334in"}![](./EntregaFinal/media/image8.png){width="0.22916666666666666in"
-height="0.22152777777777777in"}Podremos seleccionar aquellos productos o
+![](./EntregaFinal/media/image7.png)![](./EntregaFinal/media/image8.png)Podremos seleccionar aquellos productos o
 plantas que tendrá la factura con su respectiva cantidad, precio e
 importe, una vez finalizado seleccionar el botón para agregar el ítem
 caso contrario seleccionar para quitar.
@@ -193,17 +185,14 @@ Luego Aceptar (caso contrario se puede cancelar en cualquier momento
 previo).
 
 ![Interfaz de usuario gráfica Descripción generada
-automáticamente](./EntregaFinal/media/image9.PNG){width="6.148052274715661in"
-height="3.5409722222222224in"}
+automáticamente](./EntregaFinal/media/image9.PNG)
 
 b.  Productos.
 
-![](./EntregaFinal/media/image10.png){width="6.1455544619422575in"
-height="4.724409448818897in"}Al seleccionar el botón *Productos* se
+![](./EntregaFinal/media/image10.png)Al seleccionar el botón *Productos* se
 desplegará un submenú con el siguiente contenido:
 
-![](./EntregaFinal/media/image5.png){width="1.0416666666666667in"
-height="0.20833333333333334in"}Con el botón *consultar* obtenemos los
+![](./EntregaFinal/media/image5.png)Con el botón *consultar* obtenemos los
 productos que el sistema ingreso pudiendo filtrarlas de acuerdo a:
 Código del producto, Nombre y precio (desde - hasta).
 
@@ -219,17 +208,13 @@ Deshabilitar un producto.
 
 Al apretar cualquiera de los tres botones se abrirá:
 
-![](./EntregaFinal/media/image11.png){width="2.2805982064741905in"
-height="2.3622047244094486in"} ![Interfaz de usuario gráfica Descripción
+![](./EntregaFinal/media/image11.png) ![Interfaz de usuario gráfica Descripción
 generada
-automáticamente](./EntregaFinal/media/image12.png){width="2.2805982064741905in"
-height="2.3622047244094486in"} ![Interfaz de usuario gráfica Descripción
+automáticamente](./EntregaFinal/media/image12.png) ![Interfaz de usuario gráfica Descripción
 generada
-automáticamente](./EntregaFinal/media/image13.png){width="2.2805971128608924in"
-height="2.3622047244094486in"}
+automáticamente](./EntregaFinal/media/image13.png)
 
-![](./EntregaFinal/media/image14.png){width="3.584244313210849in"
-height="0.44251093613298337in"}
+![](./EntregaFinal/media/image14.png)
 
 De esta manera se llevará a cabo la gestión de Productos, Agregando,
 Actualizando o Deshabilitándolos. De la misma forma que los productos se
@@ -240,8 +225,7 @@ En caso de agregar o actualizar un producto de tipo compuesto se
 desplegará la siguiente ventana:
 
 ![Interfaz de usuario gráfica, Aplicación Descripción generada
-automáticamente](./EntregaFinal/media/image15.png){width="2.8906135170603675in"
-height="3.65625in"}
+automáticamente](./EntregaFinal/media/image15.png)
 
 En este caso seleccionar el componente que conforma al producto
 compuesto con su cantidad correspondiente repitiendo el mismo las veces
@@ -253,8 +237,7 @@ c.  Reportes.
 Al seleccionar el botón *Reportes* se desplegará un submenú con los
 siguientes botones:
 
-> ![](./EntregaFinal/media/image16.png){width="6.145138888888889in"
-> height="4.7243055555555555in"}
+> ![](./EntregaFinal/media/image16.png)
 
 A partir de estos botones se podrá obtener reportes y estadísticas de
 distintas funciones del sistema.
@@ -266,19 +249,15 @@ Comenzamos analizando el botón *Productos Vendidos*, al presionar este
 se abrirá la siguiente ventana:
 
 ![Interfaz de usuario gráfica, Texto, Aplicación Descripción generada
-automáticamente](./EntregaFinal/media/image17.png){width="6.1455544619422575in"
-height="4.724409448818897in"}
-
+automáticamente](./EntregaFinal/media/image17.png)
 En esta ventana podemos obtener reportes de los productos que se
 vendieron en una fecha determinada, donde vamos a poder filtrar por
 Fecha desde y Fecha Hasta. Como es el caso siguiente:
 
 ![Interfaz de usuario gráfica, Tabla Descripción generada
-automáticamente](./EntregaFinal/media/image18.png){width="3.6873337707786527in"
-height="2.8346456692913384in"} ![Interfaz de usuario gráfica, Gráfico,
+automáticamente](./EntregaFinal/media/image18.png) ![Interfaz de usuario gráfica, Gráfico,
 Aplicación, Gráfico circular Descripción generada
-automáticamente](./EntregaFinal/media/image19.png){width="3.6873337707786527in"
-height="2.8346456692913384in"}
+automáticamente](./EntregaFinal/media/image19.png)
 
 Esta funcionalidad aplica también para los botones de *Ventas Tipo
 Factura, Venta Empleados, Tipos de Plantas Vendidas, Catálogos
@@ -291,34 +270,28 @@ de un periodo determinado y Localidad. Esta funcionalidad aplica también
 para el botón *Compras Clientes*.
 
 ![Interfaz de usuario gráfica, Aplicación, Tabla Descripción generada
-automáticamente](./EntregaFinal/media/image20.png){width="3.6873337707786527in"
-height="2.8346456692913384in"} ![Interfaz de usuario gráfica, Gráfico,
+automáticamente](./EntregaFinal/media/image20.png) ![Interfaz de usuario gráfica, Gráfico,
 Aplicación, Gráfico circular Descripción generada
-automáticamente](./EntregaFinal/media/image21.png){width="3.6873337707786527in"
-height="2.8346456692913384in"}
+automáticamente](./EntregaFinal/media/image21.png)
 
 Por último, con el botón *Ventas Por Año* se obtiene la estadística de
 la cantidad de ventas producidas en un año determinado y el ingreso que
 se obtuvo en cada mes.
 
 ![Interfaz de usuario gráfica, Tabla Descripción generada
-automáticamente](./EntregaFinal/media/image22.png){width="3.6873337707786527in"
-height="2.8346456692913384in"} ![Interfaz de usuario gráfica, Gráfico de
+automáticamente](./EntregaFinal/media/image22.png) ![Interfaz de usuario gráfica, Gráfico de
 líneas Descripción generada
-automáticamente](./EntregaFinal/media/image23.png){width="3.6873337707786527in"
-height="2.8346456692913384in"}
+automáticamente](./EntregaFinal/media/image23.png)
 
 d.  Salir.
 
-![](./EntregaFinal/media/image24.png){width="0.63125in"
-height="0.20833333333333334in"}Para poder salir del sistema La Cone, es
+![](./EntregaFinal/media/image24.png)Para poder salir del sistema La Cone, es
 necesario presionando el botón , y luego confirmar si se desea salir del
 sistema o cerrar sesión.
 
 ![Imagen de la pantalla de un celular de un mensaje en letras blancas
 Descripción generada automáticamente con confianza
-baja](./EntregaFinal/media/image25.png){width="3.608923884514436in"
-height="1.968503937007874in"}
+baja](./EntregaFinal/media/image25.png)
 
 III. CONCLUSIÓN
 
