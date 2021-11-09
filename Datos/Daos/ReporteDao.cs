@@ -12,8 +12,7 @@ namespace Vivero.Datos.Daos
     {
         public DataTable GenerarReporteProductosVendidos(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -25,15 +24,14 @@ namespace Vivero.Datos.Daos
                         AND f.Estado = 1
                         GROUP BY p.Codigo, p.Nombre
                         ORDER BY 3 DESC";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
 
         public DataTable GenerarReporteVentaEmpleados(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -44,15 +42,14 @@ namespace Vivero.Datos.Daos
                         AND f.Estado = 1
                         GROUP BY e.ID, e.NroDoc, e.Nombre, e.Apellido
                         ORDER BY 4 DESC";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
 
         public DataTable GenerarReporteComprasClientes(string Desde, string Hasta, string valueCbo)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -73,15 +70,14 @@ namespace Vivero.Datos.Daos
                      GROUP BY c.Nombre, c.Apellido, c.NroDoc, l.Nombre
                      ORDER BY Compras DESC";
                            
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
 
         public DataTable GenerarReporteClientesPuntos(string Desde, string Hasta, string localidad)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -110,15 +106,14 @@ namespace Vivero.Datos.Daos
                             ORDER BY 4 DESC";
 
 
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
 
         public DataTable GenerarReporteTipoFacturaCantidad(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -127,15 +122,14 @@ namespace Vivero.Datos.Daos
                            JOIN TipoFactura tf ON (f.Tipo_Factura = tf.ID)
                            WHERE f.Estado = 1
                            GROUP BY tf.Nombre";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
        
         public DataTable GenerarReportePlantasVendidas(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -147,15 +141,14 @@ namespace Vivero.Datos.Daos
                         AND f.Estado = 1
                         GROUP BY p.Codigo, p.NombreCientifico
                         ORDER BY 3 DESC";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
         
         public DataTable GenerarReporteTipoPlantasVendidas(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -167,8 +160,8 @@ namespace Vivero.Datos.Daos
                         AND f.Estado = 1 
                         GROUP BY Tp.Nombre, p.NombreCientifico";
                         
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
 
@@ -176,8 +169,7 @@ namespace Vivero.Datos.Daos
 
         public DataTable GenerarReporteCatalogosSeleccionados(string Desde, string Hasta)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("FechaDesde", Desde);
             parametros.Add("FechaHasta", Hasta);
@@ -189,14 +181,13 @@ namespace Vivero.Datos.Daos
                            AND ca.Estado = 1 
                            GROUP BY ca.Nombre,P.NombreComun,P.Precio
                            ORDER by 4 DESC";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
         public DataTable GenerarReporteVentasPorAño(string año)
         {
-            DataManager dm = new DataManager();
-            dm.Open();
+            BDHelper.obtenerInstancia().Open();
             var parametros = new Dictionary<string, object>();
             parametros.Add("Año", año);
             
@@ -205,8 +196,8 @@ namespace Vivero.Datos.Daos
                            WHERE YEAR (Fecha) = @Año
                            AND Estado = 1
                            GROUP BY DATEPART(MONTH,Fecha)";
-            DataTable tabla = dm.ConsultaSQLConParametros(sql, parametros);
-            dm.Close();
+            DataTable tabla = BDHelper.obtenerInstancia().ConsultaSQLConParametros(sql, parametros);
+            BDHelper.obtenerInstancia().Close();
             return tabla;
         }
     }

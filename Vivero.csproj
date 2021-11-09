@@ -88,7 +88,6 @@
     <Compile Include="Datos\Daos\TipoFacturaDao.cs" />
     <Compile Include="Datos\Daos\TipoPlantaDao.cs" />
     <Compile Include="Datos\Daos\TipoProductoDao.cs" />
-    <Compile Include="Datos\DataManager.cs" />
     <Compile Include="Datos\DBHelper.cs" />
     <Compile Include="Datos\Interfaces\IBarrrio.cs" />
     <Compile Include="Datos\Interfaces\ICanje.cs" />

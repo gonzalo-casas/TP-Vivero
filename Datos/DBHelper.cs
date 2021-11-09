@@ -21,8 +21,10 @@ namespace Vivero.Datos
         private BDHelper() // constructor privado de la clase
         {
             conexion = new SqlConnection();
+            dbConnection = new SqlConnection();
             comando = new SqlCommand();
             cadenaConexion = @"Data Source = SQL5108.site4now.net; Initial Catalog = db_a79e23_vivero; User Id = db_a79e23_vivero_admin; Password=grupo10pav";
+            dbConnection.ConnectionString = cadenaConexion;
         }
 
         public static BDHelper obtenerInstancia()
