@@ -303,9 +303,9 @@
             this.chk_Inactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_Inactivos.Location = new System.Drawing.Point(466, 21);
             this.chk_Inactivos.Name = "chk_Inactivos";
-            this.chk_Inactivos.Size = new System.Drawing.Size(91, 24);
+            this.chk_Inactivos.Size = new System.Drawing.Size(95, 24);
             this.chk_Inactivos.TabIndex = 22;
-            this.chk_Inactivos.Text = "Inactivos";
+            this.chk_Inactivos.Text = "Anulados";
             this.chk_Inactivos.UseVisualStyleBackColor = true;
             // 
             // chk_Activos
