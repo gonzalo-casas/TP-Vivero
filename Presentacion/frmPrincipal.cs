@@ -43,18 +43,25 @@ namespace Vivero
                 this.LblNombreUsuario.Text = fl.MiUsuario.Nombre;
                 idUsuario = fl.MiUsuario.ID;
 
-                if (fl.MiUsuario.Perfil.IdPerfil.Equals(1))                 // si es administrador...
+                switch (fl.MiUsuario.Perfil.IdPerfil.ToString())
                 {
-                    habilitarOpciones(true);
-                    lblRolUsuario.Text = "Administrador";
-                }
+                    case "1": // si es administrador
+                        habilitarOpciones(true, true, true);
+                        lblRolUsuario.Text = "Administrador";
+                        break;
 
+                    case "2": //si es vendedor
+                        habilitarOpciones(true, false, false);
+                        lblRolUsuario.Text = "Vendedor";
+                        break;
 
-
-                else
-                {
-                    habilitarOpciones(false);
-                    lblRolUsuario.Text = "Vendedor";
+                    case "3":
+                        habilitarOpciones(false, false, true);
+                        lblRolUsuario.Text = "Resp. reportes";
+                        break;
+                    default:
+                        habilitarOpciones(false, false, false);
+                        break;
                 }
 
             }
@@ -63,14 +70,17 @@ namespace Vivero
             fl.Dispose();
         }
 
-        private void habilitarOpciones(bool x)
+        private void habilitarOpciones(bool x, bool y, bool z)
         {
-            btnClientes.Enabled = x;
-            BtnProveedor.Enabled = x;
-            btnEmpleados.Enabled = x;
-            btnProductos.Enabled = x;
-            btnPlantas.Enabled = x;
-            btnCatalogos.Enabled = x;
+            btnVentas.Enabled = x;
+            btnCanjes.Enabled = x;
+            btnClientes.Enabled = y;
+            BtnProveedor.Enabled = y;
+            btnEmpleados.Enabled = y;
+            btnProductos.Enabled = y;
+            btnPlantas.Enabled = y;
+            btnCatalogos.Enabled = y;
+            btnReportes.Enabled = z;
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)

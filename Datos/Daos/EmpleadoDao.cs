@@ -13,7 +13,7 @@ namespace Vivero.Datos.Daos
     {
         public Array ValidarUsuario(int Id_Usuario, string Contrasena)
         {
-            string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "'";
+            string consulta = "SELECT * FROM Empleado WHERE ID=" + Id_Usuario + " AND contraseña='" + Contrasena + "' AND Estado = 1";
 
             string[] array;
 
